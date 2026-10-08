@@ -1,0 +1,284 @@
+{
+  "id": "sample-video",
+  "title": "Mr. Market: The Mindset That Made Warren Buffett Billions",
+  "book": {
+    "title": "The Intelligent Investor",
+    "author": "Benjamin Graham",
+    "year": 1949
+  },
+  "description": "One idea from Benjamin Graham's The Intelligent Investor that changes how you see the stock market: meet Mr. Market, your manic business partner. Learn why price is not value, and how to turn his moods into your advantage.",
+  "tags": ["investing", "benjamin graham", "the intelligent investor", "mr market", "value investing", "warren buffett", "personal finance"],
+  "thumbnail": {
+    "headline": "Meet Mr. Market",
+    "subline": "The moody genius of investing",
+    "cast": "max",
+    "pose": "panicking",
+    "expression": "shocked",
+    "props": ["arrow", "moneybag"]
+  },
+  "voice": "en-US-AndrewNeural",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "section_title",
+      "narration": "Let's unpack The Intelligent Investor by Benjamin Graham, the book behind Warren Buffett, and the one idea inside it that can change how you see the market forever.",
+      "visual": {
+        "number": 1,
+        "title": "The Intelligent Investor",
+        "emphasis": "underline",
+        "sync": { "phrase": "Intelligent Investor" }
+      }
+    },
+    {
+      "id": "meet",
+      "type": "character_scene",
+      "narration": "Imagine a business partner named Mr. Market. Every single day he strolls up, knocks on your door, and shouts out a price.",
+      "visual": {
+        "title": "Meet Mr. Market",
+        "elements": [
+          {
+            "kind": "figure",
+            "id": "market",
+            "cast": "max",
+            "at": { "col": 5, "row": 1, "w": 4, "h": 5 },
+            "enter": "walk",
+            "poses": ["standing", "presenting"],
+            "expression": "happy",
+            "label": "Mr. Market"
+          },
+          {
+            "kind": "figure",
+            "id": "you",
+            "cast": "alex",
+            "at": { "col": 0, "row": 2, "w": 3, "h": 4 },
+            "facing": "right",
+            "pose": "standing",
+            "expression": "curious",
+            "label": "You"
+          },
+          {
+            "kind": "speech",
+            "at": { "col": 9, "row": 0, "w": 3, "h": 2 },
+            "color": "accent",
+            "label": "a price!",
+            "sync": { "phrase": "shouts out a price" },
+            "effects": [{ "kind": "exclamation", "sync": { "phrase": "shouts out a price" } }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "offer",
+      "type": "character_scene",
+      "narration": "Here is the real secret. He is your partner, not your boss. He offers you a deal and a fat bag of money. But you are never once forced to say yes.",
+      "visual": {
+        "title": "Partner, not boss",
+        "elements": [
+          {
+            "kind": "figure",
+            "id": "market2",
+            "cast": "max",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "facing": "left",
+            "pose": "presenting",
+            "expression": "happy",
+            "holding": { "prop": "moneybag", "hand": "left" },
+            "label": "Mr. Market"
+          },
+          {
+            "kind": "figure",
+            "id": "you2",
+            "cast": "alex",
+            "at": { "col": 1, "row": 1, "w": 3, "h": 5 },
+            "facing": "right",
+            "pose": "standing",
+            "expressions": [
+              "curious",
+              { "value": "worried", "sync": { "phrase": "forced to say yes" } }
+            ],
+            "label": "You"
+          }
+        ]
+      }
+    },
+    {
+      "id": "graham-quote",
+      "type": "quote_card",
+      "narration": "As Benjamin Graham put it, the intelligent investor is a realist who sells to optimists and buys from pessimists.",
+      "visual": {
+        "quote": "The intelligent investor is a realist who sells to optimists and buys from pessimists.",
+        "attribution": "Benjamin Graham",
+        "cast": "sage"
+      }
+    },
+    {
+      "id": "moods",
+      "type": "character_scene",
+      "narration": "But his moods swing wildly. One moment he feels euphoric and celebrates. The next, terrible news leaves him shocked. And soon he panics completely. Yet none of this changes what the business is really worth.",
+      "visual": {
+        "title": "His wild moods",
+        "elements": [
+          {
+            "kind": "figure",
+            "id": "market3",
+            "cast": "max",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
+            "poses": ["celebrating", "standing", "panicking"],
+            "expressions": [
+              "happy",
+              { "value": "shocked", "sync": { "phrase": "terrible news" } },
+              { "value": "worried", "sync": { "phrase": "he panics" } }
+            ],
+            "label": "same guy",
+            "effects": [
+              { "kind": "sparkles", "sync": { "phrase": "feels euphoric" } },
+              { "kind": "exclamation", "sync": { "phrase": "terrible news" } },
+              { "kind": "sweat_drop", "sync": { "phrase": "he panics" } },
+              { "kind": "shake", "sync": { "phrase": "panics completely" } }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "swings",
+      "type": "stat_chart",
+      "narration": "Look at his price over a single year. It leapt from one hundred, up to one forty two, crashed down to seventy eight, then settled near one fifteen.",
+      "visual": {
+        "label": "Mr. Market's price ($)",
+        "mode": "line",
+        "datapoints": [
+          { "label": "Q1", "value": 100, "sync": { "phrase": "one hundred" } },
+          { "label": "Q2", "value": 142, "sync": { "phrase": "forty two" } },
+          { "label": "Q3", "value": 78, "sync": { "phrase": "seventy eight" } },
+          { "label": "Q4", "value": 115, "sync": { "phrase": "one fifteen" } }
+        ]
+      }
+    },
+    {
+      "id": "rules",
+      "type": "list_card",
+      "narration": "So when Mr. Market knocks, remember three simple rules. His price is only an offer. You can always ignore him. And his mood is never your problem.",
+      "visual": {
+        "title": "When he knocks",
+        "items": [
+          { "label": "Price is just an offer", "icon": "tick" },
+          { "label": "You can ignore him", "icon": "box", "sync": { "phrase": "always ignore him" } },
+          { "label": "His mood isn't yours", "icon": "arrow", "sync": { "phrase": "never your problem" } }
+        ]
+      }
+    },
+    {
+      "id": "calm",
+      "type": "character_scene",
+      "narration": "The intelligent investor stays calm. He sits down with the business, studies the numbers, and lets the noise roll right past him.",
+      "visual": {
+        "title": "Do your homework",
+        "elements": [
+          {
+            "kind": "figure",
+            "id": "reader",
+            "cast": "alex",
+            "at": { "col": 4, "row": 0, "w": 5, "h": 6 },
+            "pose": "sitting",
+            "seat": "desk",
+            "holding": { "prop": "book", "hand": "left" },
+            "expression": "curious",
+            "label": "study the business",
+            "effects": [{ "kind": "nod", "sync": { "phrase": "stays calm" } }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson",
+      "type": "section_title",
+      "narration": "And that reveals the lesson that made Warren Buffett a fortune.",
+      "visual": {
+        "number": 2,
+        "title": "The Real Lesson",
+        "emphasis": "circle",
+        "sync": { "phrase": "the lesson" }
+      }
+    },
+    {
+      "id": "trick",
+      "type": "character_scene",
+      "narration": "The trick is simple to say. When the crowd is fearful, that is your moment to buy. A good idea and a patient bag of money will beat the panic every time.",
+      "visual": {
+        "title": "The simple trick",
+        "elements": [
+          {
+            "kind": "figure",
+            "id": "investor",
+            "cast": "alex",
+            "at": { "col": 1, "row": 1, "w": 3, "h": 5 },
+            "poses": ["thinking", "presenting"],
+            "expressions": [
+              "curious",
+              { "value": "happy", "sync": { "phrase": "your moment to buy" } }
+            ],
+            "label": "buy the fear",
+            "effects": [
+              { "kind": "thought_bubble", "sync": { "phrase": "simple to say" } },
+              { "kind": "nod", "sync": { "phrase": "moment to buy" } }
+            ]
+          },
+          {
+            "kind": "lightbulb",
+            "state": "on",
+            "at": { "col": 5, "row": 1, "w": 2, "h": 3 },
+            "color": "accent",
+            "label": "an idea",
+            "sync": { "phrase": "a good idea" }
+          },
+          {
+            "kind": "moneybag",
+            "at": { "col": 8, "row": 1, "w": 3, "h": 4 },
+            "label": "stay patient",
+            "sync": { "phrase": "bag of money" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pip",
+      "type": "character_scene",
+      "narration": "Even a total beginner can see it. Do the exact opposite of the crowd, and the bargains appear on their own.",
+      "visual": {
+        "title": "Do the opposite",
+        "elements": [
+          {
+            "kind": "figure",
+            "id": "pip",
+            "cast": "pip",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
+            "pose": "standing",
+            "expressions": [
+              "happy",
+              { "value": "shocked", "sync": { "phrase": "opposite of the crowd" } }
+            ],
+            "label": "wait, really?",
+            "effects": [
+              { "kind": "shake", "sync": { "phrase": "opposite of the crowd" } },
+              { "kind": "exclamation", "sync": { "phrase": "exact opposite" } }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "recap",
+      "type": "recap_card",
+      "narration": "So remember this. Price is what you pay. Value is what you get. Buy his fear, and sell his greed.",
+      "visual": {
+        "title": "Remember this",
+        "items": [
+          { "label": "Price versus value", "sync": { "phrase": "what you pay" } },
+          { "label": "Buy his fear", "sync": { "phrase": "buy his fear" } },
+          { "label": "Sell his greed", "sync": { "phrase": "sell his greed" } }
+        ]
+      }
+    }
+  ]
+}

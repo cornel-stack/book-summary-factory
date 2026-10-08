@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "id": "grip1",
+      "src": "hand/processed/grip1.png",
+      "width": 433,
+      "height": 868,
+      "penTip": {
+        "x": 80,
+        "y": 0
+      },
+      "renderHeight": 434,
+      "shaftAngleDeg": 89
+    },
+    {
+      "id": "grip2",
+      "src": "hand/processed/grip2.png",
+      "width": 522,
+      "height": 490,
+      "penTip": {
+        "x": 0,
+        "y": 48
+      },
+      "renderHeight": 288,
+      "shaftAngleDeg": 30
+    }
+  ]
+}

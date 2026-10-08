@@ -1,0 +1,29 @@
+name: Lint scripts
+
+# Fast feedback when a script changes: schema + sync-phrase validation only
+# (no audio). The full density lint runs inside the render workflow.
+on:
+  push:
+    paths:
+      - "content/**"
+      - "remotion/src/schema.ts"
+  pull_request:
+    paths:
+      - "content/**"
+      - "remotion/src/schema.ts"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Validate all scripts
+        run: npx tsx pipeline/validate_script.ts

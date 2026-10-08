@@ -1,0 +1,168 @@
+name: Render video
+
+# Manual trigger. Renders a video entirely on GitHub's free runners by splitting
+# the frames into N chunks (fan-out), then concatenating + muxing the audio.
+# No secrets are used (edge-tts needs no API key). Local `npm run build:video`
+# stays identical — CI calls the same pipeline scripts.
+on:
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: "Video id — content/videos/<id>.json"
+        required: true
+        default: "atomic-habits"
+      chunks:
+        description: "Number of render chunks (fan-out width)"
+        required: false
+        default: "8"
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: "20"
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  # 1) Audio + manifest + captions + lint + the full audio track. One artifact.
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      total_frames: ${{ steps.meta.outputs.total }}
+      chunk_array: ${{ steps.meta.outputs.array }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - run: npm ci
+      - run: pip install -r requirements.txt
+      - name: Narration audio (edge-tts)
+        run: python pipeline/generate_audio.py "${{ inputs.video_id }}"
+      - name: Timing manifest
+        run: npx tsx pipeline/build_manifest.ts "${{ inputs.video_id }}"
+      - name: Script lint
+        run: npx tsx pipeline/lint_script.ts "${{ inputs.video_id }}"
+      - name: Captions
+        run: npx tsx pipeline/build_captions.ts "${{ inputs.video_id }}"
+      - name: Full audio track
+        run: npx tsx pipeline/build_audio_track.ts "${{ inputs.video_id }}"
+      - name: Compute frame count + chunk matrix
+        id: meta
+        run: |
+          T=$(node -e "console.log(require('./.build/${{ inputs.video_id }}/manifest.json').totalDurationInFrames)")
+          N=${{ inputs.chunks }}
+          ARR=$(node -e "console.log(JSON.stringify([...Array(${N}).keys()]))")
+          echo "total=$T" >> "$GITHUB_OUTPUT"
+          echo "array=$ARR" >> "$GITHUB_OUTPUT"
+          echo "### Prepare" >> "$GITHUB_STEP_SUMMARY"
+          echo "- total frames: **$T**, chunks: **$N** (~$((T / N)) frames each)" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prepared-${{ inputs.video_id }}
+          retention-days: 1
+          path: |
+            .build/${{ inputs.video_id }}/manifest.json
+            .build/${{ inputs.video_id }}/props.json
+            .build/${{ inputs.video_id }}/words.json
+            .build/${{ inputs.video_id }}/captions.srt
+            .build/${{ inputs.video_id }}/audio.m4a
+            remotion/public/assets/${{ inputs.video_id }}/
+
+  # 2) Render each frame range in parallel (video only, muted — no audio seams).
+  render:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        chunk: ${{ fromJSON(needs.prepare.outputs.chunk_array) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: prepared-${{ inputs.video_id }}
+          path: .
+      - name: Cache Remotion browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/remotion
+          key: remotion-browser-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - name: Render chunk ${{ matrix.chunk }}
+        run: |
+          T=${{ needs.prepare.outputs.total_frames }}
+          N=${{ inputs.chunks }}
+          I=${{ matrix.chunk }}
+          START=$(( I * T / N ))
+          END=$(( (I + 1) * T / N - 1 ))
+          echo "chunk $I: frames $START-$END"
+          SECONDS=0
+          npx remotion render remotion/src/index.ts Main "chunk-${I}.mp4" \
+            --props=".build/${{ inputs.video_id }}/props.json" \
+            --public-dir=remotion/public \
+            --frames="${START}-${END}" --muted
+          echo "- chunk **$I** ($START-$END): ${SECONDS}s" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chunk-${{ inputs.video_id }}-${{ matrix.chunk }}
+          retention-days: 1
+          path: chunk-${{ matrix.chunk }}.mp4
+
+  # 3) Concat chunks (stream copy), mux the full audio, thumbnail, package.
+  stitch:
+    needs: [prepare, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: prepared-${{ inputs.video_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: chunk-${{ inputs.video_id }}-*
+          path: chunks
+          merge-multiple: true
+      - name: Cache Remotion browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/remotion
+          key: remotion-browser-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - name: Concat + mux + package
+        run: |
+          SECONDS=0
+          ID="${{ inputs.video_id }}"
+          N=${{ inputs.chunks }}
+          mkdir -p "output/$ID" ".build/$ID"
+          : > list.txt
+          for i in $(seq 0 $((N - 1))); do echo "file '$PWD/chunks/chunk-$i.mp4'" >> list.txt; done
+          ffmpeg -y -f concat -safe 0 -i list.txt -c copy ".build/$ID/video-noaudio.mp4"
+          ffmpeg -y -i ".build/$ID/video-noaudio.mp4" -i ".build/$ID/audio.m4a" \
+            -c:v copy -c:a copy -map 0:v:0 -map 1:a:0 -shortest ".build/$ID/video.mp4"
+          npx remotion still remotion/src/index.ts Thumbnail ".build/$ID/thumbnail.png" \
+            --props=".build/$ID/props.json" --public-dir=remotion/public
+          ffmpeg -y -i ".build/$ID/thumbnail.png" -vf "scale=1280:720:flags=lanczos" -update 1 -frames:v 1 ".build/$ID/thumbnail-720.png"
+          npx tsx pipeline/package.ts "$ID"
+          echo "### Stitch" >> "$GITHUB_STEP_SUMMARY"
+          echo "- concat + mux + thumbnail + package: ${SECONDS}s" >> "$GITHUB_STEP_SUMMARY"
+          echo "- output: \`output/$ID/\`" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.video_id }}-package
+          retention-days: 7
+          path: output/${{ inputs.video_id }}/

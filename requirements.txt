@@ -1,0 +1,11 @@
+# Python dependencies for the audio pipeline.
+# Install into a local virtualenv:
+#   python3 -m venv .venv
+#   .venv/bin/pip install -r requirements.txt
+edge-tts>=6.1.0
+
+# Optional — only needed to (re)process the photographed hand assets via
+# pipeline/process_hand.py. Not required for the normal build pipeline.
+# rembg[cpu]>=2.0.0
+# pillow>=10.0.0
+# numpy>=1.26.0
