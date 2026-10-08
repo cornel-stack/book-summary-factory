@@ -1,34 +1,47 @@
-# The Channel Template — writing bible (v1)
+# The Channel Template — writing bible (v3 · long-form)
 
 This is **how every video is written**, above the mechanical schema
 (`content/schema.md`). The schema says what's *valid*; this says what's *good*.
 A script that passes Zod but breaks these rules is a bad script. Default
 framing is **book-structure** (one book, one mental model, taught in parts).
 
+**LONG-FORM STANDARD (Phase 11).** Every video is **30 minutes MINIMUM**;
+30–40 min is the normal band. `target_minutes` is **required, ≥ 30**, and the
+build **hard-fails** (`build_manifest.ts`) if the real runtime lands below
+30.0 min or outside ±10% of target. Size scripts with the measured pacing
+constant — see §8.
+
 ---
 
-## 1. The video skeleton
+## 1. The video skeleton (long-form)
 
 ```
 HOOK            1 scene    ~15–25 s   name the book; promise the one idea
   → CTA (card)  1 scene    ~5–8 s     "subscribe / full notes below" (after the hook)
-BOOK INTRO      1–2 scenes ~25–40 s   who wrote it, why it matters, the surrogate (Alex) picks it up
-PART 1          title + 2–4 PRINCIPLE sections
+BOOK INTRO      2 scenes   ~35–50 s   who wrote it, why it matters, the surrogate (Alex) picks it up
+PART 1          title + 2–3 PRINCIPLE sections
   MID-RECAP     1 scene    ~15–20 s   recap_card scope:"mid"
-PART 2          title + 2–4 PRINCIPLE sections
+PART 2          RE-HOOK + title + 2–3 PRINCIPLE sections
   MID-RECAP     1 scene    ~15–20 s
-  (PART 3 …     optional, same shape)
-FINAL RECAP     1 scene    ~20–30 s   recap_card scope:"final"
+  (PARTS 3–5 …  same shape: RE-HOOK, title, principles, mid-recap)
+FINAL RECAP     1 scene    ~25–35 s   recap_card scope:"final" (one line per part)
 CLOSE           1 scene    ~15–20 s   the one-line takeaway
   → CTA (corner)1 scene    ~5–8 s     "which habit will you start? — comment" (at the close)
 ```
 
+- **4–6 PARTS, 9–14 PRINCIPLE sections total** (long-form). A short book still
+  gets 30 min by going *deeper* — more story, more application — not by padding.
 - A **PART** = a `section_title` with `role:"part"`, `number:N`. It groups
   principles; its title is the part's big idea.
 - A **PRINCIPLE** = a `section_title` with `role:"principle"`, `number:M`,
   `part:N`, followed by the scenes that teach it. This is the atomic teaching
   unit (see §3).
 - **Mid-recap after EVERY part.** No exceptions — it's the spaced-repetition beat.
+- **RE-HOOK at every part boundary after Part 1** (see §3b) — retention is the
+  whole game at 30 min.
+- **~60–90 scenes per video.** The pipeline handles it (edge-tts runs a
+  concurrency pool; chunked CI render fans out automatically). If a script has
+  fewer than ~55 scenes at 30 min, principles are being told too thinly.
 - At most **2 CTAs** per video: one after the hook, one at the close. Never salesy.
 
 ---
@@ -61,15 +74,43 @@ scene — fold them, but keep the order):
 5. **Transition** — one line that hands off to the next principle/part. Usually
    the tail of the application narration; no separate scene.
 
-A principle section is **≈ 60–90 s ≈ 150–220 narration words**, spread over
-2–4 scenes.
+A principle section is **≈ 90–150 s ≈ 220–360 narration words** (long-form),
+spread over **3–5 scenes**. (The old 150–220 band was for 10-min videos; at
+30 min a principle earns room for a fuller story + a real application.) Still
+obey the per-scene cap in §4: no single scene over ~25 s / ~65 words.
+
+---
+
+## 3b. The RE-HOOK (part-boundary retention beat)
+
+At 30+ minutes the enemy is the drop-off. After **every part except Part 1**,
+open the next part with a **RE-HOOK**: 1–2 narration sentences that *close the
+door behind the viewer and open a new loop*. Author it as a **short dedicated
+scene** right after the part title (id `pN-rehook`, a `character_scene` with the
+surrogate posing + one spot prop, ~25–40 words) — never a static card, so it
+carries a visual. (It may instead live in the part-title narration, but a
+dedicated beat paces better and dodges the dead-window lint.)
+
+**Re-hook formulas** (pick one, vary across the video):
+- **Payoff-withheld:** "You now know *why* tiny habits win. But none of it
+  sticks until you fix the one thing most people never touch — who you believe
+  you are."
+- **Objection-raise:** "Maybe you're thinking: I've tried this and quit. Good —
+  because the next part is exactly why you quit, and how not to."
+- **Stakes-raise:** "Everything so far was theory. Now it gets practical — the
+  four laws that make a habit automatic whether you feel like it or not."
+- **Cliffhanger-callback:** "Remember the plateau? Here's the system that gets
+  you across it."
+
+Rule: a re-hook **references what was just learned** and **names a tension the
+next part resolves**. It should make skipping ahead feel like a loss.
 
 ---
 
 ## 4. Pacing rules (hard)
 
-- **Principle length:** 150–220 words. Under 150 feels thin; over 220 drags —
-  split it.
+- **Principle length:** 220–360 words (long-form). Under 220 feels thin at this
+  length; over 360 drags — split into another principle.
 - **No single scene's narration over ~25 s (~65 words) without a visual
   change.** If a thought needs 90 words, it needs ≥2 visuals (a pose change, a
   new element drawn, a chart point, an expression swing synced to a phrase).
@@ -251,42 +292,77 @@ Never interrupt a principle with a CTA. Never more than one sentence.
 
 ---
 
-## 8. Word budget math (10-minute video)
+## 8. Word budget math (long-form, measured)
 
-Target **1,450–1,600 words** (≈ 150 wpm narration → ~10 min). Worked example
-for a 2-part book-structure video:
+**The pacing constant is MEASURED, not assumed.** From the atomic-habits
+Phase-10 render: 1,212 narration words produced an **8.352-minute** final video
+(including scene padding + draw-ins). That is:
+
+> **`WORDS_PER_FINAL_MINUTE = 145`**  (1,212 ÷ 8.352 = 145.1; published in
+> `remotion/src/theme.ts`).
+
+Size any script by `target_words ≈ 145 × target_minutes`. Longer videos trend a
+hair longer per word (more scenes ⇒ more padding), so 145 slightly
+*under*-estimates at 30+ min — which safely favors clearing the 30.0-min floor.
+
+**Band table** (runtime guard = `max(30.0, 0.9·target)` … `1.1·target`):
+
+| target_minutes | word target (≈145/min) | safe word band | runtime guard passes |
+|---------------:|-----------------------:|---------------:|---------------------:|
+| 30 | 4,350 | 4,350 – 4,780 | 30.0 – 33.0 min |
+| 32 | 4,640 | 4,350 – 5,100 | 30.0 – 35.2 min |
+| 35 | 5,075 | 4,570 – 5,580 | 31.5 – 38.5 min |
+| 40 | 5,800 | 5,220 – 6,380 | 36.0 – 44.0 min |
+
+Because the guard *hard-fails*, leave margin: for a 30-min minimum, prefer
+`target_minutes: 32` (band 30.0–35.2 is roomy on both sides) and write ~4,600
+words. Worked example for a **5-part / 12-principle** book-structure video:
 
 | Block | scenes | words |
 |-------|-------:|------:|
-| Hook | 1 | 55 |
-| CTA (card) | 1 | 18 |
-| Book intro | 2 | 150 |
-| Part 1 title | 1 | 20 |
-| Part 1 · 3 principles | ~9 | 3 × 190 = 570 |
-| Mid-recap 1 | 1 | 55 |
-| Part 2 title | 1 | 20 |
-| Part 2 · 3 principles | ~9 | 3 × 190 = 570 |
-| Mid-recap 2 | 1 | 55 |
-| Final recap | 1 | 70 |
-| Close | 1 | 55 |
-| CTA (corner) | 1 | 18 |
-| **Total** | **~29** | **~1,556** |
+| Hook + CTA (card) | 2 | 75 |
+| Book intro | 2 | 180 |
+| 5 part titles | 5 | 5 × 8 = 40 |
+| 4 re-hooks (parts 2–5) | 4 | 4 × 35 = 140 |
+| 12 principle titles | 12 | 12 × 8 = 96 |
+| 12 principles (bodies) | ~42 | 12 × 300 = 3,600 |
+| 5 mid-recaps | 5 | 5 × 55 = 275 |
+| 2 quotes | 2 | 2 × 28 = 56 |
+| Final recap | 1 | 85 |
+| Close + CTA (corner) | 2 | 75 |
+| **Total** | **~73** | **~4,620** |
 
 Compute the real per-scene budget from the actual structure and **verify the
-sum is 1,450–1,600 before rendering** (the pipeline measures real audio, but
-this keeps runtime ~10 min).
+sum lands in the band before rendering**. The pipeline measures real audio and
+the build fails if runtime is off — this keeps the round-trip cheap.
+
+---
+
+## 8b. Chapters (auto-generated — don't hand-write)
+
+YouTube chapters are generated from the render manifest by `package.ts`, so they
+stay exactly aligned to the video (and the SRT) at any length — 5 chapters or
+50. The `description` field holds **prose only**; `package.ts` injects a
+`Chapters:` block (0:00 intro, every part + principle title at its real start,
+the final recap, the close) and the attribution/disclaimer footer. Never paste
+timestamps into `description` by hand — they'll drift the moment narration
+changes.
 
 ---
 
 ## 9. Pre-flight checklist (run before `build:video`)
 
 - [ ] `template.framing` set; book named in scene 1.
+- [ ] `target_minutes` ≥ 30 set; word sum in the §8 band for that target.
+- [ ] 4–6 parts, 9–14 principles, ~60–90 scenes.
 - [ ] Every part followed by a mid-recap; a final recap before the close.
+- [ ] A RE-HOOK beat at every part boundary after Part 1 (§3b).
 - [ ] ≤ 2 CTAs (one post-hook, one at close).
 - [ ] No 3 consecutive same-type scenes.
-- [ ] Every principle 150–220 words; total 1,450–1,600.
+- [ ] Every principle 220–360 words; no single scene over ~65 words.
 - [ ] Every key visual has a `sync` phrase; the phrase is in that scene's narration.
 - [ ] Numbers written as words ("one forty two", not "142").
 - [ ] All five cast members used; both entrance modes; ≥1 two-char scene;
       ≥1 seated-desk scene; ≥1 held prop; ≥3 stat_chart/list moments.
 - [ ] Labels within word limits (figure ≤6, list ≤5, recap ≤4, headline ≤5).
+- [ ] `description` is prose only — chapters are auto-generated (§8b).

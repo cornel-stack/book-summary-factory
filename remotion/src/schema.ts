@@ -277,9 +277,12 @@ export const Script = z.object({
   // Narration pace: -18% (~150 wpm) is the confirmed channel default (set in
   // generate_audio.py); override here per video if needed.
   rate: z.string().optional(),
-  // Rough target length (minutes). The pipeline warns post-manifest if the real
-  // runtime lands outside ±12% of this (never hard-fails — audio is truth).
-  target_minutes: z.number().positive().optional(),
+  // Target length (minutes). REQUIRED, minimum 30 — the channel ships long-form
+  // only (Phase 11). build_manifest FAILS the build if the real runtime lands
+  // below 30.0 min or outside ±10% of this target (see pipeline/build_manifest.ts).
+  target_minutes: z.number().min(30, {
+    message: "every video is long-form: target_minutes must be ≥ 30",
+  }),
   // Channel template metadata — read by the script generator + future tooling.
   template: z
     .object({

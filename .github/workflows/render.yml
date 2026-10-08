@@ -12,16 +12,32 @@ on:
         required: true
         default: "atomic-habits"
       chunks:
-        description: "Number of render chunks (fan-out width)"
+        description: "Render chunks (fan-out width). Blank = auto: ~1 per 2200 frames, capped at 20."
         required: false
-        default: "8"
+        default: ""
+  # Reusable: the scheduler (scheduled-render.yml) calls this inline so it can
+  # flip calendar status on success. Same inputs as the manual dispatch.
+  workflow_call:
+    inputs:
+      video_id:
+        description: "Video id — content/videos/<id>.json"
+        required: true
+        type: string
+      chunks:
+        description: "Render chunks. Blank = auto (~1 per 2200 frames, cap 20)."
+        required: false
+        type: string
+        default: ""
 
 permissions:
-  contents: read
+  contents: write # publish the package to a GitHub Release (stable, non-expiring)
 
 env:
   NODE_VERSION: "20"
   PYTHON_VERSION: "3.12"
+  # Auto chunk sizing: aim for ~this many frames per parallel job, capped below.
+  TARGET_FRAMES_PER_CHUNK: "2200"
+  MAX_CHUNKS: "20"
 
 jobs:
   # 1) Audio + manifest + captions + lint + the full audio track. One artifact.
@@ -29,6 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       total_frames: ${{ steps.meta.outputs.total }}
+      chunks: ${{ steps.meta.outputs.chunks }}
       chunk_array: ${{ steps.meta.outputs.array }}
     steps:
       - uses: actions/checkout@v4
@@ -58,12 +75,21 @@ jobs:
         id: meta
         run: |
           T=$(node -e "console.log(require('./.build/${{ inputs.video_id }}/manifest.json').totalDurationInFrames)")
-          N=${{ inputs.chunks }}
+          OVERRIDE="${{ inputs.chunks }}"
+          if [ -n "$OVERRIDE" ]; then
+            N=$OVERRIDE
+            MODE="manual override"
+          else
+            # auto: ceil(frames / TARGET_FRAMES_PER_CHUNK), clamped to [1, MAX_CHUNKS]
+            N=$(node -e "console.log(Math.min(${MAX_CHUNKS}, Math.max(1, Math.ceil($T / ${TARGET_FRAMES_PER_CHUNK}))))")
+            MODE="auto (~${TARGET_FRAMES_PER_CHUNK} frames/chunk, cap ${MAX_CHUNKS})"
+          fi
           ARR=$(node -e "console.log(JSON.stringify([...Array(${N}).keys()]))")
           echo "total=$T" >> "$GITHUB_OUTPUT"
+          echo "chunks=$N" >> "$GITHUB_OUTPUT"
           echo "array=$ARR" >> "$GITHUB_OUTPUT"
           echo "### Prepare" >> "$GITHUB_STEP_SUMMARY"
-          echo "- total frames: **$T**, chunks: **$N** (~$((T / N)) frames each)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- total frames: **$T**, chunks: **$N** ($MODE, ~$((T / N)) frames each)" >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:
           name: prepared-${{ inputs.video_id }}
@@ -103,7 +129,7 @@ jobs:
       - name: Render chunk ${{ matrix.chunk }}
         run: |
           T=${{ needs.prepare.outputs.total_frames }}
-          N=${{ inputs.chunks }}
+          N=${{ needs.prepare.outputs.chunks }}
           I=${{ matrix.chunk }}
           START=$(( I * T / N ))
           END=$(( (I + 1) * T / N - 1 ))
@@ -151,7 +177,7 @@ jobs:
         run: |
           SECONDS=0
           ID="${{ inputs.video_id }}"
-          N=${{ inputs.chunks }}
+          N=${{ needs.prepare.outputs.chunks }}
           mkdir -p "output/$ID" ".build/$ID"
           : > list.txt
           for i in $(seq 0 $((N - 1))); do echo "file '$PWD/chunks/chunk-$i.mp4'" >> list.txt; done
@@ -170,3 +196,20 @@ jobs:
           name: ${{ inputs.video_id }}-package
           retention-days: 7
           path: output/${{ inputs.video_id }}/
+      # Publish to a GitHub Release tagged <video_id>: stable URLs, never expires,
+      # downloadable from a phone. Built-in token, no personal secrets.
+      - name: Publish package to a Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ID="${{ inputs.video_id }}"
+          if gh release view "$ID" >/dev/null 2>&1; then
+            echo "Release $ID exists — clobbering assets"
+            gh release upload "$ID" output/"$ID"/* --clobber
+          else
+            gh release create "$ID" output/"$ID"/* \
+              --title "$ID — animated book summary" \
+              --notes-file output/"$ID"/description.txt
+          fi
+          echo "### Release" >> "$GITHUB_STEP_SUMMARY"
+          echo "- published: ${{ github.server_url }}/${{ github.repository }}/releases/tag/$ID" >> "$GITHUB_STEP_SUMMARY"

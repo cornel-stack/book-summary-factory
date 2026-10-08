@@ -12,6 +12,8 @@
     "package": "tsx pipeline/package.ts",
     "studio": "remotion studio remotion/src/index.ts",
     "render": "remotion render remotion/src/index.ts Main",
+    "calendar:fill": "tsx pipeline/fill_calendar.ts",
+    "fetch": "tsx pipeline/fetch_release.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

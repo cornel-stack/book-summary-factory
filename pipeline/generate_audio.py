@@ -14,6 +14,7 @@ Usage: python3 pipeline/generate_audio.py <video-id>
 """
 import asyncio
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -21,6 +22,13 @@ import edge_tts
 
 REPO = Path(__file__).resolve().parent.parent
 TICKS_PER_SECOND = 10_000_000  # edge-tts offsets/durations are in 100ns ticks
+
+# Long-form videos have 60–90 scenes; synthesizing them one at a time is silly
+# (each edge-tts call is network-bound). Run a small concurrency pool instead.
+# Kept modest so the Microsoft endpoint doesn't rate-limit. Override with
+# AUDIO_CONCURRENCY. Word-timing order within a scene is unaffected (per-call);
+# scene order in words.json is restored explicitly after the gather.
+AUDIO_CONCURRENCY = int(os.environ.get("AUDIO_CONCURRENCY", "6"))
 
 # Channel-wide narration pace. The neural voices default to ~180 wpm, which is
 # too brisk for a book summary; -18% lands a measured ~150 wpm (so the template's
@@ -64,19 +72,39 @@ async def main(video_id: str) -> None:
     audio_dir.mkdir(parents=True, exist_ok=True)
     build_dir.mkdir(parents=True, exist_ok=True)
 
-    all_words: dict[str, list[dict]] = {}
-    for i, scene in enumerate(scenes, 1):
+    # Validate up front so an empty narration fails fast (not mid-pool).
+    for scene in scenes:
+        if not scene.get("narration", "").strip():
+            sys.exit(f"ERROR: scene '{scene['id']}' has empty narration")
+
+    sem = asyncio.Semaphore(AUDIO_CONCURRENCY)
+    done = 0
+    total = len(scenes)
+
+    async def worker(i: int, scene: dict) -> tuple[str, list[dict]]:
+        nonlocal done
         sid = scene["id"]
-        narration = scene.get("narration", "").strip()
-        if not narration:
-            sys.exit(f"ERROR: scene '{sid}' has empty narration")
+        narration = scene["narration"].strip()
         out_mp3 = audio_dir / f"{sid}.mp3"
-        print(f"  [{i}/{len(scenes)}] {sid}: synthesizing ({len(narration)} chars, rate {rate})…")
-        words = await synth_scene(narration, voice, rate, out_mp3)
+        async with sem:
+            words = await synth_scene(narration, voice, rate, out_mp3)
         if not out_mp3.exists() or out_mp3.stat().st_size == 0:
             sys.exit(f"ERROR: no audio produced for scene '{sid}'")
-        all_words[sid] = words
-        print(f"      → {out_mp3.name} ({out_mp3.stat().st_size} bytes, {len(words)} words)")
+        done += 1
+        print(
+            f"  [{done}/{total}] {sid}: {out_mp3.name} "
+            f"({out_mp3.stat().st_size} bytes, {len(words)} words, rate {rate})"
+        )
+        return sid, words
+
+    print(f"Synthesizing {total} scenes with concurrency {AUDIO_CONCURRENCY}…")
+    results = await asyncio.gather(*(worker(i, s) for i, s in enumerate(scenes)))
+
+    # Restore scene order (gather completes out of order under concurrency).
+    order = {s["id"]: i for i, s in enumerate(scenes)}
+    all_words: dict[str, list[dict]] = {
+        sid: words for sid, words in sorted(results, key=lambda r: order[r[0]])
+    }
 
     words_path = build_dir / "words.json"
     words_path.write_text(json.dumps(all_words, indent=2))

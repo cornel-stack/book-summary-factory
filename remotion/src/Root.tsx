@@ -32,6 +32,7 @@ const defaultProps: RenderProps = {
     tags: [],
     thumbnail: { headline: "Headline", subline: "Subline", cast: "max", pose: "thinking", expression: "curious", props: [] },
     voice: "en-US-AndrewNeural",
+    target_minutes: 30,
     template: { framing: "book-structure", hook: "direct" },
     scenes: [
       {

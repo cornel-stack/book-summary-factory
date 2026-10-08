@@ -1,0 +1,119 @@
+name: Scheduled render
+
+# Producer cadence: one video per weekday (Mon–Fri), finished package ready BY
+# 09:00 Africa/Nairobi (EAT, UTC+3). Cron 03:47 UTC = 06:47 EAT on weekdays —
+# an off-the-hour minute to dodge GitHub's top-of-hour cron rush. Each run:
+#   • renders the calendar entry whose publish_date is TODAY (Nairobi) & "scheduled"
+#   • OR, if today's is already rendered, renders TOMORROW's (one-day lookahead,
+#     so a failed morning self-heals the next day without losing the slot)
+# On success it flips the entry to "rendered" (bot commit, [skip ci]); on failure
+# it opens/updates a tracking issue and leaves status untouched (next day retries).
+on:
+  schedule:
+    - cron: "47 3 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Plan only — don't render, don't commit"
+        type: boolean
+        default: true
+      today_override:
+        description: "Override 'today' (YYYY-MM-DD, Nairobi). Blank = real date."
+        required: false
+        default: ""
+
+permissions:
+  contents: write # flip calendar status via a bot commit
+  issues: write # open a tracking issue on failure
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      ids: ${{ steps.pick.outputs.ids }}
+      has_targets: ${{ steps.pick.outputs.has_targets }}
+      dry: ${{ steps.pick.outputs.dry }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve dates + targets
+        id: pick
+        run: |
+          OV="${{ inputs.today_override }}"
+          if [ -n "$OV" ]; then TODAY="$OV"; else TODAY=$(TZ=Africa/Nairobi date +%F); fi
+          TOMORROW=$(date -d "$TODAY +1 day" +%F)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" != "false" ]; then
+            DRY=true
+          else
+            DRY=false
+          fi
+          IDS=$(TODAY="$TODAY" TOMORROW="$TOMORROW" node -e '
+            const cal = require("./content/calendar.json");
+            const byDate = (d) => cal.find((e) => e.publish_date === d);
+            const t = byDate(process.env.TODAY), tm = byDate(process.env.TOMORROW);
+            const ids = [];
+            if (t && t.status === "scheduled") ids.push(t.video_id);
+            else if (t && (t.status === "rendered" || t.status === "published") && tm && tm.status === "scheduled") ids.push(tm.video_id);
+            console.log(JSON.stringify(ids));
+          ')
+          HAS=$([ "$IDS" = "[]" ] && echo false || echo true)
+          echo "ids=$IDS" >> "$GITHUB_OUTPUT"
+          echo "has_targets=$HAS" >> "$GITHUB_OUTPUT"
+          echo "dry=$DRY" >> "$GITHUB_OUTPUT"
+          echo "### Scheduled render — plan" >> "$GITHUB_STEP_SUMMARY"
+          echo "- today (Nairobi): **$TODAY**, tomorrow: **$TOMORROW**" >> "$GITHUB_STEP_SUMMARY"
+          echo "- dry run: **$DRY**" >> "$GITHUB_STEP_SUMMARY"
+          echo "- targets: \`$IDS\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "Plan: today=$TODAY tomorrow=$TOMORROW dry=$DRY targets=$IDS"
+
+  render:
+    needs: plan
+    if: needs.plan.outputs.has_targets == 'true' && needs.plan.outputs.dry == 'false'
+    strategy:
+      fail-fast: false
+      matrix:
+        id: ${{ fromJSON(needs.plan.outputs.ids) }}
+    uses: ./.github/workflows/render.yml
+    with:
+      video_id: ${{ matrix.id }}
+
+  finalize:
+    needs: [plan, render]
+    if: always() && needs.plan.outputs.dry == 'false' && needs.plan.outputs.has_targets == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Flip status to rendered (on success)
+        if: needs.render.result == 'success'
+        run: |
+          IDS='${{ needs.plan.outputs.ids }}'
+          node -e '
+            const fs = require("fs");
+            const path = "content/calendar.json";
+            const cal = JSON.parse(fs.readFileSync(path, "utf8"));
+            const ids = JSON.parse(process.env.IDS);
+            for (const e of cal) if (ids.includes(e.video_id) && e.status === "scheduled") e.status = "rendered";
+            fs.writeFileSync(path, JSON.stringify(cal, null, 2) + "\n");
+          ' IDS="$IDS"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/calendar.json
+          git commit -m "calendar: $IDS rendered [skip ci]" || echo "nothing to commit"
+          git push
+      - name: Open/update failure issue (on failure)
+        if: needs.render.result != 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          IDS='${{ needs.plan.outputs.ids }}'
+          RUN="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          for id in $(echo "$IDS" | node -e 'const a=JSON.parse(require("fs").readFileSync(0,"utf8"));process.stdout.write(a.join(" "))'); do
+            DATE=$(node -e "const c=require('./content/calendar.json');const e=c.find(x=>x.video_id==='$id');console.log(e?e.publish_date:'?')")
+            TITLE="Render failed: $id $DATE"
+            BODY="Scheduled render failed for **$id** (publish $DATE).\n\nRun: $RUN\n\nStatus left as \`scheduled\` — the next weekday run will retry automatically."
+            NUM=$(gh issue list --search "$TITLE in:title" --state open --json number --jq '.[0].number' || echo "")
+            if [ -n "$NUM" ]; then
+              gh issue comment "$NUM" --body "Still failing. Run: $RUN"
+            else
+              printf "%b" "$BODY" | gh issue create --title "$TITLE" --body-file -
+            fi
+          done

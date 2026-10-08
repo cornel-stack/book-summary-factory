@@ -17,6 +17,17 @@ export const VIDEO = {
 export const SCENE_PADDING_FRAMES = 12; // 0.4s at 30fps
 
 /**
+ * MEASURED channel pacing constant (Phase 11). Words of narration per minute of
+ * FINAL rendered video — i.e. including scene padding + draw-ins, not raw speech.
+ * Derived empirically from the atomic-habits Phase-10 render: 1,212 narration
+ * words ÷ 8.352 min = 145.1. Use it to size a script to a target length:
+ *   target_words ≈ WORDS_PER_FINAL_MINUTE × target_minutes
+ * Longer videos trend a hair longer per word (more scenes ⇒ more padding), so
+ * this is a slight under-estimate at 30+ min — which safely favors the 30.0 floor.
+ */
+export const WORDS_PER_FINAL_MINUTE = 145;
+
+/**
  * Brand color system. Characters use ink fills + a paper-tone head area +
  * flame on exactly one accent item. marker/slate NEVER appear on characters.
  */

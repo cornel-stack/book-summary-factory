@@ -140,20 +140,33 @@ function main() {
     `Manifest: ${scenes.length} scenes, ${cursor} frames (${totalSec}s @ ${VIDEO.fps}fps)`,
   );
 
-  // Runtime guard: warn (never fail — audio is truth) if the real runtime lands
-  // outside ±12% of the script's declared target length.
-  if (script.target_minutes) {
+  // Runtime guard (Phase 11 — now HARD-FAILS, was warn-only). Every video is
+  // long-form: the build fails if the real runtime is below the 30.0-min floor
+  // OR outside ±10% of the declared target. Audio is still truth — this guards
+  // against shipping a mis-paced cut, before any render minutes are spent.
+  {
     const actualMin = cursor / VIDEO.fps / 60;
-    const lo = script.target_minutes * 0.88;
-    const hi = script.target_minutes * 1.12;
-    if (actualMin < lo || actualMin > hi) {
-      console.warn(
-        `⚠ runtime ${actualMin.toFixed(2)} min is OUTSIDE ±12% of target ${script.target_minutes} min ` +
-          `(${lo.toFixed(2)}–${hi.toFixed(2)}). Adjust word count or the "rate" field.`,
-      );
-    } else {
-      console.log(`✓ runtime ${actualMin.toFixed(2)} min is within ±12% of target ${script.target_minutes} min`);
+    const lo = script.target_minutes * 0.9;
+    const hi = script.target_minutes * 1.1;
+    const problems: string[] = [];
+    if (actualMin < 30.0) {
+      problems.push(`below the 30.0-min long-form minimum`);
     }
+    if (actualMin < lo || actualMin > hi) {
+      problems.push(
+        `outside ±10% of target ${script.target_minutes} min (${lo.toFixed(2)}–${hi.toFixed(2)})`,
+      );
+    }
+    if (problems.length > 0) {
+      console.error(
+        `\n✖ runtime guard: ${actualMin.toFixed(2)} min is ${problems.join(" and ")}.\n` +
+          `  Adjust word count (≈145 words per final minute) or the "rate" field, then rebuild.\n`,
+      );
+      process.exit(1);
+    }
+    console.log(
+      `✓ runtime ${actualMin.toFixed(2)} min — within ±10% of target ${script.target_minutes} min and ≥ 30.0 floor`,
+    );
   }
   for (const s of scenes) {
     console.log(
