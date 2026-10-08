@@ -42,6 +42,8 @@ jobs:
           cache: pip
       - run: npm ci
       - run: pip install -r requirements.txt
+      - name: Install ffmpeg (ffprobe for timing, ffmpeg for the audio track)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Narration audio (edge-tts)
         run: python pipeline/generate_audio.py "${{ inputs.video_id }}"
       - name: Timing manifest
@@ -143,6 +145,8 @@ jobs:
         with:
           path: ~/.cache/remotion
           key: remotion-browser-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - name: Install ffmpeg (concat, mux, thumbnail scale)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Concat + mux + package
         run: |
           SECONDS=0
