@@ -66,24 +66,29 @@ python3 -m venv .venv
 ## Build a video
 
 ```bash
-npm run build:video -- sample-video
+npm run build:video -- atomic-habits
 ```
 
-This runs the whole pipeline and writes `output/sample-video/`:
+This runs the whole pipeline and writes `output/atomic-habits/`:
 
 ```
-sample-video.mp4      1920x1080, 30fps
+atomic-habits.mp4     1920x1080, 30fps
 captions.srt
 thumbnail.png
-description.txt
+thumbnail-1280x720.png
+description.txt       title + auto-generated chapters + tags
 ```
+
+> Note: a 30-min video renders in ~1 hr locally. Prefer the chunked **CI
+> render** below for anything long-form; keep local builds for quick iteration.
 
 ### Individual steps (for debugging)
 
 ```bash
-.venv/bin/python pipeline/generate_audio.py sample-video
-npx tsx pipeline/build_manifest.ts sample-video
-npx tsx pipeline/build_captions.ts sample-video
+.venv/bin/python pipeline/generate_audio.py atomic-habits   # parallel edge-tts pool
+npx tsx pipeline/build_manifest.ts atomic-habits            # fails if runtime < 30 min
+npx tsx pipeline/build_captions.ts atomic-habits
+npx tsx pipeline/lint_script.ts atomic-habits               # density + collision warnings
 npm run studio        # live preview in Remotion Studio
 ```
 
@@ -143,22 +148,65 @@ secrets (edge-tts needs no API key). The render is **chunked**: the frames are
 split into N parallel jobs, then concatenated and the audio muxed.
 
 **Trigger a render:** Actions tab → **Render video** → *Run workflow* → set
-`video_id` (e.g. `atomic-habits`) and `chunks` (default `8`). Three jobs run:
-1. **prepare** — audio (edge-tts) + manifest + captions + the density lint +
-   the full audio track; uploads one `prepared-<id>` artifact and the frame count.
-2. **render** (matrix of `chunks` jobs) — each renders its frame range
+`video_id` (e.g. `atomic-habits`). Leave **`chunks` blank for auto** — the
+fan-out width is computed as `ceil(totalFrames / 2200)`, capped at **20**
+parallel jobs (a 30-min / ~56k-frame video ⇒ 20 chunks). Override only to
+force a specific width. Three jobs run:
+1. **prepare** — audio (edge-tts, parallel pool) + manifest + captions + the
+   density lint + the full audio track; uploads one `prepared-<id>` artifact,
+   the frame count, and the computed chunk count.
+2. **render** (matrix of N jobs) — each renders its frame range
    (`--frames=START-END --muted`) to a chunk; uploads it.
 3. **stitch** — concat the chunks (stream copy), mux the audio, render the
-   thumbnail, package → one artifact **`<id>-package`** (the full upload set).
+   thumbnail, package, and **publish a GitHub Release tagged `<video_id>`**
+   (plus the `<id>-package` artifact).
 
-**Download the result:** the finished run's *Artifacts* → `<id>-package`
-(mp4, SRT, thumbnails, description.txt). Per-chunk + stitch times are in the
-run's job summary. Raise `chunks` for more parallelism (≈ frames ÷ chunks per
-job at ~15 fps). **`lint.yml`** also runs on any push/PR touching `content/**`
-for fast schema + sync-phrase feedback.
+**Download the result:** the package is published to a **Release** (`Releases`
+→ `<video_id>`) — stable URLs that never expire and download fine from a phone
+— and also as the run's `<id>-package` artifact (7-day retention). Per-chunk +
+stitch + release times are in the run's job summary. **`lint.yml`** also runs on
+any push/PR touching `content/**` for fast schema + sync-phrase feedback.
 
 The **local** pipeline is unchanged — `npm run build:video -- <id>` runs the
 exact same scripts CI calls; there are no CI-only code paths.
+
+## Scheduled publishing (the content calendar)
+
+The factory ships **one video per weekday** (Mon–Fri, ~20/month) on autopilot.
+
+- **`content/calendar.json`** — the queue: `[{ video_id, publish_date
+  (YYYY-MM-DD), status: "scheduled" | "rendered" | "published" }]`.
+- **Fill a month in one command:**
+  ```bash
+  npm run calendar:fill -- --start 2026-10-12 --ids atomic-habits,deep-work,ego-is-the-enemy
+  ```
+  Assigns consecutive **weekday** dates (weekends skipped) and upserts them
+  (never clobbers an already `rendered`/`published` entry).
+- **`.github/workflows/scheduled-render.yml`** runs on cron **`47 3 * * 1-5`**
+  = **06:47 Africa/Nairobi (EAT)** every weekday — so the finished package is
+  **ready by 09:00 EAT**. Each run renders the entry whose `publish_date` is
+  **today** (Nairobi) and `scheduled`; if today's is already `rendered`, it
+  renders **tomorrow's** instead (one-day lookahead, so a failed morning
+  self-heals the next day). On success it flips the entry to `rendered` via a
+  bot commit (`[skip ci]`); on failure it opens/updates a tracking issue
+  **"Render failed: &lt;id&gt; &lt;date&gt;"** and leaves the status untouched
+  so the next day retries. Dry-run it any time: *Run workflow* →
+  `dry_run=true` (and optionally `today_override=YYYY-MM-DD`).
+
+### The producer's morning (09:00 EAT)
+
+```bash
+npm run fetch -- --today     # or: npm run fetch -- atomic-habits
+```
+
+`fetch` downloads that video's Release into
+`~/Videos/book-summary-factory/<video_id>/` (override with `FETCH_DIR`), using
+the `gh` CLI if present or plain `curl` otherwise. Then:
+
+1. Upload the `.mp4` to YouTube; paste `description.txt` (title + auto-generated
+   chapters + tags), attach `thumbnail-1280x720.png`, upload `captions.srt`.
+2. Publish, then **flip the calendar entry to `"published"`** (edit
+   `content/calendar.json`, commit) — the one manual step.
 
 ## Publishing this repo (public)
 
@@ -181,9 +229,12 @@ git push -u origin main
 ```
 
 First test run: after pushing, open **Actions → Render video → Run workflow**,
-leave `video_id=atomic-habits`, `chunks=8`, run, and download
-`atomic-habits-package` when it finishes.
+leave `video_id=atomic-habits`, `chunks` blank (auto), run, and grab the
+published Release (or the `atomic-habits-package` artifact) when it finishes.
 
 ## Not yet implemented (later phases)
 
-The content calendar/scheduler and the direct-to-YouTube upload step.
+Direct-to-YouTube upload (the producer currently uploads manually each morning —
+see *Scheduled publishing* above). Everything else — long-form scripting,
+chunked cloud render, Releases delivery, the weekday scheduler, and the local
+`fetch` command — is live.
