@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { COLORS, FONTS, LAYOUT, VIDEO } from "../theme";
+import { useBrand } from "../brand";
 import { DrawingBoard } from "../components/DrawingBoard";
 import { Stage } from "../components/Stage";
 import { Crowd, type CrowdArrangement } from "../components/Crowd";
@@ -95,6 +96,7 @@ export const CharacterScene: React.FC<{
   words: WordTiming[];
 }> = ({ visual, words }) => {
   const { fps } = useVideoConfig();
+  const brand = useBrand();
   const frame = useCurrentFrame();
   const stage: StageName = visual.stage ?? "plain";
 
@@ -102,7 +104,7 @@ export const CharacterScene: React.FC<{
   const built = visual.elements.map((el, i) => {
     const box0 = gridBox(el.at);
     const box = el.scale ? shrink(box0, el.scale) : box0;
-    const color = el.color === "accent" ? COLORS.flame : COLORS.ink;
+    const color = el.color === "accent" ? brand.accent : COLORS.ink;
     const start = syncStartFrame(words, el.sync, fps, 0);
     const key = el.id ?? `${el.kind}-${i}`;
     const flip = el.facing === "left";
@@ -234,7 +236,7 @@ export const CharacterScene: React.FC<{
   const titleOpacity = interpolate(frame, [4, 18], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.paper }}>
+    <AbsoluteFill style={{ backgroundColor: brand.paper }}>
       {/* z-order: stage → crowd → ambient reveals → title → pen heroes → front reveals → effects */}
       <Stage name={stage} frame={frame} />
       {crowdBuilt.map((b) => (

@@ -255,14 +255,24 @@ export const Scene = z.discriminatedUnion("type", [
 
 // ---------- Top-level script ----------
 
+export const BRAND_IDS = ["readlark", "percuriam"] as const;
+export const FORMATS = ["longform", "short"] as const;
+
 export const Script = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
-  book: z.object({
-    title: z.string().min(1),
-    author: z.string().min(1),
-    year: z.number().int().optional(),
-  }),
+  // Which app brand this content belongs to (brand layer: config/brands.ts).
+  brand: z.enum(BRAND_IDS).default("readlark"),
+  // longform = 16:9 Main composition; short = 9:16 vertical (30–60s), burned-in captions.
+  format: z.enum(FORMATS).default("longform"),
+  // The source book (ReadLark). Optional — PerCuriam (law) content has no book.
+  book: z
+    .object({
+      title: z.string().min(1),
+      author: z.string().min(1),
+      year: z.number().int().optional(),
+    })
+    .optional(),
   description: z.string().min(1),
   tags: z.array(z.string()).default([]),
   thumbnail: z.object({
@@ -277,25 +287,24 @@ export const Script = z.object({
   // Narration pace: -18% (~150 wpm) is the confirmed channel default (set in
   // generate_audio.py); override here per video if needed.
   rate: z.string().optional(),
-  // Target length (minutes). REQUIRED, minimum 30 — the channel ships long-form
-  // only (Phase 11). build_manifest FAILS the build if the real runtime lands
-  // below 30.0 min or outside ±10% of this target (see pipeline/build_manifest.ts).
-  target_minutes: z.number().min(30, {
-    message: "every video is long-form: target_minutes must be ≥ 30",
-  }),
+  // Target length (minutes) for longform. Optional — the real enforcement lives
+  // in build_manifest.ts, which reads the BRAND's min_minutes policy (ReadLark
+  // 30, PerCuriam 13) and the brand default target. Shorts ignore this (30–60s).
+  target_minutes: z.number().positive().optional(),
+  // On-screen hook line for a short (first ~2s claim/question). Longform ignores.
+  short_hook: z.string().optional(),
   // Channel template metadata — read by the script generator + future tooling.
   template: z
     .object({
-      framing: z.enum(["book-structure", "listicle"]).default("book-structure"),
+      framing: z.enum(["book-structure", "listicle", "explainer"]).default("book-structure"),
       hook: z.enum(["direct", "cold-open"]).default("direct"),
     })
     .default({ framing: "book-structure", hook: "direct" }),
   scenes: z.array(Scene).min(1),
 }).superRefine((s, ctx) => {
-  // Template consistency: book-structure ⇒ the book must be named (title word
-  // or author surname) in scene 1 — or within the first 2 scenes for a cold-open
-  // (where scene 1 is a mini-story that intentionally withholds the book).
-  if (s.template.framing === "book-structure") {
+  // Long-form structural rules only apply to longform book-structure videos
+  // that declare a book (PerCuriam law content uses "explainer" framing and no book).
+  if (s.format === "longform" && s.template.framing === "book-structure" && s.book) {
     const lookahead = s.template.hook === "cold-open" ? 2 : 1;
     const n = s.scenes.slice(0, lookahead).map((sc) => sc.narration).join(" ").toLowerCase();
     const titleWords = s.book.title.toLowerCase().split(/\s+/).filter((w) => w.length > 3);

@@ -2,6 +2,7 @@ import { QuietBackdrop } from "../components/QuietBackdrop";
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { COLORS, FONTS, LAYOUT, VIDEO } from "../theme";
+import { useBrand } from "../brand";
 import { DrawingBoard } from "../components/DrawingBoard";
 import { castBoardElement } from "../components/CastCharacter";
 import { quoteMark, underline } from "../drawing/icons";
@@ -22,6 +23,7 @@ export const QuoteCard: React.FC<{
   visual: { quote: string; attribution: string; cast?: CastId };
 }> = ({ visual }) => {
   const frame = useCurrentFrame();
+  const brand = useBrand();
   const cx = VIDEO.width / 2;
   const cy = VIDEO.height / 2;
   const lines = toLines(visual.quote);
@@ -35,7 +37,7 @@ export const QuoteCard: React.FC<{
       shape: quoteMark(),
       box: { x: LAYOUT.safeMargin + 40, y: cy - 300, w: 260, h: 165 },
       startFrame: 0,
-      strokeColor: COLORS.flameSoft,
+      strokeColor: brand.highlight,
       strokeWidth: 5,
     },
     {
@@ -43,7 +45,7 @@ export const QuoteCard: React.FC<{
       shape: underline(attribW),
       box: { x: cx - attribW / 2, y: cy + 250, w: attribW, h: 34 },
       startFrame: lastLineFade,
-      strokeColor: COLORS.flame,
+      strokeColor: brand.accent,
       strokeWidth: 7,
     },
   ];
@@ -71,7 +73,7 @@ export const QuoteCard: React.FC<{
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.paper }}>
+    <AbsoluteFill style={{ backgroundColor: brand.paper }}>
       <QuietBackdrop />
       <DrawingBoard elements={elements} />
       <div
@@ -107,7 +109,7 @@ export const QuoteCard: React.FC<{
           textAlign: "center",
           fontFamily: FONTS.label,
           fontSize: LAYOUT.attributionSize,
-          color: COLORS.flame,
+          color: brand.accent,
           opacity: attribOpacity,
         }}
       >

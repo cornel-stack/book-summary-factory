@@ -12,7 +12,7 @@
  * This is a thin sequencer — each step is its own single-purpose script.
  */
 import { execFileSync } from "node:child_process";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -29,6 +29,10 @@ if (!existsSync(scriptJson)) {
   console.error(`✖ No script at ${scriptJson}`);
   process.exit(1);
 }
+
+// Format dispatch: shorts render the vertical "Short" composition and get
+// per-platform metadata; long-form renders "Main" + a thumbnail + chapters.
+const isShort = (JSON.parse(readFileSync(scriptJson, "utf8")).format ?? "longform") === "short";
 
 // Prefer the project virtualenv's Python if present (edge-tts lives there).
 const venvPython = join(REPO, ".venv", "bin", "python");
@@ -57,41 +61,31 @@ run("2/6 timing manifest", "npx", ["tsx", "pipeline/build_manifest.ts", videoId]
 run("2b/6 script lint", "npx", ["tsx", "pipeline/lint_script.ts", videoId]);
 run("3/6 captions (SRT)", "npx", ["tsx", "pipeline/build_captions.ts", videoId]);
 
-run("4/6 render MP4", "npx", [
-  "remotion",
-  "render",
-  entry,
-  "Main",
-  mp4Out,
-  `--props=${propsPath}`,
-  `--public-dir=${publicDir}`,
-]);
+if (isShort) {
+  // Vertical short: one render pass of the "Short" composition, platform metadata.
+  run("4/5 render short MP4", "npx", [
+    "remotion", "render", entry, "Short", mp4Out,
+    `--props=${propsPath}`, `--public-dir=${publicDir}`,
+  ]);
+  run("5/5 package short", "npx", ["tsx", "pipeline/package_short.ts", videoId]);
+} else {
+  run("4/6 render MP4", "npx", [
+    "remotion", "render", entry, "Main", mp4Out,
+    `--props=${propsPath}`, `--public-dir=${publicDir}`,
+  ]);
 
-run("5/6 render thumbnail", "npx", [
-  "remotion",
-  "still",
-  entry,
-  "Thumbnail",
-  pngOut,
-  `--props=${propsPath}`,
-  `--public-dir=${publicDir}`,
-]);
+  run("5/6 render thumbnail", "npx", [
+    "remotion", "still", entry, "Thumbnail", pngOut,
+    `--props=${propsPath}`, `--public-dir=${publicDir}`,
+  ]);
 
-// YouTube's native thumbnail size: downscale the 1080p still to 1280×720.
-run("5b/6 thumbnail 1280×720", "ffmpeg", [
-  "-y",
-  "-i",
-  pngOut,
-  "-vf",
-  "scale=1280:720:flags=lanczos",
-  "-update",
-  "1",
-  "-frames:v",
-  "1",
-  png720,
-]);
+  // YouTube's native thumbnail size: downscale the 1080p still to 1280×720.
+  run("5b/6 thumbnail 1280×720", "ffmpeg", [
+    "-y", "-i", pngOut, "-vf", "scale=1280:720:flags=lanczos", "-update", "1", "-frames:v", "1", png720,
+  ]);
 
-run("6/6 package", "npx", ["tsx", "pipeline/package.ts", videoId]);
+  run("6/6 package", "npx", ["tsx", "pipeline/package.ts", videoId]);
+}
 
 console.log(
   `\n✅ Done: output/${videoId}/  (total ${((Date.now() - t0) / 1000).toFixed(1)}s)`,

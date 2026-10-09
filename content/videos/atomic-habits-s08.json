@@ -1,0 +1,149 @@
+{
+  "id": "atomic-habits-s08",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Design Your Environment — Atomic Habits",
+  "short_hook": "Design Your Environment",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "This is why design your environment quietly decides everything. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "design your environment"
+  ],
+  "thumbnail": {
+    "headline": "Design Your Environment",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "door"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "This is why design your environment quietly decides everything. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Here is a liberating idea. You do not need more willpower. You need a better room. Clear argues that your environment is the invisible hand that shapes your behavior, far more than discipline ever will. People with the best self control are not secretly stronger. They simply spend less time in tempting situations, because they quietly designed their world so the temptation is rarely even there.",
+      "type": "character_scene",
+      "visual": {
+        "title": "The invisible hand",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "better room"
+                }
+              }
+            ],
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "design it"
+          },
+          {
+            "kind": "door",
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "your world",
+            "sync": {
+              "phrase": "your environment"
+            }
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "state": "on",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "accent",
+            "sync": {
+              "phrase": "invisible hand"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

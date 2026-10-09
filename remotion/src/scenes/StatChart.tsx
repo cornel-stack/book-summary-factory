@@ -2,6 +2,7 @@ import { QuietBackdrop } from "../components/QuietBackdrop";
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { COLORS, FONTS, LAYOUT, VIDEO } from "../theme";
+import { useBrand } from "../brand";
 import { DrawingBoard } from "../components/DrawingBoard";
 import { circlePath } from "../drawing/stick";
 import { syncStartFrame } from "../drawing/layout";
@@ -20,6 +21,7 @@ export const StatChart: React.FC<{
   words: WordTiming[];
 }> = ({ visual, words }) => {
   const { fps } = useVideoConfig();
+  const brand = useBrand();
   const frame = useCurrentFrame();
   const pts = visual.datapoints;
 
@@ -61,7 +63,7 @@ export const StatChart: React.FC<{
         shape: full([`M ${cx - bw / 2} ${y1} L ${cx - bw / 2} ${top} L ${cx + bw / 2} ${top} L ${cx + bw / 2} ${y1}`]),
         box: fullBox,
         startFrame: syncStartFrame(words, p.sync, fps, 0),
-        strokeColor: COLORS.flame,
+        strokeColor: brand.accent,
         strokeWidth: 6,
         label: String(p.value),
         labelAt: { x: cx, y: top - 48 },
@@ -80,7 +82,7 @@ export const StatChart: React.FC<{
         shape: full(strokes),
         box: fullBox,
         startFrame: syncStartFrame(words, p.sync, fps, 0),
-        strokeColor: COLORS.flame,
+        strokeColor: brand.accent,
         strokeWidth: 7,
         label: String(p.value),
         labelAt: { x: cx, y: cy - 52 },
@@ -99,7 +101,7 @@ export const StatChart: React.FC<{
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.paper }}>
+    <AbsoluteFill style={{ backgroundColor: brand.paper }}>
       <QuietBackdrop />
       <div
         style={{

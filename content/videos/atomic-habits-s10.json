@@ -1,0 +1,137 @@
+{
+  "id": "atomic-habits-s10",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Make It Satisfying — Atomic Habits",
+  "short_hook": "Make It Satisfying",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "The fastest way to understand make it satisfying, in sixty seconds. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "make it satisfying"
+  ],
+  "thumbnail": {
+    "headline": "Make It Satisfying",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "calendar"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "The fastest way to understand make it satisfying, in sixty seconds. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "The catch here is genuinely cruel. Good habits usually pay off far in the future, while bad habits feel great right now. Our brains were built to prize the immediate reward. So you have to bridge that gap. Add a small reward you can actually feel today, something that tells your brain, right now, that this new behavior was worth repeating.",
+      "type": "character_scene",
+      "visual": {
+        "title": "Reward it now",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "small reward"
+                }
+              }
+            ],
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "worth repeating"
+                }
+              }
+            ],
+            "tier": "hero",
+            "color": "ink",
+            "label": "feel it today"
+          },
+          {
+            "kind": "gift",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "the reward",
+            "sync": {
+              "phrase": "small reward"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

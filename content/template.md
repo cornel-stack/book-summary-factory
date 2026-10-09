@@ -366,3 +366,52 @@ changes.
       ≥1 seated-desk scene; ≥1 held prop; ≥3 stat_chart/list moments.
 - [ ] Labels within word limits (figure ≤6, list ≤5, recap ≤4, headline ≤5).
 - [ ] `description` is prose only — chapters are auto-generated (§8b).
+
+---
+
+## §percuriam — the PerCuriam long-form law template (Phase 13)
+
+PerCuriam long-form is the **same skeleton, smaller**: ~**15 minutes** (band
+13–17 min, ~2,100–2,500 words at channel pace). Brand layer = PerCuriam (paper
+`#FAF7F2`, navy accents, amber highlight) including the thumbnail. Schema:
+`brand:"percuriam"`, `format:"longform"`, `template.framing:"explainer"`, **no
+`book`** (law content isn't a book), `target_minutes: 15`.
+
+### Skeleton
+```
+HOOK           1 scene   scenario or misconception — Max as the confused everyman
+  → disclaimer           spoken ONCE in the intro: "this is education, not legal advice"
+  → CTA (card)
+INTRO          1 scene   why this matters / what you'll learn
+PART 1         title + 2–3 SECTIONS
+  MID-RECAP
+PART 2         RE-HOOK + title + 2–3 SECTIONS   (5–6 SECTIONS total across parts)
+  MID-RECAP
+  (PART 3 optional)
+FINAL RECAP + CLOSE + CTA (end-card carries the disclaimer via the brand layer)
+```
+
+- A **SECTION** = one legal concept or "right": **rule in plain words → a
+  story/scenario acted by the cast → a "what to actually do" takeaway** (chip
+  style). This is PerCuriam's atomic unit (mirrors a book "principle").
+- **Re-hooks at part boundaries** (same formulas as §3b).
+- Disclaimer discipline: spoken once in the intro, shown on the end-card (brand),
+  and in every description (`package.ts`). **Never present a state-specific rule
+  as universal** — say "in most US states" / "varies by state" where it does.
+
+### Episode formats (rotate via topics.json `format_note`)
+- **Deep dive** — single topic, exhaustive: "Your complete guide to security
+  deposits." Parts = stages of the topic (what the law says → your rights → the
+  landlord's limits → how to get it back → small claims).
+- **Listicle** — "7 rights you didn't know you had." Each right is a section;
+  parts group them (3 + 4). Punchy, high-retention.
+
+### Word math (same constant)
+~145 words per final minute → **15 min ≈ 2,175 words** (band 2,100–2,500). The
+runtime guard reads the PerCuriam policy (`min_minutes: 13`, default target 15)
+and hard-fails below 13 min or outside ±10% of target.
+
+### Shorts come from here
+The 3 daily PerCuriam shorts are **derived** from that day's/week's long-form
+(`derive_shorts.ts`, one short per section), topped up from the `short`-scope
+topics when a video yields fewer than three.

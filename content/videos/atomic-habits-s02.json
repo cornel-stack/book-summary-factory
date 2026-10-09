@@ -1,0 +1,152 @@
+{
+  "id": "atomic-habits-s02",
+  "brand": "readlark",
+  "format": "short",
+  "title": "The Valley of Disappointment — Atomic Habits",
+  "short_hook": "The Valley of Disappointment",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "Most people get the valley of disappointment completely backwards. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "the valley of disappointment"
+  ],
+  "thumbnail": {
+    "headline": "The Valley of Disappointment",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "mountain"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Most people get the valley of disappointment completely backwards. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Here is the trap that stops almost everyone. You put in the work for weeks, and nothing visible seems to happen. Effort and results split apart, and you feel completely stuck. So picture an ice cube sitting in a freezing room. Twenty five degrees, twenty six, twenty seven. Still frozen solid. Nothing. Then at thirty two, one more single degree, and suddenly it cracks and begins to melt.",
+      "type": "character_scene",
+      "visual": {
+        "title": "The valley",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "path",
+            "at": {
+              "col": 2,
+              "row": 2,
+              "w": 8,
+              "h": 4
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "ambient",
+            "color": "ink"
+          },
+          {
+            "kind": "figure",
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "poses": [
+              "facepalm",
+              "standing"
+            ],
+            "expressions": [
+              "tired",
+              {
+                "value": "worried",
+                "sync": {
+                  "phrase": "nothing visible"
+                }
+              }
+            ],
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "effects": [
+              {
+                "kind": "sweat_drop",
+                "sync": {
+                  "phrase": "nothing visible"
+                }
+              }
+            ],
+            "tier": "hero",
+            "color": "ink",
+            "label": "stuck"
+          },
+          {
+            "kind": "clock",
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "work for weeks"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

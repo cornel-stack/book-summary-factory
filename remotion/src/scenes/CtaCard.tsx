@@ -2,6 +2,7 @@ import { QuietBackdrop } from "../components/QuietBackdrop";
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { COLORS, FONTS, LAYOUT, VIDEO } from "../theme";
+import { useBrand } from "../brand";
 import { DrawingBoard } from "../components/DrawingBoard";
 import { underline } from "../drawing/icons";
 import { propShape } from "../drawing/props";
@@ -14,6 +15,7 @@ import type { BoardElement } from "../drawing/types";
  */
 export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner" } }> = ({ visual }) => {
   const frame = useCurrentFrame();
+  const brand = useBrand();
   const corner = visual.style === "corner";
   const cx = VIDEO.width / 2;
   const cy = VIDEO.height / 2;
@@ -26,7 +28,7 @@ export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner
           shape: propShape("arrow", { variant: "down" }),
           box: { x: 150, y: VIDEO.height - 360, w: 120, h: 150 },
           startFrame: 4,
-          strokeColor: COLORS.flame,
+          strokeColor: brand.accent,
           strokeWidth: 8,
         },
       ]
@@ -36,7 +38,7 @@ export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner
           shape: propShape("arrow", { variant: "down" }),
           box: { x: cx - 70, y: cy - 250, w: 140, h: 170 },
           startFrame: 4,
-          strokeColor: COLORS.flame,
+          strokeColor: brand.accent,
           strokeWidth: 9,
         },
         {
@@ -44,7 +46,7 @@ export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner
           shape: underline(w),
           box: { x: cx - w / 2, y: cy + 110, w, h: 40 },
           startFrame: 22,
-          strokeColor: COLORS.flame,
+          strokeColor: brand.accent,
           strokeWidth: 9,
         },
       ];
@@ -52,7 +54,7 @@ export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner
   const op = interpolate(frame, [6, 20], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.paper }}>
+    <AbsoluteFill style={{ backgroundColor: brand.paper }}>
       <QuietBackdrop />
       <DrawingBoard elements={elements} />
       <div

@@ -1,0 +1,135 @@
+{
+  "id": "percuriam-security-deposits-s03",
+  "brand": "percuriam",
+  "format": "short",
+  "title": "The Return Deadline — Getting Your Security Deposit Back — The Complete Guide",
+  "short_hook": "The Return Deadline",
+  "description": "This is why the return deadline quietly decides everything. A 60-second idea from Getting Your Security Deposit Back — The Complete Guide.",
+  "tags": [
+    "security deposit",
+    "renters rights",
+    "tenant rights",
+    "landlord tenant law",
+    "the return deadline"
+  ],
+  "thumbnail": {
+    "headline": "The Return Deadline",
+    "cast": "max",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "calendar"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "explainer",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "This is why the return deadline quietly decides everything. It comes straight from Getting Your Security Deposit Back — The Complete Guide.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Now for the part that varies the most. A landlord cannot sit on your deposit forever. In most US states there is a hard deadline to return it, often within a set number of days after you move out, along with that itemized statement. But the exact clock varies by state. In some places it is around fourteen days, in others closer to thirty, and a few differ again. The only number that matters is the one in your state's law.",
+      "type": "character_scene",
+      "visual": {
+        "title": "The clock starts",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "sage",
+            "poses": [
+              "presenting",
+              "pointing"
+            ],
+            "expression": "happy",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "a hard deadline"
+          },
+          {
+            "kind": "calendar",
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "varies by state",
+            "sync": {
+              "phrase": "varies by state"
+            }
+          },
+          {
+            "kind": "clock",
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "set number of days"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

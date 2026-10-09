@@ -1,0 +1,152 @@
+{
+  "id": "atomic-habits-s06",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Make It Obvious — Atomic Habits",
+  "short_hook": "Make It Obvious",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "Here's the one idea that makes make it obvious finally click. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "make it obvious"
+  ],
+  "thumbnail": {
+    "headline": "Make It Obvious",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "phone"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Here's the one idea that makes make it obvious finally click. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Sage explains the first law. Every habit starts with a cue, a trigger your brain notices. A snack left on the counter. A phone glowing on the desk. Then temptation strolls in, right on schedule, offering the easy bad habit. The fix is simple to say. Make the good cues loud and impossible to miss, and make the bad cues quietly disappear.",
+      "type": "character_scene",
+      "visual": {
+        "title": "Design your cues",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 0,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "sage",
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "the teacher"
+          },
+          {
+            "kind": "figure",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "max",
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expression": "happy",
+            "facing": "left",
+            "seat": "chair",
+            "enter": "walk",
+            "effects": [
+              {
+                "kind": "motion_lines",
+                "sync": {
+                  "phrase": "temptation strolls in"
+                }
+              }
+            ],
+            "tier": "hero",
+            "color": "ink",
+            "label": "temptation",
+            "sync": {
+              "phrase": "temptation strolls in"
+            }
+          },
+          {
+            "kind": "phone",
+            "at": {
+              "col": 5,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "phone glowing"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

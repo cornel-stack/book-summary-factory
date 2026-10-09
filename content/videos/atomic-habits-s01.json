@@ -1,0 +1,155 @@
+{
+  "id": "atomic-habits-s01",
+  "brand": "readlark",
+  "format": "short",
+  "title": "The Compound Curve — Atomic Habits",
+  "short_hook": "The Compound Curve",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "Here's the one idea that makes the compound curve finally click. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "the compound curve"
+  ],
+  "thumbnail": {
+    "headline": "The Compound Curve",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "snowball"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Here's the one idea that makes the compound curve finally click. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Now flip it, because the math cuts both ways. One percent worse every day, repeated for a year, does not just stall you. It drags you down toward nearly nothing. This is the hidden danger of small choices. A skipped workout, one more late night, a tiny shortcut, each so minor you barely notice. But compounded in the wrong direction, they quietly hollow you out while you tell yourself it is fine.",
+      "type": "character_scene",
+      "visual": {
+        "title": "The other direction",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "poses": [
+              "standing"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "worried",
+                "sync": {
+                  "phrase": "wrong direction"
+                }
+              }
+            ],
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "effects": [
+              {
+                "kind": "sweat_drop",
+                "sync": {
+                  "phrase": "nearly nothing"
+                }
+              }
+            ],
+            "tier": "hero",
+            "color": "ink",
+            "label": "the drift"
+          },
+          {
+            "kind": "wall",
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "the drift",
+            "sync": {
+              "phrase": "drags you down"
+            }
+          },
+          {
+            "kind": "bed",
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "late night"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

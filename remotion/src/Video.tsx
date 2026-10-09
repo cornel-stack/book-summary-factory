@@ -2,9 +2,10 @@ import React from "react";
 import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import type { RenderProps } from "./schema";
 import { SceneRenderer } from "./scenes";
-import { COLORS } from "./theme";
 import { propShape, type PropKind } from "./drawing/props";
 import { fillColor } from "./components/CastFigure";
+import { BrandProvider } from "./brand";
+import { getBrand } from "../../config/brands";
 
 /** Board memory: small takeaway icons from the current part's principles,
  *  accumulated along the bottom edge (faded, never hand-drawn). */
@@ -62,24 +63,28 @@ export const Video: React.FC<RenderProps> = ({ script, manifest }) => {
     memByScene.set(s.id, acc);
   }
 
+  const brand = getBrand(script.brand);
+
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.paper }}>
-      {manifest.scenes.map((m) => {
-        const scene = byId.get(m.id);
-        if (!scene) return null;
-        return (
-          <Sequence
-            key={m.id}
-            from={m.startFrame}
-            durationInFrames={m.durationInFrames}
-            name={`${m.id} (${m.type})`}
-          >
-            <Audio src={staticFile(m.audioFile)} />
-            <SceneRenderer scene={scene} words={m.words} />
-            <BoardMemory icons={memByScene.get(m.id) ?? []} />
-          </Sequence>
-        );
-      })}
-    </AbsoluteFill>
+    <BrandProvider brand={script.brand}>
+      <AbsoluteFill style={{ backgroundColor: brand.paper }}>
+        {manifest.scenes.map((m) => {
+          const scene = byId.get(m.id);
+          if (!scene) return null;
+          return (
+            <Sequence
+              key={m.id}
+              from={m.startFrame}
+              durationInFrames={m.durationInFrames}
+              name={`${m.id} (${m.type})`}
+            >
+              <Audio src={staticFile(m.audioFile)} />
+              <SceneRenderer scene={scene} words={m.words} />
+              <BoardMemory icons={memByScene.get(m.id) ?? []} />
+            </Sequence>
+          );
+        })}
+      </AbsoluteFill>
+    </BrandProvider>
   );
 };

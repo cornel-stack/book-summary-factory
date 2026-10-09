@@ -23,8 +23,9 @@ import {
   type ManifestScene,
   type WordTiming,
 } from "../remotion/src/schema.js";
-import { VIDEO, SCENE_PADDING_FRAMES } from "../remotion/src/theme.js";
+import { VIDEO, VIDEO_VERTICAL, SCENE_PADDING_FRAMES } from "../remotion/src/theme.js";
 import { resolvePhraseTime } from "../remotion/src/drawing/sync.js";
+import { getBrand } from "../config/brands.js";
 
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -119,11 +120,14 @@ function main() {
     };
   });
 
+  // Shorts render at 9:16; everything else at 16:9. The composition reads these
+  // dims via calculateMetadata, so the manifest must carry the right ones.
+  const dims = script.format === "short" ? VIDEO_VERTICAL : VIDEO;
   const manifest: Manifest = {
     videoId,
-    fps: VIDEO.fps,
-    width: VIDEO.width,
-    height: VIDEO.height,
+    fps: dims.fps,
+    width: dims.width,
+    height: dims.height,
     totalDurationInFrames: cursor,
     scenes,
   };
@@ -140,33 +144,47 @@ function main() {
     `Manifest: ${scenes.length} scenes, ${cursor} frames (${totalSec}s @ ${VIDEO.fps}fps)`,
   );
 
-  // Runtime guard (Phase 11 — now HARD-FAILS, was warn-only). Every video is
-  // long-form: the build fails if the real runtime is below the 30.0-min floor
-  // OR outside ±10% of the declared target. Audio is still truth — this guards
-  // against shipping a mis-paced cut, before any render minutes are spent.
+  // Runtime guard (Phase 13 — brand-aware, HARD-FAILS). The policy comes from the
+  // BRAND (config/brands.ts), not a global constant: ReadLark long-form ≥ 30 min,
+  // PerCuriam long-form ≥ 13 min (default target 15). Shorts must land 20–70s
+  // (one 30–60s clip). Audio is truth — this guards a mis-paced cut before any
+  // render minutes are spent.
   {
+    const brand = getBrand(script.brand);
     const actualMin = cursor / VIDEO.fps / 60;
-    const lo = script.target_minutes * 0.9;
-    const hi = script.target_minutes * 1.1;
+    const actualSec = cursor / VIDEO.fps;
     const problems: string[] = [];
-    if (actualMin < 30.0) {
-      problems.push(`below the 30.0-min long-form minimum`);
-    }
-    if (actualMin < lo || actualMin > hi) {
-      problems.push(
-        `outside ±10% of target ${script.target_minutes} min (${lo.toFixed(2)}–${hi.toFixed(2)})`,
+
+    if (script.format === "short") {
+      if (actualSec < 20 || actualSec > 70) {
+        problems.push(`short is ${actualSec.toFixed(1)}s — outside the 20–70s window (aim 30–60s)`);
+      }
+      if (problems.length) {
+        console.error(`\n✖ runtime guard (${brand.id} short): ${problems.join("; ")}.\n  Trim or expand the narration.\n`);
+        process.exit(1);
+      }
+      console.log(`✓ short runtime ${actualSec.toFixed(1)}s (${brand.id}) — within the 30–60s band`);
+    } else {
+      const target = script.target_minutes ?? brand.default_target_minutes;
+      const lo = target * 0.9;
+      const hi = target * 1.1;
+      if (actualMin < brand.min_minutes) {
+        problems.push(`below the ${brand.id} long-form minimum of ${brand.min_minutes} min`);
+      }
+      if (actualMin < lo || actualMin > hi) {
+        problems.push(`outside ±10% of target ${target} min (${lo.toFixed(2)}–${hi.toFixed(2)})`);
+      }
+      if (problems.length > 0) {
+        console.error(
+          `\n✖ runtime guard (${brand.id}): ${actualMin.toFixed(2)} min is ${problems.join(" and ")}.\n` +
+            `  Adjust word count (≈145 words per final minute) or the "rate" field, then rebuild.\n`,
+        );
+        process.exit(1);
+      }
+      console.log(
+        `✓ runtime ${actualMin.toFixed(2)} min — ${brand.id}, within ±10% of target ${target} min and ≥ ${brand.min_minutes} floor`,
       );
     }
-    if (problems.length > 0) {
-      console.error(
-        `\n✖ runtime guard: ${actualMin.toFixed(2)} min is ${problems.join(" and ")}.\n` +
-          `  Adjust word count (≈145 words per final minute) or the "rate" field, then rebuild.\n`,
-      );
-      process.exit(1);
-    }
-    console.log(
-      `✓ runtime ${actualMin.toFixed(2)} min — within ±10% of target ${script.target_minutes} min and ≥ 30.0 floor`,
-    );
   }
   for (const s of scenes) {
     console.log(

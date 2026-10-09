@@ -1,0 +1,568 @@
+[
+  {
+    "id": "traffic-stop-rights",
+    "title": "Your Rights at a Traffic Stop",
+    "scope": "both",
+    "format_note": "deep dive",
+    "hook_angle": "Max gets pulled over and starts explaining his whole life story before the officer even asks a question.",
+    "key_points": [
+      "You must show license, registration, and proof of insurance when asked, but you can politely decline to answer questions beyond that.",
+      "You can ask 'Am I free to go?' and whether you're being detained, though whether police need a warrant to search your car varies by situation.",
+      "Staying calm and keeping your hands visible protects you more than arguing on the roadside, where you can't win the legal fight anyway."
+    ],
+    "sections": [
+      "The duty to identify yourself",
+      "The right to remain silent",
+      "Consent searches vs. probable cause",
+      "The difference between detention and arrest",
+      "Why you fight the ticket in court, not the street",
+      "Recording the police in public"
+    ]
+  },
+  {
+    "id": "security-deposits",
+    "title": "Getting Your Security Deposit Back",
+    "scope": "both",
+    "format_note": "listicle",
+    "hook_angle": "Max assumes his landlord can keep the deposit for 'normal wear and tear' like faded paint, which is usually not allowed.",
+    "key_points": [
+      "Landlords can deduct for actual damage beyond normal wear and tear, not for ordinary aging of the unit.",
+      "Most US states set a deadline (often 14 to 30 days, varies by state) for returning the deposit with an itemized list of deductions.",
+      "Documenting the unit with photos at move-in and move-out is your strongest evidence if there's a dispute."
+    ],
+    "sections": [
+      "Damage vs. normal wear and tear",
+      "The itemized deduction statement",
+      "State deadlines for returning your money",
+      "Move-in and move-out photo evidence",
+      "What to do when a landlord won't pay",
+      "Penalties landlords face for bad-faith withholding"
+    ]
+  },
+  {
+    "id": "small-claims-court",
+    "title": "How Small Claims Court Actually Works",
+    "scope": "longform",
+    "format_note": "deep dive",
+    "hook_angle": "Max thinks he needs to hire an expensive lawyer to sue his contractor for $3,000, when small claims is built for exactly this.",
+    "key_points": [
+      "Small claims court handles money disputes under a dollar limit that varies by state (often $2,500 to $25,000).",
+      "You usually don't need a lawyer, and in many states lawyers aren't even allowed to appear.",
+      "Winning a judgment and actually collecting the money are two different steps, and collection is often the harder one."
+    ],
+    "sections": [
+      "What small claims can and can't handle",
+      "Dollar limits that vary by state",
+      "Filing and serving the other party",
+      "Preparing your evidence and your story",
+      "Your day in court",
+      "Collecting on a judgment you win"
+    ]
+  },
+  {
+    "id": "subscription-traps",
+    "title": "Gym and Subscription Contract Traps",
+    "scope": "both",
+    "format_note": "listicle",
+    "hook_angle": "Max signed up for a 'free trial' and got charged for a year because he missed the auto-renewal he never noticed.",
+    "key_points": [
+      "Auto-renewal and negative-option billing laws require clear disclosure and easy cancellation in many US states.",
+      "Gym contracts often have cooling-off cancellation windows and must allow cancellation for relocation or disability in some states.",
+      "Disputing an unauthorized recurring charge with your card issuer is a real and powerful backup tool."
+    ],
+    "sections": [
+      "How auto-renewal clauses hide the ball",
+      "State cooling-off and cancellation rights",
+      "The 'click to cancel' rules",
+      "Canceling gym contracts for moving or injury",
+      "Chargebacks as a last resort",
+      "Spotting red flags before you sign"
+    ]
+  },
+  {
+    "id": "product-warranties",
+    "title": "Product Warranties Explained",
+    "scope": "short",
+    "hook_angle": "Max is told his broken blender isn't covered because he didn't mail in the warranty card, which usually isn't required.",
+    "key_points": [
+      "Express warranties are promises the seller makes; implied warranties of merchantability come automatically unless clearly disclaimed.",
+      "A federal law (Magnuson-Moss) says a company generally can't void your warranty just because you used third-party parts.",
+      "'As is' sales can waive implied warranties in many states, so read the sticker before you buy."
+    ]
+  },
+  {
+    "id": "at-will-employment",
+    "title": "At-Will Employment and Wrongful Termination",
+    "scope": "both",
+    "format_note": "deep dive",
+    "hook_angle": "Max believes he can only be fired 'for a good reason,' but most US employment is at-will, meaning either side can end it almost anytime.",
+    "key_points": [
+      "In almost every US state, employment is at-will, so you can be fired for any reason or no reason, as long as it isn't illegal.",
+      "Illegal reasons include firing based on race, sex, religion, age, disability, or in retaliation for protected activity.",
+      "A written contract, union agreement, or company policy can override the at-will default."
+    ],
+    "sections": [
+      "What 'at-will' really means",
+      "The illegal reasons that create exceptions",
+      "Retaliation and whistleblower protection",
+      "Contracts and handbooks that change the rules",
+      "Public-policy exceptions (varies by state)",
+      "What counts as proof of wrongful termination"
+    ]
+  },
+  {
+    "id": "miranda-myths",
+    "title": "Miranda Rights Myths Debunked",
+    "scope": "short",
+    "hook_angle": "Max thinks his case gets thrown out because the officer didn't read him his rights the second the cuffs went on.",
+    "key_points": [
+      "Miranda warnings are only required before custodial interrogation, not at the moment of every arrest.",
+      "If police don't read them when required, the usual remedy is that your statements can be suppressed, not that the whole case vanishes.",
+      "You have to clearly invoke the right to silence or a lawyer; staying quiet alone may not be enough."
+    ]
+  },
+  {
+    "id": "pressing-charges",
+    "title": "What 'Pressing Charges' Really Means",
+    "scope": "short",
+    "hook_angle": "Max threatens to 'press charges' on his neighbor, not realizing that decision belongs to the prosecutor, not to him.",
+    "key_points": [
+      "Victims report crimes, but the government (a prosecutor) decides whether to file criminal charges.",
+      "A victim often can't simply 'drop' charges once the state decides to pursue a case.",
+      "Criminal cases are brought by the state; if you want money, that's usually a separate civil lawsuit."
+    ]
+  },
+  {
+    "id": "reading-a-lease",
+    "title": "Reading Your Lease in Plain English",
+    "scope": "short",
+    "hook_angle": "Max signs a lease without reading it and later learns he agreed to pay for all repairs and waive his right to sue.",
+    "key_points": [
+      "Key clauses to find: rent and late fees, who handles repairs, entry notice, and early-termination penalties.",
+      "Some lease clauses are unenforceable even if you signed them, because state law overrides them.",
+      "Verbal promises from a landlord usually don't count unless they're written into the lease."
+    ]
+  },
+  {
+    "id": "eviction-basics",
+    "title": "Tenant Rights and Eviction Basics",
+    "scope": "both",
+    "format_note": "deep dive",
+    "hook_angle": "Max comes home to find the locks changed and his stuff on the curb, which is almost always illegal 'self-help' eviction.",
+    "key_points": [
+      "Landlords must go through a court process to evict; changing locks or shutting off utilities to force you out is illegal in virtually every state.",
+      "You're generally entitled to written notice and a chance to respond before a judge can order you out.",
+      "Notice periods and allowable reasons for eviction vary by state and sometimes by city."
+    ],
+    "sections": [
+      "Why self-help eviction is illegal",
+      "The required written notice",
+      "The court hearing and your defenses",
+      "Notice periods that vary by state",
+      "Your belongings and lockout protections",
+      "How an eviction affects your record"
+    ]
+  },
+  {
+    "id": "car-dealership-contract",
+    "title": "Getting Out of a Car Dealership Contract",
+    "scope": "short",
+    "hook_angle": "Max assumes a federal 'three-day cooling-off rule' lets him return the car he bought yesterday, which usually does not apply to cars.",
+    "key_points": [
+      "There is generally no automatic right to cancel a car purchase; the common 'cooling-off' idea mostly applies to door-to-door sales, not dealerships.",
+      "The deal is usually final once you sign and drive off, unless financing falls through under a 'yo-yo' clause.",
+      "Your real leverage is fraud, misrepresentation, or an undisclosed defect, which varies by state."
+    ]
+  },
+  {
+    "id": "debt-collector-rights",
+    "title": "Your Rights Against Debt Collectors (FDCPA)",
+    "scope": "both",
+    "format_note": "listicle",
+    "hook_angle": "Max is getting calls at 6 a.m. and at his job, and he doesn't realize a federal law puts strict limits on how collectors can act.",
+    "key_points": [
+      "The federal FDCPA bars third-party debt collectors from harassment, threats, and calling at unreasonable hours.",
+      "You can demand a collector stop contacting you in writing, and you can request written verification of the debt.",
+      "Collectors can't lie, impersonate lawyers, or threaten arrest for an ordinary unpaid bill."
+    ],
+    "sections": [
+      "Who the FDCPA covers",
+      "Banned harassment and call times",
+      "Your right to a debt verification letter",
+      "Sending a cease-contact request",
+      "Illegal threats to watch for",
+      "Suing a collector that breaks the rules"
+    ]
+  },
+  {
+    "id": "speeding-ticket-options",
+    "title": "Your Options After a Speeding Ticket",
+    "scope": "short",
+    "hook_angle": "Max just pays every ticket immediately, not realizing that paying is an admission of guilt that adds points to his license.",
+    "key_points": [
+      "Paying a ticket is usually pleading guilty, which can add points and raise your insurance.",
+      "Options often include contesting it, requesting traffic school, or negotiating a lesser charge, which varies by state.",
+      "A delay, missing officer, or faulty equipment can sometimes be grounds to beat the ticket."
+    ]
+  },
+  {
+    "id": "ndas-explained",
+    "title": "NDAs Explained",
+    "scope": "short",
+    "hook_angle": "Max panics that an NDA he signed means he can never speak about anything, when they only cover defined confidential information.",
+    "key_points": [
+      "An NDA protects specific confidential information, not everything you know or experience.",
+      "NDAs generally can't be used to silence you about illegal conduct, and some states limit NDAs covering harassment.",
+      "Overly broad or indefinite NDAs can be unenforceable depending on state law."
+    ]
+  },
+  {
+    "id": "dying-without-a-will",
+    "title": "Wills and Dying Without One (Intestacy)",
+    "scope": "longform",
+    "format_note": "deep dive",
+    "hook_angle": "Max assumes his unmarried partner will inherit everything, but without a will, state intestacy law decides, and partners often get nothing.",
+    "key_points": [
+      "If you die without a will, state 'intestacy' law decides who inherits, usually spouse and blood relatives first.",
+      "Unmarried partners and friends typically receive nothing under intestacy, no matter your wishes.",
+      "A valid will lets you choose heirs and name a guardian for your kids; requirements for a valid will vary by state."
+    ],
+    "sections": [
+      "What a will actually does",
+      "How intestacy fills the gap",
+      "Who gets left out without a will",
+      "Naming guardians for children",
+      "Will formalities that vary by state",
+      "Beneficiary designations that override a will"
+    ]
+  },
+  {
+    "id": "power-of-attorney",
+    "title": "Power of Attorney, Explained Simply",
+    "scope": "short",
+    "hook_angle": "Max thinks signing a power of attorney means he's giving away control of his life forever, when it can be limited and revoked.",
+    "key_points": [
+      "A power of attorney lets someone act on your behalf; it can be broad or limited to one task.",
+      "A 'durable' power of attorney keeps working if you become incapacitated, which is its main purpose.",
+      "You can usually revoke it anytime while you're competent, and it ends at your death."
+    ]
+  },
+  {
+    "id": "jury-duty",
+    "title": "Jury Duty: What You Need to Know",
+    "scope": "short",
+    "hook_angle": "Max tries to ignore his jury summons, not realizing that skipping it can actually lead to fines or contempt.",
+    "key_points": [
+      "Jury duty is a legal obligation, and ignoring a summons can result in penalties that vary by state.",
+      "Your employer generally can't fire you for serving, though pay-during-service rules vary by state.",
+      "You can request to be excused or postponed for genuine hardship, but you have to ask, not just skip."
+    ]
+  },
+  {
+    "id": "defamation-vs-free-speech",
+    "title": "Defamation vs. Free Speech",
+    "scope": "both",
+    "format_note": "deep dive",
+    "hook_angle": "Max thinks any mean review of his business is 'defamation,' but opinions and true statements generally aren't.",
+    "key_points": [
+      "Defamation requires a false statement of fact that harms reputation; pure opinion and true statements don't count.",
+      "Public figures must also prove 'actual malice,' a much higher bar than private individuals face.",
+      "The First Amendment limits the government, not private platforms, so a company removing your post isn't censorship in the legal sense."
+    ],
+    "sections": [
+      "Fact vs. opinion",
+      "Truth as a complete defense",
+      "Private vs. public figures",
+      "The 'actual malice' standard",
+      "What the First Amendment does and doesn't cover",
+      "Libel vs. slander"
+    ]
+  },
+  {
+    "id": "copyright-fair-use",
+    "title": "Copyright and Fair Use Basics",
+    "scope": "short",
+    "hook_angle": "Max thinks adding 'no copyright intended' to his video magically makes using someone's song legal.",
+    "key_points": [
+      "Copyright protects original creative work automatically; disclaimers like 'no copyright intended' have no legal effect.",
+      "Fair use is a flexible four-factor defense, not a fixed rule like 'under 30 seconds is fine.'",
+      "Giving credit is polite but does not by itself make unlicensed use legal."
+    ]
+  },
+  {
+    "id": "stand-your-ground",
+    "title": "Stand Your Ground vs. Duty to Retreat",
+    "scope": "short",
+    "hook_angle": "Max assumes self-defense works the same everywhere, but whether you must retreat before using force varies a lot by state.",
+    "key_points": [
+      "Self-defense generally requires a reasonable, proportional response to an imminent threat.",
+      "Some states impose a 'duty to retreat' if you can safely do so, while 'stand your ground' states do not; this varies by state.",
+      "The 'castle doctrine' commonly gives extra protection when defending your own home."
+    ]
+  },
+  {
+    "id": "prenups",
+    "title": "Prenups: Myths and Reality",
+    "scope": "short",
+    "hook_angle": "Max thinks asking for a prenup means he's planning the divorce, when it's really just deciding the rules in advance.",
+    "key_points": [
+      "A prenup sets out how assets and debts are handled if a marriage ends, mostly for property, not daily life.",
+      "Prenups generally can't predetermine child custody or child support, which courts decide based on the child's best interest.",
+      "Full financial disclosure and independent review help a prenup hold up; enforceability rules vary by state."
+    ]
+  },
+  {
+    "id": "child-custody-basics",
+    "title": "Child Custody Basics",
+    "scope": "both",
+    "format_note": "deep dive",
+    "hook_angle": "Max assumes mothers automatically get custody, but courts decide based on the child's best interest, not the parent's gender.",
+    "key_points": [
+      "Courts decide custody using the 'best interests of the child' standard, not an automatic preference for either parent.",
+      "Legal custody (decision-making) and physical custody (where the child lives) are separate and can be split.",
+      "Custody orders can be modified when circumstances change; specific factors and rules vary by state."
+    ],
+    "sections": [
+      "Legal vs. physical custody",
+      "The best-interests standard",
+      "Joint vs. sole custody",
+      "Visitation and parenting plans",
+      "Child support basics",
+      "Modifying an order later (varies by state)"
+    ]
+  },
+  {
+    "id": "overtime-pay",
+    "title": "Your Overtime Pay Rights",
+    "scope": "short",
+    "hook_angle": "Max is told he's 'salaried' so he gets no overtime, but a title alone doesn't decide whether you're exempt.",
+    "key_points": [
+      "Under federal law, non-exempt employees generally earn 1.5x pay for hours over 40 in a week.",
+      "Being paid a salary or called a 'manager' doesn't automatically make you exempt; your actual duties and pay level matter.",
+      "Some states have stricter rules, like daily overtime, so protections can be greater than federal (varies by state)."
+    ]
+  },
+  {
+    "id": "hoa-powers",
+    "title": "What Your HOA Can and Can't Do",
+    "scope": "short",
+    "hook_angle": "Max thinks his HOA can do absolutely anything, including take his house over an unpaid $200 fine overnight.",
+    "key_points": [
+      "HOAs get their power from the recorded covenants (CC&Rs) you agreed to when buying, not unlimited authority.",
+      "HOAs can fine and place liens, and in some states even foreclose, but usually only through a defined legal process.",
+      "Members typically have rights to notice, to inspect records, and to challenge rules; specifics vary by state."
+    ]
+  },
+  {
+    "id": "renters-insurance",
+    "title": "Renter's Insurance: Do You Need It?",
+    "scope": "short",
+    "hook_angle": "Max assumes his landlord's insurance covers his stolen laptop, but that policy only protects the building, not his stuff.",
+    "key_points": [
+      "A landlord's insurance covers the building, not a tenant's personal belongings.",
+      "Renter's insurance typically covers your belongings, liability if someone is hurt, and living costs if the unit becomes unlivable.",
+      "Some landlords can require renter's insurance in the lease, which is generally allowed."
+    ]
+  },
+  {
+    "id": "expungement",
+    "title": "Expungement: Clearing Your Record",
+    "scope": "short",
+    "hook_angle": "Max believes a dismissed charge automatically disappears, but records often stick around until you actively clear them.",
+    "key_points": [
+      "Expungement or sealing can remove or hide certain records, but it usually doesn't happen automatically; you must petition.",
+      "Which offenses qualify, and the waiting period, varies a lot by state.",
+      "Even after expungement, some agencies (like certain licensing bodies) may still see the record."
+    ]
+  },
+  {
+    "id": "statute-of-limitations",
+    "title": "Statute of Limitations, Explained",
+    "scope": "short",
+    "hook_angle": "Max waits five years to sue over a car crash, then learns he missed the deadline and lost his case automatically.",
+    "key_points": [
+      "A statute of limitations is a deadline to file a lawsuit or bring charges; miss it and you usually lose the right.",
+      "Time limits differ by type of claim and by state, so there's no single universal number.",
+      "The clock can sometimes pause ('toll'), for example when the harmed person is a minor."
+    ]
+  },
+  {
+    "id": "dui-stop-basics",
+    "title": "DUI Stop Basics",
+    "scope": "short",
+    "hook_angle": "Max thinks refusing a breathalyzer has no downside, but 'implied consent' laws mean refusal can trigger an automatic license suspension.",
+    "key_points": [
+      "Under 'implied consent' laws in every state, refusing a chemical test after a lawful DUI arrest can suspend your license.",
+      "Field sobriety tests (walking a line) are often voluntary, unlike the post-arrest chemical test; rules vary by state.",
+      "You generally have the right to remain silent and to request a lawyer."
+    ]
+  },
+  {
+    "id": "airline-passenger-rights",
+    "title": "Airline Passenger Rights",
+    "scope": "short",
+    "hook_angle": "Max gets bumped from an overbooked flight and assumes he's just out of luck, when he may be owed compensation.",
+    "key_points": [
+      "If you're involuntarily bumped from an oversold flight, US rules may entitle you to cash compensation, not just a voucher.",
+      "For cancellations, you're generally entitled to a refund if you choose not to fly, even on nonrefundable tickets.",
+      "Tarmac delay rules limit how long airlines can keep you waiting on the plane."
+    ]
+  },
+  {
+    "id": "warranty-of-habitability",
+    "title": "The Warranty of Habitability",
+    "scope": "short",
+    "hook_angle": "Max thinks he has no choice but to live with no heat in winter because 'the lease didn't promise heat.'",
+    "key_points": [
+      "In most US states, landlords must keep rentals livable, with basics like heat, water, and working plumbing, even if the lease is silent.",
+      "You generally must notify the landlord and give a reasonable chance to fix the problem first.",
+      "Remedies like repair-and-deduct or rent withholding exist but have strict rules that vary by state."
+    ]
+  },
+  {
+    "id": "noncompete-agreements",
+    "title": "Noncompete Agreements",
+    "scope": "both",
+    "format_note": "deep dive",
+    "hook_angle": "Max is afraid he can never work in his field again because of a noncompete, but many are limited or even unenforceable.",
+    "key_points": [
+      "Noncompetes restrict where you can work after leaving a job, but courts often won't enforce overly broad ones.",
+      "Some states ban or heavily limit noncompetes, especially for lower-wage workers, so enforceability varies by state.",
+      "Even where allowed, a noncompete usually must be reasonable in time, geography, and scope."
+    ],
+    "sections": [
+      "What a noncompete actually restricts",
+      "States that ban or limit them (varies by state)",
+      "The reasonableness test",
+      "Noncompetes vs. NDAs vs. non-solicits",
+      "What happens if you breach one",
+      "Negotiating before you sign"
+    ]
+  },
+  {
+    "id": "filing-a-police-report",
+    "title": "Filing a Police Report",
+    "scope": "short",
+    "hook_angle": "Max thinks filing a police report automatically means someone gets arrested and charged, which isn't how it works.",
+    "key_points": [
+      "A police report documents an incident; it doesn't by itself guarantee an arrest or charges.",
+      "Reports can be important for insurance claims, protective orders, and creating a record.",
+      "Knowingly filing a false report is itself a crime, so stick to the facts."
+    ]
+  },
+  {
+    "id": "suing-someone",
+    "title": "Suing Someone: The Real Process",
+    "scope": "both",
+    "format_note": "deep dive",
+    "hook_angle": "Max expects a dramatic trial next week, not realizing most lawsuits drag on for months and usually settle before trial.",
+    "key_points": [
+      "A lawsuit starts with filing a complaint and formally serving the other side, not with a courtroom showdown.",
+      "Discovery (exchanging evidence) is the long, expensive middle stage, and most cases settle before trial.",
+      "Winning doesn't guarantee payment; collecting on a judgment is a separate challenge."
+    ],
+    "sections": [
+      "Complaint and service of process",
+      "The defendant's response and motions",
+      "Discovery: the real work",
+      "Settlement and mediation",
+      "Trial and judgment",
+      "Collecting (and appealing)"
+    ]
+  },
+  {
+    "id": "landmark-cases-explained",
+    "title": "Landmark Cases Told Simply",
+    "scope": "longform",
+    "format_note": "listicle",
+    "hook_angle": "Max can quote 'you have the right to remain silent' from TV but has no idea it comes from a real Supreme Court case.",
+    "key_points": [
+      "Miranda v. Arizona created the warning police must give before custodial questioning.",
+      "Gideon v. Wainwright guaranteed a free lawyer for defendants who can't afford one in serious criminal cases.",
+      "Tinker v. Des Moines held that students don't shed their free-speech rights at the schoolhouse gate."
+    ],
+    "sections": [
+      "Why these cases still touch daily life",
+      "Miranda v. Arizona: the right to silence",
+      "Gideon v. Wainwright: the right to a lawyer",
+      "Tinker v. Des Moines: student speech",
+      "How a case becomes 'the law of the land'",
+      "When the Court changes its mind"
+    ]
+  },
+  {
+    "id": "identity-theft-steps",
+    "title": "Identity Theft: What to Do First",
+    "scope": "short",
+    "hook_angle": "Max sees a strange credit card account in his name and freezes, not knowing the concrete steps that actually stop the bleeding.",
+    "key_points": [
+      "Act fast: place a fraud alert or credit freeze, and report to the FTC at IdentityTheft.gov for a recovery plan.",
+      "You're generally not liable for most fraudulent charges if you report them promptly.",
+      "File a police report and dispute fraudulent accounts in writing to create a paper trail."
+    ]
+  },
+  {
+    "id": "workplace-harassment",
+    "title": "Workplace Harassment: Know the Line",
+    "scope": "both",
+    "format_note": "deep dive",
+    "hook_angle": "Max assumes a rude boss is automatically illegal harassment, but the law targets harassment based on protected traits, not general jerks.",
+    "key_points": [
+      "Illegal harassment is unwelcome conduct based on a protected trait (like sex, race, or religion) that's severe or pervasive.",
+      "A single rude boss or general unfairness usually isn't illegal unless it's tied to a protected characteristic.",
+      "Reporting through your employer's process and keeping records matters, and retaliation for complaining is separately illegal."
+    ],
+    "sections": [
+      "What makes harassment illegal",
+      "Protected traits under the law",
+      "'Severe or pervasive' explained",
+      "Quid pro quo vs. hostile environment",
+      "How to report and document",
+      "Retaliation protection"
+    ]
+  },
+  {
+    "id": "lemon-laws",
+    "title": "Consumer Lemon Laws",
+    "scope": "short",
+    "hook_angle": "Max assumes any used car that breaks down qualifies as a 'lemon,' but lemon laws are narrower than people think.",
+    "key_points": [
+      "Lemon laws generally cover new vehicles with a substantial defect the dealer can't fix after a reasonable number of tries.",
+      "What qualifies, and whether used cars are covered, varies by state.",
+      "You usually must give the manufacturer a fair chance to repair before you have a claim."
+    ]
+  },
+  {
+    "id": "signing-as-cosigner",
+    "title": "What Being a Cosigner Really Means",
+    "scope": "short",
+    "hook_angle": "Max cosigns his nephew's car loan thinking he's just 'vouching,' not realizing he's fully on the hook if the nephew stops paying.",
+    "key_points": [
+      "A cosigner is equally responsible for the full debt, not just a backup reference.",
+      "If the main borrower misses payments, it hits your credit and the lender can come after you.",
+      "Getting released from a cosigned loan is hard and usually requires the lender's agreement."
+    ]
+  },
+  {
+    "id": "restraining-orders",
+    "title": "Restraining Orders, Explained",
+    "scope": "short",
+    "hook_angle": "Max thinks a restraining order is instant and permanent, but it usually starts temporary and needs a court hearing to continue.",
+    "key_points": [
+      "A protective order often starts as a temporary emergency order, then a hearing decides whether it becomes longer-term.",
+      "The process, available types, and duration vary by state.",
+      "Violating a restraining order is a crime, even if the protected person invites contact."
+    ]
+  },
+  {
+    "id": "medical-consent-rights",
+    "title": "Your Rights to Medical Records and Consent",
+    "scope": "short",
+    "hook_angle": "Max assumes the hospital owns his records and can refuse to share them, but federal law gives him a right to his own records.",
+    "key_points": [
+      "Under federal law (HIPAA), you generally have the right to access and get copies of your own medical records.",
+      "Informed consent means a provider must explain risks and alternatives before most treatments.",
+      "You can usually refuse treatment as a competent adult, with narrow exceptions."
+    ]
+  }
+]

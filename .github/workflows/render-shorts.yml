@@ -1,0 +1,111 @@
+name: Render shorts batch
+
+# Renders a batch of vertical shorts (one matrix job each, single-pass) and
+# publishes them into one bundle Release. No secrets (edge-tts needs no key).
+# Called directly (a comma id list) or by the scheduler (workflow_call).
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Comma-separated short ids (content/videos/<id>.json, format:short)"
+        required: true
+      release_tag:
+        description: "Release tag to publish into (blank = shorts-<run>)"
+        required: false
+        default: ""
+  workflow_call:
+    inputs:
+      ids:
+        required: true
+        type: string
+      release_tag:
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+env:
+  NODE_VERSION: "20"
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+      tag: ${{ steps.m.outputs.tag }}
+    steps:
+      - id: m
+        run: |
+          ARR=$(node -e "console.log(JSON.stringify('${{ inputs.ids }}'.split(',').map(s=>s.trim()).filter(Boolean)))")
+          TAG="${{ inputs.release_tag }}"
+          [ -z "$TAG" ] && TAG="shorts-${{ github.run_id }}"
+          echo "matrix=$ARR" >> "$GITHUB_OUTPUT"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        id: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "${{ env.NODE_VERSION }}", cache: npm }
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ env.PYTHON_VERSION }}", cache: pip }
+      - run: npm ci
+      - run: pip install -r requirements.txt
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Cache Remotion browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/remotion
+          key: remotion-browser-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - name: Build + render short ${{ matrix.id }}
+        run: |
+          SECONDS=0
+          ID="${{ matrix.id }}"
+          python pipeline/generate_audio.py "$ID"
+          npx tsx pipeline/build_manifest.ts "$ID"
+          npx tsx pipeline/build_captions.ts "$ID"
+          npx remotion render remotion/src/index.ts Short ".build/$ID/video.mp4" \
+            --props=".build/$ID/props.json" --public-dir=remotion/public
+          npx tsx pipeline/package_short.ts "$ID"
+          echo "- short **$ID**: ${SECONDS}s, $(du -h output/$ID/$ID.mp4 | cut -f1)" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: short-${{ matrix.id }}
+          retention-days: 3
+          path: output/${{ matrix.id }}/
+
+  bundle:
+    needs: [plan, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { pattern: "short-*", path: shorts }
+      - name: Publish bundle Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="${{ needs.plan.outputs.tag }}"
+          # flatten: prefix each short's files with its id so one Release holds the batch
+          mkdir -p upload
+          for d in shorts/short-*; do
+            id=$(basename "$d" | sed 's/^short-//')
+            for f in "$d"/*; do cp "$f" "upload/${id}__$(basename "$f")"; done
+          done
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" upload/* --clobber
+          else
+            gh release create "$TAG" upload/* --title "$TAG" --notes "Shorts batch bundle."
+          fi
+          echo "### Shorts bundle → $TAG" >> "$GITHUB_STEP_SUMMARY"
+          ls upload | sed 's/^/- /' >> "$GITHUB_STEP_SUMMARY"

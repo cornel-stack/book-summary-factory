@@ -27,6 +27,7 @@ import {
 import { idleLife, idleSeated } from "../drawing/motion";
 import type { BoardElement } from "../drawing/types";
 import { castFillColor, type WardrobeMode } from "./CastFigure";
+import { useBrand } from "../brand";
 
 const FILL_FRAMES = 12; // ~0.4s directional fill wipe
 const WIPE_SOFT = 14; // soft edge width (local units)
@@ -70,7 +71,8 @@ export const CastFillWipe: React.FC<{
 }> = ({ castId, pose, expression, flip, seat, view, wardrobe = "torso", scale, progress }) => {
   const r = castFigureRender(CAST[castId], pose, { expression, flip, seat, view });
   const sw = 2 / scale;
-  const cc = castFillColor(castId, wardrobe);
+  const brand = useBrand();
+  const cc = castFillColor(castId, wardrobe, { accent: brand.accentOnInk, paper: brand.paper });
   const sStrokes =
     pose === "sitting" && seat && seat !== "none" ? seatLocal(seat, flip ? -1 : 1) : { behind: [], front: [] };
   const gid = `wipe-${castId}-${pose}-${flip ? "f" : "n"}`;
@@ -94,7 +96,7 @@ export const CastFillWipe: React.FC<{
         ))}
         {drawPaths(r.fills, sw, cc)}
         {sStrokes.front.map((d, i) => (
-          <path key={`sf${i}`} d={d} fill={COLORS.paper} stroke={COLORS.ink} strokeWidth={sw} strokeLinejoin="round" />
+          <path key={`sf${i}`} d={d} fill={brand.paper} stroke={COLORS.ink} strokeWidth={sw} strokeLinejoin="round" />
         ))}
       </g>
     </>
@@ -200,7 +202,8 @@ export const AliveCast: React.FC<{
     ? castRenderSide(def, poseA, { expression, flip, blink, simplified, handL: ph.L, handR: ph.R })
     : castRender(def, poseA, { expression, flip, blink, simplified, handL: ph.L, handR: ph.R });
   const sw = 2 / scale;
-  const cc = castFillColor(castId, wardrobe);
+  const brand = useBrand();
+  const cc = castFillColor(castId, wardrobe, { accent: brand.accentOnInk, paper: brand.paper });
   const [nx, ny] = r.neck;
 
   // Head node = idle sway/turn + follow-through + action.
@@ -235,7 +238,7 @@ export const AliveCast: React.FC<{
         {held && (
           <g transform={held.transform}>
             {held.shape.strokes.map((d, i) => (
-              <path key={`hp${i}`} d={d} fill={COLORS.paper} stroke={COLORS.ink} strokeWidth={sw * 1.3} strokeLinejoin="round" />
+              <path key={`hp${i}`} d={d} fill={brand.paper} stroke={COLORS.ink} strokeWidth={sw * 1.3} strokeLinejoin="round" />
             ))}
           </g>
         )}
@@ -247,7 +250,7 @@ export const AliveCast: React.FC<{
         </g>
       </g>
       {seatG.front.map((d, i) => (
-        <path key={`sf${i}`} d={d} fill={COLORS.paper} stroke={COLORS.ink} strokeWidth={sw} strokeLinejoin="round" />
+        <path key={`sf${i}`} d={d} fill={brand.paper} stroke={COLORS.ink} strokeWidth={sw} strokeLinejoin="round" />
       ))}
     </>
   );

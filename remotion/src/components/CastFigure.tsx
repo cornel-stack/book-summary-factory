@@ -1,5 +1,6 @@
 import React from "react";
 import { COLORS, CAST_WARDROBE } from "../theme";
+import { useBrand } from "../brand";
 import {
   CAST,
   castFigureRender,
@@ -20,15 +21,24 @@ export const fillColor = (f: Fill) =>
 
 export type WardrobeMode = "torso" | "full-top" | "none";
 
+/** The brand-substitutable colors a cast figure needs: the "flame" accent item
+ *  becomes the brand's on-ink accent, and paper areas take the brand paper. */
+export interface CastPalette {
+  accent: string; // brand.accentOnInk — the one accent item (tie/hairband/...)
+  paper: string; // brand.paper — head area, held props
+}
+const LEGACY_CAST_PALETTE: CastPalette = { accent: COLORS.flame, paper: COLORS.paper };
+
 /** Wardrobe-aware fill mapper: the torso ("top") takes the member's
  *  CAST_WARDROBE color; sleeves take it only in "full-top" mode; everything
- *  else is unchanged. Flame stays flame (brightest). "none"/silhouette → ink. */
-export function castFillColor(id: CastId, mode: WardrobeMode) {
+ *  else is unchanged. The accent item takes the BRAND accent (on-ink variant);
+ *  "none"/silhouette → ink. Pass the brand palette from useBrand(). */
+export function castFillColor(id: CastId, mode: WardrobeMode, pal: CastPalette = LEGACY_CAST_PALETTE) {
   const w = CAST_WARDROBE[id];
   return (f: Fill): string => {
-    if (f === "flame") return COLORS.flame;
+    if (f === "flame") return pal.accent;
     if (f === "inkFar") return COLORS.inkFar;
-    if (f === "paper") return COLORS.paper;
+    if (f === "paper") return pal.paper;
     if (f === "top") return mode === "none" ? COLORS.ink : w;
     if (f === "sleeve") return mode === "full-top" ? w : COLORS.ink;
     return COLORS.ink; // ink, hand
@@ -57,10 +67,12 @@ export const CastStatic: React.FC<{
   feetY: number;
   base: number;
 }> = ({ id, pose = "standing", expression = "happy", flip, silhouette, blink, view, seat = "chair", wardrobe = "torso", holding, cx, feetY, base }) => {
+  const brand = useBrand();
+  const pal: CastPalette = { accent: brand.accentOnInk, paper: brand.paper };
   const scale = base * CAST[id].heightScale;
   const r = castFigureRender(CAST[id], pose, { expression, flip, silhouette, blink, view, seat });
   const sw = 2 / scale;
-  const cc = castFillColor(id, silhouette ? "none" : wardrobe);
+  const cc = castFillColor(id, silhouette ? "none" : wardrobe, pal);
   const tx = cx - 50 * scale;
   const ty = feetY - 192 * scale;
   const held = holding ? heldProp(holding.prop, holding.hand === "left" ? r.gripL : r.gripR, 0.32 * CAST[id].build) : null;
@@ -98,13 +110,13 @@ export const CastStatic: React.FC<{
         {held && (
           <g transform={held.transform}>
             {held.shape.strokes.map((d, i) => (
-              <path key={`hp${i}`} d={d} fill={COLORS.paper} stroke={COLORS.ink} strokeWidth={sw * 1.3} strokeLinejoin="round" />
+              <path key={`hp${i}`} d={d} fill={brand.paper} stroke={COLORS.ink} strokeWidth={sw * 1.3} strokeLinejoin="round" />
             ))}
           </g>
         )}
       </g>
       {sStrokes.front.map((d, i) => (
-        <path key={`sf${i}`} d={d} fill={COLORS.paper} stroke={COLORS.ink} strokeWidth={2.5} strokeLinejoin="round" />
+        <path key={`sf${i}`} d={d} fill={brand.paper} stroke={COLORS.ink} strokeWidth={2.5} strokeLinejoin="round" />
       ))}
     </>
   );

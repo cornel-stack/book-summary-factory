@@ -1,3 +1,121 @@
 [
-  { "video_id": "atomic-habits", "publish_date": "2026-10-12", "status": "scheduled" }
+  {
+    "video_id": "percuriam-security-deposits",
+    "brand": "percuriam",
+    "format": "longform",
+    "publish_date": "2026-10-12",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "percuriam-security-deposits-s01",
+    "brand": "percuriam",
+    "format": "short",
+    "publish_date": "2026-10-12",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "percuriam-security-deposits-s02",
+    "brand": "percuriam",
+    "format": "short",
+    "publish_date": "2026-10-12",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "percuriam-security-deposits-s03",
+    "brand": "percuriam",
+    "format": "short",
+    "publish_date": "2026-10-12",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits",
+    "brand": "readlark",
+    "format": "longform",
+    "publish_date": "2026-10-12",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s01",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-12",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s02",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-12",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s03",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-12",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s04",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-13",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s05",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-13",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s06",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-13",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s07",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-14",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s08",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-14",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s09",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-14",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s10",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-15",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s11",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-15",
+    "status": "scheduled"
+  },
+  {
+    "video_id": "atomic-habits-s12",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-15",
+    "status": "scheduled"
+  }
 ]

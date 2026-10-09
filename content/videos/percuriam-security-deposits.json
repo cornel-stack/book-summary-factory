@@ -1,0 +1,876 @@
+{
+  "id": "percuriam-security-deposits",
+  "title": "Getting Your Security Deposit Back — The Complete Guide",
+  "brand": "percuriam",
+  "format": "longform",
+  "template": {
+    "framing": "explainer",
+    "hook": "direct"
+  },
+  "target_minutes": 15,
+  "description": "A full, plain-English guide to getting your security deposit back when you move out. We walk through what a landlord can and cannot keep, the difference between real damage and normal wear and tear, the itemized deduction statement you are usually owed, the deadlines that vary from state to state, the photo evidence that wins disputes, and exactly what to do when a landlord simply refuses to pay. Clear, calm, and practical, with the moves that actually protect your money.",
+  "tags": [
+    "security deposit",
+    "renters rights",
+    "tenant rights",
+    "landlord tenant law",
+    "normal wear and tear",
+    "getting deposit back",
+    "small claims court",
+    "moving out",
+    "renting",
+    "us law explained"
+  ],
+  "thumbnail": {
+    "headline": "Get Your Deposit Back",
+    "subline": "Security deposits — the full guide",
+    "cast": "max",
+    "pose": "thinking",
+    "expression": "worried",
+    "props": [
+      "moneybag",
+      "house"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Max just moved out of his apartment, left it broom clean, and handed back the keys. Weeks later, his landlord keeps the entire deposit, blaming faded paint and a bit of worn carpet. Max sighs, shrugs, and assumes that is just how renting works, that the deposit was basically gone the day he paid it. It is not. In most US states, a landlord cannot pocket your money for the ordinary aging of a place you lived in and loved for years.",
+      "visual": {
+        "title": "Where's my money?",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
+            "poses": [ "standing", "thinking" ],
+            "expressions": [ "worried", { "value": "shocked", "sync": { "phrase": "keeps the entire deposit" } } ],
+            "label": "broom clean",
+            "effects": [ { "kind": "question_marks", "sync": { "phrase": "just how renting works" } } ]
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
+            "sync": { "phrase": "keeps the entire deposit" }
+          },
+          {
+            "kind": "door",
+            "tier": "ambient",
+            "at": { "col": 0, "row": 1, "w": 2, "h": 5 },
+            "sync": { "phrase": "handed back the keys" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta-top",
+      "type": "cta",
+      "narration": "Quick note before we dig in. The full written summary is in the description, and a new plain-English breakdown of everyday law lands every week if you subscribe.",
+      "visual": {
+        "text": "Full summary below — subscribe for everyday law explained",
+        "style": "card"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "character_scene",
+      "narration": "Here is the one thing to say up front, and we will only say it once. This is education, not legal advice. Security deposit rules vary by state, and sometimes even by city, so always check your own state's law for the exact numbers before you act. What we can do here is give you the map, so you know what questions to ask and what to look for. Sage is going to walk you through two things. First, what the law actually lets a landlord keep. And second, the concrete moves that get your money back when they push the limits. Learn both, and you stop being an easy target.",
+      "visual": {
+        "title": "Not legal advice",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "presenting" ],
+            "expression": "happy",
+            "label": "the map"
+          },
+          {
+            "kind": "scale",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "the law",
+            "sync": { "phrase": "what the law" }
+          },
+          {
+            "kind": "book",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "check your own state" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "part1",
+      "type": "section_title",
+      "narration": "Part one. What can a landlord actually keep?",
+      "visual": {
+        "role": "part",
+        "number": 1,
+        "title": "What They Can Keep",
+        "emphasis": "underline",
+        "sync": { "phrase": "actually keep" }
+      }
+    },
+    {
+      "id": "s1-title",
+      "type": "section_title",
+      "narration": "Section one. Damage versus normal wear and tear.",
+      "visual": {
+        "role": "principle", "number": 1, "part": 1,
+        "title": "Damage Vs Wear And Tear",
+        "emphasis": "circle",
+        "sync": { "phrase": "wear and tear" },
+        "memory": "house"
+      }
+    },
+    {
+      "id": "s1-rule",
+      "type": "character_scene",
+      "narration": "Start with the single idea the whole topic rests on. In most US states, a landlord can only take deductions for actual damage, not for normal wear and tear. Normal wear and tear is the ordinary aging you would expect from simply living in a place. Faded paint, a few small nail holes, lightly worn carpet in the walkways. That is the landlord's cost of doing business, not yours.",
+      "visual": {
+        "title": "The core rule",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "presenting" ],
+            "expression": "happy",
+            "label": "the core rule",
+            "effects": [ { "kind": "nod", "sync": { "phrase": "normal wear and tear" } } ]
+          },
+          {
+            "kind": "house",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "ordinary aging",
+            "sync": { "phrase": "ordinary aging" }
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "actual damage" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s1-story",
+      "type": "character_scene",
+      "narration": "So where is the line? Picture two apartments. In the first, the carpet is a little flattened and the walls have faded after three years. That is wear and tear, and the landlord eats it. In the second, there is a wine stain soaked deep into that carpet and a fist sized hole punched in the wall. That is damage, caused by something beyond ordinary living, and the landlord can fairly charge to fix it.",
+      "visual": {
+        "title": "Where's the line?",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "thinking", "presenting" ],
+            "expressions": [ "curious", { "value": "shocked", "sync": { "phrase": "fist sized hole" } } ],
+            "label": "two apartments"
+          },
+          {
+            "kind": "wall",
+            "at": { "col": 6, "row": 1, "w": 3, "h": 5 },
+            "label": "the damage",
+            "sync": { "phrase": "beyond ordinary living" }
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 2, "w": 2, "h": 2 },
+            "sync": { "phrase": "wear and tear" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s1-list",
+      "type": "list_card",
+      "narration": "So put this rule to work. First, remember the test. Damage is beyond ordinary living, and wear and tear is not. Second, do not accept a charge for simple aging, like faded paint or lightly worn carpet. And third, when a deduction looks fuzzy, ask the landlord to explain exactly how it goes past normal use.",
+      "visual": {
+        "title": "Know the line",
+        "items": [
+          { "label": "Learn the test", "icon": "tick", "sync": { "phrase": "remember the test" } },
+          { "label": "Refuse aging charges", "icon": "box", "sync": { "phrase": "simple aging" } },
+          { "label": "Ask them to explain", "icon": "arrow", "sync": { "phrase": "explain exactly" } }
+        ]
+      }
+    },
+    {
+      "id": "s1-cleaning",
+      "type": "character_scene",
+      "narration": "One place this line gets blurry is cleaning. A landlord can usually charge to clean a unit you left genuinely dirty, with grease caked on the stove or grime in the tub. What they generally cannot do is bill you for a routine professional cleaning just because the lease says so, or for the ordinary dust of normal living. In most states, the test is still the same. Did you leave real mess behind, or just a place that was lived in?",
+      "visual": {
+        "title": "The cleaning trap",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "thinking", "presenting" ],
+            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "lived in" } } ],
+            "label": "real mess?",
+            "effects": [ { "kind": "nod", "sync": { "phrase": "the test is still the same" } } ]
+          },
+          {
+            "kind": "house",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "genuinely dirty",
+            "sync": { "phrase": "genuinely dirty" }
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "routine professional cleaning" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2-title",
+      "type": "section_title",
+      "narration": "Section two. The itemized deduction statement.",
+      "visual": {
+        "role": "principle", "number": 2, "part": 1,
+        "title": "The Itemized Statement",
+        "emphasis": "circle",
+        "sync": { "phrase": "itemized deduction statement" },
+        "memory": "book"
+      }
+    },
+    {
+      "id": "s2-rule",
+      "type": "character_scene",
+      "narration": "Here is a protection most renters never claim. In most US states, if a landlord keeps any part of your deposit, they cannot just quietly take it. They have to send you an itemized statement. That means a written list, spelling out each deduction and what it was for, and often the receipts to back it up. A vague note saying cleaning and repairs is not enough.",
+      "visual": {
+        "title": "Show the list",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "presenting" ],
+            "expression": "happy",
+            "label": "the written list"
+          },
+          {
+            "kind": "book",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "each deduction",
+            "sync": { "phrase": "each deduction" }
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "keeps any part" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2-story",
+      "type": "character_scene",
+      "narration": "Max gets his statement, and suddenly the fog clears. Two hundred dollars for cleaning, but he left the place spotless. One hundred fifty for repainting a wall that was simply old. Once each charge has to be written down and justified, the weak ones stand out. The itemized list is not just paperwork. It turns a mystery deduction into something you can actually challenge, line by line.",
+      "visual": {
+        "title": "The fog clears",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "thinking", "pointing" ],
+            "expressions": [ "worried", { "value": "curious", "sync": { "phrase": "weak ones stand out" } } ],
+            "label": "line by line",
+            "effects": [ { "kind": "idea_flash", "sync": { "phrase": "fog clears" } } ]
+          },
+          {
+            "kind": "book",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "the statement",
+            "sync": { "phrase": "written down and justified" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2-list",
+      "type": "list_card",
+      "narration": "So use the statement as your tool. First, if you got nothing in writing, request the itemized list directly. Second, read every line and match it against the real condition you left the place in. And third, flag any charge for normal aging, because those are the ones that usually do not hold up.",
+      "visual": {
+        "title": "Work the statement",
+        "items": [
+          { "label": "Request the list", "icon": "tick", "sync": { "phrase": "request the itemized list" } },
+          { "label": "Read every line", "icon": "box", "sync": { "phrase": "read every line" } },
+          { "label": "Flag aging charges", "icon": "arrow", "sync": { "phrase": "normal aging" } }
+        ]
+      }
+    },
+    {
+      "id": "s3-title",
+      "type": "section_title",
+      "narration": "Section three. The deadline to return your money.",
+      "visual": {
+        "role": "principle", "number": 3, "part": 1,
+        "title": "The Return Deadline",
+        "emphasis": "circle",
+        "sync": { "phrase": "return your money" },
+        "memory": "calendar"
+      }
+    },
+    {
+      "id": "s3-rule",
+      "type": "character_scene",
+      "narration": "Now for the part that varies the most. A landlord cannot sit on your deposit forever. In most US states there is a hard deadline to return it, often within a set number of days after you move out, along with that itemized statement. But the exact clock varies by state. In some places it is around fourteen days, in others closer to thirty, and a few differ again. The only number that matters is the one in your state's law.",
+      "visual": {
+        "title": "The clock starts",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "presenting", "pointing" ],
+            "expression": "happy",
+            "label": "a hard deadline"
+          },
+          {
+            "kind": "calendar",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "varies by state",
+            "sync": { "phrase": "varies by state" }
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "set number of days" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3-story",
+      "type": "character_scene",
+      "narration": "This deadline is quietly one of your strongest cards. Say your state gives the landlord a set window, and that window passes with total silence. No check, no statement, nothing. In many states, blowing the deadline weakens the landlord's position badly. Depending on where you live, they can lose the right to keep any of it, and sometimes owe you even more. So the very first thing to look up is your state's exact deadline.",
+      "visual": {
+        "title": "Your strongest card",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "standing", "presenting" ],
+            "expressions": [ "worried", { "value": "happy", "sync": { "phrase": "strongest card" } } ],
+            "label": "the window passes",
+            "effects": [ { "kind": "sparkles", "sync": { "phrase": "owe you even more" } } ]
+          },
+          {
+            "kind": "calendar",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "the deadline",
+            "sync": { "phrase": "blowing the deadline" }
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
+            "sync": { "phrase": "exact deadline" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3-list",
+      "type": "list_card",
+      "narration": "So handle the clock like it matters, because it does. First, look up your state's exact deadline before you even move out. Second, mark the day you handed over the keys, since that is usually when the clock starts. And third, if the deadline passes in silence, know that the silence itself may now be working for you.",
+      "visual": {
+        "title": "Mind the clock",
+        "items": [
+          { "label": "Look up your deadline", "icon": "tick", "sync": { "phrase": "exact deadline" } },
+          { "label": "Mark the key date", "icon": "box", "sync": { "phrase": "handed over the keys" } },
+          { "label": "Silence can help you", "icon": "arrow", "sync": { "phrase": "passes in silence" } }
+        ]
+      }
+    },
+    {
+      "id": "s3-address",
+      "type": "character_scene",
+      "narration": "One small catch can quietly reset that clock. In many states, the deadline only starts running once you give the landlord a forwarding address in writing. Skip that step, and a landlord can argue the clock never even began. So when you hand back the keys, hand over your new address too, in writing, and keep a copy. It is a thirty second move that locks in the one deadline your whole case may hang on.",
+      "visual": {
+        "title": "Give an address",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "presenting", "pointing" ],
+            "expression": "happy",
+            "label": "in writing",
+            "effects": [ { "kind": "idea_flash", "sync": { "phrase": "thirty second move" } } ]
+          },
+          {
+            "kind": "book",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "forwarding address",
+            "sync": { "phrase": "forwarding address" }
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "reset that clock" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "recap1",
+      "type": "recap_card",
+      "narration": "Quick recap of part one. A landlord can only charge for real damage, never for normal wear and tear. If they keep anything, they usually owe you an itemized statement explaining why. And they have to do it before a deadline that varies by state. So that is what the law allows. But knowing the rules means nothing if you cannot prove your side. So how do you actually win the fight?",
+      "visual": {
+        "title": "Part one, in short",
+        "scope": "mid",
+        "items": [
+          { "label": "Damage, not wear", "sync": { "phrase": "normal wear and tear" } },
+          { "label": "Itemized statement owed", "sync": { "phrase": "itemized statement" } },
+          { "label": "Deadline varies by state", "sync": { "phrase": "varies by state" } }
+        ]
+      }
+    },
+    {
+      "id": "part2",
+      "type": "section_title",
+      "narration": "Part two. How you actually get it back.",
+      "visual": {
+        "role": "part",
+        "number": 2,
+        "title": "How You Get It Back",
+        "emphasis": "underline",
+        "sync": { "phrase": "actually get it back" }
+      }
+    },
+    {
+      "id": "p2-rehook",
+      "type": "character_scene",
+      "narration": "So now you know the rules the landlord has to play by. But here is the catch that trips people up. Rules do not enforce themselves. When it is your word against the landlord's about the state of that carpet, the one with proof usually wins, and too often that is not the tenant. So before you can use a single right from part one, you need the one thing that makes all of them real. Evidence. Let us build your case.",
+      "visual": {
+        "title": "Rules need proof",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
+            "poses": [ "thinking" ],
+            "expressions": [ "worried", { "value": "curious", "sync": { "phrase": "build your case" } } ],
+            "label": "your word?",
+            "effects": [ { "kind": "question_marks", "sync": { "phrase": "word against the landlord" } } ]
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
+            "sync": { "phrase": "one with proof" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-title",
+      "type": "section_title",
+      "narration": "Section four. Photos at move-in and move-out.",
+      "visual": {
+        "role": "principle", "number": 4, "part": 2,
+        "title": "Move-In Move-Out Photos",
+        "emphasis": "circle",
+        "sync": { "phrase": "move in and move out" },
+        "memory": "phone"
+      }
+    },
+    {
+      "id": "s4-rule",
+      "type": "character_scene",
+      "narration": "This is the single most powerful habit a renter has, and it costs you nothing. Document the unit with photos. On the day you move in, photograph every room, every scuff, every worn spot, before you unpack a single box. Open the cabinets, catch the carpet, get the corners. Then on the day you move out, do it all again from the same angles, once the place is empty. Timestamped pictures of the before and after are your strongest evidence if there is ever a dispute, because they freeze the truth in a way no argument ever can.",
+      "visual": {
+        "title": "Photograph everything",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "standing", "presenting" ],
+            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "strongest evidence" } } ],
+            "label": "before and after",
+            "effects": [ { "kind": "idea_flash", "sync": { "phrase": "Document the unit" } } ]
+          },
+          {
+            "kind": "phone",
+            "at": { "col": 7, "row": 2, "w": 3, "h": 4 },
+            "label": "timestamped photos",
+            "sync": { "phrase": "Timestamped pictures" }
+          },
+          {
+            "kind": "house",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "every room" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-story",
+      "type": "character_scene",
+      "narration": "Imagine the dispute without photos. The landlord says you stained the carpet. You say it was already there. It is just two voices, and you lose. Now imagine it with photos. You pull up a clear shot from move-in day showing that exact stain, before you ever lived there. The argument is over in seconds. That one habit flips the whole conversation from he said, she said, into simple proof.",
+      "visual": {
+        "title": "Proof ends it",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "standing", "celebrating" ],
+            "expressions": [ "worried", { "value": "happy", "sync": { "phrase": "over in seconds" } } ],
+            "label": "simple proof",
+            "effects": [ { "kind": "sparkles", "sync": { "phrase": "simple proof" } } ]
+          },
+          {
+            "kind": "phone",
+            "at": { "col": 6, "row": 2, "w": 3, "h": 4 },
+            "label": "the before shot",
+            "sync": { "phrase": "clear shot from move in" }
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
+            "sync": { "phrase": "flips the whole conversation" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-list",
+      "type": "list_card",
+      "narration": "So build your evidence every single time. First, photograph the whole unit at move-in, before you unpack anything. Second, repeat it at move-out from the same angles once the place is empty. And third, save everything, the photos, the lease, and any messages, in one folder you can find in a hurry.",
+      "visual": {
+        "title": "Build the evidence",
+        "items": [
+          { "label": "Photos at move-in", "icon": "tick", "sync": { "phrase": "at move in" } },
+          { "label": "Repeat at move-out", "icon": "box", "sync": { "phrase": "repeat it at move out" } },
+          { "label": "Save it all", "icon": "arrow", "sync": { "phrase": "save everything" } }
+        ]
+      }
+    },
+    {
+      "id": "s5-title",
+      "type": "section_title",
+      "narration": "Section five. When the landlord just won't pay.",
+      "visual": {
+        "role": "principle", "number": 5, "part": 2,
+        "title": "When They Won't Pay",
+        "emphasis": "circle",
+        "sync": { "phrase": "won't pay" },
+        "memory": "scale"
+      }
+    },
+    {
+      "id": "s5-rule",
+      "type": "character_scene",
+      "narration": "So the deadline passed, or the deductions are clearly bogus, and the landlord will not budge. Do not panic, and do not give up on the money. You still have a ladder of steps, and you climb it one rung at a time. It starts polite and gets firmer with each step. Most disputes end on the lower rungs, long before anyone ever sees a courtroom, simply because a tenant who clearly knows their rights is a tenant most landlords would rather just pay than fight.",
+      "visual": {
+        "title": "Climb the ladder",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "presenting" ],
+            "expression": "happy",
+            "label": "one rung at a time"
+          },
+          {
+            "kind": "ladder",
+            "at": { "col": 6, "row": 1, "w": 3, "h": 5 },
+            "label": "the steps",
+            "sync": { "phrase": "ladder of steps" }
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
+            "sync": { "phrase": "rather just pay" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-demand",
+      "type": "character_scene",
+      "narration": "The key rung is the demand letter. Max writes a short, calm note to the landlord. It states the amount owed, points to his photos and the lease, cites the deadline his state sets, and gives a clear date to pay by. He keeps a copy and sends it so he can prove it arrived. A written demand often works on its own, because it quietly signals that the next step is a judge.",
+      "visual": {
+        "title": "The demand letter",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "sitting", "presenting" ],
+            "seat": "desk",
+            "expression": "curious",
+            "label": "short and calm",
+            "effects": [ { "kind": "nod", "sync": { "phrase": "amount owed" } } ]
+          },
+          {
+            "kind": "book",
+            "at": { "col": 7, "row": 2, "w": 3, "h": 3 },
+            "label": "the letter",
+            "sync": { "phrase": "demand letter" }
+          },
+          {
+            "kind": "gift",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "clear date to pay" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-list",
+      "type": "list_card",
+      "narration": "So move up the ladder in order. First, send a calm written demand that lays out the money and your proof. Second, if that is ignored, file in small claims court, which is built for exactly this and rarely needs a lawyer. And third, bring your photos and your paper trail, because the prepared party usually wins.",
+      "visual": {
+        "title": "Escalate in order",
+        "items": [
+          { "label": "Send a demand letter", "icon": "tick", "sync": { "phrase": "written demand" } },
+          { "label": "File in small claims", "icon": "box", "sync": { "phrase": "small claims court" } },
+          { "label": "Bring your proof", "icon": "arrow", "sync": { "phrase": "photos and your paper trail" } }
+        ]
+      }
+    },
+    {
+      "id": "s6-title",
+      "type": "section_title",
+      "narration": "Section six. The penalties landlords face.",
+      "visual": {
+        "role": "principle", "number": 6, "part": 2,
+        "title": "Penalties Landlords Face",
+        "emphasis": "circle",
+        "sync": { "phrase": "penalties landlords face" },
+        "memory": "scale"
+      }
+    },
+    {
+      "id": "s6-rule",
+      "type": "character_scene",
+      "narration": "Here is the part that puts real teeth behind everything else. In many US states, a landlord who keeps your deposit in bad faith does not just have to give it back. They can owe you a penalty on top, sometimes two or even three times the amount wrongly withheld, plus your court costs. The law does this on purpose, so that stealing a deposit is a bad bet, not a free roll of the dice.",
+      "visual": {
+        "title": "Real teeth",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "presenting", "pointing" ],
+            "expression": "happy",
+            "label": "a penalty on top"
+          },
+          {
+            "kind": "scale",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "bad faith",
+            "sync": { "phrase": "bad faith" }
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "two or even three times" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6-story",
+      "type": "character_scene",
+      "narration": "Think about what that means at the table. The landlord did the math and wrongly kept eight hundred dollars. But in a bad faith state, a judge could order double or triple, turning that eight hundred into a far bigger bill, plus the cost of court. Suddenly keeping your money is the expensive choice. That is exactly why a calm, informed tenant so often gets paid without ever filing anything at all.",
+      "visual": {
+        "title": "The expensive choice",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "standing", "celebrating" ],
+            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "gets paid" } } ],
+            "label": "informed tenant",
+            "effects": [ { "kind": "money", "sync": { "phrase": "far bigger bill" } } ]
+          },
+          {
+            "kind": "scale",
+            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "label": "double or triple",
+            "sync": { "phrase": "double or triple" }
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
+            "sync": { "phrase": "expensive choice" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6-list",
+      "type": "list_card",
+      "narration": "So use these penalties as your leverage. First, look up whether your state allows extra damages for bad faith, because many do. Second, mention it calmly in your demand letter, so the landlord knows the real stakes. And third, never bluff, only point to a penalty your own state law actually provides.",
+      "visual": {
+        "title": "Use the leverage",
+        "items": [
+          { "label": "Check for bad-faith damages", "icon": "tick", "sync": { "phrase": "extra damages for bad faith" } },
+          { "label": "Mention it calmly", "icon": "box", "sync": { "phrase": "mention it calmly" } },
+          { "label": "Never bluff", "icon": "arrow", "sync": { "phrase": "never bluff" } }
+        ]
+      }
+    },
+    {
+      "id": "s6-free",
+      "type": "character_scene",
+      "narration": "And if the numbers still feel intimidating, remember you rarely fight alone. Many states run a free tenant hotline or a local housing agency that will tell you your exact deadline and your penalty rules over the phone. Legal aid groups help renters who cannot afford a lawyer. None of this costs you anything, and all of it tilts the table back toward you. The landlord is counting on you not knowing. The whole game is simply to know.",
+      "visual": {
+        "title": "You're not alone",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "facing": "right",
+            "poses": [ "standing", "celebrating" ],
+            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "simply to know" } } ],
+            "label": "get free help",
+            "effects": [ { "kind": "sparkles", "sync": { "phrase": "tilts the table" } } ]
+          },
+          {
+            "kind": "phone",
+            "at": { "col": 6, "row": 2, "w": 3, "h": 4 },
+            "label": "free hotline",
+            "sync": { "phrase": "free tenant hotline" }
+          },
+          {
+            "kind": "heart",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
+            "sync": { "phrase": "help renters" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "recap2",
+      "type": "recap_card",
+      "narration": "Recap of part two. Photos at move-in and move-out turn your word into proof. If a landlord stonewalls, you climb a ladder, a calm demand letter first, then small claims court. And in many states, bad faith withholding lets you recover extra damages on top. Put part one and part two together, and you are no longer guessing. You are the prepared party.",
+      "visual": {
+        "title": "Part two, in short",
+        "scope": "mid",
+        "items": [
+          { "label": "Photos are proof", "sync": { "phrase": "turn your word into proof" } },
+          { "label": "Demand, then sue", "sync": { "phrase": "demand letter first" } },
+          { "label": "Bad faith costs them", "sync": { "phrase": "bad faith withholding" } }
+        ]
+      }
+    },
+    {
+      "id": "final-recap",
+      "type": "recap_card",
+      "narration": "So here is the whole guide, in five lines. First, they can only charge for real damage, not normal wear and tear. Second, they usually owe you an itemized statement before a deadline set by your state. Third, photograph the place at move-in and move-out. Fourth, if they stall, send a demand letter, then use small claims court. And fifth, remember the penalties, because bad faith can cost a landlord far more than your deposit.",
+      "visual": {
+        "title": "The whole guide",
+        "scope": "final",
+        "items": [
+          { "label": "Damage, not wear", "sync": { "phrase": "real damage" } },
+          { "label": "Itemized by deadline", "sync": { "phrase": "itemized statement" } },
+          { "label": "Photograph everything", "sync": { "phrase": "Photograph the place" } },
+          { "label": "Demand, then small claims", "sync": { "phrase": "small claims court" } },
+          { "label": "Bad faith costs them", "sync": { "phrase": "the penalties" } }
+        ]
+      }
+    },
+    {
+      "id": "close",
+      "type": "section_title",
+      "narration": "Your deposit is your money, held in trust for a while, not a gift to your landlord. You do not need to be a lawyer to protect it, and you do not need to be loud or angry either. You just need to document the place, know your state's deadline, keep your paperwork, and calmly ask for what the law already says is yours. Do that, and most of the time, you simply get your money back.",
+      "visual": {
+        "title": "It's Your Money",
+        "emphasis": "circle",
+        "sync": { "phrase": "your money" }
+      }
+    },
+    {
+      "id": "cta-end",
+      "type": "cta",
+      "narration": "One last thing before you go. Have you ever had a landlord keep part of your deposit? Tell me what happened in the comments, and I will see you in the next one.",
+      "visual": {
+        "text": "Ever lost a deposit? Tell me below.",
+        "style": "corner"
+      }
+    }
+  ]
+}

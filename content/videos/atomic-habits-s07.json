@@ -1,0 +1,139 @@
+{
+  "id": "atomic-habits-s07",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Make It Attractive — Atomic Habits",
+  "short_hook": "Make It Attractive",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "Most people get make it attractive completely backwards. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "make it attractive"
+  ],
+  "thumbnail": {
+    "headline": "Make It Attractive",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "moneybag"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Most people get make it attractive completely backwards. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "This is Mr. Market's favorite law, because every bad habit dresses up as a reward. That bag of easy dopamine looks so good in the moment. But here is the twist. Your brain does not actually crave the habit itself. It craves the hit it expects to get. So the real question is never willpower. It is which craving you set up to win in advance.",
+      "type": "character_scene",
+      "visual": {
+        "title": "The craving",
+        "stage": "street",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "max",
+            "poses": [
+              "presenting",
+              "standing"
+            ],
+            "expression": "happy",
+            "facing": "right",
+            "seat": "chair",
+            "holding": {
+              "prop": "moneybag",
+              "hand": "right"
+            },
+            "enter": "draw",
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "easy dopamine"
+                }
+              },
+              {
+                "kind": "money",
+                "sync": {
+                  "phrase": "craves the hit"
+                }
+              }
+            ],
+            "tier": "hero",
+            "color": "ink",
+            "label": "easy dopamine"
+          },
+          {
+            "kind": "brain",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "Your brain"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

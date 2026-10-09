@@ -2,6 +2,7 @@ import { QuietBackdrop } from "../components/QuietBackdrop";
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { COLORS, FONTS, LAYOUT, VIDEO } from "../theme";
+import { useBrand } from "../brand";
 import { DrawingBoard } from "../components/DrawingBoard";
 import { circleBadge, listIcon } from "../drawing/icons";
 import { syncStartFrame } from "../drawing/layout";
@@ -15,6 +16,7 @@ export const RecapCard: React.FC<{
   words: WordTiming[];
 }> = ({ visual, words }) => {
   const { fps } = useVideoConfig();
+  const brand = useBrand();
   const frame = useCurrentFrame();
 
   const hasTitle = Boolean(visual.title);
@@ -30,11 +32,11 @@ export const RecapCard: React.FC<{
       shape: circleBadge(),
       box: { x: circleX, y: rowY, w: 96, h: 96 },
       startFrame: syncStartFrame(words, item.sync, fps, 0),
-      strokeColor: COLORS.flame,
+      strokeColor: brand.accent,
       strokeWidth: 6,
       label: String(i + 1),
       labelAnchor: "inside",
-      labelColor: COLORS.flame,
+      labelColor: brand.accent,
     });
     elements.push({
       key: `tick-${i}`,
@@ -55,7 +57,7 @@ export const RecapCard: React.FC<{
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.paper }}>
+    <AbsoluteFill style={{ backgroundColor: brand.paper }}>
       <QuietBackdrop />
       {visual.title && (
         <div

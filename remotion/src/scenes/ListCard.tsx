@@ -2,6 +2,7 @@ import { QuietBackdrop } from "../components/QuietBackdrop";
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { COLORS, FONTS, LAYOUT, VIDEO } from "../theme";
+import { useBrand } from "../brand";
 import { DrawingBoard } from "../components/DrawingBoard";
 import { listIcon } from "../drawing/icons";
 import { syncStartFrame } from "../drawing/layout";
@@ -15,6 +16,7 @@ export const ListCard: React.FC<{
   words: WordTiming[];
 }> = ({ visual, words }) => {
   const { fps } = useVideoConfig();
+  const brand = useBrand();
   const frame = useCurrentFrame();
 
   const hasTitle = Boolean(visual.title);
@@ -27,7 +29,7 @@ export const ListCard: React.FC<{
     shape: listIcon(item.icon),
     box: { x: iconX, y: topY + i * step, w: 92, h: 92 },
     startFrame: syncStartFrame(words, item.sync, fps, 0),
-    strokeColor: COLORS.flame,
+    strokeColor: brand.accent,
     strokeWidth: 8,
     label: item.label,
     labelAnchor: "right",
@@ -40,7 +42,7 @@ export const ListCard: React.FC<{
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.paper }}>
+    <AbsoluteFill style={{ backgroundColor: brand.paper }}>
       <QuietBackdrop />
       {visual.title && (
         <div

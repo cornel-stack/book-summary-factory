@@ -1,0 +1,177 @@
+{
+  "id": "atomic-habits-s11",
+  "brand": "readlark",
+  "format": "short",
+  "title": "The Goldilocks Rule — Atomic Habits",
+  "short_hook": "The Goldilocks Rule",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "Here's the one idea that makes the goldilocks rule finally click. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "the goldilocks rule"
+  ],
+  "thumbnail": {
+    "headline": "The Goldilocks Rule",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "scale"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Here's the one idea that makes the goldilocks rule finally click. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Humans love a specific kind of challenge. Not too hard, or we get anxious and give up. Not too easy, or we get bored and drift away. We stay most engaged right at the edge of our current ability, a task just manageable enough to be interesting. Clear calls this the Goldilocks rule. Keep your habit sitting in that sweet spot.",
+      "type": "character_scene",
+      "visual": {
+        "title": "The sweet spot",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "sage",
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "just right"
+          },
+          {
+            "kind": "scale",
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 5,
+              "h": 5
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "the balance",
+            "sync": {
+              "phrase": "Goldilocks rule"
+            }
+          },
+          {
+            "kind": "target",
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "sweet spot"
+            }
+          },
+          {
+            "kind": "gears",
+            "at": {
+              "col": 10,
+              "row": 4,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "just manageable enough"
+            }
+          },
+          {
+            "kind": "bed",
+            "at": {
+              "col": 0,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "get bored and drift"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { interpolate, spring, useVideoConfig } from "remotion";
 import { COLORS, FONTS } from "../theme";
+import { useBrand } from "../brand";
 
 /**
  * Animated-effects language — small SVG animations that make actions *look*
@@ -28,8 +29,6 @@ export type EffectKind =
 export const CHARACTER_ACTION_EFFECTS: EffectKind[] = ["shake", "nod", "headshake"];
 
 const ink = COLORS.ink;
-const accent = COLORS.flame;
-const marker = COLORS.marker;
 
 const Dot = (x: number, y: number, r: number, fill = ink, op = 1) => (
   <circle cx={x} cy={y} r={r} fill={fill} opacity={op} />
@@ -46,6 +45,10 @@ export const Effect: React.FC<{
   duration?: number;
 }> = ({ kind, x, y, size, frame, startFrame, loop = false, duration }) => {
   const { fps } = useVideoConfig();
+  const brand = useBrand();
+  const accent = brand.accent;
+  const marker = brand.highlight;
+  const paper = brand.paper;
   const local = frame - startFrame;
   const life = duration ?? (loop ? 9999 : 55);
   if (local < 0 || (!loop && local > life + 20)) return null;
@@ -72,10 +75,10 @@ export const Effect: React.FC<{
           <g>
             {dots}
             <g opacity={cop} fill="none" stroke={ink} strokeWidth={3}>
-              <circle cx={40} cy={40} r={20} fill={COLORS.paper} />
-              <circle cx={62} cy={34} r={15} fill={COLORS.paper} />
-              <circle cx={66} cy={52} r={13} fill={COLORS.paper} />
-              <circle cx={30} cy={52} r={12} fill={COLORS.paper} />
+              <circle cx={40} cy={40} r={20} fill={paper} />
+              <circle cx={62} cy={34} r={15} fill={paper} />
+              <circle cx={66} cy={52} r={13} fill={paper} />
+              <circle cx={30} cy={52} r={12} fill={paper} />
             </g>
           </g>
         );
@@ -113,7 +116,7 @@ export const Effect: React.FC<{
         return (
           <g>
             <g fill="none" stroke={on ? accent : ink} strokeWidth={3} opacity={on ? 1 : 0.5}>
-              <circle cx={50} cy={48} r={18} fill={on ? marker : COLORS.paper} />
+              <circle cx={50} cy={48} r={18} fill={on ? marker : paper} />
               <path d="M 42 60 L 58 60" />
               <path d="M 44 66 L 56 66" />
               <path d="M 46 42 L 50 36 L 54 42" />
@@ -133,7 +136,7 @@ export const Effect: React.FC<{
         const op = interpolate(local, [0, 4, 22, 28], [0, 1, 1, 0], { extrapolateRight: "clamp" });
         return (
           <g opacity={op} transform={`translate(70 ${yb})`}>
-            <path d="M 0 -10 C 8 2 8 12 0 12 C -8 12 -8 2 0 -10 Z" fill={COLORS.paper} stroke={ink} strokeWidth={2.5} />
+            <path d="M 0 -10 C 8 2 8 12 0 12 C -8 12 -8 2 0 -10 Z" fill={paper} stroke={ink} strokeWidth={2.5} />
           </g>
         );
       }

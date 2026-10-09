@@ -11,6 +11,7 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { Script, type Manifest } from "../remotion/src/schema.js";
+import { getBrand, activeCta } from "../config/brands.js";
 
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -83,7 +84,20 @@ function buildChapters(script: Script, manifest: Manifest): string {
 }
 
 function buildDescription(script: Script, manifest: Manifest): string {
+  const brand = getBrand(script.brand);
   const tagLine = script.tags.map((t) => `#${t.replace(/\s+/g, "")}`).join(" ");
+  const cta = `${activeCta(brand)} — ${brand.domain}`;
+  // ReadLark: cite the source book + a commentary disclaimer. PerCuriam: the
+  // legal disclaimer is mandatory in every description.
+  const attribution = script.book
+    ? `Based on "${script.book.title}" by ${script.book.author}` +
+      (script.book.year ? ` (${script.book.year})` : "")
+    : null;
+  const footer = brand.disclaimer
+    ? `— ${brand.disclaimer}`
+    : "— This is an original educational summary for discussion; it is not " +
+      "affiliated with or endorsed by the author or publisher. Quotes are the " +
+      "author's, used for commentary.";
   return [
     script.title,
     "",
@@ -91,14 +105,12 @@ function buildDescription(script: Script, manifest: Manifest): string {
     "",
     buildChapters(script, manifest),
     "",
-    `Based on "${script.book.title}" by ${script.book.author}` +
-      (script.book.year ? ` (${script.book.year})` : ""),
+    cta,
+    ...(attribution ? ["", attribution] : []),
     "",
     tagLine,
     "",
-    "— This is an original educational summary for discussion; it is not " +
-      "affiliated with or endorsed by the author or publisher. Quotes are the " +
-      "author's, used for commentary.",
+    footer,
   ].join("\n");
 }
 

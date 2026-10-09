@@ -1,0 +1,186 @@
+{
+  "id": "atomic-habits-s12",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Play To Your Strengths — Atomic Habits",
+  "short_hook": "Play To Your Strengths",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "Most people get play to your strengths completely backwards. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "play to your strengths"
+  ],
+  "thumbnail": {
+    "headline": "Play To Your Strengths",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "brain"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Most people get play to your strengths completely backwards. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Now, a fair question. What about talent, and genes? Clear is honest here. Your genes do not determine your destiny, but they do shape the odds. They decide which games are easy and fun for you to play, and which feel like endless uphill work. The trick is not to fight your nature. It is to choose the arena where your nature is quietly an advantage.",
+      "type": "character_scene",
+      "visual": {
+        "title": "Pick your game",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "sage",
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "your nature"
+                }
+              }
+            ],
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "choose well"
+          },
+          {
+            "kind": "brain",
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "your wiring",
+            "sync": {
+              "phrase": "talent, and genes"
+            }
+          },
+          {
+            "kind": "target",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "an advantage"
+            }
+          },
+          {
+            "kind": "scale",
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "shape the odds"
+            }
+          },
+          {
+            "kind": "mountain",
+            "at": {
+              "col": 0,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "endless uphill work"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

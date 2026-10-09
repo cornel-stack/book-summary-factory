@@ -11,6 +11,23 @@ export const VIDEO = {
 } as const;
 
 /**
+ * Vertical format for shorts (TikTok / Reels / YouTube Shorts). 9:16 @ 30fps.
+ * The SAFE zone keeps all content clear of platform UI chrome (top clock/handle,
+ * bottom caption/CTA rail, side action buttons).
+ */
+export const VIDEO_VERTICAL = {
+  width: 1080,
+  height: 1920,
+  fps: 30,
+} as const;
+
+export const SHORT_SAFE = {
+  top: 220, // platform header / clock
+  bottom: 320, // caption rail + CTA
+  side: 60, // action buttons
+} as const;
+
+/**
  * Silent padding (in frames) appended after each scene's narration so that
  * one scene's audio doesn't bump straight into the next.
  */

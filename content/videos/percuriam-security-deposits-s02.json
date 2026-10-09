@@ -1,0 +1,134 @@
+{
+  "id": "percuriam-security-deposits-s02",
+  "brand": "percuriam",
+  "format": "short",
+  "title": "The Itemized Statement — Getting Your Security Deposit Back — The Complete Guide",
+  "short_hook": "The Itemized Statement",
+  "description": "Most people get the itemized statement completely backwards. A 60-second idea from Getting Your Security Deposit Back — The Complete Guide.",
+  "tags": [
+    "security deposit",
+    "renters rights",
+    "tenant rights",
+    "landlord tenant law",
+    "the itemized statement"
+  ],
+  "thumbnail": {
+    "headline": "The Itemized Statement",
+    "cast": "max",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "book"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "explainer",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Most people get the itemized statement completely backwards. It comes straight from Getting Your Security Deposit Back — The Complete Guide.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Here is a protection most renters never claim. In most US states, if a landlord keeps any part of your deposit, they cannot just quietly take it. They have to send you an itemized statement. That means a written list, spelling out each deduction and what it was for, and often the receipts to back it up. A vague note saying cleaning and repairs is not enough.",
+      "type": "character_scene",
+      "visual": {
+        "title": "Show the list",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "sage",
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "the written list"
+          },
+          {
+            "kind": "book",
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "each deduction",
+            "sync": {
+              "phrase": "each deduction"
+            }
+          },
+          {
+            "kind": "moneybag",
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "keeps any part"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

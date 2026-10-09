@@ -1,0 +1,150 @@
+{
+  "id": "atomic-habits-s05",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Every Action A Vote — Atomic Habits",
+  "short_hook": "Every Action A Vote",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "The fastest way to understand every action a vote, in sixty seconds. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "every action a vote"
+  ],
+  "thumbnail": {
+    "headline": "Every Action A Vote",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "shoe"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "The fastest way to understand every action a vote, in sixty seconds. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Think of every habit like a tiny election for your identity. Each rep is a single vote, cast for the type of person you are becoming. And here is the relief. You do not need a unanimous result. Nobody is a perfect saver or a perfect runner. You just need your habits to win the majority of the time, so the evidence stacks in your favor.",
+      "type": "character_scene",
+      "visual": {
+        "title": "Cast your vote",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "crowd",
+            "at": {
+              "col": 0,
+              "row": 4,
+              "w": 12,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "count": 7,
+            "arrangement": "cluster",
+            "tint": "#BBD0DD",
+            "tier": "hero",
+            "color": "ink",
+            "sync": {
+              "phrase": "tiny election"
+            }
+          },
+          {
+            "kind": "figure",
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "maya",
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
+            "expression": "happy",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "the majority"
+                }
+              }
+            ],
+            "tier": "hero",
+            "color": "ink",
+            "label": "one more vote"
+          },
+          {
+            "kind": "target",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "single vote"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

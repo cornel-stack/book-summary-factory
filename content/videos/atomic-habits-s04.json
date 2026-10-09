@@ -1,0 +1,149 @@
+{
+  "id": "atomic-habits-s04",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Identity Over Outcomes — Atomic Habits",
+  "short_hook": "Identity Over Outcomes",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "You've been thinking about identity over outcomes the wrong way. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "identity over outcomes"
+  ],
+  "thumbnail": {
+    "headline": "Identity Over Outcomes",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "target"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "You've been thinking about identity over outcomes the wrong way. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Most people start with an outcome. Lose the weight. Finish the book. Clear flips the whole order around. Start instead with the person you want to be. Maya does not say I want to run. She says I am a runner, and runners simply do not skip two days in a row. The behavior is no longer something she forces. It is proof of who she already is.",
+      "type": "character_scene",
+      "visual": {
+        "title": "Start with who",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "crowd",
+            "at": {
+              "col": 0,
+              "row": 4,
+              "w": 12,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "count": 6,
+            "arrangement": "row",
+            "tier": "hero",
+            "color": "ink",
+            "sync": {
+              "phrase": "Most people"
+            }
+          },
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "maya",
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expression": "happy",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "I am a runner"
+                }
+              }
+            ],
+            "tier": "hero",
+            "color": "ink",
+            "label": "I am a runner"
+          },
+          {
+            "kind": "shoe",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "runners simply"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

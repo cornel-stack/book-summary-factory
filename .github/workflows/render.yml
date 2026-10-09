@@ -28,6 +28,11 @@ on:
         required: false
         type: string
         default: ""
+      release_tag:
+        description: "Release tag to publish into (blank = the video id)."
+        required: false
+        type: string
+        default: ""
 
 permissions:
   contents: write # publish the package to a GitHub Release (stable, non-expiring)
@@ -203,13 +208,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           ID="${{ inputs.video_id }}"
-          if gh release view "$ID" >/dev/null 2>&1; then
-            echo "Release $ID exists — clobbering assets"
-            gh release upload "$ID" output/"$ID"/* --clobber
+          TAG="${{ inputs.release_tag }}"
+          [ -z "$TAG" ] && TAG="$ID"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG exists — clobbering assets"
+            gh release upload "$TAG" output/"$ID"/* --clobber
           else
-            gh release create "$ID" output/"$ID"/* \
-              --title "$ID — animated book summary" \
+            gh release create "$TAG" output/"$ID"/* \
+              --title "$TAG" \
               --notes-file output/"$ID"/description.txt
           fi
           echo "### Release" >> "$GITHUB_STEP_SUMMARY"
-          echo "- published: ${{ github.server_url }}/${{ github.repository }}/releases/tag/$ID" >> "$GITHUB_STEP_SUMMARY"
+          echo "- published to tag **$TAG**: ${{ github.server_url }}/${{ github.repository }}/releases/tag/$TAG" >> "$GITHUB_STEP_SUMMARY"

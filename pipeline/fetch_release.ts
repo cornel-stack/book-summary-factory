@@ -39,18 +39,14 @@ function repoSlug(): string {
   return "cornel-stack/book-summary-factory";
 }
 
-function todaysVideoId(): string {
+function todaysBundleTag(): string {
   const today = new Date().toLocaleDateString("en-CA", { timeZone: "Africa/Nairobi" });
-  const cal: { video_id: string; publish_date: string }[] = JSON.parse(
-    readFileSync(join(REPO, "content", "calendar.json"), "utf8"),
-  );
-  const entry = cal.find((e) => e.publish_date === today);
-  if (!entry) {
-    console.error(`✖ nothing scheduled for today (${today}, Nairobi) in content/calendar.json`);
-    process.exit(1);
+  const cal: { publish_date: string }[] = JSON.parse(readFileSync(join(REPO, "content", "calendar.json"), "utf8"));
+  if (!cal.some((e) => e.publish_date === today)) {
+    console.warn(`(nothing is dated ${today} in the calendar — trying the bundle anyway)`);
   }
-  console.log(`Today (${today}, Nairobi) → ${entry.video_id}`);
-  return entry.video_id;
+  console.log(`Today (${today}, Nairobi) → bundle content-${today}`);
+  return `content-${today}`;
 }
 
 function hasGh(): boolean {
@@ -60,9 +56,9 @@ function hasGh(): boolean {
 
 function main() {
   const args = process.argv.slice(2);
-  const id = args.includes("--today")
-    ? todaysVideoId()
-    : args.find((a) => !a.startsWith("--"));
+  // --today pulls the whole daily bundle Release (content-<date>); otherwise a
+  // single video/short's own Release by id.
+  const id = args.includes("--today") ? todaysBundleTag() : args.find((a) => !a.startsWith("--"));
   if (!id) {
     console.error("Usage: npm run fetch -- [video_id|--today]");
     process.exit(1);

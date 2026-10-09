@@ -15,5 +15,5 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["remotion/src", "pipeline"]
+  "include": ["remotion/src", "pipeline", "config"]
 }

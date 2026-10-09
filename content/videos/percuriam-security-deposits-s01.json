@@ -1,0 +1,142 @@
+{
+  "id": "percuriam-security-deposits-s01",
+  "brand": "percuriam",
+  "format": "short",
+  "title": "Damage Vs Wear And Tear — Getting Your Security Deposit Back — The Complete Guide",
+  "short_hook": "Damage Vs Wear And Tear",
+  "description": "Here's the one idea that makes damage vs wear and tear finally click. A 60-second idea from Getting Your Security Deposit Back — The Complete Guide.",
+  "tags": [
+    "security deposit",
+    "renters rights",
+    "tenant rights",
+    "landlord tenant law",
+    "damage vs wear and tear"
+  ],
+  "thumbnail": {
+    "headline": "Damage Vs Wear And Tear",
+    "cast": "max",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "house"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "explainer",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Here's the one idea that makes damage vs wear and tear finally click. It comes straight from Getting Your Security Deposit Back — The Complete Guide.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Start with the single idea the whole topic rests on. In most US states, a landlord can only take deductions for actual damage, not for normal wear and tear. Normal wear and tear is the ordinary aging you would expect from simply living in a place. Faded paint, a few small nail holes, lightly worn carpet in the walkways. That is the landlord's cost of doing business, not yours.",
+      "type": "character_scene",
+      "visual": {
+        "title": "The core rule",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "sage",
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "normal wear and tear"
+                }
+              }
+            ],
+            "tier": "hero",
+            "color": "ink",
+            "label": "the core rule"
+          },
+          {
+            "kind": "house",
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "ordinary aging",
+            "sync": {
+              "phrase": "ordinary aging"
+            }
+          },
+          {
+            "kind": "scale",
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "actual damage"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

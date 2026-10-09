@@ -1,6 +1,8 @@
 import React from "react";
 import { Composition, Still } from "remotion";
 import { Video } from "./Video";
+import { ShortVideo } from "./ShortVideo";
+import { BrandSheet } from "./BrandSheet";
 import { Thumbnail } from "./Thumbnail";
 import { CastSheetPoses, CastSheetExpr } from "./CastSheet";
 import { CastGestureSheet } from "./CastGestureSheet";
@@ -27,6 +29,8 @@ const defaultProps: RenderProps = {
   script: {
     id: "placeholder",
     title: "Placeholder — run build:video to generate real props",
+    brand: "readlark",
+    format: "longform",
     book: { title: "Book", author: "Author" },
     description: "placeholder",
     tags: [],
@@ -103,6 +107,22 @@ export const RemotionRoot: React.FC = () => {
         height={VIDEO.height}
         defaultProps={defaultProps}
       />
+      <Composition
+        id="Short"
+        component={ShortVideo}
+        width={1080}
+        height={1920}
+        fps={VIDEO.fps}
+        durationInFrames={defaultProps.manifest.totalDurationInFrames}
+        defaultProps={defaultProps}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: Math.max(1, props.manifest.totalDurationInFrames),
+          fps: props.manifest.fps,
+          width: props.manifest.width,
+          height: props.manifest.height,
+        })}
+      />
+      <Still id="BrandSheet" component={BrandSheet} width={1920} height={1080} />
     </>
   );
 };

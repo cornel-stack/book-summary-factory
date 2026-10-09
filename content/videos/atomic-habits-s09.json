@@ -1,0 +1,155 @@
+{
+  "id": "atomic-habits-s09",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Make It Easy — Atomic Habits",
+  "short_hook": "Make It Easy",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "You've been thinking about make it easy the wrong way. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "make it easy"
+  ],
+  "thumbnail": {
+    "headline": "Make It Easy",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "book"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "You've been thinking about make it easy the wrong way. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Pip decides, with huge enthusiasm, that he will read one whole hour every single night. He lasts about two days. Clear's answer is the two minute rule. Shrink the habit down until it is almost laughably small. Not read a book. Read a single page. Not run three miles. Just put on your shoes and step outside. Make the first step so tiny that skipping it would feel faintly ridiculous.",
+      "type": "character_scene",
+      "visual": {
+        "title": "Shrink it down",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "pip",
+            "poses": [
+              "standing"
+            ],
+            "expressions": [
+              "happy",
+              {
+                "value": "shocked",
+                "sync": {
+                  "phrase": "two days"
+                }
+              }
+            ],
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "effects": [
+              {
+                "kind": "exclamation",
+                "sync": {
+                  "phrase": "two days"
+                }
+              }
+            ],
+            "tier": "hero",
+            "color": "ink",
+            "label": "one page?"
+          },
+          {
+            "kind": "book",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 4,
+              "h": 3
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "one page",
+            "sync": {
+              "phrase": "Read a single page"
+            }
+          },
+          {
+            "kind": "hourglass",
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "two minute rule"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

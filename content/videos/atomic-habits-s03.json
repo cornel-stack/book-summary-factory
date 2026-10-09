@@ -1,0 +1,148 @@
+{
+  "id": "atomic-habits-s03",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Systems Over Goals — Atomic Habits",
+  "short_hook": "Systems Over Goals",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "This is why systems over goals quietly decides everything. A 60-second idea from Atomic Habits.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "systems over goals"
+  ],
+  "thumbnail": {
+    "headline": "Systems Over Goals",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "gears"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "This is why systems over goals quietly decides everything. It comes straight from Atomic Habits.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Here is the uncomfortable part. Winners and losers often share the exact same goals. The goal was never the thing that truly set them apart. What separated them was the system they ran, quietly, every single day. Goals are fine for setting a direction. But systems are what actually make the progress. So if you want a better result, stop fixating on the target, and fix the system that points at it.",
+      "type": "character_scene",
+      "visual": {
+        "title": "Fix the system",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "the system"
+                }
+              }
+            ],
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "run the system"
+          },
+          {
+            "kind": "gears",
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "the system",
+            "sync": {
+              "phrase": "the system"
+            }
+          },
+          {
+            "kind": "target",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "same goals"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { COLORS, FONTS, LAYOUT, VIDEO } from "../theme";
+import { useBrand } from "../brand";
 import { DrawingBoard } from "../components/DrawingBoard";
 import { circleBadge, underline } from "../drawing/icons";
 import { syncStartFrame } from "../drawing/layout";
@@ -25,6 +26,7 @@ export const SectionTitle: React.FC<{
   words: WordTiming[];
 }> = ({ visual, words }) => {
   const frame = useCurrentFrame();
+  const brand = useBrand();
   const { fps } = useVideoConfig();
 
   const cx = VIDEO.width / 2;
@@ -58,11 +60,11 @@ export const SectionTitle: React.FC<{
       shape: circleBadge(),
       box: { x: cx - 55, y: cy - 240, w: 110, h: 110 },
       startFrame: 4,
-      strokeColor: COLORS.flame,
+      strokeColor: brand.accent,
       strokeWidth: 6,
       label: String(visual.number),
       labelAnchor: "inside",
-      labelColor: COLORS.flame,
+      labelColor: brand.accent,
     });
   }
   elements.push({
@@ -76,12 +78,12 @@ export const SectionTitle: React.FC<{
         ? { x: cx - (approxW + 80) / 2, y: cy - 110, w: approxW + 80, h: 200 }
         : { x: cx - approxW / 2, y: cy + 60, w: approxW, h: 40 },
     startFrame: markerStart,
-    strokeColor: COLORS.flame,
+    strokeColor: brand.accent,
     strokeWidth: 9,
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.paper }}>
+    <AbsoluteFill style={{ backgroundColor: brand.paper }}>
       <QuietBackdrop />
       {kicker && (
         <div
@@ -93,7 +95,7 @@ export const SectionTitle: React.FC<{
             fontFamily: FONTS.label,
             fontSize: 46,
             letterSpacing: 8,
-            color: COLORS.flame,
+            color: brand.accent,
             opacity: titleOpacity,
           }}
         >
