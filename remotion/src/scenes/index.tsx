@@ -6,6 +6,7 @@ import { CharacterScene } from "./CharacterScene";
 import { ListCard } from "./ListCard";
 import { StatChart } from "./StatChart";
 import { RecapCard } from "./RecapCard";
+import { CompareCard } from "./CompareCard";
 import { CtaCard } from "./CtaCard";
 
 /** Maps a validated scene to its visual component, threading word timings. */
@@ -26,6 +27,8 @@ export const SceneRenderer: React.FC<{ scene: Scene; words: WordTiming[] }> = ({
       return <StatChart visual={scene.visual} words={words} />;
     case "recap_card":
       return <RecapCard visual={scene.visual} words={words} />;
+    case "compare":
+      return <CompareCard visual={scene.visual} words={words} />;
     case "cta":
       return <CtaCard visual={scene.visual} />;
   }

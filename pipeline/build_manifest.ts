@@ -155,7 +155,9 @@ function main() {
   // Shorts must land 20–70s (or within a `target_minutes` window for 2-min
   // socials). Audio is truth — this guards a mis-paced cut before any
   // render minutes are spent.
-  {
+  if (process.env.SKIP_RUNTIME_GUARD === "1") {
+    console.log("⏭  runtime guard skipped (SKIP_RUNTIME_GUARD=1 — sample/test render)");
+  } else {
     const brand = getBrand(script.brand);
     const actualMin = cursor / VIDEO.fps / 60;
     const actualSec = cursor / VIDEO.fps;

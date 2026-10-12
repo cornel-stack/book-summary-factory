@@ -33,6 +33,8 @@ export const PROP_KINDS = [
   "mountain", "path", "staircase", "scale", "hourglass", "clock", "calendar", "trophy", "target",
   "seedling", "sapling", "tree", "brain", "heart", "gears", "ladder", "wall", "gift", "phone",
   "bed", "dumbbell", "shoe", "coffee", "snowball",
+  // money / data graphics (Phase 16)
+  "coins", "dollar", "bargraph", "piechart", "trendup", "percent",
 ] as const;
 
 export const EXPRESSIONS = [
@@ -213,7 +215,12 @@ export const ListCardVisual = z.object({
 
 export const StatChartVisual = z.object({
   label: z.string().min(1),
-  mode: z.enum(["line", "bars"]).default("line"),
+  // line/bars/area = trends; pie = share; number = one big kinetic figure.
+  mode: z.enum(["line", "bars", "area", "pie", "number"]).default("line"),
+  // Number formatting applied to every value (animated count-up).
+  prefix: z.string().optional(), // e.g. "$"
+  suffix: z.string().optional(), // e.g. "B", "%", "×"
+  decimals: z.number().int().min(0).max(2).optional(),
   datapoints: z
     .array(
       z.object({
@@ -236,6 +243,21 @@ export const RecapCardVisual = z.object({
   items: z.array(RecapItem).min(1),
 });
 
+/** A comparison / mini-table: two columns, each a heading + rows (Phase 16). */
+const CompareItem = z.union([
+  z.string().transform((label) => ({ label, sync: undefined })),
+  z.object({ label: wordLimit(6), sync: Sync.optional() }),
+]);
+const CompareColumn = z.object({
+  heading: wordLimit(4),
+  items: z.array(CompareItem).min(1),
+});
+export const CompareVisual = z.object({
+  title: wordLimit(6).optional(),
+  left: CompareColumn,
+  right: CompareColumn,
+});
+
 // ---------- Discriminated union of scenes ----------
 
 const SceneBase = {
@@ -250,6 +272,7 @@ export const Scene = z.discriminatedUnion("type", [
   z.object({ ...SceneBase, type: z.literal("list_card"), visual: ListCardVisual }),
   z.object({ ...SceneBase, type: z.literal("stat_chart"), visual: StatChartVisual }),
   z.object({ ...SceneBase, type: z.literal("recap_card"), visual: RecapCardVisual }),
+  z.object({ ...SceneBase, type: z.literal("compare"), visual: CompareVisual }),
   z.object({ ...SceneBase, type: z.literal("cta"), visual: CtaVisual }),
 ]);
 
@@ -411,6 +434,10 @@ export function collectScenePhrases(scene: Scene): string[] {
       break;
     case "stat_chart":
       scene.visual.datapoints.forEach((d) => push(d.sync));
+      break;
+    case "compare":
+      scene.visual.left.items.forEach((i) => push(i.sync));
+      scene.visual.right.items.forEach((i) => push(i.sync));
       break;
     case "quote_card":
     case "cta":

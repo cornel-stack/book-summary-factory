@@ -112,6 +112,13 @@ export const SCENE_TINT = {
   coral: "#F2CFC0",
 } as const;
 
+/**
+ * Chart series colors (Phase 16 — motion graphics). Secondary tones to cycle
+ * AFTER the brand accent (which stays the emphasis/first series). Warm, muted,
+ * cohesive with SCENE_PALETTE so animated data still reads as hand-drawn-adjacent.
+ */
+export const CHART_COLORS = ["#2F6690", "#7A9E5E", "#CBA56B", "#5E8CA8", "#E0896B"] as const;
+
 /** Font families (resolved webfonts from fonts.ts). */
 export const FONTS = {
   heading: FONT_FAMILY.hand, // Caveat
