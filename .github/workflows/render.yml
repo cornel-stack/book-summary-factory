@@ -64,9 +64,20 @@ jobs:
           cache: pip
       - run: npm ci
       - run: pip install -r requirements.txt
-      - name: Install ffmpeg (ffprobe for timing, ffmpeg for the audio track) + libasound2 (Azure TTS SDK)
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg libasound2t64 || sudo apt-get install -y ffmpeg libasound2
-      - name: Narration audio (edge-tts → Azure fallback)
+      - name: Install ffmpeg + libasound2 (Azure SDK) + espeak-ng (Kokoro)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng libasound2t64 || sudo apt-get install -y ffmpeg espeak-ng libasound2
+      - name: Cache Kokoro (pip wheels + HF model)
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/huggingface
+          key: kokoro-${{ runner.os }}-${{ hashFiles('requirements-kokoro.txt') }}
+      - name: Install Kokoro (offline TTS last-resort fallback, CPU torch)
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-kokoro.txt
+      - name: Narration audio (edge → Azure → Kokoro, auto-fallback)
         env:
           AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
           AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
