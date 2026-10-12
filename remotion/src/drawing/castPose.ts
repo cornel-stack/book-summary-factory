@@ -60,8 +60,11 @@ export const CAST_POSES: Record<StickPose, CastPoseA> = {
   thinking: { armL: HANG_L, armR: { sh: 20, fo: -150 }, legL: STANCE_L, legR: STANCE_R, headTilt: -4 },
   facepalm: { armL: HANG_L, armR: { sh: 8, fo: -156 }, legL: STANCE_L, legR: STANCE_R, headTilt: 4 },
   shrugging: { armL: { sh: -54, fo: -118 }, armR: { sh: 54, fo: 118 }, legL: STANCE_L, legR: STANCE_R },
-  celebrating: { armL: { sh: -150, fo: -166 }, armR: { sh: 150, fo: 166 }, legL: { hip: -11, sh: -2 }, legR: { hip: 11, sh: 2 } },
-  panicking: { armL: { sh: -158, fo: -172 }, armR: { sh: 158, fo: 172 }, legL: { hip: -13, sh: -3 }, legR: { hip: 13, sh: 3 } },
+  // raised arms form a cheerful "Y": upper arm up-and-out, forearm bent slightly
+  // further out so the open hand splays at the top corner (never collinear with
+  // the arm, which used to hide the hand).
+  celebrating: { armL: { sh: -138, fo: -152 }, armR: { sh: 138, fo: 152 }, legL: { hip: -11, sh: -2 }, legR: { hip: 11, sh: 2 } },
+  panicking: { armL: { sh: -150, fo: -138 }, armR: { sh: 150, fo: 138 }, legL: { hip: -13, sh: -3 }, legR: { hip: 13, sh: 3 } },
   walking: { armL: { sh: 18, fo: 30 }, armR: { sh: -20, fo: -8 }, legL: { hip: -24, sh: 8 }, legR: { hip: 22, sh: -20 } },
   sitting: {
     // front-view seated: forearms drop down-outward so the hands rest on the

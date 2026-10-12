@@ -4,6 +4,7 @@ import { COLORS, FONTS, LAYOUT, VIDEO } from "../theme";
 import { useBrand } from "../brand";
 import { DrawingBoard } from "../components/DrawingBoard";
 import { Stage } from "../components/Stage";
+import { AmbientLayer as BgDoodles } from "../components/AmbientLayer";
 import { Crowd, type CrowdArrangement } from "../components/Crowd";
 import { RevealLayer, type Reveal, type RevealItem } from "../components/RevealLayer";
 import { castBoardElement, castOutlineStrokes, type ExprStep } from "../components/CastCharacter";
@@ -237,8 +238,9 @@ export const CharacterScene: React.FC<{
 
   return (
     <AbsoluteFill style={{ backgroundColor: brand.paper }}>
-      {/* z-order: stage → crowd → ambient reveals → title → pen heroes → front reveals → effects */}
+      {/* z-order: stage → drifting doodles → crowd → ambient reveals → title → pen heroes → front reveals → effects */}
       <Stage name={stage} frame={frame} />
+      <BgDoodles intensity={0.55} />
       {crowdBuilt.map((b) => (
         <Crowd
           key={b.key}

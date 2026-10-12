@@ -86,6 +86,7 @@ function main() {
     } else if (scene.type === "stat_chart") scene.visual.datapoints.forEach((d) => add(d.sync));
     else if (scene.type === "list_card" || scene.type === "recap_card") scene.visual.items.forEach((it) => add((it as { sync?: { phrase: string } }).sync));
     else if (scene.type === "compare") [...scene.visual.left.items, ...scene.visual.right.items].forEach((it) => add((it as { sync?: { phrase: string } }).sync));
+    else if (scene.type === "table") scene.visual.rows.forEach((r) => add((r as { sync?: { phrase: string } }).sync));
     else if (scene.type === "section_title") add(scene.visual.sync);
   }
 
@@ -135,7 +136,7 @@ function main() {
 
   // ── Phase 16 — visual richness nudges (warnings) ───────────────────────────
   const ENUM = /\b(two|three|four|five|six|seven|eight|nine|ten)\b[\s\S]{0,40}?\b(ideas?|steps?|laws?|rules?|reasons?|skills?|ways?|things?|types?|kinds?|lessons?|parts?|traits?|habits?|questions?|principles?|levels?|stages?|pillars?)\b/i;
-  const SHOWN = new Set(["list_card", "compare", "recap_card", "stat_chart"]);
+  const SHOWN = new Set(["list_card", "compare", "recap_card", "stat_chart", "table"]);
   for (const scene of script.scenes) {
     if (scene.type === "character_scene") {
       const heroes = scene.visual.elements.filter(

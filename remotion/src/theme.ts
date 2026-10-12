@@ -101,6 +101,15 @@ export const CAST_WARDROBE = {
   max: "#495A6B", // slate charcoal (a volatile suit)
   maya: "#8E5E78", // muted plum / berry
   pip: "#3E8577", // muted teal (kept cool so it never competes with flame)
+  // ---- Phase 17 ensemble (distinct cool/jewel tones) ----
+  jade: "#2E7D6B", // deep jade green
+  omar: "#5A6E8C", // dusty indigo
+  nadia: "#9A5A6E", // muted rose
+  theo: "#C98A3C", // warm ochre (kid — a touch brighter)
+  rosa: "#7A6AA3", // muted violet
+  kwame: "#3C6E97", // ocean blue
+  lena: "#6E7B86", // soft slate grey
+  deshawn: "#4E7A4A", // forest green
 } as const;
 
 /** Lighter tints of the palette, for large soft background washes (sky, walls). */
@@ -124,6 +133,7 @@ export const FONTS = {
   heading: FONT_FAMILY.hand, // Caveat
   label: FONT_FAMILY.hand, // Caveat
   body: FONT_FAMILY.body, // Inter
+  display: FONT_FAMILY.display, // Anton — bold thumbnail punch words
 } as const;
 
 export const LAYOUT = {

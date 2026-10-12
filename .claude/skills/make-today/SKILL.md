@@ -37,12 +37,21 @@ Write `content/videos/<slug>.json` — a COMPLETE longform that obeys
   (names the book in sentence 1); `tags`; `thumbnail`.
 - **Visuals — SHOW, don't say (template §4e, lint-enforced)**: never a lone
   figure — every `character_scene` has the figure PLUS ≥1–2 metaphor/data props
-  (reveal + sync); money talk draws money (`coins`/`dollar`/`moneybag`/`bargraph`/
-  `trendup`/`percent`). **Every enumeration** ("five ideas", "three steps") →
-  a `list_card`. **Every number/stat** → a `stat_chart` (`number` big count-up,
-  `bars`/`line`/`area` growing, `pie` share). **Every "X vs Y"** → a `compare`
-  table. Vary scene types (never 3 same-type in a row); keep something new every
-  6–10 s.
+  (reveal + sync); draw the idea with the illustration library (`dominoes`,
+  `checkmark`, `brick`, `snowball`, `seedling`/`tree`, `dumbbell`, `calendar`,
+  `scale`, `target`, `gears`, money/data props…). **Every enumeration** → a
+  `list_card`. **Every number/stat** → a `stat_chart` (`number` count-up,
+  `bars`/`line`/`area`, `pie`). **Every "X vs Y"** → a `compare`. **Multi-column
+  / matrix data** (e.g. the four laws × tactics, a tracker week) → the `table`
+  scene (`columns` + `rows`, `highlight` the key row). Vary scene types (never 3
+  same-type in a row); keep something new every 6–10 s. Ambient motion + title/
+  quote/CTA breathing are automatic — but still no dead hero > 8 s.
+- **Cast — use the 13-member ensemble**: alex, sage, max, maya, pip, jade, omar,
+  nadia, theo, rosa, kwame, lena, deshawn (varied age/build/hair/skin). Spread
+  them across scenes; never cast one person for the whole video.
+- **Thumbnail (Hybrid)**: set `punch_words` (2–3 BIG words — last renders in
+  flame), an expressive `cast` + `pose:"celebrating"`/`"pointing"`,
+  `expression`, 1–2 `props`, `pointer:"spotlight"`.
 - **CRITICAL**: every `sync:{phrase}` (and expression/effect/datapoint/item sync)
   must be a VERBATIM substring of that scene's `narration`. Spell numbers as words
   ("thirty seven", not "37"). On-screen text within the word limits.

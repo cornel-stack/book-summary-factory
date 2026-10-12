@@ -30,7 +30,9 @@ export type PropKind =
   | "seedling" | "sapling" | "tree" | "brain" | "heart" | "gears" | "ladder" | "wall" | "gift" | "phone"
   | "bed" | "dumbbell" | "shoe" | "coffee" | "snowball"
   // money / data graphics (Phase 16)
-  | "coins" | "dollar" | "bargraph" | "piechart" | "trendup" | "percent";
+  | "coins" | "dollar" | "bargraph" | "piechart" | "trendup" | "percent"
+  // habit-specific illustrations (Phase 17)
+  | "dominoes" | "checkmark" | "brick";
 
 // ---------- originals (now with colored fills) ----------
 const door = (open: boolean): Shape =>
@@ -331,6 +333,40 @@ const percent = (): Shape => ({
   fills: [F(circle(55, 55, 48), T.sun)],
 });
 
+// Chain reaction / habit-stacking: upright tiles with the last one tipping over.
+const dominoes = (): Shape => {
+  const tiles = [20, 54, 88].map((x) => rect(x, 30, 24, 70));
+  const tipping = `M 122 42 L 162 72 L 150 88 L 110 58 Z`;
+  return {
+    viewBox: { w: 180, h: 120 },
+    strokes: [...tiles, line(32, 65, 44, 65), line(66, 65, 78, 65), line(100, 65, 112, 65), tipping],
+    fills: [...tiles.map((d) => F(d, T.sky)), F(tipping, P.coral)],
+  };
+};
+
+// Streak / habit-tracker tick in a rounded box.
+const roundRect = (x: number, y: number, w: number, h: number, r: number) =>
+  `M ${x + r} ${y} h ${w - 2 * r} a ${r} ${r} 0 0 1 ${r} ${r} v ${h - 2 * r} a ${r} ${r} 0 0 1 ${-r} ${r} h ${-(w - 2 * r)} a ${r} ${r} 0 0 1 ${-r} ${-r} v ${-(h - 2 * r)} a ${r} ${r} 0 0 1 ${r} ${-r} Z`;
+const checkmark = (): Shape => {
+  const box = roundRect(18, 18, 84, 84, 14);
+  return {
+    viewBox: { w: 120, h: 120 },
+    strokes: [box, `M 34 62 L 54 84 L 92 38`],
+    fills: [F(box, T.leaf, 0.6)],
+  };
+};
+
+// Identity "bricks": a small wall, built one brick at a time.
+const brick = (): Shape => {
+  const bottom = [14, 60, 106].map((x) => rect(x, 74, 44, 30));
+  const top = [37, 83].map((x) => rect(x, 42, 44, 30));
+  return {
+    viewBox: { w: 160, h: 120 },
+    strokes: [...bottom, ...top],
+    fills: [...bottom.map((d) => F(d, P.sand)), ...top.map((d) => F(d, P.coral, 0.8))],
+  };
+};
+
 const PROPS: Record<PropKind, (o?: { variant?: string; state?: string }) => Shape> = {
   door: (o) => door(o?.variant === "open" || o?.state === "open"),
   desk, easel,
@@ -341,6 +377,7 @@ const PROPS: Record<PropKind, (o?: { variant?: string; state?: string }) => Shap
   mountain, path, staircase, scale, hourglass, clock, calendar, trophy, target,
   seedling, sapling, tree, brain, heart, gears, ladder, wall, gift, phone, bed, dumbbell, shoe, coffee, snowball,
   coins, dollar, bargraph, piechart, trendup, percent,
+  dominoes, checkmark, brick,
 };
 
 /** Resolve a prop kind (+ optional variant/state) to its drawable shape. */

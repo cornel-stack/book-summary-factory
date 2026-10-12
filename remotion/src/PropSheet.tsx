@@ -8,6 +8,7 @@ const KINDS: PropKind[] = [
   "target", "seedling", "sapling", "tree", "brain", "heart", "gears", "ladder",
   "wall", "gift", "phone", "bed", "dumbbell", "shoe", "coffee", "snowball",
   "house", "book", "moneybag", "lightbulb", "desk", "door", "easel", "speech",
+  "coins", "dollar", "bargraph", "piechart", "trendup", "percent", "dominoes", "checkmark", "brick",
 ];
 
 const Cell: React.FC<{ kind: PropKind; cx: number; cy: number; box: number }> = ({ kind, cx, cy, box }) => {

@@ -6,10 +6,23 @@ import {
   castFigureRender,
   heldProp,
   seatStrokes,
+  SKIN,
   type CastId,
   type Fill,
   type SeatKind,
 } from "../drawing/cast";
+
+/** Darken a hex color toward near-black by `amt` (0..1) — for the shaded far
+ *  hand in profile so it recedes like the rest of the far-side limbs. */
+function shade(hex: string, amt: number): string {
+  const m = /^#?([0-9a-f]{6})$/i.exec(hex.trim());
+  if (!m) return hex;
+  const v = parseInt(m[1]!, 16);
+  const r = Math.round(((v >> 16) & 255) * (1 - amt));
+  const g = Math.round(((v >> 8) & 255) * (1 - amt));
+  const b = Math.round((v & 255) * (1 - amt));
+  return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+}
 import { type CastView } from "../drawing/castPose";
 import { type PropKind } from "../drawing/props";
 import { type StickPose } from "../drawing/stick";
@@ -17,7 +30,12 @@ import type { Expression } from "../drawing/character";
 
 // Base mapper: top/sleeve/hand → ink (no wardrobe).
 export const fillColor = (f: Fill) =>
-  f === "flame" ? COLORS.flame : f === "inkFar" ? COLORS.inkFar : f === "paper" ? COLORS.paper : COLORS.ink;
+  f === "flame" ? COLORS.flame
+    : f === "inkFar" ? COLORS.inkFar
+    : f === "paper" ? COLORS.paper
+    : f === "skin" ? SKIN.light
+    : f === "skinFar" ? shade(SKIN.light, 0.32)
+    : COLORS.ink;
 
 export type WardrobeMode = "torso" | "full-top" | "none";
 
@@ -35,10 +53,13 @@ const LEGACY_CAST_PALETTE: CastPalette = { accent: COLORS.flame, paper: COLORS.p
  *  "none"/silhouette → ink. Pass the brand palette from useBrand(). */
 export function castFillColor(id: CastId, mode: WardrobeMode, pal: CastPalette = LEGACY_CAST_PALETTE) {
   const w = CAST_WARDROBE[id];
+  const skin = CAST[id]?.skin ?? SKIN.light;
   return (f: Fill): string => {
     if (f === "flame") return pal.accent;
     if (f === "inkFar") return COLORS.inkFar;
     if (f === "paper") return pal.paper;
+    if (f === "skin") return skin;
+    if (f === "skinFar") return shade(skin, 0.32);
     if (f === "top") return mode === "none" ? COLORS.ink : w;
     if (f === "sleeve") return mode === "full-top" ? w : COLORS.ink;
     return COLORS.ink; // ink, hand

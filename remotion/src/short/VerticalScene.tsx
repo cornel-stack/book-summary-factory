@@ -654,7 +654,8 @@ export const VerticalScene: React.FC<{ scene: Scene; words: WordTiming[]; isHook
     case "stat_chart":
       return <VStatChart visual={scene.visual} words={words} />;
     case "compare":
-      // Shorts don't use compare (derive_shorts only picks char/list); longform only.
+    case "table":
+      // Shorts don't use compare/table (derive_shorts only picks char/list); longform only.
       return null;
     case "cta":
       // The end card renders full-frame brand chrome upstream (ShortEndCard).

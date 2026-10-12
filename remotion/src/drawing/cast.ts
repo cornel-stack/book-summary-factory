@@ -24,14 +24,20 @@ import {
  * ink face reads, and flame on exactly one accent item.
  */
 
-export type CastId = "alex" | "sage" | "max" | "maya" | "pip";
+export type CastId =
+  | "alex" | "sage" | "max" | "maya" | "pip"
+  // Phase 17 ensemble — a bigger, more diverse cast (ages / builds / skin tones).
+  | "jade" | "omar" | "nadia" | "theo" | "rosa" | "kwame" | "lena" | "deshawn";
 // "top"/"hand" are semantic tags for the fusion wardrobe layer — they render as
 // ink in the normal cast (so the live cast is pixel-identical), but the fusion
 // renderer recolors "top" → wardrobe color and "hand" → paper.
-export type Fill = "ink" | "paper" | "flame" | "inkFar" | "top" | "sleeve" | "hand";
+// "skin"/"skinFar" are the per-member skin tone (head + hands); the ink outline
+// keeps them reading as distinct shapes — which is also what makes a raised /
+// collinear hand read as a hand instead of merging into the ink arm.
+export type Fill = "ink" | "paper" | "flame" | "inkFar" | "top" | "sleeve" | "hand" | "skin" | "skinFar";
 export type Part = { d: string; fill: Fill };
-export type HairKind = "short" | "swoop" | "ponytail" | "sage" | "beanie";
-export type AccentKind = "sneakers" | "bowtie" | "tie" | "hairband" | "beanie";
+export type HairKind = "short" | "swoop" | "ponytail" | "sage" | "beanie" | "afro" | "bun" | "bald" | "curly" | "long";
+export type AccentKind = "sneakers" | "bowtie" | "tie" | "hairband" | "beanie" | "scarf" | "earrings";
 export type TorsoShape = "default" | "aline";
 /** Where a seated figure sits. "chair" is the default; "none" opts out (the
  *  scene supplies the surface, e.g. a wall or ledge). */
@@ -46,16 +52,38 @@ export type CastDef = {
   hair: HairKind;
   beard?: boolean;
   glasses?: boolean;
+  gray?: boolean; // hair/beard render in muted grey (age cue)
   accent: AccentKind;
   torsoShape?: TorsoShape;
+  skin?: string; // head + hand tone (hex); defaults to the brand paper
 };
 
+// Warm skin palette, kept light→medium so the ink face features always read.
+export const SKIN = {
+  porcelain: "#F4D9BE",
+  light: "#EEC39A",
+  tan: "#E0A878",
+  olive: "#CE9262",
+  warm: "#C07D4E",
+  deep: "#A5663B",
+} as const;
+
 export const CAST: Record<CastId, CastDef> = {
-  alex: { id: "alex", name: "Alex", heightScale: 1.0, build: 1.0, headScale: 1.0, hair: "short", accent: "sneakers" },
-  sage: { id: "sage", name: "Sage", heightScale: 1.07, build: 0.82, headScale: 1.0, hair: "sage", beard: true, glasses: true, accent: "bowtie" },
-  max: { id: "max", name: "Max", heightScale: 0.95, build: 1.55, headScale: 1.08, hair: "short", accent: "tie" },
-  maya: { id: "maya", name: "Maya", heightScale: 1.0, build: 0.98, headScale: 1.0, hair: "ponytail", accent: "hairband", torsoShape: "aline" },
-  pip: { id: "pip", name: "Pip", heightScale: 0.78, build: 1.22, headScale: 1.12, hair: "beanie", accent: "beanie" },
+  // ---- originals (now with skin tones; hands/heads read against the ink body) ----
+  alex: { id: "alex", name: "Alex", heightScale: 1.0, build: 1.0, headScale: 1.0, hair: "short", accent: "sneakers", skin: SKIN.light },
+  sage: { id: "sage", name: "Sage", heightScale: 1.07, build: 0.82, headScale: 1.0, hair: "sage", beard: true, glasses: true, gray: true, accent: "bowtie", skin: SKIN.porcelain },
+  max: { id: "max", name: "Max", heightScale: 0.95, build: 1.55, headScale: 1.08, hair: "short", accent: "tie", skin: SKIN.tan },
+  maya: { id: "maya", name: "Maya", heightScale: 1.0, build: 0.98, headScale: 1.0, hair: "ponytail", accent: "hairband", torsoShape: "aline", skin: SKIN.olive },
+  pip: { id: "pip", name: "Pip", heightScale: 0.78, build: 1.22, headScale: 1.12, hair: "beanie", accent: "beanie", skin: SKIN.warm },
+  // ---- Phase 17 ensemble ----
+  jade: { id: "jade", name: "Jade", heightScale: 1.0, build: 0.95, headScale: 1.0, hair: "afro", accent: "earrings", torsoShape: "aline", skin: SKIN.deep },
+  omar: { id: "omar", name: "Omar", heightScale: 1.05, build: 0.9, headScale: 1.0, hair: "bald", beard: true, glasses: true, gray: true, accent: "scarf", skin: SKIN.olive },
+  nadia: { id: "nadia", name: "Nadia", heightScale: 1.0, build: 1.02, headScale: 1.0, hair: "bun", accent: "hairband", torsoShape: "aline", skin: SKIN.warm },
+  theo: { id: "theo", name: "Theo", heightScale: 0.72, build: 1.0, headScale: 1.2, hair: "curly", accent: "sneakers", skin: SKIN.tan },
+  rosa: { id: "rosa", name: "Rosa", heightScale: 0.98, build: 1.05, headScale: 1.0, hair: "long", accent: "hairband", torsoShape: "aline", skin: SKIN.light },
+  kwame: { id: "kwame", name: "Kwame", heightScale: 1.06, build: 1.2, headScale: 1.02, hair: "curly", accent: "tie", skin: SKIN.deep },
+  lena: { id: "lena", name: "Lena", heightScale: 1.0, build: 0.9, headScale: 1.0, hair: "bun", glasses: true, gray: true, accent: "bowtie", torsoShape: "aline", skin: SKIN.porcelain },
+  deshawn: { id: "deshawn", name: "Deshawn", heightScale: 1.04, build: 1.35, headScale: 1.04, hair: "short", accent: "sneakers", skin: SKIN.warm },
 };
 
 /** Which hand pose each arm uses per body pose (L/R before any flip). */
@@ -283,6 +311,28 @@ function hairParts(kind: HairKind, cx: number, cy: number, r: number, fill: Fill
         { d: `M ${n(cx - r * 1.04)} ${n(cy - r * 0.15)} Q ${cx} ${n(cy - r * 1.55)} ${n(cx + r * 1.04)} ${n(cy - r * 0.15)} Z`, fill }, // dome
         { d: `M ${n(cx - r * 1.04)} ${n(cy - r * 0.15)} L ${n(cx + r * 1.04)} ${n(cy - r * 0.15)} L ${n(cx + r * 1.04)} ${n(cy - r * 0.34)} L ${n(cx - r * 1.04)} ${n(cy - r * 0.34)} Z`, fill }, // brim band
       ];
+    case "afro": {
+      // a big rounded halo of hair sitting above/around the crown
+      const R = r * 1.38;
+      return [{ d: `M ${n(cx - R)} ${n(cy - r * 0.2)} a ${n(R)} ${n(R * 0.95)} 0 1 1 ${n(2 * R)} 0 Q ${cx} ${n(cy - r * 0.7)} ${n(cx - R)} ${n(cy - r * 0.2)} Z`, fill }];
+    }
+    case "bun":
+      return [
+        { d: circleD(cx, cy - r * 1.18, r * 0.42), fill }, // top bun
+        { d: `M ${n(cx - r * 1.0)} ${n(cy - r * 0.1)} Q ${n(cx - r * 1.05)} ${n(cy - r * 1.24)} ${cx} ${n(cy - r * 1.22)} Q ${n(cx + r * 1.05)} ${n(cy - r * 1.24)} ${n(cx + r * 1.0)} ${n(cy - r * 0.1)} Q ${cx} ${n(cy - r * 0.72)} ${n(cx - r * 1.0)} ${n(cy - r * 0.1)} Z`, fill },
+      ];
+    case "bald":
+      return []; // clean crown — the skin head reads on its own
+    case "curly":
+      // a bumpy (scalloped) cap — three rounded tufts across the top
+      return [{ d: `M ${n(cx - r * 0.98)} ${n(cy - r * 0.45)} Q ${n(cx - r * 1.1)} ${n(cy - r * 1.05)} ${n(cx - r * 0.4)} ${n(cy - r * 0.95)} Q ${n(cx - r * 0.5)} ${n(cy - r * 1.3)} ${cx} ${n(cy - r * 1.12)} Q ${n(cx + r * 0.5)} ${n(cy - r * 1.3)} ${n(cx + r * 0.4)} ${n(cy - r * 0.95)} Q ${n(cx + r * 1.1)} ${n(cy - r * 1.05)} ${n(cx + r * 0.98)} ${n(cy - r * 0.45)} Q ${cx} ${n(cy - r * 0.86)} ${n(cx - r * 0.98)} ${n(cy - r * 0.45)} Z`, fill }];
+    case "long":
+      // crown + two drapes falling past the jaw on each side
+      return [
+        { d: `M ${n(cx - r * 1.05)} ${n(cy + r * 0.9)} Q ${n(cx - r * 1.15)} ${n(cy - r * 0.4)} ${n(cx - r * 0.9)} ${n(cy - r * 0.95)} Q ${n(cx - r * 0.6)} ${n(cy - r * 0.5)} ${n(cx - r * 0.72)} ${n(cy + r * 0.9)} Z`, fill }, // left drape
+        { d: `M ${n(cx + r * 1.05)} ${n(cy + r * 0.9)} Q ${n(cx + r * 1.15)} ${n(cy - r * 0.4)} ${n(cx + r * 0.9)} ${n(cy - r * 0.95)} Q ${n(cx + r * 0.6)} ${n(cy - r * 0.5)} ${n(cx + r * 0.72)} ${n(cy + r * 0.9)} Z`, fill }, // right drape
+        { d: `M ${n(cx - r * 1.0)} ${n(cy - r * 0.1)} Q ${cx} ${n(cy - r * 1.24)} ${n(cx + r * 1.0)} ${n(cy - r * 0.1)} Q ${cx} ${n(cy - r * 0.72)} ${n(cx - r * 1.0)} ${n(cy - r * 0.1)} Z`, fill }, // crown
+      ];
   }
 }
 
@@ -299,6 +349,16 @@ function accentShape(kind: AccentKind, cx: number, cy: number, r: number, neckY:
       return [{ d: `M ${n(cx - 4)} ${n(neckY)} L ${n(cx + 4)} ${n(neckY)} L ${n(cx + 7)} ${n(neckY + 30)} L ${cx} ${n(neckY + 40)} L ${n(cx - 7)} ${n(neckY + 30)} Z`, fill: "flame" }];
     case "hairband":
       return [{ d: `M ${n(cx - r * 1.02)} ${n(cy - r * 0.42)} Q ${cx} ${n(cy - r * 0.86)} ${n(cx + r * 1.02)} ${n(cy - r * 0.42)} L ${n(cx + r * 1.02)} ${n(cy - r * 0.6)} Q ${cx} ${n(cy - r * 1.04)} ${n(cx - r * 1.02)} ${n(cy - r * 0.6)} Z`, fill: "flame" }];
+    case "scarf":
+      // a band wrapped at the base of the neck / collarbone
+      return [{ d: `M ${n(cx - 13)} ${n(neckY + 2)} Q ${cx} ${n(neckY + 9)} ${n(cx + 13)} ${n(neckY + 2)} L ${n(cx + 11)} ${n(neckY + 9)} Q ${cx} ${n(neckY + 15)} ${n(cx - 11)} ${n(neckY + 9)} Z M ${n(cx + 7)} ${n(neckY + 9)} L ${n(cx + 12)} ${n(neckY + 26)} L ${n(cx + 5)} ${n(neckY + 24)} Z`, fill: "flame" }];
+    case "earrings": {
+      const ey = cy + r * 0.34;
+      return [
+        { d: circleD(cx - r * 1.0, ey, r * 0.12), fill: "flame" },
+        { d: circleD(cx + r * 1.0, ey, r * 0.12), fill: "flame" },
+      ];
+    }
     default:
       return [];
   }
@@ -402,31 +462,33 @@ export function castRender(def: CastDef, pose: CastPoseA, opts: CastRenderOpts =
   bodyFills.push({ d: capsule(LR[1], LR[2], lK, lA), fill: "ink" });
   bodyFills.push({ d: footPart(LL[2], LL[2][0] >= cx ? 1 : -1, footScale), fill: footFill });
   bodyFills.push({ d: footPart(LR[2], LR[2][0] >= cx ? 1 : -1, footScale), fill: footFill });
-  // clean torso (wardrobe "top") + short neck
+  // clean torso (wardrobe "top") + short neck (skin, so it bridges head→body)
   bodyFills.push({ d: torsoClean(cx, shoulderY, torsoBot, shoulderHalf, hipHalf), fill: "top" });
-  bodyFills.push({ d: capsule([cx, shoulderY + 2], [cx, chinY + 3], headR * 0.42, headR * 0.4), fill: "ink" });
-  // arms = "sleeve" (ink by default; wardrobe only in full-top mode); mitt hands ink
+  bodyFills.push({ d: capsule([cx, shoulderY + 2], [cx, chinY + 3], headR * 0.42, headR * 0.4), fill: inkOrFlame("skin") });
+  // arms = "sleeve" (ink by default; wardrobe only in full-top mode); mitt hands
+  // take the skin tone so the ink outline reads them as hands in EVERY pose.
   bodyFills.push({ d: capsule(AL[0], AL[1], aS, aE), fill: "sleeve" });
   bodyFills.push({ d: capsule(AL[1], AL[2], aE, aW), fill: "sleeve" });
   bodyFills.push({ d: capsule(AR[0], AR[1], aS, aE), fill: "sleeve" });
   bodyFills.push({ d: capsule(AR[1], AR[2], aE, aW), fill: "sleeve" });
-  bodyFills.push({ d: handPart(hL, AL[2], AL[1], handScale), fill: "ink" });
-  bodyFills.push({ d: handPart(hR, AR[2], AR[1], handScale), fill: "ink" });
+  bodyFills.push({ d: handPart(hL, AL[2], AL[1], handScale), fill: inkOrFlame("skin") });
+  bodyFills.push({ d: handPart(hR, AR[2], AR[1], handScale), fill: inkOrFlame("skin") });
   // accent on the body/neck (tie/bowtie) — stays with the torso (suppressed on
   // the minimum-width turn frame so no stray accent pixels show)
-  if (!simple && (def.accent === "tie" || def.accent === "bowtie")) {
+  if (!simple && (def.accent === "tie" || def.accent === "bowtie" || def.accent === "scarf")) {
     bodyFills.push(...accentShape(def.accent, cx, headCy, headR, chinY).map((pp) => ({ ...pp, fill: inkOrFlame(pp.fill) })));
   }
 
   const headFills: Part[] = [];
-  headFills.push({ d: circleD(cx, headCy, headR), fill: sil ? "ink" : "paper" });
+  const hairInk: Fill = def.gray ? inkOrFlame("inkFar") : inkOrFlame("ink");
+  headFills.push({ d: circleD(cx, headCy, headR), fill: sil ? "ink" : "skin" });
   // hair block always draws (it IS the head mass); fine details are dropped on
   // the simplified turn frame.
-  if (def.hair !== "beanie") headFills.push(...hairParts(def.hair, cx, headCy, headR, inkOrFlame("ink")));
-  if (def.beard && !simple) headFills.push({ ...beardPart(cx, headCy, headR), fill: inkOrFlame("ink") });
+  if (def.hair !== "beanie") headFills.push(...hairParts(def.hair, cx, headCy, headR, hairInk));
+  if (def.beard && !simple) headFills.push({ ...beardPart(cx, headCy, headR), fill: hairInk });
   if (def.hair === "beanie") headFills.push(...hairParts("beanie", cx, headCy, headR, simple ? "ink" : inkOrFlame("flame")));
-  if (!simple && def.accent === "hairband") {
-    headFills.push(...accentShape("hairband", cx, headCy, headR, chinY).map((pp) => ({ ...pp, fill: inkOrFlame(pp.fill) })));
+  if (!simple && (def.accent === "hairband" || def.accent === "earrings")) {
+    headFills.push(...accentShape(def.accent, cx, headCy, headR, chinY).map((pp) => ({ ...pp, fill: inkOrFlame(pp.fill) })));
   }
   if (def.glasses && !sil && !simple) headFills.push(...glassesParts(cx, headCy, headR));
 
@@ -483,6 +545,21 @@ function headSide(cx: number, cy: number, r: number, face: number): string {
 
 function hairSide(def: CastDef, cx: number, cy: number, r: number, face: number, inkOr: (f: Fill) => Fill): Part[] {
   const out: Part[] = [];
+  if (def.hair === "bald") return out; // clean crown in profile too
+  if (def.hair === "afro") {
+    const R = r * 1.34;
+    out.push({ d: `M ${n(cx - R * 0.8)} ${n(cy - r * 0.1)} a ${n(R)} ${n(R * 0.92)} 0 1 1 ${n(2 * R * 0.8)} 0 Q ${cx} ${n(cy - r * 0.6)} ${n(cx - R * 0.8)} ${n(cy - r * 0.1)} Z`, fill: inkOr("ink") });
+    return out;
+  }
+  if (def.hair === "bun") {
+    out.push({ d: circleD(cx - face * r * 0.95, cy - r * 0.95, r * 0.4), fill: inkOr("ink") }); // bun at back
+    out.push({ d: `M ${n(cx - face * r * 0.95)} ${n(cy - r * 0.35)} Q ${n(cx - face * r * 0.2)} ${n(cy - r * 1.2)} ${n(cx + face * r * 0.98)} ${n(cy - r * 0.5)} Q ${n(cx + face * r * 0.1)} ${n(cy - r * 0.78)} ${n(cx - face * r * 0.95)} ${n(cy - r * 0.35)} Z`, fill: inkOr("ink") });
+    return out;
+  }
+  if (def.hair === "long") {
+    out.push({ d: `M ${n(cx - face * r * 1.0)} ${n(cy + r * 1.0)} Q ${n(cx - face * r * 1.1)} ${n(cy - r * 0.5)} ${n(cx + face * r * 0.4)} ${n(cy - r * 0.95)} Q ${n(cx + face * r * 1.0)} ${n(cy - r * 0.4)} ${n(cx + face * r * 0.5)} ${n(cy + r * 0.2)} Q ${n(cx - face * r * 0.3)} ${n(cy + r * 0.6)} ${n(cx - face * r * 1.0)} ${n(cy + r * 1.0)} Z`, fill: inkOr("ink") });
+    return out;
+  }
   if (def.hair === "beanie") {
     out.push({ d: `M ${n(cx - r * 1.05)} ${n(cy - r * 0.15)} Q ${n(cx)} ${n(cy - r * 1.55)} ${n(cx + r * 1.05)} ${n(cy - r * 0.15)} Z`, fill: inkOr("flame") });
     out.push({ d: `M ${n(cx - r * 1.05)} ${n(cy - r * 0.15)} L ${n(cx + r * 1.05)} ${n(cy - r * 0.15)} L ${n(cx + r * 1.05)} ${n(cy - r * 0.34)} L ${n(cx - r * 1.05)} ${n(cy - r * 0.34)} Z`, fill: inkOr("flame") });
@@ -680,6 +757,8 @@ export function castRenderSide(def: CastDef, pose: CastPoseA, opts: CastRenderOp
   const hNear: HandPose = opts.flip ? opts.handR ?? "open" : opts.handL ?? "open";
   const hFar: HandPose = opts.flip ? opts.handL ?? "open" : opts.handR ?? "open";
   const farFill: Fill = sil || simple ? "ink" : "inkFar";
+  const handNearFill: Fill = sil || simple ? "ink" : "skin";
+  const handFarFill: Fill = sil || simple ? "ink" : "skinFar";
   const footFillNear: Fill = simple ? "ink" : inkOr(def.accent === "sneakers" ? "flame" : "ink");
   const footFillFar: Fill = sil || simple ? "ink" : def.accent === "sneakers" ? "flame" : "inkFar";
 
@@ -690,17 +769,17 @@ export function castRenderSide(def: CastDef, pose: CastPoseA, opts: CastRenderOp
   bodyFills.push({ d: footPart(LFar[2], face, footScale), fill: footFillFar });
   bodyFills.push({ d: capsule(AFar[0], AFar[1], aS, aE), fill: farFill });
   bodyFills.push({ d: capsule(AFar[1], AFar[2], aE, aW), fill: farFill });
-  bodyFills.push({ d: handPart(hFar, AFar[2], AFar[1], handScale), fill: farFill });
-  // torso (wardrobe "top") + neck
+  bodyFills.push({ d: handPart(hFar, AFar[2], AFar[1], handScale), fill: handFarFill });
+  // torso (wardrobe "top") + neck (skin)
   bodyFills.push({ d: torsoSide(cx, shoulderY, torsoBot, dS, pr.depthHip, belly, face), fill: "top" });
-  bodyFills.push({ d: capsule([cx, shoulderY + 2], [cx, chinY + 3], headR * 0.4, headR * 0.38), fill: "ink" });
+  bodyFills.push({ d: capsule([cx, shoulderY + 2], [cx, chinY + 3], headR * 0.4, headR * 0.38), fill: sil || simple ? "ink" : "skin" });
   // near limbs (front) — near arm is a sleeve ("top"), near hand "hand"
   bodyFills.push({ d: capsule(LNear[0], LNear[1], lH, lK), fill: "ink" });
   bodyFills.push({ d: capsule(LNear[1], LNear[2], lK, lA), fill: "ink" });
   bodyFills.push({ d: footPart(LNear[2], face, footScale), fill: footFillNear });
   bodyFills.push({ d: capsule(ANear[0], ANear[1], aS, aE), fill: "sleeve" });
   bodyFills.push({ d: capsule(ANear[1], ANear[2], aE, aW), fill: "sleeve" });
-  bodyFills.push({ d: handPart(hNear, ANear[2], ANear[1], handScale), fill: "ink" });
+  bodyFills.push({ d: handPart(hNear, ANear[2], ANear[1], handScale), fill: handNearFill });
   // front accents — deliberate profile versions, always visible (dropped only
   // on the minimum-width turn frame)
   if (!simple && def.accent === "tie") {
@@ -711,9 +790,14 @@ export function castRenderSide(def: CastDef, pose: CastPoseA, opts: CastRenderOp
   }
 
   const headFills: Part[] = [];
-  headFills.push({ d: headSide(cx, headCy, headR, face), fill: sil ? "ink" : "paper" });
-  headFills.push(...hairSide(def, cx, headCy, headR, face, simple ? (() => "ink" as Fill) : inkOr));
-  if (def.beard && !simple) headFills.push({ d: beardSide(cx, headCy, headR, face), fill: inkOr("ink") });
+  const hairInkOr: (f: Fill) => Fill = simple
+    ? (() => "ink" as Fill)
+    : def.gray
+      ? (f: Fill) => (f === "ink" ? inkOr("inkFar") : inkOr(f))
+      : inkOr;
+  headFills.push({ d: headSide(cx, headCy, headR, face), fill: sil ? "ink" : "skin" });
+  headFills.push(...hairSide(def, cx, headCy, headR, face, hairInkOr));
+  if (def.beard && !simple) headFills.push({ d: beardSide(cx, headCy, headR, face), fill: inkOr(def.gray ? "inkFar" : "ink") });
   if (def.glasses && !sil && !simple) headFills.push({ d: glassesSide(cx, headCy, headR, face), fill: "ink" });
 
   const faceStrokes = sil || simple ? [] : faceSideFeatures(head, opts.expression ?? "neutral", face, opts.blink === true);

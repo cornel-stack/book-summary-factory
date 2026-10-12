@@ -52,6 +52,8 @@ export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner
       ];
 
   const op = interpolate(frame, [6, 20], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  // keep the prompt alive: a gentle breathing pulse that invites the click
+  const pulse = 1 + Math.sin(frame / 16) * 0.025;
 
   return (
     <AbsoluteFill style={{ backgroundColor: brand.paper }}>
@@ -80,6 +82,7 @@ export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner
                 fontSize: LAYOUT.titleSize * 0.82,
                 color: COLORS.ink,
                 opacity: op,
+                transform: `scale(${pulse})`,
               }
         }
       >

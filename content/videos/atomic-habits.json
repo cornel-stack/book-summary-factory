@@ -1,3769 +1,1072 @@
 {
   "id": "atomic-habits",
-  "title": "Atomic Habits Summary: 1% Better Every Day (Full Breakdown)",
-  "book": {
-    "title": "Atomic Habits",
-    "author": "James Clear",
-    "year": 2018
-  },
-  "description": "A full, in-depth animated summary of Atomic Habits by James Clear. You don't rise to the level of your goals — you fall to the level of your systems. Across five parts we break down why tiny changes compound (and decay), the valley of disappointment, identity-based habits, the four laws of behavior change (make it obvious, attractive, easy, and satisfying), designing your environment, the Goldilocks rule, and how your genes shape the game you should play — with concrete examples you can use today. Original script, hand-drawn animation, one idea at a time.",
+  "title": "Atomic Habits Summary: 1% Better Every Day",
+  "brand": "readlark",
+  "format": "longform",
+  "book": { "title": "Atomic Habits", "author": "James Clear", "year": 2018 },
+  "description": "Atomic Habits by James Clear is the definitive playbook for building good habits and breaking bad ones, one tiny change at a time. This summary walks through the compounding power of one percent better, the surprising truth that you do not rise to your goals but fall to your systems, the identity shift that makes change stick, and the four laws of behavior change you can use today. By the end you will have a concrete system for making good habits obvious, attractive, easy, and satisfying, and for making bad habits invisible, unattractive, hard, and unsatisfying.",
   "tags": [
     "atomic habits",
     "james clear",
-    "book summary",
+    "atomic habits summary",
     "habits",
-    "self improvement",
-    "productivity",
+    "build good habits",
+    "break bad habits",
     "four laws of behavior change",
     "1 percent better",
+    "habit stacking",
+    "self improvement",
+    "productivity",
     "identity based habits",
-    "animated book summary"
+    "book summary"
   ],
-  "template": {
-    "framing": "book-structure",
-    "hook": "direct"
-  },
-  "target_minutes": 32,
   "thumbnail": {
-    "headline": "1% Better Every Day",
-    "subline": "Atomic Habits — the deep dive",
+    "headline": "Tiny Habits Win",
+    "punch_words": ["1%", "BETTER"],
     "cast": "alex",
-    "pose": "celebrating",
-    "expression": "happy",
-    "props": [
-      "book",
-      "lightbulb"
-    ]
+    "pose": "pointing",
+    "expression": "shocked",
+    "props": ["snowball", "trendup"],
+    "pointer": "spotlight"
   },
   "voice": "en-US-AndrewNeural",
+  "target_minutes": 32,
+  "pinned_comment": "Which of the four laws do you break the most right now? Tell me below.",
+  "promise": "tiny changes, remarkable results",
+  "title_variants": [
+    "Atomic Habits Summary: 1% Better Every Day",
+    "Why Your Goals Keep Failing You (And What Actually Works)",
+    "Build Habits That Finally Stick With One Tiny Change"
+  ],
+  "category": "Habits & Productivity",
+  "template": { "framing": "book-structure", "hook": "direct" },
   "scenes": [
     {
       "id": "hook",
-      "type": "section_title",
-      "narration": "James Clear's Atomic Habits rests on one quietly radical idea: your daily systems, not your big goals, decide who you become.",
+      "type": "character_scene",
+      "narration": "Forget motivation. In Atomic Habits, James Clear proves that tiny changes, remarkable results, is not a slogan but math. If you get one percent better every single day for one year, you end up thirty seven times better by the end. Stay with me and you will leave with a system, not a wish.",
       "visual": {
-        "title": "Atomic Habits",
-        "emphasis": "underline",
-        "sync": {
-          "phrase": "Atomic Habits"
-        }
+        "title": "Tiny changes win",
+        "stage": "stage-spotlight",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "curious", "enter": "draw", "sync": { "phrase": "tiny changes" } },
+          { "kind": "snowball", "at": { "col": 7, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "label": "one percent", "sync": { "phrase": "one percent better" } },
+          { "kind": "trendup", "at": { "col": 9, "row": 1, "w": 3, "h": 3 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "thirty seven times" } }
+        ]
       }
     },
     {
-      "id": "cta-top",
+      "id": "cta-hook",
       "type": "cta",
-      "narration": "Quick note before we dig in. The full written notes are in the description, and a new breakdown like this one lands every weekday if you subscribe.",
-      "visual": {
-        "text": "Full notes below — subscribe for a new book every week",
-        "style": "card"
-      }
+      "narration": "Full notes are in the description. Subscribe if you want the next big idea broken down like this.",
+      "visual": { "text": "Full notes below — subscribe for the next one.", "style": "card" }
     },
     {
-      "id": "intro-a",
+      "id": "intro-1",
       "type": "character_scene",
-      "narration": "Meet the reader. That is you. After a serious injury nearly ended his sport, James Clear rebuilt his life one tiny routine at a time, and wrote down exactly how in this book. The title carries two meanings. Atomic, as in tiny and almost unnoticeable. And atomic, as in the basic unit of a much larger system. Tiny pieces, building something far bigger than themselves. Keep both meanings in your head, because the entire book lives in the gap between them.",
+      "narration": "First, who is James Clear. He was a baseball player whose skull was shattered by a flying bat in high school, an injury so severe he was placed in a medically induced coma. His comeback was not a burst of willpower. It was years of small, boring, repeated choices that slowly rebuilt his life, until he became an all star athlete and then one of the most read writers on habits alive.",
       "visual": {
-        "title": "Open the book",
+        "title": "Who wrote it",
         "stage": "room",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 4,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "thinking",
-              "presenting"
-            ],
-            "expression": "curious",
-            "holding": {
-              "prop": "book",
-              "hand": "right"
-            },
-            "label": "that's you"
-          },
-          {
-            "kind": "heart",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 0,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "rebuilt his life"
-            }
-          },
-          {
-            "kind": "gears",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "larger system"
-            }
-          }
+          { "kind": "figure", "cast": "sage", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "James Clear" } },
+          { "kind": "book", "at": { "col": 8, "row": 2, "w": 3, "h": 3 }, "reveal": "draw", "sync": { "phrase": "writers on habits" } },
+          { "kind": "trophy", "at": { "col": 10, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "all star athlete" } }
         ]
       }
     },
     {
-      "id": "intro-b",
+      "id": "intro-2",
       "type": "character_scene",
-      "narration": "His promise is refreshingly small. Do not try to transform overnight. Just get one percent better each day. Because when you repeat a habit, the results do not simply add up. They compound, quietly, until the change becomes impossible to ignore. A single saved coin never makes you rich, but the habit of saving, repeated for years, absolutely does. The same goes for a single workout, a single page, a single kind word. On its own, forgettable. Repeated, it quietly becomes your whole life.",
+      "narration": "So why does this book matter to you. Because most people believe change requires a huge push, a dramatic overhaul, a new year resolution made of pure grit. Clear argues the opposite. Lasting change is the product of hundreds of tiny decisions that compound quietly in the dark, long before you ever see a result. Meet Alex, our stand in for you, who is tired of starting over every Monday.",
       "visual": {
-        "title": "One percent better",
-        "stage": "plain",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 3,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "they compound"
-                }
-              }
-            ],
-            "label": "get better",
-            "effects": [
-              {
-                "kind": "idea_flash",
-                "sync": {
-                  "phrase": "one percent better"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "lightbulb",
-            "state": "on",
-            "at": {
-              "col": 8,
-              "row": 1,
-              "w": 2,
-              "h": 3
-            },
-            "color": "accent",
-            "label": "the idea",
-            "sync": {
-              "phrase": "one percent better"
-            }
-          },
-          {
-            "kind": "snowball",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 0,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "they compound"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "intro-c",
-      "type": "character_scene",
-      "narration": "The whole book is really a playbook with two halves. First, the mindset. Why these small habits quietly decide almost everything about where you end up. Then, the method. The exact four laws you use to build the habits you want, and break the ones you do not. Alex here is going to walk the entire thing with you, step by step. So let us open part one, and start where every habit secretly begins. With a single, almost invisible choice. Because by the end of this, you will not just understand your habits. You will know exactly how to redesign them.",
-      "visual": {
-        "title": "The playbook",
-        "stage": "room",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "four laws"
-                }
-              }
-            ],
-            "label": "step by step",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "part one"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "book",
-            "at": {
-              "col": 6,
-              "row": 2,
-              "w": 3,
-              "h": 3
-            },
-            "label": "two halves",
-            "sync": {
-              "phrase": "two halves"
-            }
-          },
-          {
-            "kind": "gears",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "the method"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "part1",
-      "type": "section_title",
-      "narration": "Part one. Why do tiny changes win?",
-      "visual": {
-        "role": "part",
-        "number": 1,
-        "title": "Why Tiny Changes Win",
-        "emphasis": "underline",
-        "sync": {
-          "phrase": "tiny changes"
-        }
-      }
-    },
-    {
-      "id": "p1-1-title",
-      "type": "section_title",
-      "narration": "Principle one. The compound curve.",
-      "visual": {
-        "role": "principle",
-        "number": 1,
-        "part": 1,
-        "title": "The Compound Curve",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "compound curve"
-        },
-        "memory": "snowball"
-      }
-    },
-    {
-      "id": "p1-1-chart",
-      "type": "stat_chart",
-      "narration": "Watch what one percent a day really does. Start at one. A month in, you are barely ahead of where you began. But stay on the curve, and by the end of the year, you are not twice as good. You are thirty seven times better. That is the strange, patient power of compounding.",
-      "visual": {
-        "label": "1% better, every day",
-        "mode": "line",
-        "datapoints": [
-          {
-            "label": "Start",
-            "value": 1,
-            "sync": {
-              "phrase": "Start at one"
-            }
-          },
-          {
-            "label": "Month one",
-            "value": 4
-          },
-          {
-            "label": "Month six",
-            "value": 13
-          },
-          {
-            "label": "One year",
-            "value": 37,
-            "sync": {
-              "phrase": "thirty seven times"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p1-1-cycling",
-      "type": "stat_chart",
-      "narration": "Consider British Cycling. For years the team was mediocre, almost a joke. Then coach Dave Brailsford made one strange promise. Improve everything by just one percent. Better seats, grippier tires, even teaching riders to wash their hands so they got sick less often. Alone, each tweak was tiny, almost silly. But stacked together, and compounded season after season, those marginal gains turned a losing team into Olympic and Tour de France champions.",
-      "visual": {
-        "label": "Marginal gains add up",
-        "mode": "bars",
-        "datapoints": [
-          {
-            "label": "Each tweak",
-            "value": 1,
-            "sync": {
-              "phrase": "just one percent"
-            }
-          },
-          {
-            "label": "Stacked",
-            "value": 9,
-            "sync": {
-              "phrase": "marginal gains"
-            }
-          },
-          {
-            "label": "Champions",
-            "value": 37,
-            "sync": {
-              "phrase": "champions"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p1-1-decay",
-      "type": "character_scene",
-      "narration": "Now flip it, because the math cuts both ways. One percent worse every day, repeated for a year, does not just stall you. It drags you down toward nearly nothing. This is the hidden danger of small choices. A skipped workout, one more late night, a tiny shortcut, each so minor you barely notice. But compounded in the wrong direction, they quietly hollow you out while you tell yourself it is fine.",
-      "visual": {
-        "title": "The other direction",
-        "stage": "plain",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "standing"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "worried",
-                "sync": {
-                  "phrase": "wrong direction"
-                }
-              }
-            ],
-            "label": "the drift",
-            "effects": [
-              {
-                "kind": "sweat_drop",
-                "sync": {
-                  "phrase": "nearly nothing"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "wall",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "label": "the drift",
-            "sync": {
-              "phrase": "drags you down"
-            }
-          },
-          {
-            "kind": "bed",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "late night"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p1-1-apply",
-      "type": "character_scene",
-      "narration": "The trouble is, one percent is invisible in the moment, so it is easy to quit. Think of habits as the compound interest of getting better. Sit down, do the boring rep every day, and the gains do not add. They multiply underneath you. Miss one day, and you hardly notice. Miss a hundred, and the curve you were counting on simply never arrives.",
-      "visual": {
-        "title": "It compounds",
-        "stage": "outdoor",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "facing": "right",
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "They multiply"
-                }
-              }
-            ],
-            "label": "every day",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "every day"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "snowball",
-            "at": {
-              "col": 6,
-              "row": 2,
-              "w": 5,
-              "h": 4
-            },
-            "label": "it grows",
-            "sync": {
-              "phrase": "They multiply"
-            }
-          },
-          {
-            "kind": "staircase",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "boring rep"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p1-1-list",
-      "type": "list_card",
-      "narration": "So put the compound curve to work for you starting today. First, define your own one percent, the smallest improvement you could honestly repeat every single day. Second, protect the streak, because the real gains live in the repetition, never in one heroic burst. And third, zoom out, and start judging yourself by the trajectory you are on, not by the single frustrating point where you happen to stand right now.",
-      "visual": {
-        "title": "Work the curve",
-        "items": [
-          {
-            "label": "Define your one percent",
-            "icon": "tick",
-            "sync": {
-              "phrase": "one percent"
-            }
-          },
-          {
-            "label": "Protect the streak",
-            "icon": "box",
-            "sync": {
-              "phrase": "protect the streak"
-            }
-          },
-          {
-            "label": "Judge the trajectory",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "the trajectory"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p1-2-title",
-      "type": "section_title",
-      "narration": "Principle two. The valley of disappointment.",
-      "visual": {
-        "role": "principle",
-        "number": 2,
-        "part": 1,
-        "title": "The Valley of Disappointment",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "valley of disappointment"
-        },
-        "memory": "mountain"
-      }
-    },
-    {
-      "id": "p1-2-story",
-      "type": "character_scene",
-      "narration": "Here is the trap that stops almost everyone. You put in the work for weeks, and nothing visible seems to happen. Effort and results split apart, and you feel completely stuck. So picture an ice cube sitting in a freezing room. Twenty five degrees, twenty six, twenty seven. Still frozen solid. Nothing. Then at thirty two, one more single degree, and suddenly it cracks and begins to melt.",
-      "visual": {
-        "title": "The valley",
-        "stage": "outdoor",
-        "elements": [
-          {
-            "kind": "path",
-            "tier": "hero",
-            "at": {
-              "col": 2,
-              "row": 2,
-              "w": 8,
-              "h": 4
-            },
-            "reveal": "draw"
-          },
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 4,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "facepalm",
-              "standing"
-            ],
-            "expressions": [
-              "tired",
-              {
-                "value": "worried",
-                "sync": {
-                  "phrase": "nothing visible"
-                }
-              }
-            ],
-            "label": "stuck",
-            "effects": [
-              {
-                "kind": "sweat_drop",
-                "sync": {
-                  "phrase": "nothing visible"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "clock",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "work for weeks"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p1-2-apply",
-      "type": "character_scene",
-      "narration": "Your habits were never wasted. They were storing value you simply could not see, like that ice cube warming one quiet degree at a time. Almost all the action happens after the breakthrough. So when progress feels pointless, that is usually the exact moment to keep going. The people who break through are rarely the most gifted in the room. They are the ones who refused to quit inside the valley.",
-      "visual": {
-        "title": "The breakthrough",
-        "stage": "outdoor",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "celebrating"
-            ],
-            "expressions": [
-              "worried",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "the breakthrough"
-                }
-              }
-            ],
-            "label": "it's working",
-            "effects": [
-              {
-                "kind": "sparkles",
-                "sync": {
-                  "phrase": "the breakthrough"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "mountain",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 5,
-              "h": 5
-            },
-            "label": "the summit",
-            "sync": {
-              "phrase": "the breakthrough"
-            }
-          },
-          {
-            "kind": "trophy",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "break through"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p1-2-list",
-      "type": "list_card",
-      "narration": "So here is how you survive the valley. First, expect the flat stretch, and plan for it, so it does not surprise you into quitting. Second, fall in love with the daily rep itself, not just the far off result. And third, measure the tiny wins you can see today, the pages read, the sessions done, so the invisible progress finally feels real.",
-      "visual": {
-        "title": "Survive the valley",
-        "items": [
-          {
-            "label": "Expect the flat stretch",
-            "icon": "tick",
-            "sync": {
-              "phrase": "expect the flat"
-            }
-          },
-          {
-            "label": "Love the daily rep",
-            "icon": "box",
-            "sync": {
-              "phrase": "daily rep"
-            }
-          },
-          {
-            "label": "Measure tiny wins",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "tiny wins"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p1-2-bamboo",
-      "type": "character_scene",
-      "narration": "Here is nature's own version of the valley. The Chinese bamboo tree is planted, watered, and fertilized, and for nearly five long years, almost nothing shows above the soil. Most gardeners would give up and assume the seed was dead. But underground, unseen, it is building an enormous root system. Then, in its fifth year, that bamboo can rocket up ninety feet in just six weeks. The growth looks sudden. It was really years in the making.",
-      "visual": {
-        "title": "The bamboo tree",
-        "stage": "outdoor",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "thinking",
-              "celebrating"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "fifth year"
-                }
-              }
-            ],
-            "label": "wait for it"
-          },
-          {
-            "kind": "tree",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "label": "ninety feet",
-            "sync": {
-              "phrase": "ninety feet"
-            }
-          },
-          {
-            "kind": "seedling",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 4,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "underground"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p1-3-title",
-      "type": "section_title",
-      "narration": "Principle three. Systems over goals.",
-      "visual": {
-        "role": "principle",
-        "number": 3,
-        "part": 1,
-        "title": "Systems Over Goals",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "Systems over goals"
-        },
-        "memory": "gears"
-      }
-    },
-    {
-      "id": "p1-3-systems",
-      "type": "character_scene",
-      "narration": "Here is the uncomfortable part. Winners and losers often share the exact same goals. The goal was never the thing that truly set them apart. What separated them was the system they ran, quietly, every single day. Goals are fine for setting a direction. But systems are what actually make the progress. So if you want a better result, stop fixating on the target, and fix the system that points at it.",
-      "visual": {
-        "title": "Fix the system",
+        "title": "Why it matters",
         "stage": "desk-office",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "thinking",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "the system"
-                }
-              }
-            ],
-            "label": "run the system"
-          },
-          {
-            "kind": "gears",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 3,
-              "h": 4
-            },
-            "label": "the system",
-            "sync": {
-              "phrase": "the system"
-            }
-          },
-          {
-            "kind": "target",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "same goals"
-            }
-          }
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "thinking", "expression": "tired", "enter": "walk", "facing": "right", "sync": { "phrase": "Meet Alex" }, "effects": [ { "kind": "thought_bubble", "sync": { "phrase": "starting over" } } ] },
+          { "kind": "calendar", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "every Monday" } }
         ]
       }
     },
     {
-      "id": "p1-3-apply",
-      "type": "character_scene",
-      "narration": "So stop obsessing over the finish line. You do not rise to the level of your goals. You fall to the level of your systems. That plateau of latent potential is real, and your habits are quietly filling the reservoir behind the dam the whole time you feel stuck. Keep the system running, trust the slow fill, and one day the water finally spills over.",
+      "id": "intro-3",
+      "type": "stat_chart",
+      "narration": "And this is not a fringe idea. Atomic Habits has sold well over twenty million copies worldwide, and for years it has sat near the top of the best seller lists week after week. Numbers like that do not come from clever marketing. They come from readers who tried one small change, watched it actually work, and then told everyone they knew.",
       "visual": {
-        "title": "Trust the system",
+        "label": "Copies sold worldwide",
+        "mode": "number",
+        "suffix": "M+",
+        "datapoints": [
+          { "label": "copies", "value": 20, "sync": { "phrase": "twenty million copies" } }
+        ]
+      }
+    },
+    {
+      "id": "intro-4",
+      "type": "character_scene",
+      "narration": "The word atomic is doing double duty here, and it is worth a second. An atom is tiny, almost nothing on its own. But atomic also means a source of immense energy, the basic unit of a larger system. That is exactly what a habit is. One repetition looks like nothing. Stack thousands of them and you are splitting the atom of your whole life. Small in size, enormous in power. Alex is about to find out how.",
+      "visual": {
+        "title": "Small but mighty",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "thinking", "expression": "curious", "enter": "draw", "sync": { "phrase": "the word atomic" } },
+          { "kind": "lightbulb", "at": { "col": 8, "row": 2, "w": 3, "h": 3 }, "reveal": "draw", "state": "on", "color": "accent", "sync": { "phrase": "immense energy" } },
+          { "kind": "snowball", "at": { "col": 10, "row": 3, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "Small in size" } }
+        ]
+      }
+    },
+    {
+      "id": "p1-title",
+      "type": "section_title",
+      "narration": "Part one. The surprising power of atomic habits.",
+      "visual": { "role": "part", "number": 1, "title": "Power Of Atomic Habits", "emphasis": "underline", "sync": { "phrase": "atomic habits" } }
+    },
+    {
+      "id": "pr1-title",
+      "type": "section_title",
+      "narration": "Principle one. Small habits compound.",
+      "visual": { "role": "principle", "number": 1, "part": 1, "title": "Small Habits Compound", "emphasis": "circle", "memory": "snowball", "sync": { "phrase": "Small habits compound" } }
+    },
+    {
+      "id": "pr1-1",
+      "type": "character_scene",
+      "narration": "Here is the idea that makes the whole book work. A habit is a compound interest machine for your behavior. The same way a little money left alone grows into a fortune, a tiny action repeated grows into a transformed life. The problem is that in the beginning the effects are so small they feel invisible, so almost everyone quits before the curve turns up.",
+      "visual": {
+        "title": "Compound interest",
         "stage": "outdoor",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "latent potential"
-                }
-              }
-            ],
-            "label": "keep running",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "your systems"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "mountain",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 5,
-              "h": 5
-            },
-            "label": "the reservoir",
-            "sync": {
-              "phrase": "latent potential"
-            }
-          },
-          {
-            "kind": "staircase",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "finish line"
-            }
-          }
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "curious", "enter": "draw", "sync": { "phrase": "compound interest" } },
+          { "kind": "snowball", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "grows into a transformed life" } },
+          { "kind": "coins", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "little money" } }
         ]
       }
     },
     {
-      "id": "p1-3-list",
-      "type": "list_card",
-      "narration": "So shift your focus from the goal to the system behind it. Stop asking only what do I want to achieve, and start asking what system would quietly make it almost inevitable. Build a routine simple enough that you could run it on your very worst day. And when progress stalls out, do not scrap the goal in a panic. Just calmly fix the system that is feeding it.",
+      "id": "pr1-chart",
+      "type": "stat_chart",
+      "narration": "Look at the math and you can never unsee it. If you improve by one percent each day, that is one point zero one raised to the power of three hundred sixty five, which lands near thirty eight. But if you get one percent worse each day, zero point nine nine to that same power collapses almost to zero. Same year. Opposite lives. The gap is not talent. It is direction, compounded.",
       "visual": {
-        "title": "Build the system",
-        "items": [
-          {
-            "label": "Ask about the system",
-            "icon": "tick",
-            "sync": {
-              "phrase": "what system"
-            }
-          },
-          {
-            "label": "Repeat on bad days",
-            "icon": "box",
-            "sync": {
-              "phrase": "worst day"
-            }
-          },
-          {
-            "label": "Fix, don't scrap",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "fix the system"
-            }
-          }
+        "label": "One year of 1% a day",
+        "mode": "line",
+        "decimals": 1,
+        "datapoints": [
+          { "label": "start", "value": 1, "sync": { "phrase": "one percent each day" } },
+          { "label": "mid", "value": 6 },
+          { "label": "better", "value": 37.8, "sync": { "phrase": "near thirty eight" } },
+          { "label": "worse", "value": 0.03, "sync": { "phrase": "almost to zero" } }
         ]
       }
     },
     {
-      "id": "recap1",
+      "id": "pr1-2",
+      "type": "character_scene",
+      "narration": "This is why habits feel disappointing. You expect progress to be a straight line, but it moves along a plateau Clear calls the valley of disappointment. Picture an ice cube in a cold room. You raise the temperature one degree at a time and nothing happens, nothing happens, nothing happens, then at thirty two degrees the ice melts. The melting looked sudden. It was built by every degree before it.",
+      "visual": {
+        "title": "Valley of disappointment",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "maya", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "worried", "enter": "draw", "sync": { "phrase": "valley of disappointment" } },
+          { "kind": "scale", "at": { "col": 8, "row": 3, "w": 4, "h": 3 }, "reveal": "draw", "sync": { "phrase": "the ice melts" } },
+          { "kind": "clock", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "one degree at a time" } }
+        ]
+      }
+    },
+    {
+      "id": "pr1-3",
+      "type": "character_scene",
+      "narration": "Clear tells a story that proves it. British Cycling was a joke for a hundred years, until a new coach obsessed over tiny marginal gains. He tweaked the seats, repainted the truck floor to spot dust, even taught the riders the best way to wash their hands to avoid colds. None of it mattered on its own. Together, those one percent improvements turned a losing team into Olympic and Tour de France champions within a few short years.",
+      "visual": {
+        "title": "Marginal gains",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "omar", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "marginal gains" } },
+          { "kind": "trophy", "at": { "col": 8, "row": 2, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "champions" } },
+          { "kind": "percent", "at": { "col": 10, "row": 3, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "one percent improvements" } }
+        ]
+      }
+    },
+    {
+      "id": "pr2-title",
+      "type": "section_title",
+      "narration": "Principle two. Goals are for losers, systems are for winners.",
+      "visual": { "role": "principle", "number": 2, "part": 1, "title": "Systems Over Goals", "emphasis": "circle", "memory": "gears", "sync": { "phrase": "systems are for winners" } }
+    },
+    {
+      "id": "pr2-quote",
+      "type": "quote_card",
+      "narration": "Clear puts it bluntly. You do not rise to the level of your goals. You fall to the level of your systems.",
+      "visual": { "quote": "You do not rise to the level of your goals. You fall to the level of your systems.", "attribution": "James Clear, Atomic Habits", "cast": "sage" }
+    },
+    {
+      "id": "pr2-1",
+      "type": "character_scene",
+      "narration": "Everybody wants the trophy. Both the winner and the loser of a championship shared the exact same goal, so the goal cannot be what separated them. What separated them was the system, the daily process each one actually ran. Goals set a direction, but systems drive the progress. Fall in love with the boring repetition and the results take care of themselves.",
+      "visual": {
+        "title": "Love the process",
+        "stage": "stage-spotlight",
+        "elements": [
+          { "kind": "figure", "cast": "omar", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "the system" } },
+          { "kind": "gears", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "daily process" } },
+          { "kind": "trophy", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "the trophy" } }
+        ]
+      }
+    },
+    {
+      "id": "pr2-compare",
+      "type": "compare",
+      "narration": "Hold the two side by side. A goal is the result you want, singular and far away. A system is the actions you repeat, daily and under your control. Goals are good for setting a direction. Systems are better for making progress. Winners and losers have the same goals. They do not have the same systems.",
+      "visual": {
+        "title": "Goals vs systems",
+        "left": { "heading": "Goals", "items": [ { "label": "The result you want", "sync": { "phrase": "the result you want" } }, { "label": "Set a direction", "sync": { "phrase": "setting a direction" } } ] },
+        "right": { "heading": "Systems", "items": [ { "label": "The actions you repeat", "sync": { "phrase": "the actions you repeat" } }, { "label": "Make real progress", "sync": { "phrase": "making progress" } } ] }
+      }
+    },
+    {
+      "id": "pr2-2",
+      "type": "character_scene",
+      "narration": "Think about what this means for a bad day. A system does not care whether you feel motivated. It just asks, did you run the process today, yes or no. That takes the pressure off the outcome, which you cannot control, and puts it on the action, which you always can. Stop obsessing over the number on the scale, and start obsessing over whether you showed up. Love the system, and the scale takes care of itself.",
+      "visual": {
+        "title": "Run the process",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "theo", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "neutral", "enter": "draw", "sync": { "phrase": "run the process" } },
+          { "kind": "gears", "at": { "col": 7, "row": 2, "w": 3, "h": 4 }, "reveal": "draw", "sync": { "phrase": "the action" } },
+          { "kind": "scale", "at": { "col": 10, "row": 3, "w": 2, "h": 3 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "the scale takes care of itself" } }
+        ]
+      }
+    },
+    {
+      "id": "pr2b-title",
+      "type": "section_title",
+      "narration": "Principle two b. The plateau of latent potential.",
+      "visual": { "role": "principle", "number": 3, "part": 1, "title": "Plateau Of Potential", "emphasis": "circle", "memory": "staircase", "sync": { "phrase": "plateau of latent potential" } }
+    },
+    {
+      "id": "pr2b-1",
+      "type": "character_scene",
+      "narration": "Here is the most important chart in the book, and almost nobody draws it right. We expect our effort to pay off in a straight diagonal line. We expect that if we put in the work, the results should arrive on schedule, evenly, day by day. Clear calls this expectation the great lie of self improvement, because reality does not work that way at all. Your real progress hides for a long time, flat and frustrating, and then it erupts all at once.",
+      "visual": {
+        "title": "The great lie",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "max", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "worried", "enter": "draw", "sync": { "phrase": "a straight diagonal line" }, "effects": [ { "kind": "sweat_drop", "sync": { "phrase": "flat and frustrating" } } ] },
+          { "kind": "trendup", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "erupts all at once" } }
+        ]
+      }
+    },
+    {
+      "id": "pr2b-2",
+      "type": "character_scene",
+      "narration": "Clear names the gap between the line we expect and the line we get the plateau of latent potential. Think of it like heating that ice cube again, or like a bamboo plant that spends five years growing roots underground before it shoots ninety feet into the sky in six weeks. The work was never wasted. It was being stored. The breakthrough you are waiting for is simply the latent potential of everything you already did, finally made visible.",
+      "visual": {
+        "title": "Stored, not wasted",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "curious", "enter": "draw", "sync": { "phrase": "latent potential" } },
+          { "kind": "sapling", "at": { "col": 7, "row": 2, "w": 2, "h": 4 }, "reveal": "draw", "sync": { "phrase": "growing roots underground" } },
+          { "kind": "tree", "at": { "col": 9, "row": 1, "w": 3, "h": 5 }, "reveal": "pop", "color": "accent", "sync": { "phrase": "finally made visible" } }
+        ]
+      }
+    },
+    {
+      "id": "p1-recap",
       "type": "recap_card",
-      "narration": "Quick recap of part one. Your systems beat your goals. Small gains compound, for you or against you. And the valley is not failure, it is latent potential waiting to break. But knowing all of this changes nothing until you change something far deeper. Who do you actually believe you are?",
+      "narration": "Quick recap of part one. First, habits are compound interest, so tiny gains stack into enormous outcomes. Second, you climb through a valley of disappointment and a long plateau before results appear. And third, you do not rise to your goals, you fall to your systems.",
       "visual": {
-        "title": "Part one, in short",
+        "title": "Part one recap",
         "scope": "mid",
         "items": [
-          {
-            "label": "Systems beat goals",
-            "sync": {
-              "phrase": "systems beat your goals"
-            }
-          },
-          {
-            "label": "Small gains compound",
-            "sync": {
-              "phrase": "Small gains compound"
-            }
-          },
-          {
-            "label": "Trust the valley",
-            "sync": {
-              "phrase": "the valley"
-            }
-          }
+          { "label": "Habits compound", "sync": { "phrase": "compound interest" } },
+          { "label": "Push past the valley", "sync": { "phrase": "valley of disappointment" } },
+          { "label": "Systems beat goals", "sync": { "phrase": "fall to your systems" } }
         ]
       }
     },
     {
-      "id": "part2",
+      "id": "p2-title",
       "type": "section_title",
-      "narration": "Part two. You become your habits.",
-      "visual": {
-        "role": "part",
-        "number": 2,
-        "title": "You Become Your Habits",
-        "emphasis": "underline",
-        "sync": {
-          "phrase": "your habits"
-        }
-      }
+      "narration": "Part two. Change who you believe you are.",
+      "visual": { "role": "part", "number": 2, "title": "Change Your Identity", "emphasis": "underline", "sync": { "phrase": "who you believe you are" } }
     },
     {
       "id": "p2-rehook",
       "type": "character_scene",
-      "narration": "You now know why tiny habits win. But here is the catch that quietly stops most people. You can understand every word of part one and still quit by Friday. Why? Because none of it truly sticks until you change the one thing underneath every single habit. Not what you want. Who you believe you are. Goals can pull you for a while, but identity is what carries you when the motivation runs dry. So before we touch a single technique, we have to rebuild the person doing them.",
+      "narration": "You now know why tiny habits win. But none of it sticks until you fix the one thing almost everyone skips, the thing underneath every habit, which is who you believe you are. Get this wrong and every system collapses. Get it right and good habits feel like coming home.",
       "visual": {
-        "title": "The thing underneath",
+        "title": "The deepest layer",
         "stage": "plain",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 3,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "thinking"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "worried",
-                "sync": {
-                  "phrase": "still quit"
-                }
-              }
-            ],
-            "label": "who are you?",
-            "effects": [
-              {
-                "kind": "question_marks",
-                "sync": {
-                  "phrase": "who you believe"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "brain",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 8,
-              "row": 2,
-              "w": 3,
-              "h": 3
-            },
-            "sync": {
-              "phrase": "tiny habits win"
-            }
-          }
+          { "kind": "figure", "cast": "nadia", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "curious", "enter": "walk", "facing": "right", "sync": { "phrase": "who you believe you are" } },
+          { "kind": "brain", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "every habit" } }
         ]
       }
     },
     {
-      "id": "p2-1-title",
+      "id": "pr3-title",
       "type": "section_title",
-      "narration": "Principle four. Identity over outcomes.",
-      "visual": {
-        "role": "principle",
-        "number": 4,
-        "part": 2,
-        "title": "Identity Over Outcomes",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "Identity over outcomes"
-        },
-        "memory": "target"
-      }
+      "narration": "Principle three. Build identity based habits.",
+      "visual": { "role": "principle", "number": 3, "part": 2, "title": "Identity Based Habits", "emphasis": "circle", "memory": "brain", "sync": { "phrase": "identity based habits" } }
     },
     {
-      "id": "p2-1-maya",
+      "id": "pr3-1",
       "type": "character_scene",
-      "narration": "Most people start with an outcome. Lose the weight. Finish the book. Clear flips the whole order around. Start instead with the person you want to be. Maya does not say I want to run. She says I am a runner, and runners simply do not skip two days in a row. The behavior is no longer something she forces. It is proof of who she already is.",
-      "visual": {
-        "title": "Start with who",
-        "stage": "outdoor",
-        "elements": [
-          {
-            "kind": "crowd",
-            "count": 6,
-            "arrangement": "row",
-            "at": {
-              "col": 0,
-              "row": 4,
-              "w": 12,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "Most people"
-            }
-          },
-          {
-            "kind": "figure",
-            "cast": "maya",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "I am a runner",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "I am a runner"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "shoe",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "runners simply"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p2-1-layers",
-      "type": "character_scene",
-      "narration": "Clear describes three layers of change, like rings. The outer ring is your outcomes, what you get. The middle ring is your process, what you do. And the deepest ring is your identity, what you believe. Most people try to change from the outside in, chasing results. But lasting habits are built from the inside out, starting with the belief, and letting the actions follow.",
+      "narration": "Clear draws three layers of change, like rings inside each other. The outer ring is outcomes, what you get. The middle ring is processes, what you do. The deepest ring is identity, what you believe. Most people start at the outer ring, chasing a result. Lasting change starts at the center, by changing the belief about the kind of person you are.",
       "visual": {
         "title": "Three layers",
-        "stage": "plain",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "sage",
-            "at": {
-              "col": 0,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "inside out"
-          },
-          {
-            "kind": "target",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 5,
-              "h": 5
-            },
-            "label": "the rings",
-            "sync": {
-              "phrase": "three layers"
-            }
-          },
-          {
-            "kind": "brain",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "your identity"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p2-1-list",
-      "type": "list_card",
-      "narration": "So flip your own script. Decide the type of person you want to be. Then prove it to yourself with small, repeated wins, one tiny rep at a time. Ask a simple question before any choice. What would a healthy person do? What would a writer do? Then do that one thing, and let it quietly cast a vote.",
-      "visual": {
-        "title": "Become the type",
-        "items": [
-          {
-            "label": "Decide the type",
-            "icon": "tick",
-            "sync": {
-              "phrase": "type of person"
-            }
-          },
-          {
-            "label": "Prove it small",
-            "icon": "box",
-            "sync": {
-              "phrase": "prove it to yourself"
-            }
-          },
-          {
-            "label": "What would they do",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "healthy person do"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p2-1-smoker",
-      "type": "character_scene",
-      "narration": "Clear shares one perfect little example. Two people are trying to quit smoking. Each is offered a cigarette. The first says, no thanks, I am trying to quit. He still believes he is a smoker who is simply fighting the urge. The second says, no thanks, I am not a smoker. A tiny difference in the words. An enormous difference underneath. One person is resisting an identity. The other has already quietly become someone new.",
-      "visual": {
-        "title": "Not a smoker",
-        "stage": "plain",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "sage",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "I'm not a smoker"
-          },
-          {
-            "kind": "speech",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 4,
-              "h": 3
-            },
-            "label": "two answers",
-            "sync": {
-              "phrase": "quit smoking"
-            }
-          },
-          {
-            "kind": "brain",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "already quietly become"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p2-2-title",
-      "type": "section_title",
-      "narration": "Principle five. Every action is a vote.",
-      "visual": {
-        "role": "principle",
-        "number": 5,
-        "part": 2,
-        "title": "Every Action A Vote",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "action is a vote"
-        },
-        "memory": "shoe"
-      }
-    },
-    {
-      "id": "p2-2-votes",
-      "type": "character_scene",
-      "narration": "Think of every habit like a tiny election for your identity. Each rep is a single vote, cast for the type of person you are becoming. And here is the relief. You do not need a unanimous result. Nobody is a perfect saver or a perfect runner. You just need your habits to win the majority of the time, so the evidence stacks in your favor.",
-      "visual": {
-        "title": "Cast your vote",
-        "stage": "stage-spotlight",
-        "elements": [
-          {
-            "kind": "crowd",
-            "count": 7,
-            "arrangement": "cluster",
-            "tint": "#BBD0DD",
-            "at": {
-              "col": 0,
-              "row": 4,
-              "w": 12,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "tiny election"
-            }
-          },
-          {
-            "kind": "figure",
-            "cast": "maya",
-            "at": {
-              "col": 4,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "standing",
-              "celebrating"
-            ],
-            "expression": "happy",
-            "label": "one more vote",
-            "effects": [
-              {
-                "kind": "sparkles",
-                "sync": {
-                  "phrase": "the majority"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "target",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 10,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "single vote"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p2-2-reader",
-      "type": "character_scene",
-      "narration": "This is why the goal was never really the point. The goal is not to read a book. The goal is to become a reader. The goal is not to run a marathon. The goal is to become a runner. When the habit becomes part of your identity, you no longer have to chase motivation. You act in line with the person you already believe you are.",
-      "visual": {
-        "title": "Become a reader",
         "stage": "room",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 0,
-              "w": 5,
-              "h": 6
-            },
-            "pose": "sitting",
-            "seat": "desk",
-            "facing": "right",
-            "holding": {
-              "prop": "book",
-              "hand": "right"
-            },
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "become a reader"
-                }
-              }
-            ],
-            "label": "a reader",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "become a reader"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "heart",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 9,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "part of your identity"
-            }
-          }
+          { "kind": "figure", "cast": "theo", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "neutral", "enter": "draw", "sync": { "phrase": "three layers" } },
+          { "kind": "target", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "the deepest ring is identity" } }
         ]
       }
     },
     {
-      "id": "p2-quote",
-      "type": "quote_card",
-      "narration": "As James Clear puts it, every action you take is a vote for the type of person you wish to become.",
+      "id": "pr3-table",
+      "type": "table",
+      "narration": "Watch how the sentence changes everything. The first time you are offered a cigarette, the beginner says no thanks, I am trying to quit, still a smoker fighting the urge. The identity based answer is simply, no thanks, I am not a smoker. Same refusal, different person. Every action you take is a vote for the type of person you wish to become.",
       "visual": {
-        "quote": "Every action you take is a vote for the type of person you wish to become.",
-        "attribution": "James Clear",
-        "cast": "sage"
+        "title": "Same no, new self",
+        "columns": ["Layer", "Old self", "New self"],
+        "rows": [
+          { "cells": ["Outcome", "Quit smoking", "Healthy lungs"] },
+          { "cells": ["Process", "Resist the urge", "Skip it easily"] },
+          { "cells": ["Identity", "Trying to quit", "Not a smoker"], "highlight": true, "sync": { "phrase": "I am not a smoker" } }
+        ]
       }
     },
     {
-      "id": "p2-2-habits",
+      "id": "pr3-2",
       "type": "character_scene",
-      "narration": "And this is the real, lasting reward of any habit. Yes, it helps you get things done today. But far more deeply, each repetition is quietly reshaping how you see yourself. Every time you write, you become a little more of a writer. Every workout, a little more of an athlete. Your habits are the path by which you slowly, rep by rep, vote yourself into a brand new identity. That is the real prize.",
+      "narration": "So the practical move is a two step loop. First, decide the type of person you want to be. Second, prove it to yourself with small wins. Want to be a reader. Read one page tonight. Want to be a runner. Lace up and run to the end of the street. You are not chasing the outcome anymore. You are casting votes, and every vote says this is who I am.",
       "visual": {
-        "title": "The real prize",
-        "stage": "stage-spotlight",
+        "title": "Cast your votes",
+        "stage": "street",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "maya",
-            "at": {
-              "col": 4,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "standing",
-              "celebrating"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "new identity"
-                }
-              }
-            ],
-            "label": "becoming",
-            "effects": [
-              {
-                "kind": "sparkles",
-                "sync": {
-                  "phrase": "new identity"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "heart",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 10,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "a writer"
-            }
-          },
-          {
-            "kind": "trophy",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 0,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "the real prize"
-            }
-          }
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "celebrating", "expression": "happy", "enter": "draw", "sync": { "phrase": "small wins" } },
+          { "kind": "checkmark", "at": { "col": 8, "row": 2, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "casting votes" } },
+          { "kind": "shoe", "at": { "col": 10, "row": 3, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "a runner" } }
         ]
       }
     },
     {
-      "id": "recap2",
-      "type": "recap_card",
-      "narration": "Recap of part two. True change runs through identity, not just outcomes. Every single action is a vote for the person you are becoming. And you only need the majority, not perfection. So now the practical question. How do you actually cast those votes on purpose, even on the days you really do not feel like it?",
+      "id": "pr3-3",
+      "type": "character_scene",
+      "narration": "And this is why most resolutions die in February. People set an outcome goal, lose weight, get rich, then white knuckle through actions that war with how they still see themselves. If you believe you are messy, no tidy system survives you for long. But change the belief first, decide you are a tidy person, and the tidy actions start to feel like simply being yourself. Behavior that is out of line with the self will not last. Behavior that confirms the self repeats on its own.",
       "visual": {
-        "title": "Part two, in short",
+        "title": "Belief comes first",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "nadia", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "neutral", "enter": "draw", "sync": { "phrase": "change the belief first" } },
+          { "kind": "brain", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "confirms the self" } }
+        ]
+      }
+    },
+    {
+      "id": "pr4-title",
+      "type": "section_title",
+      "narration": "Principle four. The habit loop.",
+      "visual": { "role": "principle", "number": 4, "part": 2, "title": "The Habit Loop", "emphasis": "circle", "memory": "gears", "sync": { "phrase": "habit loop" } }
+    },
+    {
+      "id": "pr4-1",
+      "type": "character_scene",
+      "narration": "Before we can change a habit, we have to see it. Clear breaks every habit into a four step loop that runs on a feedback cycle. The cue notices a reward is available. The craving is the motivation to get it. The response is the action you take. And the reward is the payoff that teaches your brain to do it all again next time.",
+      "visual": {
+        "title": "Four step loop",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "sage", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "four step loop" } },
+          { "kind": "gears", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "feedback cycle" } },
+          { "kind": "lightbulb", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "state": "on", "tier": "ambient", "sync": { "phrase": "the cue" } }
+        ]
+      }
+    },
+    {
+      "id": "pr4-list",
+      "type": "list_card",
+      "narration": "Say that back as four words so they stick. Cue. Craving. Response. Reward. The cue triggers, the craving pulls, the response acts, the reward satisfies. Master these four and you hold the lever behind every behavior you have ever had.",
+      "visual": {
+        "title": "The four steps",
+        "items": [
+          { "label": "Cue triggers", "icon": "arrow", "sync": { "phrase": "The cue triggers" } },
+          { "label": "Craving pulls", "icon": "arrow", "sync": { "phrase": "the craving pulls" } },
+          { "label": "Response acts", "icon": "arrow", "sync": { "phrase": "the response acts" } },
+          { "label": "Reward satisfies", "icon": "arrow", "sync": { "phrase": "the reward satisfies" } }
+        ]
+      }
+    },
+    {
+      "id": "pr4b-title",
+      "type": "section_title",
+      "narration": "Principle five. Habits build your self belief.",
+      "visual": { "role": "principle", "number": 5, "part": 2, "title": "Habits Build Belief", "emphasis": "circle", "memory": "checkmark", "sync": { "phrase": "build your self belief" } }
+    },
+    {
+      "id": "pr4b-1",
+      "type": "character_scene",
+      "narration": "There is a loop inside the loop that most people miss. Your habits shape your identity, but your identity also shapes your habits. It runs both directions. Every time you write, you build a little more evidence that you are a writer. Every time you train, you earn a little more proof that you are an athlete. The more evidence you gather, the stronger the belief, and the stronger the belief, the easier the next action becomes.",
+      "visual": {
+        "title": "Evidence builds belief",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "maya", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "both directions" } },
+          { "kind": "brick", "at": { "col": 7, "row": 3, "w": 2, "h": 2 }, "reveal": "draw", "sync": { "phrase": "a little more evidence" } },
+          { "kind": "wall", "at": { "col": 9, "row": 2, "w": 3, "h": 4 }, "reveal": "pop", "color": "accent", "tier": "ambient", "sync": { "phrase": "the stronger the belief" } }
+        ]
+      }
+    },
+    {
+      "id": "pr4b-2",
+      "type": "character_scene",
+      "narration": "This is why Clear warns against clinging too tightly to a single identity. If you are only a runner and an injury stops you, the whole identity shatters. So keep it broad. Instead of I am a quarterback, say I am the kind of person who is mentally tough and loves a challenge. The habit is the brick. The identity is the wall. Lay enough bricks, keep the identity flexible, and the wall will stand even when life throws a storm at it.",
+      "visual": {
+        "title": "Keep it flexible",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "deshawn", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "curious", "enter": "draw", "sync": { "phrase": "a single identity" } },
+          { "kind": "brick", "at": { "col": 7, "row": 4, "w": 2, "h": 2 }, "reveal": "draw", "sync": { "phrase": "The habit is the brick" } },
+          { "kind": "wall", "at": { "col": 9, "row": 2, "w": 3, "h": 4 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "the wall will stand" } }
+        ]
+      }
+    },
+    {
+      "id": "p2-recap",
+      "type": "recap_card",
+      "narration": "Recap of part two. True change runs three layers deep, and the deepest one is identity. Every action is a vote for who you are becoming. Habits and identity feed each other in a loop. And every habit runs the same four step cycle of cue, craving, response, and reward.",
+      "visual": {
+        "title": "Part two recap",
         "scope": "mid",
         "items": [
-          {
-            "label": "Change your identity",
-            "sync": {
-              "phrase": "through identity"
-            }
-          },
-          {
-            "label": "Every action votes",
-            "sync": {
-              "phrase": "action is a vote"
-            }
-          },
-          {
-            "label": "Majority, not perfection",
-            "sync": {
-              "phrase": "the majority"
-            }
-          }
+          { "label": "Identity runs deepest", "sync": { "phrase": "the deepest one is identity" } },
+          { "label": "Actions are votes", "sync": { "phrase": "a vote for who you are" } },
+          { "label": "Cue craving response reward", "sync": { "phrase": "cue, craving, response" } }
         ]
       }
     },
     {
-      "id": "part3",
+      "id": "p3-title",
       "type": "section_title",
-      "narration": "Part three. Make it obvious, and make it attractive.",
-      "visual": {
-        "role": "part",
-        "number": 3,
-        "title": "Obvious And Attractive",
-        "emphasis": "underline",
-        "sync": {
-          "phrase": "make it attractive"
-        }
-      }
+      "narration": "Part three. The first law, make it obvious.",
+      "visual": { "role": "part", "number": 3, "title": "First Law: Obvious", "emphasis": "underline", "sync": { "phrase": "make it obvious" } }
     },
     {
       "id": "p3-rehook",
       "type": "character_scene",
-      "narration": "So your identity is the destination. Now for the practical engine that gets you there. Clear gives us four simple laws of behavior change. In this part we tackle the first two, the laws that decide whether you ever even begin. Get these wrong, and the best intentions in the world die on the launchpad. Get them right, and starting feels almost effortless, like the habit was waiting for you all along. So let us make the good behavior the obvious, tempting one.",
+      "narration": "Maybe you are thinking, I already know what to do, I just do not do it. Good, because the next four parts are the four laws that turn knowing into doing, whether you feel like it or not. The first law attacks the cue. We are going to make the good habit impossible to miss.",
+      "visual": {
+        "title": "Turn knowing into doing",
+        "stage": "plain",
+        "elements": [
+          { "kind": "figure", "cast": "max", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "curious", "enter": "walk", "facing": "right", "sync": { "phrase": "the four laws" } },
+          { "kind": "target", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "attacks the cue" } }
+        ]
+      }
+    },
+    {
+      "id": "p3-laws-table",
+      "type": "table",
+      "narration": "Here is the whole system on one card. To build a good habit, you make it obvious, attractive, easy, and satisfying. To break a bad one, you invert each law, make it invisible, unattractive, hard, and unsatisfying. Four laws, two directions. We will take them one at a time.",
       "visual": {
         "title": "The four laws",
-        "stage": "plain",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 3,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "the engine"
-          },
-          {
-            "kind": "gears",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 8,
-              "row": 2,
-              "w": 3,
-              "h": 3
-            },
-            "sync": {
-              "phrase": "four simple laws"
-            }
-          }
+        "columns": ["Step", "Build", "Break"],
+        "rows": [
+          { "cells": ["Cue", "Obvious", "Invisible"], "sync": { "phrase": "make it obvious" } },
+          { "cells": ["Craving", "Attractive", "Unattractive"], "sync": { "phrase": "attractive" } },
+          { "cells": ["Response", "Easy", "Hard"], "sync": { "phrase": "easy" } },
+          { "cells": ["Reward", "Satisfying", "Unsatisfying"], "sync": { "phrase": "and satisfying" } }
         ]
       }
     },
     {
-      "id": "p3-loop",
-      "type": "list_card",
-      "narration": "First, the model everything hangs on. Every habit, good or bad, runs through the same four step loop. It starts with a cue, a trigger that says now. That sparks a craving, the wanting of some reward. Then comes the response, the actual habit you perform. And finally the reward itself, the payoff that satisfies you and teaches your brain to run the whole loop again. The four laws simply tune each stage of that loop.",
-      "visual": {
-        "title": "The habit loop",
-        "items": [
-          {
-            "label": "Cue",
-            "icon": "tick",
-            "sync": {
-              "phrase": "a cue"
-            }
-          },
-          {
-            "label": "Craving",
-            "icon": "box",
-            "sync": {
-              "phrase": "a craving"
-            }
-          },
-          {
-            "label": "Response",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "the response"
-            }
-          },
-          {
-            "label": "Reward",
-            "icon": "tick",
-            "sync": {
-              "phrase": "the reward itself"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p3-1-title",
+      "id": "pr5-title",
       "type": "section_title",
-      "narration": "Law one. Make it obvious.",
-      "visual": {
-        "role": "principle",
-        "number": 6,
-        "part": 3,
-        "title": "Make It Obvious",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "Make it obvious"
-        },
-        "memory": "phone"
-      }
+      "narration": "Principle five. Make it obvious.",
+      "visual": { "role": "principle", "number": 5, "part": 3, "title": "Make It Obvious", "emphasis": "circle", "memory": "calendar", "sync": { "phrase": "Make it obvious" } }
     },
     {
-      "id": "p3-1-teach",
+      "id": "pr5-1",
       "type": "character_scene",
-      "narration": "Sage explains the first law. Every habit starts with a cue, a trigger your brain notices. A snack left on the counter. A phone glowing on the desk. Then temptation strolls in, right on schedule, offering the easy bad habit. The fix is simple to say. Make the good cues loud and impossible to miss, and make the bad cues quietly disappear.",
+      "narration": "The first tool is an implementation intention, which is a fancy name for a simple sentence. I will do this behavior at this time in this place. Instead of saying I will exercise more, you say I will walk for ten minutes at seven in the morning in my kitchen. Research found people who wrote that exact sentence were far more likely to follow through, because the cue is now scheduled.",
       "visual": {
-        "title": "Design your cues",
-        "stage": "stage-spotlight",
+        "title": "Name the cue",
+        "stage": "desk-office",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "sage",
-            "at": {
-              "col": 0,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "the teacher"
-          },
-          {
-            "kind": "figure",
-            "cast": "max",
-            "at": {
-              "col": 7,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "left",
-            "enter": "walk",
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "temptation",
-            "sync": {
-              "phrase": "temptation strolls in"
-            },
-            "effects": [
-              {
-                "kind": "motion_lines",
-                "sync": {
-                  "phrase": "temptation strolls in"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "phone",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 5,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "phone glowing"
-            }
-          }
+          { "kind": "figure", "cast": "jade", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "implementation intention" } },
+          { "kind": "clock", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "the cue is now scheduled" } },
+          { "kind": "calendar", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "this time" } }
         ]
       }
     },
     {
-      "id": "p3-1-stack",
-      "type": "character_scene",
-      "narration": "A great trick for obvious is habit stacking. Anchor a new habit to one you already do without thinking. After I pour my morning coffee, I will write one line in my journal. The old habit becomes the cue for the new one, so you never have to rely on memory or raw motivation. The trigger is already built right into your day.",
+      "id": "pr5-stat",
+      "type": "stat_chart",
+      "narration": "The numbers on this are almost unfair. In one study on exercise, people who simply wanted to work out followed through about thirty five percent of the time. The group that wrote a single when and where sentence followed through over ninety percent of the time. Same intention, same people, one tiny sentence, and the success rate nearly tripled.",
       "visual": {
-        "title": "Stack it on",
+        "label": "Followed through",
+        "mode": "bars",
+        "suffix": "%",
+        "datapoints": [
+          { "label": "no plan", "value": 35, "sync": { "phrase": "thirty five percent" } },
+          { "label": "wrote it", "value": 91, "sync": { "phrase": "ninety percent" } }
+        ]
+      }
+    },
+    {
+      "id": "pr5-2",
+      "type": "character_scene",
+      "narration": "The second tool is habit stacking. You anchor a new habit to one you already do, using the formula after I do this, I will do that. After I pour my morning coffee, I will meditate for one minute. After I sit at my desk, I will write one sentence. Your existing routine becomes the cue, so you never have to remember, you just have to follow the chain.",
+      "visual": {
+        "title": "Habit stacking",
         "stage": "room",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "thinking",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "habit stacking"
-                }
-              }
-            ],
-            "label": "stack it",
-            "effects": [
-              {
-                "kind": "thought_bubble",
-                "sync": {
-                  "phrase": "habit stacking"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "coffee",
-            "at": {
-              "col": 7,
-              "row": 2,
-              "w": 3,
-              "h": 4
-            },
-            "label": "morning coffee",
-            "sync": {
-              "phrase": "pour my morning coffee"
-            }
-          },
-          {
-            "kind": "gears",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "built right into"
-            }
-          }
+          { "kind": "figure", "cast": "rosa", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "happy", "enter": "draw", "sync": { "phrase": "habit stacking" } },
+          { "kind": "coffee", "at": { "col": 7, "row": 3, "w": 2, "h": 2 }, "reveal": "draw", "sync": { "phrase": "morning coffee" } },
+          { "kind": "staircase", "at": { "col": 9, "row": 2, "w": 3, "h": 4 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "follow the chain" } }
         ]
       }
     },
     {
-      "id": "p3-1-list",
-      "type": "list_card",
-      "narration": "So make the first law work for you. Write an implementation intention. I will do this behavior, at this time, in this place. Stack the new habit onto an old reliable one. And set your cues out in plain sight, the book on the pillow, the guitar on its stand, so the right choice is the one you cannot help but notice.",
-      "visual": {
-        "title": "Make it obvious",
-        "items": [
-          {
-            "label": "Time and place",
-            "icon": "tick",
-            "sync": {
-              "phrase": "this time"
-            }
-          },
-          {
-            "label": "Stack on an old one",
-            "icon": "box",
-            "sync": {
-              "phrase": "Stack the new habit"
-            }
-          },
-          {
-            "label": "Cues in sight",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "plain sight"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p3-1-point",
+      "id": "pr5-3",
       "type": "character_scene",
-      "narration": "Japan's railways use a beautiful trick called pointing and calling. Drivers physically point at each signal and say its status out loud. Green light. Speed check. It looks almost comically silly to passengers. But it drops errors by up to eighty five percent, because it drags an automatic action up into full awareness. That is the whole first law in miniature. When you make a cue impossible to ignore, the right behavior becomes much harder to forget.",
+      "narration": "The third tool is to design your environment. We think we choose our habits, but we mostly respond to what is in front of us. Put the apple on the counter and the cookies out of sight. Lay your gym clothes by the bed. Clear says environment is the invisible hand that shapes behavior, so make the cues for good habits obvious and the cues for bad ones disappear.",
       "visual": {
-        "title": "Point and call",
-        "stage": "street",
+        "title": "Design your space",
+        "stage": "room",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "sage",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "pointing",
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "green light",
-            "effects": [
-              {
-                "kind": "exclamation",
-                "sync": {
-                  "phrase": "full awareness"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "arrow",
-            "variant": "up",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 3,
-              "h": 4
-            },
-            "label": "point at it",
-            "sync": {
-              "phrase": "pointing and calling"
-            }
-          },
-          {
-            "kind": "phone",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "impossible to ignore"
-            }
-          }
+          { "kind": "figure", "cast": "kwame", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "curious", "enter": "draw", "sync": { "phrase": "design your environment" } },
+          { "kind": "house", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "the invisible hand" } },
+          { "kind": "bed", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "by the bed" } }
         ]
       }
     },
     {
-      "id": "p3-2-title",
+      "id": "pr5-list",
+      "type": "list_card",
+      "narration": "So here is your make it obvious checklist, the four moves of the first law in order. First, write the implementation intention. Second, stack it on an existing habit. Third, redesign the space so the cue is everywhere. And fourth, make each cue a trigger for exactly one good behavior, so your environment quietly votes for the person you want to be.",
+      "visual": {
+        "title": "Obvious checklist",
+        "items": [
+          { "label": "Write the intention", "icon": "box", "sync": { "phrase": "write the implementation intention" } },
+          { "label": "Stack on a habit", "icon": "box", "sync": { "phrase": "stack it on an existing habit" } },
+          { "label": "Redesign the space", "icon": "box", "sync": { "phrase": "redesign the space" } },
+          { "label": "One cue, one habit", "icon": "box", "sync": { "phrase": "exactly one good behavior" } }
+        ]
+      }
+    },
+    {
+      "id": "pr5b-title",
       "type": "section_title",
-      "narration": "Law two. Make it attractive.",
-      "visual": {
-        "role": "principle",
-        "number": 7,
-        "part": 3,
-        "title": "Make It Attractive",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "Make it attractive"
-        },
-        "memory": "moneybag"
-      }
+      "narration": "Principle nine. Make bad habits invisible.",
+      "visual": { "role": "principle", "number": 9, "part": 3, "title": "Make Bad Habits Invisible", "emphasis": "circle", "memory": "wall", "sync": { "phrase": "make bad habits invisible" } }
     },
     {
-      "id": "p3-2-craving",
+      "id": "pr5b-1",
       "type": "character_scene",
-      "narration": "This is Mr. Market's favorite law, because every bad habit dresses up as a reward. That bag of easy dopamine looks so good in the moment. But here is the twist. Your brain does not actually crave the habit itself. It craves the hit it expects to get. So the real question is never willpower. It is which craving you set up to win in advance.",
+      "narration": "Now flip the first law to break a habit. If making a good cue obvious builds a habit, then making a bad cue invisible breaks one. This is the single most practical thing in the whole book. You do not need more discipline. You need to remove the cue. Cannot stop scrolling. Leave the phone in another room. Snacking too much. Do not keep the snacks in the house at all.",
       "visual": {
-        "title": "The craving",
-        "stage": "street",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "max",
-            "at": {
-              "col": 4,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "presenting",
-              "standing"
-            ],
-            "expression": "happy",
-            "holding": {
-              "prop": "moneybag",
-              "hand": "right"
-            },
-            "label": "easy dopamine",
-            "effects": [
-              {
-                "kind": "sparkles",
-                "sync": {
-                  "phrase": "easy dopamine"
-                }
-              },
-              {
-                "kind": "money",
-                "sync": {
-                  "phrase": "craves the hit"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "brain",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 10,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "Your brain"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p3-2-bundle",
-      "type": "character_scene",
-      "narration": "So use a trick called temptation bundling. Pair something you need to do with something you genuinely want to do. Only watch your favorite show while you are on the treadmill. Only listen to that addictive podcast while you clean the kitchen. You borrow the pull of the fun thing, and quietly attach it to the habit you have been avoiding.",
-      "visual": {
-        "title": "Bundle the pull",
+        "title": "Remove the cue",
         "stage": "room",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "celebrating"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "temptation bundling"
-                }
-              }
-            ],
-            "label": "pair them up",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "the fun thing"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "dumbbell",
-            "at": {
-              "col": 6,
-              "row": 2,
-              "w": 2,
-              "h": 3
-            },
-            "label": "the chore",
-            "sync": {
-              "phrase": "treadmill"
-            }
-          },
-          {
-            "kind": "heart",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "want to do"
-            }
-          }
+          { "kind": "figure", "cast": "pip", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "shrugging", "expression": "worried", "enter": "draw", "sync": { "phrase": "remove the cue" } },
+          { "kind": "phone", "at": { "col": 7, "row": 3, "w": 2, "h": 2 }, "reveal": "draw", "sync": { "phrase": "another room" } },
+          { "kind": "wall", "at": { "col": 9, "row": 2, "w": 3, "h": 4 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "in the house at all" } }
         ]
       }
     },
     {
-      "id": "p3-2-list",
-      "type": "list_card",
-      "narration": "So stack the craving firmly in your favor. Bundle the habit with something you already love, so the pull is there from the start. Surround yourself with a tribe where your new habit is simply the normal thing to do. And reframe the story. You do not have to train. You get to. Same exact action, a completely different feeling.",
-      "visual": {
-        "title": "Make it tempting",
-        "items": [
-          {
-            "label": "Bundle with fun",
-            "icon": "tick",
-            "sync": {
-              "phrase": "Bundle the habit"
-            }
-          },
-          {
-            "label": "Join a tribe",
-            "icon": "box",
-            "sync": {
-              "phrase": "a tribe"
-            }
-          },
-          {
-            "label": "You get to",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "You get to"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p3-2-dopamine",
+      "id": "pr5b-2",
       "type": "character_scene",
-      "narration": "There is real brain science underneath this law. Scientists once assumed dopamine spiked only when we actually got a reward. It turns out it spikes most when we anticipate one. It is the wanting, not the having, that truly drives us to act. This is exactly why attractive habits work. By making the anticipation vivid and pleasant, you load the craving up in advance, so your brain starts pulling you toward the habit instead of away from it.",
+      "narration": "Clear tells the story of an executive who cut his smoking habit by redesigning his life around invisibility. The key insight is that self control is a short term strategy, not a long term one. You cannot white knuckle your way past a tempting cue a thousand times a day and expect to win. The people who look the most disciplined are usually just the ones who arranged their world so the temptation almost never shows up.",
       "visual": {
-        "title": "Wanting, not having",
-        "stage": "plain",
+        "title": "Discipline is design",
+        "stage": "desk-office",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "max",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "anticipate one"
-                }
-              }
-            ],
-            "label": "the wanting",
-            "effects": [
-              {
-                "kind": "sparkles",
-                "sync": {
-                  "phrase": "anticipate one"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "brain",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 4,
-              "h": 4
-            },
-            "label": "dopamine",
-            "sync": {
-              "phrase": "brain science"
-            }
-          },
-          {
-            "kind": "heart",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 4,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "the craving"
-            }
-          }
+          { "kind": "figure", "cast": "theo", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "thinking", "expression": "tired", "enter": "draw", "sync": { "phrase": "self control" } },
+          { "kind": "scale", "at": { "col": 8, "row": 3, "w": 4, "h": 3 }, "reveal": "draw", "sync": { "phrase": "the temptation" } },
+          { "kind": "lightbulb", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "state": "on", "tier": "ambient", "sync": { "phrase": "the key insight" } }
         ]
       }
     },
     {
-      "id": "p3-3-title",
-      "type": "section_title",
-      "narration": "Principle eight. Design your environment.",
-      "visual": {
-        "role": "principle",
-        "number": 8,
-        "part": 3,
-        "title": "Design Your Environment",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "Design your environment"
-        },
-        "memory": "door"
-      }
-    },
-    {
-      "id": "p3-3-env",
-      "type": "character_scene",
-      "narration": "Here is a liberating idea. You do not need more willpower. You need a better room. Clear argues that your environment is the invisible hand that shapes your behavior, far more than discipline ever will. People with the best self control are not secretly stronger. They simply spend less time in tempting situations, because they quietly designed their world so the temptation is rarely even there.",
-      "visual": {
-        "title": "The invisible hand",
-        "stage": "room",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "thinking",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "better room"
-                }
-              }
-            ],
-            "label": "design it"
-          },
-          {
-            "kind": "door",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "label": "your world",
-            "sync": {
-              "phrase": "your environment"
-            }
-          },
-          {
-            "kind": "lightbulb",
-            "state": "on",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "color": "accent",
-            "sync": {
-              "phrase": "invisible hand"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p3-3-redesign",
-      "type": "character_scene",
-      "narration": "So become the architect of your own space. Want to eat better? Put the fruit in a bowl on the counter and bury the cookies in the back of a high cupboard. Want to practice guitar? Leave it on a stand in the middle of the living room. Make the good habit the path of least resistance, and the bad one a genuine hassle.",
-      "visual": {
-        "title": "Be the architect",
-        "stage": "room",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "maya",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "the architect",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "least resistance"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "coffee",
-            "at": {
-              "col": 6,
-              "row": 2,
-              "w": 2,
-              "h": 3
-            },
-            "label": "in reach",
-            "sync": {
-              "phrase": "on the counter"
-            }
-          },
-          {
-            "kind": "wall",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 2,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "a genuine hassle"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p3-3-list",
-      "type": "list_card",
-      "narration": "So engineer the space around you. Add friction to the bad habits, unplug the console, delete the app, so laziness works in your favor. Remove friction from the good ones, so they are ready and waiting. And give each habit its own place, one space for work, one for rest, so the room itself tells your brain what to do.",
-      "visual": {
-        "title": "Engineer the space",
-        "items": [
-          {
-            "label": "Add friction to bad",
-            "icon": "tick",
-            "sync": {
-              "phrase": "Add friction"
-            }
-          },
-          {
-            "label": "Remove friction from good",
-            "icon": "box",
-            "sync": {
-              "phrase": "Remove friction"
-            }
-          },
-          {
-            "label": "One place per habit",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "its own place"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p3-3-study",
-      "type": "character_scene",
-      "narration": "A famous hospital study proves just how powerful this is. Researchers quietly rearranged a cafeteria, moving bottled water to eye level beside every register, and tucking the soda further away. Nobody was told a single thing. Yet over three months, soda sales dropped and water sales climbed sharply. Same people, same willpower, just a different room. Their environment was shaping their choices the entire time, silently, without one poster or lecture about being healthy.",
-      "visual": {
-        "title": "Rearrange the room",
-        "stage": "room",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "maya",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "move the water",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "a different room"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "coffee",
-            "at": {
-              "col": 6,
-              "row": 2,
-              "w": 2,
-              "h": 3
-            },
-            "label": "eye level",
-            "sync": {
-              "phrase": "eye level"
-            }
-          },
-          {
-            "kind": "door",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 2,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "hospital study"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "recap3",
+      "id": "p3-recap",
       "type": "recap_card",
-      "narration": "Recap of part three. Make the good cues obvious, and let the bad ones fade into the background. Make the habit attractive by bundling it with what you already crave. And design your environment so the right choice is the easy one. Two laws down. Two to go, and these next two are where most people secretly fall apart.",
+      "narration": "Part three in three lines. Write an implementation intention so the cue has a time and place. Stack the new habit onto an old one. Design your environment so good cues are everywhere, and make the cues for bad habits disappear.",
       "visual": {
-        "title": "Part three, in short",
+        "title": "Part three recap",
         "scope": "mid",
         "items": [
-          {
-            "label": "Make it obvious",
-            "sync": {
-              "phrase": "obvious"
-            }
-          },
-          {
-            "label": "Make it attractive",
-            "sync": {
-              "phrase": "attractive"
-            }
-          },
-          {
-            "label": "Design the room",
-            "sync": {
-              "phrase": "design your environment"
-            }
-          }
+          { "label": "Schedule the cue", "sync": { "phrase": "implementation intention" } },
+          { "label": "Stack new on old", "sync": { "phrase": "Stack the new habit" } },
+          { "label": "Design the environment", "sync": { "phrase": "design your environment" } }
         ]
       }
     },
     {
-      "id": "part4",
+      "id": "p4-title",
       "type": "section_title",
-      "narration": "Part four. Make it easy, and make it satisfying.",
-      "visual": {
-        "role": "part",
-        "number": 4,
-        "title": "Easy And Satisfying",
-        "emphasis": "underline",
-        "sync": {
-          "phrase": "make it satisfying"
-        }
-      }
+      "narration": "Part four. The second law, make it attractive.",
+      "visual": { "role": "part", "number": 4, "title": "Second Law: Attractive", "emphasis": "underline", "sync": { "phrase": "make it attractive" } }
     },
     {
       "id": "p4-rehook",
       "type": "character_scene",
-      "narration": "Obvious and attractive get you to the starting line. But beginning is the easy part. Everyone begins. The last two laws are about the part nobody posts online. Showing up on the gray, boring days, when the excitement is long gone and nobody is watching or clapping. This is where habits are actually made or lost. Anyone can be disciplined when they are excited. The real skill is staying consistent once the excitement quietly wears off. So these last two laws are about making the habit stick for good.",
+      "narration": "Making a habit obvious is not enough if you dread it. Remember the craving, the second step of the loop. If a habit is not appealing, your brain will fight you every time. So the second law asks a different question. How do we make the good habit something you actually want to do.",
       "visual": {
-        "title": "The gray days",
+        "title": "Make it wanted",
         "stage": "plain",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 3,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "standing"
-            ],
-            "expressions": [
-              "tired",
-              {
-                "value": "curious",
-                "sync": {
-                  "phrase": "made or lost"
-                }
-              }
-            ],
-            "label": "show up"
-          },
-          {
-            "kind": "calendar",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 8,
-              "row": 2,
-              "w": 3,
-              "h": 3
-            },
-            "sync": {
-              "phrase": "gray, boring days"
-            }
-          }
+          { "kind": "figure", "cast": "pip", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "shrugging", "expression": "worried", "enter": "walk", "facing": "right", "sync": { "phrase": "the craving" } },
+          { "kind": "heart", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "actually want to do" } }
         ]
       }
     },
     {
-      "id": "p4-1-title",
+      "id": "pr6-title",
       "type": "section_title",
-      "narration": "Law three. Make it easy.",
-      "visual": {
-        "role": "principle",
-        "number": 9,
-        "part": 4,
-        "title": "Make It Easy",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "Make it easy"
-        },
-        "memory": "book"
-      }
+      "narration": "Principle six. Make it attractive.",
+      "visual": { "role": "principle", "number": 6, "part": 4, "title": "Make It Attractive", "emphasis": "circle", "memory": "heart", "sync": { "phrase": "Make it attractive" } }
     },
     {
-      "id": "p4-1-pip",
+      "id": "pr6-1",
       "type": "character_scene",
-      "narration": "Pip decides, with huge enthusiasm, that he will read one whole hour every single night. He lasts about two days. Clear's answer is the two minute rule. Shrink the habit down until it is almost laughably small. Not read a book. Read a single page. Not run three miles. Just put on your shoes and step outside. Make the first step so tiny that skipping it would feel faintly ridiculous.",
+      "narration": "The key tool here is temptation bundling. You pair something you need to do with something you want to do. Only watch your favorite show while you are on the exercise bike. Only listen to the podcast you love while cleaning the house. The thing you want becomes the reward that makes the thing you need suddenly attractive.",
       "visual": {
-        "title": "Shrink it down",
+        "title": "Temptation bundling",
         "stage": "room",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "pip",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing"
-            ],
-            "expressions": [
-              "happy",
-              {
-                "value": "shocked",
-                "sync": {
-                  "phrase": "two days"
-                }
-              }
-            ],
-            "label": "one page?",
-            "effects": [
-              {
-                "kind": "exclamation",
-                "sync": {
-                  "phrase": "two days"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "book",
-            "at": {
-              "col": 7,
-              "row": 2,
-              "w": 4,
-              "h": 3
-            },
-            "label": "one page",
-            "sync": {
-              "phrase": "Read a single page"
-            }
-          },
-          {
-            "kind": "hourglass",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "two minute rule"
-            }
-          }
+          { "kind": "figure", "cast": "lena", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "celebrating", "expression": "happy", "enter": "draw", "sync": { "phrase": "temptation bundling" } },
+          { "kind": "dumbbell", "at": { "col": 7, "row": 3, "w": 2, "h": 2 }, "reveal": "draw", "sync": { "phrase": "exercise bike" } },
+          { "kind": "gift", "at": { "col": 9, "row": 2, "w": 3, "h": 3 }, "reveal": "pop", "color": "accent", "sync": { "phrase": "the reward" } }
         ]
       }
     },
     {
-      "id": "p4-1-friction",
+      "id": "pr6-table",
+      "type": "table",
+      "narration": "You can combine bundling with your habit stack into one elegant chain. After the thing you already do, add the thing you need to do, then let yourself have the thing you want to do. After my lunch, I will call one lead, then I will check my messages. The need gets sandwiched between a routine and a reward, and the whole chain pulls you forward.",
+      "visual": {
+        "title": "Stack and bundle",
+        "columns": ["Slot", "Action"],
+        "rows": [
+          { "cells": ["Already do", "Finish lunch"], "sync": { "phrase": "After my lunch" } },
+          { "cells": ["Need to do", "Call one lead"], "sync": { "phrase": "call one lead" } },
+          { "cells": ["Want to do", "Check messages"], "sync": { "phrase": "check my messages" } }
+        ]
+      }
+    },
+    {
+      "id": "pr6-2",
       "type": "character_scene",
-      "narration": "The secret is that the first step is a gateway. Standing on the treadmill makes the run almost automatic. Writing one sentence often becomes a paragraph. The hard part was never the work. It was starting. So master the ritual of showing up, and let the habit grow naturally from there. A two minute version you actually do beats a perfect plan you keep skipping.",
+      "narration": "The deeper force is belonging. We imitate three groups, the close, the many, and the powerful. Humans are herd animals, so the fastest way to make a habit attractive is to join a culture where your desired behavior is the normal behavior. If you want to read more, join people who read. Their habits become your habits, because we badly want to fit in.",
       "visual": {
-        "title": "Just start",
-        "stage": "plain",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "showing up"
-                }
-              }
-            ],
-            "label": "gateway step",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "automatic"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "door",
-            "at": {
-              "col": 7,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "label": "the gateway",
-            "sync": {
-              "phrase": "a gateway"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p4-1-list",
-      "type": "list_card",
-      "narration": "So make the good habit genuinely easy. Shrink it to two minutes or less, a version you cannot talk yourself out of. Reduce the friction around it, so the right action takes almost no effort. And simply master showing up first, because a small habit you keep beats a grand one you abandon. Consistency, not intensity, quietly wins the long game.",
-      "visual": {
-        "title": "The two minute rule",
-        "items": [
-          {
-            "label": "Two minutes or less",
-            "icon": "tick",
-            "sync": {
-              "phrase": "two minutes or less"
-            }
-          },
-          {
-            "label": "Reduce the friction",
-            "icon": "box",
-            "sync": {
-              "phrase": "Reduce the friction"
-            }
-          },
-          {
-            "label": "Just show up",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "showing up"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p4-1-decisive",
-      "type": "character_scene",
-      "narration": "The choreographer Twyla Tharp wakes before dawn and does exactly one thing. She hails a cab to the gym. Not the workout, just the cab. That single, almost effortless ritual is her decisive moment, the tiny action that quietly sets the whole day in motion. Our lives are steered by a handful of these little moments. Master the two minute version of each one, and every good choice downstream suddenly gets dramatically easier.",
-      "visual": {
-        "title": "Decisive moments",
+        "title": "Join the tribe",
         "stage": "street",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "enter": "walk",
-            "poses": [
-              "walking",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "decisive moment"
-                }
-              }
-            ],
-            "label": "just the cab"
-          },
-          {
-            "kind": "clock",
-            "at": {
-              "col": 7,
-              "row": 1,
-              "w": 3,
-              "h": 3
-            },
-            "label": "before dawn",
-            "sync": {
-              "phrase": "before dawn"
-            }
-          },
-          {
-            "kind": "door",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "two minute version"
-            }
-          }
+          { "kind": "figure", "cast": "deshawn", "at": { "col": 1, "row": 1, "w": 3, "h": 5 }, "pose": "standing", "expression": "happy", "enter": "draw", "sync": { "phrase": "herd animals" } },
+          { "kind": "crowd", "at": { "col": 6, "row": 2, "w": 6, "h": 4 }, "count": 6, "arrangement": "cluster", "tint": "sky", "sync": { "phrase": "join a culture" } }
         ]
       }
     },
     {
-      "id": "p4-2-title",
+      "id": "pr7a-title",
       "type": "section_title",
-      "narration": "Law four. Make it satisfying.",
-      "visual": {
-        "role": "principle",
-        "number": 10,
-        "part": 4,
-        "title": "Make It Satisfying",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "Make it satisfying"
-        },
-        "memory": "calendar"
-      }
+      "narration": "Principle ten. Reframe the habit.",
+      "visual": { "role": "principle", "number": 10, "part": 4, "title": "Reframe The Habit", "emphasis": "circle", "memory": "brain", "sync": { "phrase": "Reframe the habit" } }
     },
     {
-      "id": "p4-2-reward",
+      "id": "pr7a-1",
       "type": "character_scene",
-      "narration": "The catch here is genuinely cruel. Good habits usually pay off far in the future, while bad habits feel great right now. Our brains were built to prize the immediate reward. So you have to bridge that gap. Add a small reward you can actually feel today, something that tells your brain, right now, that this new behavior was worth repeating.",
+      "narration": "Here is a tiny mindset shift with outsized power. Stop saying I have to, and start saying I get to. You do not have to go to work. You get to go to work, which means you have a job that many people would trade places for. You do not have to exercise. You get to move a body that still works. Same action, same morning, but you have reframed a burden into a privilege, and the craving follows the frame.",
       "visual": {
-        "title": "Reward it now",
-        "stage": "desk-office",
+        "title": "Get to, not have to",
+        "stage": "room",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "celebrating"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "small reward"
-                }
-              }
-            ],
-            "label": "feel it today",
-            "effects": [
-              {
-                "kind": "sparkles",
-                "sync": {
-                  "phrase": "worth repeating"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "gift",
-            "at": {
-              "col": 7,
-              "row": 2,
-              "w": 3,
-              "h": 3
-            },
-            "label": "the reward",
-            "sync": {
-              "phrase": "small reward"
-            }
-          }
+          { "kind": "figure", "cast": "lena", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "happy", "enter": "draw", "sync": { "phrase": "I get to" } },
+          { "kind": "gift", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "a privilege" } }
         ]
       }
     },
     {
-      "id": "p4-2-track",
+      "id": "pr7a-2",
       "type": "character_scene",
-      "narration": "The simplest reward of all is tracking. Mark an X on the calendar each day you show up, and watch the chain of marks slowly grow. Each mark feels satisfying on its own. And soon the chain itself becomes the motivation. You will not want to break the streak. One rule stands above all the others. Never miss twice in a row.",
+      "narration": "You can also build a motivation ritual, a tiny thing you enjoy that you do right before a hard habit. Some athletes listen to the same song before every game, until the song itself pulls them into focus. Over time the little ritual becomes a cue that your brain learns to associate with doing the hard thing well. You are hacking the craving on purpose, attaching a good feeling to the exact moment you need it most.",
       "visual": {
-        "title": "Don't break the chain",
-        "stage": "desk-office",
+        "title": "Motivation ritual",
+        "stage": "stage-spotlight",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 0,
-              "w": 5,
-              "h": 6
-            },
-            "pose": "sitting",
-            "seat": "desk",
-            "facing": "right",
-            "expressions": [
-              "happy",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "never miss twice"
-                }
-              }
-            ],
-            "label": "never miss twice",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "break the streak"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "calendar",
-            "at": {
-              "col": 8,
-              "row": 1,
-              "w": 3,
-              "h": 4
-            },
-            "label": "the streak",
-            "sync": {
-              "phrase": "chain of marks"
-            }
-          },
-          {
-            "kind": "trophy",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "satisfying"
-            }
-          }
+          { "kind": "figure", "cast": "pip", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "celebrating", "expression": "happy", "enter": "draw", "sync": { "phrase": "a motivation ritual" } },
+          { "kind": "heart", "at": { "col": 8, "row": 2, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "a good feeling" } },
+          { "kind": "target", "at": { "col": 10, "row": 3, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "into focus" } }
         ]
       }
     },
     {
-      "id": "p4-2-list",
-      "type": "list_card",
-      "narration": "So close the loop and make it satisfying. Give yourself an immediate little reward, so the good behavior feels good today. Track the habit, because what gets measured tends to get repeated. And protect the streak with one unbreakable rule. Life happens, so you may miss once. But never, ever miss twice in a row.",
-      "visual": {
-        "title": "Close the loop",
-        "items": [
-          {
-            "label": "Reward it now",
-            "icon": "tick",
-            "sync": {
-              "phrase": "immediate little reward"
-            }
-          },
-          {
-            "label": "Track the habit",
-            "icon": "box",
-            "sync": {
-              "phrase": "Track the habit"
-            }
-          },
-          {
-            "label": "Never miss twice",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "miss twice"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p4-2-paperclip",
-      "type": "character_scene",
-      "narration": "A young stockbroker named Trent Dyrsmid kept two jars on his desk. Each morning, one jar held a hundred and twenty paper clips. With every single sales call he made, he moved one clip over to the empty jar. That was the entire system. The growing pile was instant, visible proof that he had actually shown up and done the work. Within months he was bringing in serious money. A tiny satisfying signal, repeated, built a career.",
-      "visual": {
-        "title": "Move the clip",
-        "stage": "desk-office",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 0,
-              "w": 5,
-              "h": 6
-            },
-            "pose": "sitting",
-            "seat": "desk",
-            "facing": "right",
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "shown up"
-                }
-              }
-            ],
-            "label": "one more call",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "visible proof"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "calendar",
-            "at": {
-              "col": 8,
-              "row": 1,
-              "w": 3,
-              "h": 4
-            },
-            "label": "the jars",
-            "sync": {
-              "phrase": "paper clips"
-            }
-          },
-          {
-            "kind": "trophy",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "built a career"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p4-2-contract",
-      "type": "character_scene",
-      "narration": "You can also flip this law around to crush a bad habit. Make it immediately painful. Sign a simple habit contract, a written promise with real stakes, and hand it to a friend. Tell them that if you skip the gym this week, you owe them twenty dollars, or you post something embarrassing online. Suddenly the bad choice carries an instant cost, and a real human is watching. Accountability turns a private slip into a very public one.",
-      "visual": {
-        "title": "Add a cost",
-        "stage": "plain",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "max",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expressions": [
-              "worried",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "Accountability"
-                }
-              }
-            ],
-            "label": "real stakes",
-            "effects": [
-              {
-                "kind": "sweat_drop",
-                "sync": {
-                  "phrase": "instant cost"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "speech",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 4,
-              "h": 3
-            },
-            "label": "the contract",
-            "sync": {
-              "phrase": "habit contract"
-            }
-          },
-          {
-            "kind": "moneybag",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "twenty dollars"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "recap4",
+      "id": "p4-recap",
       "type": "recap_card",
-      "narration": "Recap of part four. Make the habit easy, shrinking it until starting is almost effortless. And make it satisfying, with a reward you can feel today and a streak you refuse to break. Those are the four laws. But there is one more problem, the quiet one that ends more good habits than any missed alarm ever could.",
+      "narration": "Part four, short and sweet. Bundle a habit you need with a treat you want. Surround yourself with a tribe where the behavior you want is already normal. Reframe have to into get to. Make it attractive and the craving works for you instead of against you.",
       "visual": {
-        "title": "Part four, in short",
+        "title": "Part four recap",
         "scope": "mid",
         "items": [
-          {
-            "label": "Make it easy",
-            "sync": {
-              "phrase": "easy"
-            }
-          },
-          {
-            "label": "Make it satisfying",
-            "sync": {
-              "phrase": "satisfying"
-            }
-          },
-          {
-            "label": "Never miss twice",
-            "sync": {
-              "phrase": "break"
-            }
-          }
+          { "label": "Bundle want and need", "sync": { "phrase": "Bundle a habit" } },
+          { "label": "Join the right tribe", "sync": { "phrase": "a tribe" } },
+          { "label": "Craving works for you", "sync": { "phrase": "the craving works for you" } }
         ]
       }
     },
     {
-      "id": "part5",
+      "id": "p5-title",
       "type": "section_title",
-      "narration": "Part five. Staying in the game.",
-      "visual": {
-        "role": "part",
-        "number": 5,
-        "title": "Staying In The Game",
-        "emphasis": "underline",
-        "sync": {
-          "phrase": "Staying in the game"
-        }
-      }
+      "narration": "Part five. The third law, make it easy.",
+      "visual": { "role": "part", "number": 5, "title": "Third Law: Easy", "emphasis": "underline", "sync": { "phrase": "make it easy" } }
     },
     {
       "id": "p5-rehook",
       "type": "character_scene",
-      "narration": "You can run all four laws perfectly and still fall off. Why? Because over time, habits get boring. And boredom, not failure, is the real enemy that quietly ends most good habits. This final part is the difference between people who do this for a month, and the ones who stay in the game for years. It is the stuff nobody tells you, the quiet art of keeping a good habit alive long after the novelty is gone. Get this, and the habit becomes permanent.",
+      "narration": "Here is where most advice fails you. It tells you to want it more and try harder. Clear says the opposite. Do not rely on willpower, because willpower runs out. Instead, make the good habit so easy that doing it takes less effort than skipping it. This is the law that finally gets you off the couch.",
       "visual": {
-        "title": "The real enemy",
+        "title": "Make effort tiny",
         "stage": "plain",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 3,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "poses": [
-              "standing"
-            ],
-            "expressions": [
-              "tired",
-              {
-                "value": "curious",
-                "sync": {
-                  "phrase": "years"
-                }
-              }
-            ],
-            "label": "stay in it",
-            "effects": [
-              {
-                "kind": "zzz",
-                "sync": {
-                  "phrase": "habits get boring"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "scale",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 8,
-              "row": 2,
-              "w": 3,
-              "h": 3
-            },
-            "sync": {
-              "phrase": "the real enemy"
-            }
-          }
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "curious", "enter": "walk", "facing": "right", "sync": { "phrase": "willpower runs out" } },
+          { "kind": "path", "at": { "col": 7, "row": 3, "w": 5, "h": 3 }, "reveal": "draw", "sync": { "phrase": "so easy" } }
         ]
       }
     },
     {
-      "id": "p5-1-title",
+      "id": "pr7-title",
       "type": "section_title",
-      "narration": "Principle eleven. The Goldilocks rule.",
-      "visual": {
-        "role": "principle",
-        "number": 11,
-        "part": 5,
-        "title": "The Goldilocks Rule",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "Goldilocks rule"
-        },
-        "memory": "scale"
-      }
+      "narration": "Principle seven. The two minute rule.",
+      "visual": { "role": "principle", "number": 7, "part": 5, "title": "The Two Minute Rule", "emphasis": "circle", "memory": "clock", "sync": { "phrase": "two minute rule" } }
     },
     {
-      "id": "p5-1-goldilocks",
+      "id": "pr7-1",
       "type": "character_scene",
-      "narration": "Humans love a specific kind of challenge. Not too hard, or we get anxious and give up. Not too easy, or we get bored and drift away. We stay most engaged right at the edge of our current ability, a task just manageable enough to be interesting. Clear calls this the Goldilocks rule. Keep your habit sitting in that sweet spot.",
+      "narration": "The headline tool of this law is the two minute rule. When you start a new habit, it should take less than two minutes to do. Read one page. Do one push up. Write one sentence. The point is not the two minutes. The point is to master showing up, because a habit you do for two minutes is a habit you keep, and a habit you keep is a habit you can grow.",
       "visual": {
-        "title": "The sweet spot",
-        "stage": "plain",
+        "title": "Under two minutes",
+        "stage": "desk-office",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "sage",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "just right"
-          },
-          {
-            "kind": "scale",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 5,
-              "h": 5
-            },
-            "label": "the balance",
-            "sync": {
-              "phrase": "Goldilocks rule"
-            }
-          },
-          {
-            "kind": "target",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "sweet spot"
-            }
-          },
-          {
-            "kind": "gears",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 4,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "just manageable enough"
-            }
-          },
-          {
-            "kind": "bed",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 0,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "get bored and drift"
-            }
-          }
+          { "kind": "figure", "cast": "maya", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "happy", "enter": "draw", "sync": { "phrase": "two minute rule" } },
+          { "kind": "clock", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "two minutes" } },
+          { "kind": "seedling", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "grow" } }
         ]
       }
     },
     {
-      "id": "p5-1-boredom",
+      "id": "pr7-table",
+      "type": "table",
+      "narration": "Watch how any big goal shrinks to a two minute entry point. Become a reader turns into read one page. Do yoga turns into take out the mat. Run a marathon turns into tie my running shoes. You scale the habit down until it is almost too easy to fail, and only then do you let it slowly grow.",
+      "visual": {
+        "title": "Scale it down",
+        "columns": ["Big goal", "Two minute version"],
+        "rows": [
+          { "cells": ["Become a reader", "Read one page"], "sync": { "phrase": "read one page" } },
+          { "cells": ["Do yoga", "Take out the mat"], "sync": { "phrase": "take out the mat" } },
+          { "cells": ["Run a marathon", "Tie my shoes"], "sync": { "phrase": "tie my running shoes" } }
+        ]
+      }
+    },
+    {
+      "id": "pr7-2",
       "type": "character_scene",
-      "narration": "But even at the perfect difficulty, novelty fades, and the day comes when you simply do not feel like it. Here is what separates the pros. They fall in love with boredom. They show up when it is dull, when the newness is gone, when it would be easy to stop. Professionals stick to the schedule. Amateurs let life get in the way.",
+      "narration": "Pair that with reducing friction. Every habit has a number of steps between you and the action, and each step is a chance to quit. Want to go to the gym. Pack your bag the night before and lay it by the door. Want to eat better. Chop the vegetables on Sunday. You are an engineer now, removing the obstacles between you and the behavior you want.",
       "visual": {
-        "title": "Love the boredom",
-        "stage": "stage-spotlight",
+        "title": "Reduce friction",
+        "stage": "room",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "alex",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "presenting"
-            ],
-            "expressions": [
-              "tired",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "the pros"
-                }
-              }
-            ],
-            "label": "show up anyway",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "stick to the schedule"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "calendar",
-            "tier": "hero",
-            "reveal": "draw",
-            "at": {
-              "col": 9,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "do not feel like it"
-            }
-          }
+          { "kind": "figure", "cast": "omar", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "thinking", "expression": "curious", "enter": "draw", "sync": { "phrase": "reducing friction" } },
+          { "kind": "wall", "at": { "col": 8, "row": 3, "w": 4, "h": 3 }, "reveal": "draw", "sync": { "phrase": "removing the obstacles" } },
+          { "kind": "door", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "variant": "open", "tier": "ambient", "sync": { "phrase": "by the door" } }
         ]
       }
     },
     {
-      "id": "p5-1-list",
-      "type": "list_card",
-      "narration": "So keep the game worth playing. Tune the difficulty to that just manageable edge, so it stays interesting without crushing you. Then commit to a schedule, not a mood, because the schedule shows up even when the motivation does not. And when it gets dull, remember that the boredom itself is the barrier most people never push past.",
-      "visual": {
-        "title": "Stay engaged",
-        "items": [
-          {
-            "label": "Just manageable edge",
-            "icon": "tick",
-            "sync": {
-              "phrase": "just manageable edge"
-            }
-          },
-          {
-            "label": "Schedule, not mood",
-            "icon": "box",
-            "sync": {
-              "phrase": "a schedule"
-            }
-          },
-          {
-            "label": "Push past boredom",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "the boredom itself"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p5-1-flow",
-      "type": "character_scene",
-      "narration": "Think for a second about why video games are so gripping. They sit perfectly on the edge of your ability, always just hard enough to keep pulling you back in. Good habits can borrow that exact same magic. Keep nudging the bar up by a sliver as you improve, so the challenge keeps growing right alongside your skill. Stay in that narrow channel between boredom and anxiety, and showing up stops feeling like a grind.",
-      "visual": {
-        "title": "Stay in the channel",
-        "stage": "plain",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "pip",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "standing",
-              "celebrating"
-            ],
-            "expression": "happy",
-            "label": "just hard enough",
-            "effects": [
-              {
-                "kind": "sparkles",
-                "sync": {
-                  "phrase": "video games"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "scale",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "label": "the edge",
-            "sync": {
-              "phrase": "edge of your ability"
-            }
-          },
-          {
-            "kind": "target",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "nudging the bar up"
-            }
-          },
-          {
-            "kind": "brain",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 4,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "between boredom and anxiety"
-            }
-          },
-          {
-            "kind": "gears",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 0,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "right alongside your skill"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p5-2-title",
+      "id": "pr7b-title",
       "type": "section_title",
-      "narration": "Principle twelve. Play to your strengths.",
-      "visual": {
-        "role": "principle",
-        "number": 12,
-        "part": 5,
-        "title": "Play To Your Strengths",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "Play to your strengths"
-        },
-        "memory": "brain"
-      }
+      "narration": "Principle eleven. The law of least effort.",
+      "visual": { "role": "principle", "number": 11, "part": 5, "title": "The Law Of Least Effort", "emphasis": "circle", "memory": "path", "sync": { "phrase": "law of least effort" } }
     },
     {
-      "id": "p5-2-genes",
+      "id": "pr7b-1",
       "type": "character_scene",
-      "narration": "Now, a fair question. What about talent, and genes? Clear is honest here. Your genes do not determine your destiny, but they do shape the odds. They decide which games are easy and fun for you to play, and which feel like endless uphill work. The trick is not to fight your nature. It is to choose the arena where your nature is quietly an advantage.",
+      "narration": "Human beings are wired to follow the path of least effort. Energy is precious, so your brain is always looking for the version of a task that costs the least. This is not laziness. It is biology. So the smartest move is to stop fighting that wiring and start using it. Make your good habits the easy path, and make your bad habits the hard path, and you let your own nature do the work for you.",
       "visual": {
-        "title": "Pick your game",
+        "title": "Follow the easy path",
         "stage": "outdoor",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "sage",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "thinking",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "your nature"
-                }
-              }
-            ],
-            "label": "choose well"
-          },
-          {
-            "kind": "brain",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 4,
-              "h": 4
-            },
-            "label": "your wiring",
-            "sync": {
-              "phrase": "talent, and genes"
-            }
-          },
-          {
-            "kind": "target",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "an advantage"
-            }
-          },
-          {
-            "kind": "scale",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "shape the odds"
-            }
-          },
-          {
-            "kind": "mountain",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 0,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "endless uphill work"
-            }
-          }
+          { "kind": "figure", "cast": "theo", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "walking", "expression": "neutral", "enter": "walk", "facing": "right", "sync": { "phrase": "path of least effort" } },
+          { "kind": "path", "at": { "col": 6, "row": 3, "w": 6, "h": 3 }, "reveal": "draw", "sync": { "phrase": "the easy path" } }
         ]
       }
     },
     {
-      "id": "p5-2-explore",
+      "id": "pr7b-2",
       "type": "character_scene",
-      "narration": "So how do you find that game? Early on, explore. Try many things, lightly, to see what clicks and what drains you. Then, once something fits, exploit it. Pour your energy into the habit that suits who you are. The right habit is not just the one that works on paper. It is the one you can happily keep doing when nobody is forcing you.",
+      "narration": "The most powerful version of this is a one time action that locks in better behavior forever. Buy a better mattress once, and you sleep better for years. Cancel the subscription once, and you stop the drain for good. Use a smaller plate once, and you eat a little less at every single meal. One decision, paid once, that keeps paying you back. Hunt for those, because they are the highest leverage habits of all.",
       "visual": {
-        "title": "Explore, then commit",
-        "stage": "outdoor",
+        "title": "One and done",
+        "stage": "room",
         "elements": [
-          {
-            "kind": "figure",
-            "cast": "maya",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "walking",
-              "presenting"
-            ],
-            "enter": "walk",
-            "expression": "happy",
-            "label": "find your fit",
-            "effects": [
-              {
-                "kind": "nod",
-                "sync": {
-                  "phrase": "exploit it"
-                }
-              }
-            ]
-          },
-          {
-            "kind": "path",
-            "at": {
-              "col": 6,
-              "row": 2,
-              "w": 5,
-              "h": 3
-            },
-            "label": "the search",
-            "sync": {
-              "phrase": "explore"
-            }
-          },
-          {
-            "kind": "seedling",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "suits who you are"
-            }
-          }
+          { "kind": "figure", "cast": "maya", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "a one time action" } },
+          { "kind": "bed", "at": { "col": 7, "row": 3, "w": 2, "h": 2 }, "reveal": "draw", "sync": { "phrase": "a better mattress" } },
+          { "kind": "trendup", "at": { "col": 9, "row": 2, "w": 3, "h": 3 }, "reveal": "pop", "color": "accent", "tier": "ambient", "sync": { "phrase": "keeps paying you back" } }
         ]
       }
     },
     {
-      "id": "p5-2-list",
-      "type": "list_card",
-      "narration": "So play the game that fits you. Explore widely at first, sampling habits and fields to see what genuinely clicks. Then exploit your strengths, committing to the arena where you have a natural edge. And design the specific version of the habit that suits your life, because the best habit is always the one you will actually sustain.",
-      "visual": {
-        "title": "Fit the habit to you",
-        "items": [
-          {
-            "label": "Explore widely first",
-            "icon": "tick",
-            "sync": {
-              "phrase": "Explore widely"
-            }
-          },
-          {
-            "label": "Exploit your strengths",
-            "icon": "box",
-            "sync": {
-              "phrase": "exploit your strengths"
-            }
-          },
-          {
-            "label": "Make it sustainable",
-            "icon": "arrow",
-            "sync": {
-              "phrase": "actually sustain"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "p5-2-phelps",
-      "type": "character_scene",
-      "narration": "Compare two Olympic champions. Michael Phelps, built long and lean with a huge wingspan, was practically made for the pool. Hicham El Guerrouj, small and feather light, was built to run. Swap their sports, and suddenly neither one dominates. Each became a legend by choosing the arena that fit his own body. You will never be world class at absolutely everything. But find the habit, the field, the game that genuinely suits you, and your effort compounds far faster.",
-      "visual": {
-        "title": "Choose your arena",
-        "stage": "stage-spotlight",
-        "elements": [
-          {
-            "kind": "figure",
-            "cast": "sage",
-            "at": {
-              "col": 1,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "facing": "right",
-            "poses": [
-              "presenting"
-            ],
-            "expression": "happy",
-            "label": "fit the arena"
-          },
-          {
-            "kind": "trophy",
-            "at": {
-              "col": 6,
-              "row": 1,
-              "w": 4,
-              "h": 4
-            },
-            "label": "two champions",
-            "sync": {
-              "phrase": "Olympic champions"
-            }
-          },
-          {
-            "kind": "dumbbell",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 5,
-              "row": 0,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "built to run"
-            }
-          },
-          {
-            "kind": "target",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 10,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "suits you"
-            }
-          },
-          {
-            "kind": "snowball",
-            "tier": "hero",
-            "reveal": "pop",
-            "at": {
-              "col": 0,
-              "row": 3,
-              "w": 2,
-              "h": 2
-            },
-            "sync": {
-              "phrase": "compounds far faster"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "recap5",
+      "id": "p5-recap",
       "type": "recap_card",
-      "narration": "Recap of part five. Keep your habit at the Goldilocks edge, hard enough to hold your interest, and learn to fall in love with the boring days. Then pick the game that fits your nature, so the habit works with you instead of against you. That is how you turn a short burst of effort into a lifelong practice.",
+      "narration": "Part five in brief. Shrink the habit with the two minute rule so starting is almost effortless. Reduce friction by removing the steps between you and the action. Follow the law of least effort, and use one time actions that pay off for years. Make it easy, and you stop needing willpower at all.",
       "visual": {
-        "title": "Part five, in short",
+        "title": "Part five recap",
         "scope": "mid",
         "items": [
-          {
-            "label": "Stay at the edge",
-            "sync": {
-              "phrase": "Goldilocks edge"
-            }
-          },
-          {
-            "label": "Love the boring days",
-            "sync": {
-              "phrase": "boring days"
-            }
-          },
-          {
-            "label": "Play your game",
-            "sync": {
-              "phrase": "fits your nature"
-            }
-          }
+          { "label": "Use two minute rule", "sync": { "phrase": "two minute rule" } },
+          { "label": "Reduce the friction", "sync": { "phrase": "reduce friction" } },
+          { "label": "Stop needing willpower", "sync": { "phrase": "needing willpower" } }
         ]
       }
     },
     {
-      "id": "systems-quote",
-      "type": "quote_card",
-      "narration": "And that loops us right back to the very first idea. As Clear says, you do not rise to the level of your goals. You fall to the level of your systems.",
+      "id": "p6-title",
+      "type": "section_title",
+      "narration": "Part six. The fourth law, make it satisfying.",
+      "visual": { "role": "part", "number": 6, "title": "Fourth Law: Satisfying", "emphasis": "underline", "sync": { "phrase": "make it satisfying" } }
+    },
+    {
+      "id": "p6-rehook",
+      "type": "character_scene",
+      "narration": "You have made the habit obvious, attractive, and easy. There is one problem left, and it is the quiet killer. The good habits we want pay off in the future, but our brains crave a reward right now. The fourth law closes that gap. We are going to make doing the right thing feel good immediately.",
       "visual": {
-        "quote": "You do not rise to the level of your goals. You fall to the level of your systems.",
-        "attribution": "James Clear",
-        "cast": "sage"
+        "title": "Close the gap",
+        "stage": "plain",
+        "elements": [
+          { "kind": "figure", "cast": "nadia", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "curious", "enter": "walk", "facing": "right", "sync": { "phrase": "a reward right now" } },
+          { "kind": "hourglass", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "the quiet killer" } }
+        ]
+      }
+    },
+    {
+      "id": "pr8-title",
+      "type": "section_title",
+      "narration": "Principle eight. Make it satisfying.",
+      "visual": { "role": "principle", "number": 8, "part": 6, "title": "Make It Satisfying", "emphasis": "circle", "memory": "checkmark", "sync": { "phrase": "Make it satisfying" } }
+    },
+    {
+      "id": "pr8-quote",
+      "type": "quote_card",
+      "narration": "Clear sums up the whole fourth law in a single sentence worth taping to your wall. What is rewarded is repeated. What is punished is avoided.",
+      "visual": { "quote": "What is rewarded is repeated. What is punished is avoided.", "attribution": "James Clear, Atomic Habits", "cast": "sage" }
+    },
+    {
+      "id": "pr8-1",
+      "type": "character_scene",
+      "narration": "The core rule is simple. What is immediately rewarded gets repeated, and what is immediately punished gets avoided. The reason bad habits win is that they feel good now and hurt later, while good habits feel hard now and pay off later. So you have to add a little immediate reward to the good behavior, a small celebration the moment you finish.",
+      "visual": {
+        "title": "Reward it now",
+        "stage": "stage-spotlight",
+        "elements": [
+          { "kind": "figure", "cast": "theo", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "celebrating", "expression": "happy", "enter": "draw", "sync": { "phrase": "immediately rewarded" } },
+          { "kind": "gift", "at": { "col": 8, "row": 2, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "immediate reward" } },
+          { "kind": "trophy", "at": { "col": 10, "row": 3, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "a small celebration" } }
+        ]
+      }
+    },
+    {
+      "id": "pr8-2",
+      "type": "character_scene",
+      "narration": "The most powerful satisfying tool is a habit tracker. Keep a simple calendar and mark an X every day you complete the habit. The chain of X marks becomes its own reward, visible proof that you are becoming the person you said you would be. And the golden rule of streaks is this. Never miss twice. Missing once is an accident. Missing twice is the start of a new habit.",
+      "visual": {
+        "title": "Never miss twice",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "jade", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "happy", "enter": "draw", "sync": { "phrase": "habit tracker" } },
+          { "kind": "calendar", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "chain of X marks" } },
+          { "kind": "checkmark", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "Never miss twice" } }
+        ]
+      }
+    },
+    {
+      "id": "pr8-chart",
+      "type": "stat_chart",
+      "narration": "And the tracker makes the compounding visible. One check mark is nothing. Thirty check marks is a streak you will not want to break. Ninety check marks is a new identity. The bar you are watching grow is not just days logged. It is your evidence that the system is working.",
+      "visual": {
+        "label": "Days you showed up",
+        "mode": "bars",
+        "suffix": " days",
+        "datapoints": [
+          { "label": "week one", "value": 7, "sync": { "phrase": "One check mark" } },
+          { "label": "month one", "value": 30, "sync": { "phrase": "Thirty check marks" } },
+          { "label": "quarter", "value": 90, "sync": { "phrase": "Ninety check marks" } }
+        ]
+      }
+    },
+    {
+      "id": "pr8-compare",
+      "type": "compare",
+      "narration": "This is the whole tug of war in one picture. A bad habit pays you right now and bills you later, which is why it feels so easy to say yes. A good habit costs you right now and pays you later, which is why it feels so easy to skip. The fourth law simply drags the good habit reward forward in time, so the right choice finally wins the moment.",
+      "visual": {
+        "title": "Now vs later",
+        "left": { "heading": "Bad habit", "items": [ { "label": "Feels good now", "sync": { "phrase": "pays you right now" } }, { "label": "Bills you later", "sync": { "phrase": "bills you later" } } ] },
+        "right": { "heading": "Good habit", "items": [ { "label": "Costs you now", "sync": { "phrase": "costs you right now" } }, { "label": "Pays you later", "sync": { "phrase": "pays you later" } } ] }
+      }
+    },
+    {
+      "id": "pr9-title",
+      "type": "section_title",
+      "narration": "Principle twelve. Make bad habits unsatisfying.",
+      "visual": { "role": "principle", "number": 12, "part": 6, "title": "Make Bad Habits Costly", "emphasis": "circle", "memory": "scale", "sync": { "phrase": "Make bad habits unsatisfying" } }
+    },
+    {
+      "id": "pr9-1",
+      "type": "character_scene",
+      "narration": "To break a habit, invert the fourth law and make it unsatisfying. The best tool is an accountability partner and a habit contract. You write down the habit you want, you state the punishment if you fail, and you ask someone to hold you to it. A cost that is immediate and public makes a bad habit sting right now, instead of someday. We will do almost anything to avoid looking bad in front of a person we respect.",
+      "visual": {
+        "title": "Add a cost",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "omar", "at": { "col": 1, "row": 1, "w": 3, "h": 5 }, "pose": "handshake", "expression": "neutral", "enter": "draw", "facing": "right", "sync": { "phrase": "accountability partner" } },
+          { "kind": "figure", "cast": "nadia", "at": { "col": 5, "row": 1, "w": 3, "h": 5 }, "pose": "handshake", "expression": "happy", "enter": "draw", "facing": "left", "sync": { "phrase": "a habit contract" } },
+          { "kind": "scale", "at": { "col": 9, "row": 3, "w": 3, "h": 3 }, "reveal": "draw", "sync": { "phrase": "immediate and public" } }
+        ]
+      }
+    },
+    {
+      "id": "pr9-2",
+      "type": "character_scene",
+      "narration": "Here is a table that puts the two directions next to each other, so you can aim any habit in your life. For the good habit you want, add a small reward and a watching eye. For the bad habit you want gone, attach a cost you feel today. Same law of satisfaction, pointed in opposite directions, and you are now steering instead of drifting.",
+      "visual": {
+        "title": "Point the law",
+        "stage": "stage-spotlight",
+        "elements": [
+          { "kind": "figure", "cast": "sage", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "steering instead of drifting" } },
+          { "kind": "target", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "any habit in your life" } }
+        ]
+      }
+    },
+    {
+      "id": "pr9-table",
+      "type": "table",
+      "narration": "Read it straight across. For a good habit, add a reward now, and add an accountability partner. For a bad habit, add a cost now, and sign a contract. Build it with a carrot. Break it with a cost.",
+      "visual": {
+        "title": "Build vs break",
+        "columns": ["Lever", "Good habit", "Bad habit"],
+        "rows": [
+          { "cells": ["Payoff", "Reward now", "Cost now"], "sync": { "phrase": "add a reward now" } },
+          { "cells": ["People", "Partner", "Contract"], "sync": { "phrase": "accountability partner" } }
+        ]
+      }
+    },
+    {
+      "id": "pr10-title",
+      "type": "section_title",
+      "narration": "Principle thirteen. The Goldilocks rule.",
+      "visual": { "role": "principle", "number": 13, "part": 6, "title": "The Goldilocks Rule", "emphasis": "circle", "memory": "mountain", "sync": { "phrase": "Goldilocks rule" } }
+    },
+    {
+      "id": "pr10-1",
+      "type": "character_scene",
+      "narration": "One last question. How do you stay motivated for years, not weeks. Clear points to the Goldilocks rule. We feel most engaged when a task is right at the edge of our current ability, not too hard and not too easy, but just manageable. Too easy and you are bored. Too hard and you are discouraged. The sweet spot is a challenge about four percent beyond what you can comfortably do, which keeps the work interesting enough to come back to.",
+      "visual": {
+        "title": "Just right",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "kwame", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "curious", "enter": "draw", "sync": { "phrase": "the edge of our current ability" } },
+          { "kind": "mountain", "at": { "col": 7, "row": 1, "w": 5, "h": 5 }, "reveal": "draw", "sync": { "phrase": "the sweet spot" } }
+        ]
+      }
+    },
+    {
+      "id": "pr10-2",
+      "type": "character_scene",
+      "narration": "But even the Goldilocks rule meets its enemy, which is boredom. The real difference between the professional and the amateur is not more passion. It is that the professional sticks to the schedule even when it is dull, even when the novelty is long gone. Falling in love with boredom, showing up on the gray and ordinary days, is the final, quiet skill that separates people who keep their habits from people who lose them.",
+      "visual": {
+        "title": "Fall for boredom",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "rosa", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "tired", "enter": "draw", "sync": { "phrase": "which is boredom" } },
+          { "kind": "calendar", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "sticks to the schedule" } },
+          { "kind": "clock", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "the gray and ordinary days" } }
+        ]
+      }
+    },
+    {
+      "id": "p6-recap",
+      "type": "recap_card",
+      "narration": "Part six, the finish line of the laws. Give good habits an immediate reward so your brain votes to repeat them. Track the habit and watch the chain grow, and whatever happens, never miss twice. Make bad habits unsatisfying with a real cost, and learn to fall in love with boredom.",
+      "visual": {
+        "title": "Part six recap",
+        "scope": "mid",
+        "items": [
+          { "label": "Reward it immediately", "sync": { "phrase": "an immediate reward" } },
+          { "label": "Track the chain", "sync": { "phrase": "Track the habit" } },
+          { "label": "Never miss twice", "sync": { "phrase": "never miss twice" } }
+        ]
+      }
+    },
+    {
+      "id": "apply-1",
+      "type": "character_scene",
+      "narration": "Let us watch Alex run one habit through all four laws, so you can see how they stack. Alex wants to read every night. Obvious, the book sits on the pillow. Attractive, it is a thriller Alex cannot put down. Easy, the rule is just one page. Satisfying, Alex marks a big X on the calendar the second the page is done. Four laws, one tiny habit, and suddenly the thing that never stuck becomes automatic.",
+      "visual": {
+        "title": "All four, one habit",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "sitting", "seat": "chair", "expression": "happy", "enter": "draw", "holding": { "prop": "book", "hand": "right" }, "sync": { "phrase": "all four laws" } },
+          { "kind": "calendar", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "a big X on the calendar" } },
+          { "kind": "checkmark", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "becomes automatic" } }
+        ]
       }
     },
     {
       "id": "final-recap",
       "type": "recap_card",
-      "narration": "So here is the whole book, in five lines. First, trust your systems over your goals. Second, cast a daily vote for the identity you want. Third, make the good habits obvious and attractive. Fourth, make them easy and satisfying. And fifth, stay in the game, so you never get bored and quit. Do that, and Atomic Habits quietly rebuilds your life.",
+      "narration": "Let us tie the whole book together. Tiny habits compound into remarkable results. You do not rise to your goals, you fall to your systems. Real change is identity change, one vote at a time. And the four laws make it work. Make it obvious. Make it attractive. Make it easy. Make it satisfying.",
       "visual": {
         "title": "The whole book",
         "scope": "final",
         "items": [
-          {
-            "label": "Trust your systems",
-            "sync": {
-              "phrase": "trust your systems"
-            }
-          },
-          {
-            "label": "Cast daily votes",
-            "sync": {
-              "phrase": "cast a daily vote"
-            }
-          },
-          {
-            "label": "Obvious and attractive",
-            "sync": {
-              "phrase": "obvious and attractive"
-            }
-          },
-          {
-            "label": "Easy and satisfying",
-            "sync": {
-              "phrase": "easy and satisfying"
-            }
-          },
-          {
-            "label": "Never get bored",
-            "sync": {
-              "phrase": "never get bored"
-            }
-          }
+          { "label": "Tiny habits compound", "sync": { "phrase": "Tiny habits compound" } },
+          { "label": "Systems over goals", "sync": { "phrase": "fall to your systems" } },
+          { "label": "Change your identity", "sync": { "phrase": "identity change" } },
+          { "label": "Use the four laws", "sync": { "phrase": "the four laws" } }
+        ]
+      }
+    },
+    {
+      "id": "apply-2",
+      "type": "list_card",
+      "narration": "So before you click away, pick one habit and run it through the laws right now, in your head. Make the cue obvious, put it somewhere you cannot miss it. Make it attractive, pair it with something you love. Make it easy, shrink it under two minutes. Make it satisfying, reward yourself the instant you finish. One habit, four tweaks. That is the whole method, and you can start it today.",
+      "visual": {
+        "title": "Your turn now",
+        "items": [
+          { "label": "Make the cue obvious", "icon": "tick", "sync": { "phrase": "Make the cue obvious" } },
+          { "label": "Make it attractive", "icon": "tick", "sync": { "phrase": "Make it attractive" } },
+          { "label": "Make it easy", "icon": "tick", "sync": { "phrase": "Make it easy" } },
+          { "label": "Make it satisfying", "icon": "tick", "sync": { "phrase": "Make it satisfying" } }
         ]
       }
     },
     {
       "id": "close",
-      "type": "section_title",
-      "narration": "You don't need a bigger goal. You need a smaller start. So pick one tiny habit, shrink it to two minutes, and cast your first vote today.",
+      "type": "character_scene",
+      "narration": "So here is the one line to carry out of Atomic Habits. You do not need to be twice as good. You need to be one percent better today, then show up again tomorrow. Every action is a vote for the person you want to become. Cast enough of them, and the results take care of themselves.",
       "visual": {
-        "title": "Tiny Is The Point",
-        "emphasis": "circle",
-        "sync": {
-          "phrase": "smaller start"
-        }
+        "title": "One percent better",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "celebrating", "expression": "happy", "enter": "draw", "sync": { "phrase": "one percent better" } },
+          { "kind": "mountain", "at": { "col": 7, "row": 1, "w": 5, "h": 5 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "the person you want to become" } },
+          { "kind": "tree", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "take care of themselves" } }
+        ]
       }
     },
     {
-      "id": "cta-end",
+      "id": "cta-close",
       "type": "cta",
-      "narration": "One last question before you go. Which tiny habit will you start today? Tell me in the comments, and I will see you in the next one.",
-      "visual": {
-        "text": "Which habit will you start today? Tell me below.",
-        "style": "corner"
-      }
+      "narration": "Which habit will you start today. Tell me in the comments, and subscribe for the next book.",
+      "visual": { "text": "Which habit will you start today? Comment below.", "style": "corner" }
     }
-  ],
-  "category": "Habits & Productivity",
-  "pinned_comment": "Which of the four laws do you break most — making it obvious, attractive, easy, or satisfying? Drop it below 👇",
-  "title_variants": [
-    "Atomic Habits Summary: 1% Better Every Day (Full Breakdown)",
-    "Why Your Goals Keep Failing You (It's Not Willpower)",
-    "Build Habits That Actually Stick — The Atomic Habits System"
-  ],
-  "promise": "decide who you become"
+  ]
 }

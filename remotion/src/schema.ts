@@ -35,6 +35,8 @@ export const PROP_KINDS = [
   "bed", "dumbbell", "shoe", "coffee", "snowball",
   // money / data graphics (Phase 16)
   "coins", "dollar", "bargraph", "piechart", "trendup", "percent",
+  // habit-specific illustrations (Phase 17)
+  "dominoes", "checkmark", "brick",
 ] as const;
 
 export const EXPRESSIONS = [
@@ -121,7 +123,7 @@ export const CtaVisual = z.object({
 });
 
 /** A single drawable element in a character scene (figure or prop). */
-export const CAST_IDS = ["alex", "sage", "max", "maya", "pip"] as const;
+export const CAST_IDS = ["alex", "sage", "max", "maya", "pip", "jade", "omar", "nadia", "theo", "rosa", "kwame", "lena", "deshawn"] as const;
 
 /** An expression swing: a bare name, or a name that starts on a spoken phrase. */
 const ExpressionCue = z.union([
@@ -258,6 +260,20 @@ export const CompareVisual = z.object({
   right: CompareColumn,
 });
 
+/** A general NxM data table (Phase 17): a header row + data rows that animate
+ *  in one at a time. `columns` includes the corner/row-label header; each row's
+ *  first cell is its label and the rest are the values. */
+const TableRow = z.object({
+  cells: z.array(wordLimit(4)).min(2).max(4),
+  sync: Sync.optional(),
+  highlight: z.boolean().optional(), // emphasise this row (flame tint)
+});
+export const TableVisual = z.object({
+  title: wordLimit(6).optional(),
+  columns: z.array(wordLimit(3)).min(2).max(4),
+  rows: z.array(TableRow).min(2).max(6),
+});
+
 // ---------- Discriminated union of scenes ----------
 
 const SceneBase = {
@@ -273,6 +289,7 @@ export const Scene = z.discriminatedUnion("type", [
   z.object({ ...SceneBase, type: z.literal("stat_chart"), visual: StatChartVisual }),
   z.object({ ...SceneBase, type: z.literal("recap_card"), visual: RecapCardVisual }),
   z.object({ ...SceneBase, type: z.literal("compare"), visual: CompareVisual }),
+  z.object({ ...SceneBase, type: z.literal("table"), visual: TableVisual }),
   z.object({ ...SceneBase, type: z.literal("cta"), visual: CtaVisual }),
 ]);
 
@@ -317,11 +334,18 @@ export const Script = z.object({
   tags: z.array(z.string()).default([]),
   thumbnail: z.object({
     headline: wordLimit(5),
+    // Hybrid thumbnail (Phase 17): 2–4 BIG bold punch words in Anton, stacked.
+    // Falls back to headline words if omitted.
+    punch_words: z.array(z.string()).min(1).max(4).optional(),
     subline: z.string().optional(),
     cast: z.enum(CAST_IDS).default("alex"),
     pose: StickPose.default("thinking"),
     expression: z.enum(EXPRESSIONS).default("shocked"),
     props: z.array(PropKind).max(2).default([]),
+    // One punch accent color behind the text block (hex). Defaults to brand ink.
+    bg: z.string().optional(),
+    // Draw a spotlight ring (default) or an arrow pointing at the subject.
+    pointer: z.enum(["spotlight", "arrow", "none"]).default("spotlight"),
   }),
   voice: z.string().default("en-US-AndrewNeural"),
   // Narration pace: -18% (~150 wpm) is the confirmed channel default (set in
@@ -438,6 +462,9 @@ export function collectScenePhrases(scene: Scene): string[] {
     case "compare":
       scene.visual.left.items.forEach((i) => push(i.sync));
       scene.visual.right.items.forEach((i) => push(i.sync));
+      break;
+    case "table":
+      scene.visual.rows.forEach((r) => push(r.sync));
       break;
     case "quote_card":
     case "cta":

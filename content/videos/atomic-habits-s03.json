@@ -2,28 +2,28 @@
   "id": "atomic-habits-s03",
   "brand": "readlark",
   "format": "short",
-  "title": "Systems Over Goals — Atomic Habits",
-  "short_hook": "Systems Over Goals",
+  "title": "Plateau Of Potential — Atomic Habits",
+  "short_hook": "Plateau Of Potential",
   "book": {
     "title": "Atomic Habits",
     "author": "James Clear",
     "year": 2018
   },
-  "description": "This is why systems over goals quietly decides everything. A 60-second idea from Atomic Habits.",
+  "description": "This is why plateau of potential quietly decides everything. A 60-second idea from Atomic Habits.",
   "tags": [
     "atomic habits",
     "james clear",
-    "book summary",
+    "atomic habits summary",
     "habits",
-    "systems over goals"
+    "plateau of potential"
   ],
   "thumbnail": {
-    "headline": "Systems Over Goals",
+    "headline": "Plateau Of Potential",
     "cast": "alex",
     "pose": "presenting",
     "expression": "happy",
     "props": [
-      "gears"
+      "staircase"
     ]
   },
   "voice": "en-US-AndrewNeural",
@@ -35,7 +35,7 @@
     {
       "id": "hook",
       "type": "character_scene",
-      "narration": "This is why systems over goals quietly decides everything. It comes straight from Atomic Habits.",
+      "narration": "This is why plateau of potential quietly decides everything. It comes straight from Atomic Habits.",
       "visual": {
         "stage": "plain",
         "elements": [
@@ -59,10 +59,10 @@
     },
     {
       "id": "idea",
-      "narration": "Here is the uncomfortable part. Winners and losers often share the exact same goals. The goal was never the thing that truly set them apart. What separated them was the system they ran, quietly, every single day. Goals are fine for setting a direction. But systems are what actually make the progress. So if you want a better result, stop fixating on the target, and fix the system that points at it.",
+      "narration": "Here is the most important chart in the book, and almost nobody draws it right. We expect our effort to pay off in a straight diagonal line. We expect that if we put in the work, the results should arrive on schedule, evenly, day by day. Clear calls this expectation the great lie of self improvement, because reality does not work that way at all. Your real progress hides for a long time, flat and frustrating, and then it erupts all at once.",
       "type": "character_scene",
       "visual": {
-        "title": "Fix the system",
+        "title": "The great lie",
         "stage": "desk-office",
         "elements": [
           {
@@ -73,33 +73,32 @@
               "w": 4,
               "h": 5
             },
-            "cast": "alex",
-            "poses": [
-              "thinking",
-              "presenting"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "happy",
-                "sync": {
-                  "phrase": "the system"
-                }
-              }
-            ],
+            "cast": "max",
+            "pose": "standing",
+            "expression": "worried",
             "facing": "right",
             "seat": "chair",
             "enter": "draw",
+            "effects": [
+              {
+                "kind": "sweat_drop",
+                "sync": {
+                  "phrase": "flat and frustrating"
+                }
+              }
+            ],
             "tier": "hero",
             "color": "ink",
-            "label": "run the system"
+            "sync": {
+              "phrase": "a straight diagonal line"
+            }
           },
           {
-            "kind": "gears",
+            "kind": "trendup",
             "at": {
-              "col": 6,
-              "row": 1,
-              "w": 3,
+              "col": 8,
+              "row": 2,
+              "w": 4,
               "h": 4
             },
             "cast": "alex",
@@ -107,29 +106,10 @@
             "seat": "chair",
             "enter": "draw",
             "tier": "hero",
-            "color": "ink",
-            "label": "the system",
-            "sync": {
-              "phrase": "the system"
-            }
-          },
-          {
-            "kind": "target",
-            "at": {
-              "col": 10,
-              "row": 1,
-              "w": 2,
-              "h": 2
-            },
-            "cast": "alex",
-            "facing": "right",
-            "seat": "chair",
-            "enter": "draw",
-            "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "color": "ink",
             "sync": {
-              "phrase": "same goals"
+              "phrase": "erupts all at once"
             }
           }
         ]

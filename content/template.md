@@ -260,9 +260,21 @@ MOVE and the screen must SHOW what the voice says. Hard rules (lint-nudged):
 - **Compare with the table.** "X vs Y" → a `compare` scene: `left`/`right`
   columns (heading + items), rows slide in column-by-column with a center "vs".
   (e.g. getting-rich vs staying-rich, goals vs systems, saver vs spender.)
-- **Density still rules (§4c/§4d):** something new every 6–10 s, nothing newest
-  for > 8 s. Lists, charts, compare, and prop-reveals all count — prefer them
-  over a static figure holding the screen.
+- **Tabulate multi-column data with `table` (Phase 17).** When you have more than
+  two columns or a matrix (e.g. the Four Laws × make-it-obvious/attractive/easy/
+  satisfying, a habit-tracker week, before→after→why), use a `table`:
+  `{ title?, columns:[2–4 headers], rows:[{ cells:[2–4 strings ≤4 words], sync?, highlight? }] }`
+  (2–6 rows). Rows spring in one at a time; set `highlight:true` on the key row.
+- **Draw the idea with the illustration library.** Prefer a specific prop over a
+  generic figure: `dominoes` (chain reaction / stacking), `checkmark` (streak /
+  tracking), `brick` (identity, built brick-by-brick), `snowball`, `seedling`→
+  `sapling`→`tree`, `dumbbell`, `shoe`, `calendar`, `scale`, `target`, `gears`,
+  `trophy`, `path`/`mountain`/`staircase`, plus the money/data props.
+- **Ambient motion is automatic** (drifting doodles behind every scene, and the
+  title/quote/CTA now keep breathing) — but that does NOT excuse a dead hero:
+  **Density still rules (§4c/§4d):** something new every 6–10 s, nothing newest
+  for > 8 s. Lists, charts, compare, table, and prop-reveals all count — prefer
+  them over a static figure holding the screen.
 
 ## 5. Verb → pose + effect cheat-sheet (cast-aware)
 
@@ -282,6 +294,14 @@ MOVE and the screen must SHOW what the voice says. Hard rules (lint-nudged):
 | a mood swings mid-sentence | `expressions:[{value,sync}]` | matching per-swing effects |
 | a number / trend | `stat_chart` (line for trends, bars for compares) | — |
 | a checklist / the application | `list_card` (tick/box/arrow icons) | — |
+| a matrix / multi-column data | `table` (header row + rows, highlight the key row) | — |
+
+**Cast (13 members, diverse).** alex, sage (older, glasses, beard), max (heavy),
+maya, pip (small), jade (afro), omar (older, bald, glasses), nadia (bun), theo
+(kid), rosa (long hair), kwame (curly), lena (older, glasses), deshawn (broad).
+Each has its own skin tone — hands + faces read in every pose. Spread them across
+scenes (vary who appears; use duos + crowds); never cast one person for the whole
+video. Skin tone/age/build/hair diversity is free — use it.
 
 Brand rule: one flame accent per character, `marker`/`slate` never on
 characters, `slate` charts only.
@@ -333,6 +353,13 @@ Suggested is the long-term one. Pack for it:
   playlist + end-screen grouping in `upload-notes.txt`.
 - **`pinned_comment`** — one engagement question tied to the book, e.g. "Which of
   the four laws do you break most? 👇". Goes in the pinned comment (session time).
+- **`thumbnail` (Hybrid — Phase 17, research-led for CTR):** one BIG emotive cast
+  figure on the right third over a flame spotlight; bold punch words on the left.
+  Set: `headline` (≤5 words), `punch_words` (2–3 BIG words, Anton — the last word
+  renders in flame, so make it the payoff), `cast` (pick an expressive member),
+  `pose:"celebrating"` or `"pointing"`, `expression:"happy"`/`"shocked"`,
+  `props` (1–2 that signal the topic), `pointer:"spotlight"` (default) / `"arrow"`.
+  Keep it to ~3 words + one subject + one accent colour (high contrast at mobile).
 
 ---
 
@@ -417,8 +444,10 @@ changes.
 - [ ] Every principle 220–360 words; no single scene over ~65 words.
 - [ ] Every key visual has a `sync` phrase; the phrase is in that scene's narration.
 - [ ] Numbers written as words ("one forty two", not "142").
-- [ ] All five cast members used; both entrance modes; ≥1 two-char scene;
-      ≥1 seated-desk scene; ≥1 held prop; ≥3 stat_chart/list moments.
+- [ ] A varied slice of the 13-member cast used (not one person throughout);
+      both entrance modes; ≥1 two-char scene; ≥1 seated-desk scene; ≥1 held prop;
+      ≥3 stat_chart/list/table moments (incl. ≥1 `table`).
+- [ ] `thumbnail` set with `punch_words` (2–3) + an expressive pose (§6b).
 - [ ] Labels within word limits (figure ≤6, list ≤5, recap ≤4, headline ≤5).
 - [ ] `description` is prose only — chapters are auto-generated (§8b).
 - [ ] **`title_variants`** set (exactly 3: search / curiosity / benefit); variant
