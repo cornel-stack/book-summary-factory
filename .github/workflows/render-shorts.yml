@@ -60,14 +60,17 @@ jobs:
         with: { python-version: "${{ env.PYTHON_VERSION }}", cache: pip }
       - run: npm ci
       - run: pip install -r requirements.txt
-      - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install ffmpeg + libasound2 (Azure TTS SDK)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg libasound2t64 || sudo apt-get install -y ffmpeg libasound2
       - name: Cache Remotion browser
         uses: actions/cache@v4
         with:
           path: ~/.cache/remotion
           key: remotion-browser-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - name: Build + render short ${{ matrix.id }}
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
         run: |
           SECONDS=0
           ID="${{ matrix.id }}"

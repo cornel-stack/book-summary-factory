@@ -29,6 +29,24 @@ Narration audio is the source of truth for all timing:
 - **edge-tts** (Python) — narration audio + word boundaries
 - **ffmpeg / ffprobe** — audio measurement (and later video stitching)
 
+### TTS providers (resilience)
+
+`generate_audio.py` is provider-pluggable via `TTS_PROVIDER` (default `auto`):
+
+- **edge** — free Microsoft Edge neural voices, no key, `WordBoundary` timings.
+  Primary, but Microsoft's endpoint **periodically 403s globally** (local *and*
+  CI), and its commercial-use terms are a gray area.
+- **azure** — official Azure Cognitive Services Speech: the *same* neural voices
+  + native word-boundary events, commercial-licensed, reliable. Free tier
+  0.5M chars/month. Set `AZURE_SPEECH_KEY` (+ `AZURE_SPEECH_REGION`, default
+  `eastus`). Locally: export the env vars. In CI: add repo **secrets**
+  `AZURE_SPEECH_KEY` / `AZURE_SPEECH_REGION` (the render workflows already read
+  them and `apt install libasound2`).
+
+`auto` probes edge once; if it's down and a key is set, it falls back to Azure;
+otherwise it exits with guidance. Both providers emit the identical per-word
+timing contract, so sync + captions are unaffected by which one runs.
+
 ## Repo layout
 
 ```

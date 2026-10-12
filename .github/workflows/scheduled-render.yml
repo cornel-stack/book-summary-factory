@@ -105,6 +105,7 @@ jobs:
     with:
       video_id: ${{ matrix.id }}
       release_tag: ${{ needs.plan.outputs.tag }}
+    secrets: inherit # pass AZURE_SPEECH_KEY/REGION to the TTS fallback
 
   render-shorts:
     needs: [plan, prep-release]
@@ -113,6 +114,7 @@ jobs:
     with:
       ids: ${{ needs.plan.outputs.short_ids_csv }}
       release_tag: ${{ needs.plan.outputs.tag }}
+    secrets: inherit # pass AZURE_SPEECH_KEY/REGION to the TTS fallback
 
   finalize:
     needs: [plan, render-long, render-shorts]
