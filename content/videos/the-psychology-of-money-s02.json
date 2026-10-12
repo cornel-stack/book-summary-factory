@@ -1,0 +1,118 @@
+{
+  "id": "the-psychology-of-money-s02",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Luck and Risk — The Psychology of Money",
+  "short_hook": "Luck and Risk",
+  "book": {
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "year": 2020
+  },
+  "description": "Most people get luck and risk completely backwards. A 60-second idea from The Psychology of Money.",
+  "tags": [
+    "psychology of money",
+    "morgan housel",
+    "money",
+    "personal finance",
+    "luck and risk"
+  ],
+  "thumbnail": {
+    "headline": "Luck and Risk",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": []
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Most people get luck and risk completely backwards. It comes straight from The Psychology of Money.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "Bill Gates attended one of the only high schools on earth that owned a computer. The odds of that, Housel estimates, were about one in a million. His friend Kent was just as brilliant and just as driven. But before he ever got his shot, Kent died in a mountaineering accident. Same talent, same ambition, wildly different luck. One name you know. The other you never heard until just now.",
+      "type": "character_scene",
+      "visual": {
+        "title": "One in a million",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "alex",
+            "poses": [
+              "standing"
+            ],
+            "expression": "neutral",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "label": "the lucky one"
+          },
+          {
+            "kind": "mountain",
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "mountaineering accident"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}
