@@ -1,0 +1,17 @@
+# Offline, free-forever TTS fallback: Kokoro-82M (Apache-2.0) — commercial-safe,
+# no keys, no quota, with NATIVE per-word timestamps. Used by generate_audio.py
+# when TTS_PROVIDER=kokoro, or automatically when edge-tts is down and no Azure
+# key is set. Default voice af_heart (override with KOKORO_VOICE).
+#
+# HEAVY: pulls in PyTorch. On CPU-only machines / CI, install the CPU torch wheel
+# FIRST so you don't download ~2GB of CUDA packages:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements-kokoro.txt
+#
+# Also needs the espeak-ng shared library for phonemization (the .so, not the CLI):
+#   apt-get install -y espeak-ng        # provides libespeak-ng.so
+#
+# Runs on CPU at roughly real time (~a few minutes for a 2-min short; a 30-min
+# longform is a long local render — prefer edge/azure in CI for speed).
+kokoro>=0.9.4
+soundfile>=0.12.1

@@ -28,7 +28,11 @@ export type PropKind =
   // metaphors (Phase 7)
   | "mountain" | "path" | "staircase" | "scale" | "hourglass" | "clock" | "calendar" | "trophy" | "target"
   | "seedling" | "sapling" | "tree" | "brain" | "heart" | "gears" | "ladder" | "wall" | "gift" | "phone"
-  | "bed" | "dumbbell" | "shoe" | "coffee" | "snowball";
+  | "bed" | "dumbbell" | "shoe" | "coffee" | "snowball"
+  // money / data graphics (Phase 16)
+  | "coins" | "dollar" | "bargraph" | "piechart" | "trendup" | "percent"
+  // habit-specific illustrations (Phase 17)
+  | "dominoes" | "checkmark" | "brick";
 
 // ---------- originals (now with colored fills) ----------
 const door = (open: boolean): Shape =>
@@ -282,6 +286,87 @@ const snowball = (): Shape => ({
   fills: [F(circle(124, 82, 40), "#FAF6EE"), F(circle(60, 104, 18), "#FAF6EE"), F(circle(26, 115, 8), "#FAF6EE"), F(`M 10 44 L 150 118 L 150 126 L 10 52 Z`, T.sky)],
 });
 
+// ---------- money / data graphics (Phase 16) ----------
+const ell = (cx: number, cy: number, rx: number, ry: number): Stroke =>
+  `M ${cx - rx} ${cy} a ${rx} ${ry} 0 1 0 ${2 * rx} 0 a ${rx} ${ry} 0 1 0 ${-2 * rx} 0`;
+
+const coins = (): Shape => {
+  const cx = 60, rx = 42, ry = 14;
+  const ys = [100, 78, 56, 34];
+  return {
+    viewBox: { w: 120, h: 120 },
+    strokes: [
+      ...ys.map((y) => ell(cx, y, rx, ry)),
+      line(cx - rx, 34, cx - rx, 100), line(cx + rx, 34, cx + rx, 100),
+      `M 66 26 C 54 22 50 34 60 36 C 70 38 66 50 54 46`, line(60, 20, 60, 50),
+    ],
+    fills: ys.map((y) => F(ell(cx, y, rx, ry), P.sun)),
+  };
+};
+
+const dollar = (): Shape => ({
+  viewBox: { w: 80, h: 120 },
+  strokes: [`M 58 26 C 30 16 16 42 40 52 C 66 62 52 90 24 80`, line(40, 10, 40, 96)],
+});
+
+const bargraph = (): Shape => ({
+  viewBox: { w: 140, h: 120 },
+  strokes: [line(20, 10, 20, 100), line(20, 100, 132, 100), rect(32, 60, 26, 40), rect(68, 36, 26, 64), rect(104, 20, 26, 80)],
+  fills: [F(rect(32, 60, 26, 40), T.sky), F(rect(68, 36, 26, 64), P.sky), F(rect(104, 20, 26, 80), P.sky)],
+});
+
+const piechart = (): Shape => ({
+  viewBox: { w: 120, h: 120 },
+  strokes: [circle(60, 60, 48), line(60, 60, 60, 12), line(60, 60, 104, 80), line(60, 60, 28, 94)],
+  fills: [F(`M 60 60 L 60 12 A 48 48 0 0 1 104 80 Z`, P.coral), F(`M 60 60 L 104 80 A 48 48 0 0 1 28 94 Z`, T.sky)],
+});
+
+const trendup = (): Shape => ({
+  viewBox: { w: 140, h: 120 },
+  strokes: [`M 16 96 L 54 70 L 84 82 L 124 24`, poly(108, 24, 124, 24, 124, 40)],
+  fills: [F(`M 16 96 L 54 70 L 84 82 L 124 24 L 124 100 L 16 100 Z`, T.leaf, 0.7)],
+});
+
+const percent = (): Shape => ({
+  viewBox: { w: 110, h: 110 },
+  strokes: [circle(55, 55, 48), line(32, 74, 78, 36), circle(40, 44, 9), circle(70, 66, 9)],
+  fills: [F(circle(55, 55, 48), T.sun)],
+});
+
+// Chain reaction / habit-stacking: upright tiles with the last one tipping over.
+const dominoes = (): Shape => {
+  const tiles = [20, 54, 88].map((x) => rect(x, 30, 24, 70));
+  const tipping = `M 122 42 L 162 72 L 150 88 L 110 58 Z`;
+  return {
+    viewBox: { w: 180, h: 120 },
+    strokes: [...tiles, line(32, 65, 44, 65), line(66, 65, 78, 65), line(100, 65, 112, 65), tipping],
+    fills: [...tiles.map((d) => F(d, T.sky)), F(tipping, P.coral)],
+  };
+};
+
+// Streak / habit-tracker tick in a rounded box.
+const roundRect = (x: number, y: number, w: number, h: number, r: number) =>
+  `M ${x + r} ${y} h ${w - 2 * r} a ${r} ${r} 0 0 1 ${r} ${r} v ${h - 2 * r} a ${r} ${r} 0 0 1 ${-r} ${r} h ${-(w - 2 * r)} a ${r} ${r} 0 0 1 ${-r} ${-r} v ${-(h - 2 * r)} a ${r} ${r} 0 0 1 ${r} ${-r} Z`;
+const checkmark = (): Shape => {
+  const box = roundRect(18, 18, 84, 84, 14);
+  return {
+    viewBox: { w: 120, h: 120 },
+    strokes: [box, `M 34 62 L 54 84 L 92 38`],
+    fills: [F(box, T.leaf, 0.6)],
+  };
+};
+
+// Identity "bricks": a small wall, built one brick at a time.
+const brick = (): Shape => {
+  const bottom = [14, 60, 106].map((x) => rect(x, 74, 44, 30));
+  const top = [37, 83].map((x) => rect(x, 42, 44, 30));
+  return {
+    viewBox: { w: 160, h: 120 },
+    strokes: [...bottom, ...top],
+    fills: [...bottom.map((d) => F(d, P.sand)), ...top.map((d) => F(d, P.coral, 0.8))],
+  };
+};
+
 const PROPS: Record<PropKind, (o?: { variant?: string; state?: string }) => Shape> = {
   door: (o) => door(o?.variant === "open" || o?.state === "open"),
   desk, easel,
@@ -291,6 +376,8 @@ const PROPS: Record<PropKind, (o?: { variant?: string; state?: string }) => Shap
   speech, house, bridge,
   mountain, path, staircase, scale, hourglass, clock, calendar, trophy, target,
   seedling, sapling, tree, brain, heart, gears, ladder, wall, gift, phone, bed, dumbbell, shoe, coffee, snowball,
+  coins, dollar, bargraph, piechart, trendup, percent,
+  dominoes, checkmark, brick,
 };
 
 /** Resolve a prop kind (+ optional variant/state) to its drawable shape. */

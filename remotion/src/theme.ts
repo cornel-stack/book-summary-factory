@@ -28,6 +28,17 @@ export const SHORT_SAFE = {
 } as const;
 
 /**
+ * Shorts optimization (Phase 14). Shorts rank on view-duration-relative-to-length
+ * + loops, NOT CTR — so a LONG brand end-card bleeds the %-watched + loop metric.
+ * The end-card is capped to ~1s; the CTA moves to the platform captions + the
+ * pinned comment; a small persistent wordmark watermark carries the brand through
+ * the body instead. Edit SHORTS_ENDCARD_SECONDS to tune the cap.
+ */
+export const SHORTS_ENDCARD_SECONDS = 1.0;
+/** Target length band for shorts (seconds). Lint warns beyond `warn`. */
+export const SHORTS_DURATION = { min: 35, max: 50, warn: 55 } as const;
+
+/**
  * Silent padding (in frames) appended after each scene's narration so that
  * one scene's audio doesn't bump straight into the next.
  */
@@ -90,6 +101,15 @@ export const CAST_WARDROBE = {
   max: "#495A6B", // slate charcoal (a volatile suit)
   maya: "#8E5E78", // muted plum / berry
   pip: "#3E8577", // muted teal (kept cool so it never competes with flame)
+  // ---- Phase 17 ensemble (distinct cool/jewel tones) ----
+  jade: "#2E7D6B", // deep jade green
+  omar: "#5A6E8C", // dusty indigo
+  nadia: "#9A5A6E", // muted rose
+  theo: "#C98A3C", // warm ochre (kid — a touch brighter)
+  rosa: "#7A6AA3", // muted violet
+  kwame: "#3C6E97", // ocean blue
+  lena: "#6E7B86", // soft slate grey
+  deshawn: "#4E7A4A", // forest green
 } as const;
 
 /** Lighter tints of the palette, for large soft background washes (sky, walls). */
@@ -101,11 +121,19 @@ export const SCENE_TINT = {
   coral: "#F2CFC0",
 } as const;
 
+/**
+ * Chart series colors (Phase 16 — motion graphics). Secondary tones to cycle
+ * AFTER the brand accent (which stays the emphasis/first series). Warm, muted,
+ * cohesive with SCENE_PALETTE so animated data still reads as hand-drawn-adjacent.
+ */
+export const CHART_COLORS = ["#2F6690", "#7A9E5E", "#CBA56B", "#5E8CA8", "#E0896B"] as const;
+
 /** Font families (resolved webfonts from fonts.ts). */
 export const FONTS = {
   heading: FONT_FAMILY.hand, // Caveat
   label: FONT_FAMILY.hand, // Caveat
   body: FONT_FAMILY.body, // Inter
+  display: FONT_FAMILY.display, // Anton — bold thumbnail punch words
 } as const;
 
 export const LAYOUT = {

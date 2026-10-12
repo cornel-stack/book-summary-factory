@@ -16,3 +16,8 @@ remotion/out/
 .DS_Store
 *.log
 .env
+
+# Claude Code local-only
+.claude/settings.local.json
+.claude/plans/
+.claude/shell-snapshots/

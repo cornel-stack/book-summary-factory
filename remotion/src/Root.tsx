@@ -2,7 +2,6 @@ import React from "react";
 import { Composition, Still } from "remotion";
 import { Video } from "./Video";
 import { ShortVideo } from "./ShortVideo";
-import { BrandSheet } from "./BrandSheet";
 import { Thumbnail } from "./Thumbnail";
 import { CastSheetPoses, CastSheetExpr } from "./CastSheet";
 import { CastGestureSheet } from "./CastGestureSheet";
@@ -31,10 +30,10 @@ const defaultProps: RenderProps = {
     title: "Placeholder — run build:video to generate real props",
     brand: "readlark",
     format: "longform",
-    book: { title: "Book", author: "Author" },
+    book: { title: "Atomic Habits", author: "James Clear" },
     description: "placeholder",
     tags: [],
-    thumbnail: { headline: "Headline", subline: "Subline", cast: "max", pose: "thinking", expression: "curious", props: [] },
+    thumbnail: { headline: "Tiny Habits Win", punch_words: ["TINY", "HABITS", "WIN"], cast: "jade", pose: "celebrating", expression: "happy", props: ["dominoes", "trophy"], pointer: "spotlight" },
     voice: "en-US-AndrewNeural",
     target_minutes: 30,
     template: { framing: "book-structure", hook: "direct" },
@@ -122,7 +121,6 @@ export const RemotionRoot: React.FC = () => {
           height: props.manifest.height,
         })}
       />
-      <Still id="BrandSheet" component={BrandSheet} width={1920} height={1080} />
     </>
   );
 };

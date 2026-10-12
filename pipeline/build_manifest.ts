@@ -23,7 +23,7 @@ import {
   type ManifestScene,
   type WordTiming,
 } from "../remotion/src/schema.js";
-import { VIDEO, VIDEO_VERTICAL, SCENE_PADDING_FRAMES } from "../remotion/src/theme.js";
+import { VIDEO, VIDEO_VERTICAL, SCENE_PADDING_FRAMES, SHORTS_ENDCARD_SECONDS } from "../remotion/src/theme.js";
 import { resolvePhraseTime } from "../remotion/src/drawing/sync.js";
 import { getBrand } from "../config/brands.js";
 
@@ -104,7 +104,13 @@ function main() {
     const audioAbs = join(REPO, "remotion", "public", audioRel);
     const audioDurationSec = ffprobeDurationSec(audioAbs);
     const audioFrames = Math.ceil(audioDurationSec * VIDEO.fps);
-    const durationInFrames = audioFrames + SCENE_PADDING_FRAMES;
+    // Phase 14: a SHORT's end-card (cta) is capped to ~1s — a long brand outro
+    // bleeds the loop / view-duration metric. The CTA now lives in the captions +
+    // pinned comment, so the end-card only needs a brief brand sting.
+    const durationInFrames =
+      script.format === "short" && scene.type === "cta"
+        ? Math.max(1, Math.round(SHORTS_ENDCARD_SECONDS * VIDEO.fps))
+        : audioFrames + SCENE_PADDING_FRAMES;
 
     const startFrame = cursor;
     cursor += durationInFrames;
@@ -144,26 +150,42 @@ function main() {
     `Manifest: ${scenes.length} scenes, ${cursor} frames (${totalSec}s @ ${VIDEO.fps}fps)`,
   );
 
-  // Runtime guard (Phase 13 — brand-aware, HARD-FAILS). The policy comes from the
-  // BRAND (config/brands.ts), not a global constant: ReadLark long-form ≥ 30 min,
-  // PerCuriam long-form ≥ 13 min (default target 15). Shorts must land 20–70s
-  // (one 30–60s clip). Audio is truth — this guards a mis-paced cut before any
+  // Runtime guard (HARD-FAILS). The policy comes from the brand (config/brands.ts),
+  // not a global constant: ReadLark long-form ≥ 30 min (default target 32).
+  // Shorts must land 20–70s (or within a `target_minutes` window for 2-min
+  // socials). Audio is truth — this guards a mis-paced cut before any
   // render minutes are spent.
-  {
+  if (process.env.SKIP_RUNTIME_GUARD === "1") {
+    console.log("⏭  runtime guard skipped (SKIP_RUNTIME_GUARD=1 — sample/test render)");
+  } else {
     const brand = getBrand(script.brand);
     const actualMin = cursor / VIDEO.fps / 60;
     const actualSec = cursor / VIDEO.fps;
     const problems: string[] = [];
 
     if (script.format === "short") {
-      if (actualSec < 20 || actualSec > 70) {
+      // Two short products share the vertical pipeline: a classic 30–60s clip
+      // (no target_minutes) and a longer, vertical-native SOCIAL video (declares
+      // target_minutes, e.g. 2.2). When a target is set, enforce ±15% of it with
+      // a 90s floor; otherwise keep the 20–70s window.
+      if (script.target_minutes != null) {
+        const target = script.target_minutes;
+        const lo = target * 0.85;
+        const hi = target * 1.15;
+        if (actualSec < 90) {
+          problems.push(`social short is ${actualSec.toFixed(1)}s — below the 90s floor`);
+        }
+        if (actualMin < lo || actualMin > hi) {
+          problems.push(`outside ±15% of target ${target} min (${(lo * 60).toFixed(0)}–${(hi * 60).toFixed(0)}s)`);
+        }
+      } else if (actualSec < 20 || actualSec > 70) {
         problems.push(`short is ${actualSec.toFixed(1)}s — outside the 20–70s window (aim 30–60s)`);
       }
       if (problems.length) {
         console.error(`\n✖ runtime guard (${brand.id} short): ${problems.join("; ")}.\n  Trim or expand the narration.\n`);
         process.exit(1);
       }
-      console.log(`✓ short runtime ${actualSec.toFixed(1)}s (${brand.id}) — within the 30–60s band`);
+      console.log(`✓ short runtime ${actualSec.toFixed(1)}s (${brand.id})`);
     } else {
       const target = script.target_minutes ?? brand.default_target_minutes;
       const lo = target * 0.9;

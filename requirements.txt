@@ -4,6 +4,14 @@
 #   .venv/bin/pip install -r requirements.txt
 edge-tts>=6.1.0
 
+# Resilient fallback TTS: official Azure Cognitive Services Speech. Same neural
+# voices as edge-tts + native word-boundary timings. Used automatically when
+# edge-tts is unavailable (it 403s globally from time to time) and
+# AZURE_SPEECH_KEY is set. Free tier: 0.5M characters/month.
+# Linux note: the SDK links libasound2 (installed in CI); mp3 output goes via
+# ffmpeg so no GStreamer plugin is needed.
+azure-cognitiveservices-speech>=1.37.0
+
 # Optional — only needed to (re)process the photographed hand assets via
 # pipeline/process_hand.py. Not required for the normal build pipeline.
 # rembg[cpu]>=2.0.0

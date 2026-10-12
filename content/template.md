@@ -239,6 +239,43 @@ possible.** Concrete rules (lint-enforced):
    8 s rule. The levers are (a) more sub-reveals/spots, (b) a faster `rate`, or
    (c) shorter per-scene narration — pick deliberately per video.
 
+## 4e. Motion graphics & data — SHOW, don't say (Phase 16)
+
+The channel is hand-drawn charm **plus** slick animated data. Every scene must
+MOVE and the screen must SHOW what the voice says. Hard rules (lint-nudged):
+
+- **Never a lone figure.** A `character_scene` has the figure PLUS ≥1–2
+  metaphor/data props (`reveal:"pop"/"wash"`, sync'd). Money talk → draw money:
+  `coins`, `dollar`, `moneybag`, `bargraph`, `piechart`, `trendup`, `percent`,
+  `scale`, `clock`. Pair the figure on one side, the graphic(s) on the other.
+- **Show every list.** If the narration enumerates ("five ideas", "three steps",
+  "two skills", "the four laws"), it MUST appear as a `list_card` (items spring
+  in, sync'd per item) — never narrated over a single figure. The lint warns.
+- **Show every number.** Any figure/stat → a `stat_chart`:
+  - `mode:"number"` — one big kinetic count-up ("$84.5B", "37×", "90%"); set
+    `prefix`/`suffix`/`decimals`.
+  - `mode:"bars"` / `"line"` / `"area"` — growing bars / progressive line with a
+    soft fill; values count up as each point lands. Use for trends & comparisons.
+  - `mode:"pie"` — share of a whole (wedges sweep in).
+- **Compare with the table.** "X vs Y" → a `compare` scene: `left`/`right`
+  columns (heading + items), rows slide in column-by-column with a center "vs".
+  (e.g. getting-rich vs staying-rich, goals vs systems, saver vs spender.)
+- **Tabulate multi-column data with `table` (Phase 17).** When you have more than
+  two columns or a matrix (e.g. the Four Laws × make-it-obvious/attractive/easy/
+  satisfying, a habit-tracker week, before→after→why), use a `table`:
+  `{ title?, columns:[2–4 headers], rows:[{ cells:[2–4 strings ≤4 words], sync?, highlight? }] }`
+  (2–6 rows). Rows spring in one at a time; set `highlight:true` on the key row.
+- **Draw the idea with the illustration library.** Prefer a specific prop over a
+  generic figure: `dominoes` (chain reaction / stacking), `checkmark` (streak /
+  tracking), `brick` (identity, built brick-by-brick), `snowball`, `seedling`→
+  `sapling`→`tree`, `dumbbell`, `shoe`, `calendar`, `scale`, `target`, `gears`,
+  `trophy`, `path`/`mountain`/`staircase`, plus the money/data props.
+- **Ambient motion is automatic** (drifting doodles behind every scene, and the
+  title/quote/CTA now keep breathing) — but that does NOT excuse a dead hero:
+  **Density still rules (§4c/§4d):** something new every 6–10 s, nothing newest
+  for > 8 s. Lists, charts, compare, table, and prop-reveals all count — prefer
+  them over a static figure holding the screen.
+
 ## 5. Verb → pose + effect cheat-sheet (cast-aware)
 
 | Narration beat | cast + pose / expression | effect |
@@ -257,6 +294,14 @@ possible.** Concrete rules (lint-enforced):
 | a mood swings mid-sentence | `expressions:[{value,sync}]` | matching per-swing effects |
 | a number / trend | `stat_chart` (line for trends, bars for compares) | — |
 | a checklist / the application | `list_card` (tick/box/arrow icons) | — |
+| a matrix / multi-column data | `table` (header row + rows, highlight the key row) | — |
+
+**Cast (13 members, diverse).** alex, sage (older, glasses, beard), max (heavy),
+maya, pip (small), jade (afro), omar (older, bald, glasses), nadia (bun), theo
+(kid), rosa (long hair), kwame (curly), lena (older, glasses), deshawn (broad).
+Each has its own skin tone — hands + faces read in every pose. Spread them across
+scenes (vary who appears; use duos + crowds); never cast one person for the whole
+video. Skin tone/age/build/hair diversity is free — use it.
 
 Brand rule: one flame accent per character, `marker`/`slate` never on
 characters, `slate` charts only.
@@ -278,6 +323,43 @@ the title. Use sparingly; it costs time.
 
 **Rule:** the hook must name the book (title or author) — it's both good
 practice and schema-enforced under book-structure.
+
+**Promise tag (Phase 14, lint-enforced):** set the top-level `promise` field to a
+verbatim phrase from the first scene(s) that states the video's CORE PROMISE — the
+payoff a viewer stays for. The lint FAILS if that phrase isn't spoken within the
+first **15 s**. Keep it concrete ("decide who you become", "get your deposit
+back"), not vague. The first scene must also show a visual change within 3 s (the
+hand's draw-in already satisfies this).
+
+---
+
+## 6b. YouTube packaging & SEO (Phase 14 — ranking)
+
+YouTube is a funnel: impressions → CTR (title+thumbnail) → retention →
+satisfaction → session. Search is the discovery surface for a new channel;
+Suggested is the long-term one. Pack for it:
+
+- **`title_variants` — EXACTLY 3** (YouTube's native A/B test takes 3). All ≤100
+  chars, never misleading (the video must deliver the claim):
+  1. **SEARCH-LED** — begins with the book title verbatim, e.g.
+     `Atomic Habits Summary: 1% Better Every Day` (aim ≤70 chars). This is the
+     default `title` and becomes the description's first (search-visible) line.
+  2. **CURIOSITY-LED** — an open loop / question ("Why Your Goals Keep Failing You").
+  3. **BENEFIT-LED** — outcome-first ("Build Habits That Actually Stick").
+- **Book title verbatim** must appear in variant (1), the description's first
+  line, and the MP4 filename (`<slug>-summary.mp4`) — all handled by the packager;
+  the lint FAILS if it's missing from variant (1) or the description.
+- **`category`** — one of the fixed set (e.g. "Habits & Productivity"). Drives the
+  playlist + end-screen grouping in `upload-notes.txt`.
+- **`pinned_comment`** — one engagement question tied to the book, e.g. "Which of
+  the four laws do you break most? 👇". Goes in the pinned comment (session time).
+- **`thumbnail` (Hybrid — Phase 17, research-led for CTR):** one BIG emotive cast
+  figure on the right third over a flame spotlight; bold punch words on the left.
+  Set: `headline` (≤5 words), `punch_words` (2–3 BIG words, Anton — the last word
+  renders in flame, so make it the payoff), `cast` (pick an expressive member),
+  `pose:"celebrating"` or `"pointing"`, `expression:"happy"`/`"shocked"`,
+  `props` (1–2 that signal the topic), `pointer:"spotlight"` (default) / `"arrow"`.
+  Keep it to ~3 words + one subject + one accent colour (high contrast at mobile).
 
 ---
 
@@ -362,56 +444,14 @@ changes.
 - [ ] Every principle 220–360 words; no single scene over ~65 words.
 - [ ] Every key visual has a `sync` phrase; the phrase is in that scene's narration.
 - [ ] Numbers written as words ("one forty two", not "142").
-- [ ] All five cast members used; both entrance modes; ≥1 two-char scene;
-      ≥1 seated-desk scene; ≥1 held prop; ≥3 stat_chart/list moments.
+- [ ] A varied slice of the 13-member cast used (not one person throughout);
+      both entrance modes; ≥1 two-char scene; ≥1 seated-desk scene; ≥1 held prop;
+      ≥3 stat_chart/list/table moments (incl. ≥1 `table`).
+- [ ] `thumbnail` set with `punch_words` (2–3) + an expressive pose (§6b).
 - [ ] Labels within word limits (figure ≤6, list ≤5, recap ≤4, headline ≤5).
 - [ ] `description` is prose only — chapters are auto-generated (§8b).
-
----
-
-## §percuriam — the PerCuriam long-form law template (Phase 13)
-
-PerCuriam long-form is the **same skeleton, smaller**: ~**15 minutes** (band
-13–17 min, ~2,100–2,500 words at channel pace). Brand layer = PerCuriam (paper
-`#FAF7F2`, navy accents, amber highlight) including the thumbnail. Schema:
-`brand:"percuriam"`, `format:"longform"`, `template.framing:"explainer"`, **no
-`book`** (law content isn't a book), `target_minutes: 15`.
-
-### Skeleton
-```
-HOOK           1 scene   scenario or misconception — Max as the confused everyman
-  → disclaimer           spoken ONCE in the intro: "this is education, not legal advice"
-  → CTA (card)
-INTRO          1 scene   why this matters / what you'll learn
-PART 1         title + 2–3 SECTIONS
-  MID-RECAP
-PART 2         RE-HOOK + title + 2–3 SECTIONS   (5–6 SECTIONS total across parts)
-  MID-RECAP
-  (PART 3 optional)
-FINAL RECAP + CLOSE + CTA (end-card carries the disclaimer via the brand layer)
-```
-
-- A **SECTION** = one legal concept or "right": **rule in plain words → a
-  story/scenario acted by the cast → a "what to actually do" takeaway** (chip
-  style). This is PerCuriam's atomic unit (mirrors a book "principle").
-- **Re-hooks at part boundaries** (same formulas as §3b).
-- Disclaimer discipline: spoken once in the intro, shown on the end-card (brand),
-  and in every description (`package.ts`). **Never present a state-specific rule
-  as universal** — say "in most US states" / "varies by state" where it does.
-
-### Episode formats (rotate via topics.json `format_note`)
-- **Deep dive** — single topic, exhaustive: "Your complete guide to security
-  deposits." Parts = stages of the topic (what the law says → your rights → the
-  landlord's limits → how to get it back → small claims).
-- **Listicle** — "7 rights you didn't know you had." Each right is a section;
-  parts group them (3 + 4). Punchy, high-retention.
-
-### Word math (same constant)
-~145 words per final minute → **15 min ≈ 2,175 words** (band 2,100–2,500). The
-runtime guard reads the PerCuriam policy (`min_minutes: 13`, default target 15)
-and hard-fails below 13 min or outside ±10% of target.
-
-### Shorts come from here
-The 3 daily PerCuriam shorts are **derived** from that day's/week's long-form
-(`derive_shorts.ts`, one short per section), topped up from the `short`-scope
-topics when a video yields fewer than three.
+- [ ] **`title_variants`** set (exactly 3: search / curiosity / benefit); variant
+      (1) starts with the book title and is the default `title` (§6b).
+- [ ] **`category`** set; **`pinned_comment`** written; **`promise`** tagged
+      (verbatim phrase, spoken ≤15 s — lint-enforced §6).
+- [ ] `description` first sentence names the book title (search-visible line 1).

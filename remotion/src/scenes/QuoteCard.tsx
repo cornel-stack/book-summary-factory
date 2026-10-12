@@ -86,6 +86,7 @@ export const QuoteCard: React.FC<{
           fontSize: LAYOUT.quoteSize,
           color: COLORS.ink,
           lineHeight: LAYOUT.lineHeight,
+          transform: `translateY(${Math.sin(frame / 30) * 3}px)`,
         }}
       >
         {lines.map((line, i) => {

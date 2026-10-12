@@ -22,7 +22,18 @@ const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const CAL = join(REPO, "content", "calendar.json");
 
 type Status = "scheduled" | "rendered" | "published";
-type Entry = { video_id: string; brand: string; format: string; publish_date: string; status: Status };
+type Entry = {
+  video_id: string;
+  brand: string;
+  format: string;
+  publish_date: string;
+  status: Status;
+  // Phase 14 — session-time machinery: category drives playlists + end-screen
+  // grouping; the dates let end-screen picks use true render/publish history.
+  category?: string;
+  rendered_date?: string;
+  published_date?: string;
+};
 
 function arg(name: string): string | undefined {
   const i = process.argv.indexOf(`--${name}`);
@@ -45,7 +56,7 @@ function main() {
   const format = arg("format") ?? "longform";
   const perDay = Math.max(1, parseInt(arg("per-day") ?? "1", 10));
   if (!start || !/^\d{4}-\d{2}-\d{2}$/.test(start) || !idsRaw) {
-    console.error("Usage: npm run calendar:fill -- --start YYYY-MM-DD --ids id1,id2,... [--brand readlark|percuriam] [--format longform|short] [--per-day N]");
+    console.error("Usage: npm run calendar:fill -- --start YYYY-MM-DD --ids id1,id2,... [--brand readlark] [--format longform|short] [--per-day N]");
     process.exit(1);
   }
   if (!(BRAND_IDS as readonly string[]).includes(brand)) { console.error(`✖ bad --brand ${brand}`); process.exit(1); }

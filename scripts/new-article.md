@@ -1,7 +1,7 @@
-# Playbook — one article per brand per weekday (markdown)
+# Playbook — one ReadLark article per weekday (markdown)
 
 800–1,200 words, SEO-aware, posted manually. Output:
-`content/articles/<brand>/<YYYY-MM-DD>-<slug>.md`.
+`content/articles/readlark/<YYYY-MM-DD>-<slug>.md`.
 
 ## Front matter (every article)
 ```md
@@ -9,7 +9,7 @@
 title: "<60-char headline with the primary keyword>"
 slug: <kebab-case>
 meta_description: "<150–160 char summary with the keyword>"
-brand: readlark | percuriam
+brand: readlark
 date: YYYY-MM-DD
 tags: [tag, tag, tag]
 ---
@@ -26,12 +26,3 @@ tags: [tag, tag, tag]
 - Natural internal backlinks to related pieces; one soft mention:
   *"(ReadLark turns books like this into 10-minute summaries — launching soon.)"*
 - Voice: warm, practical, a little literary.
-
-## PerCuriam (law topics expanded)
-- Expand a `topics.json` entry into a plain-English guide.
-- **Disclaimer footer is mandatory:** end with
-  *"This article is educational information, not legal advice. Laws vary by state;
-  consult a licensed attorney for your situation."*
-- Backlink to `percuriam.app`. Use "in most US states" where it varies. Never
-  present a state-specific rule as universal.
-- Voice: calm, clear, reassuring; no legalese.

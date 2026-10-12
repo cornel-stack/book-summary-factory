@@ -2,23 +2,23 @@
   "id": "atomic-habits-s01",
   "brand": "readlark",
   "format": "short",
-  "title": "The Compound Curve — Atomic Habits",
-  "short_hook": "The Compound Curve",
+  "title": "Small Habits Compound — Atomic Habits",
+  "short_hook": "Small Habits Compound",
   "book": {
     "title": "Atomic Habits",
     "author": "James Clear",
     "year": 2018
   },
-  "description": "Here's the one idea that makes the compound curve finally click. A 60-second idea from Atomic Habits.",
+  "description": "Here's the one idea that makes small habits compound finally click. A 60-second idea from Atomic Habits.",
   "tags": [
     "atomic habits",
     "james clear",
-    "book summary",
+    "atomic habits summary",
     "habits",
-    "the compound curve"
+    "small habits compound"
   ],
   "thumbnail": {
-    "headline": "The Compound Curve",
+    "headline": "Small Habits Compound",
     "cast": "alex",
     "pose": "presenting",
     "expression": "happy",
@@ -35,7 +35,7 @@
     {
       "id": "hook",
       "type": "character_scene",
-      "narration": "Here's the one idea that makes the compound curve finally click. It comes straight from Atomic Habits.",
+      "narration": "Here's the one idea that makes small habits compound finally click. It comes straight from Atomic Habits.",
       "visual": {
         "stage": "plain",
         "elements": [
@@ -59,11 +59,11 @@
     },
     {
       "id": "idea",
-      "narration": "Now flip it, because the math cuts both ways. One percent worse every day, repeated for a year, does not just stall you. It drags you down toward nearly nothing. This is the hidden danger of small choices. A skipped workout, one more late night, a tiny shortcut, each so minor you barely notice. But compounded in the wrong direction, they quietly hollow you out while you tell yourself it is fine.",
+      "narration": "Here is the idea that makes the whole book work. A habit is a compound interest machine for your behavior. The same way a little money left alone grows into a fortune, a tiny action repeated grows into a transformed life. The problem is that in the beginning the effects are so small they feel invisible, so almost everyone quits before the curve turns up. The people who succeed are rarely the most talented. They are the ones who kept depositing tiny actions long after it stopped feeling exciting, trusting the math before they could see the balance.",
       "type": "character_scene",
       "visual": {
-        "title": "The other direction",
-        "stage": "plain",
+        "title": "Compound interest",
+        "stage": "outdoor",
         "elements": [
           {
             "kind": "figure",
@@ -74,57 +74,41 @@
               "h": 5
             },
             "cast": "alex",
-            "poses": [
-              "standing"
-            ],
-            "expressions": [
-              "curious",
-              {
-                "value": "worried",
-                "sync": {
-                  "phrase": "wrong direction"
-                }
-              }
-            ],
+            "pose": "standing",
+            "expression": "curious",
             "facing": "right",
             "seat": "chair",
             "enter": "draw",
-            "effects": [
-              {
-                "kind": "sweat_drop",
-                "sync": {
-                  "phrase": "nearly nothing"
-                }
-              }
-            ],
             "tier": "hero",
             "color": "ink",
-            "label": "the drift"
+            "sync": {
+              "phrase": "compound interest"
+            }
           },
           {
-            "kind": "wall",
+            "kind": "snowball",
             "at": {
-              "col": 6,
-              "row": 1,
+              "col": 8,
+              "row": 2,
               "w": 4,
-              "h": 5
+              "h": 4
             },
             "cast": "alex",
             "facing": "right",
             "seat": "chair",
             "enter": "draw",
             "tier": "hero",
-            "color": "ink",
-            "label": "the drift",
+            "reveal": "draw",
+            "color": "accent",
             "sync": {
-              "phrase": "drags you down"
+              "phrase": "grows into a transformed life"
             }
           },
           {
-            "kind": "bed",
+            "kind": "coins",
             "at": {
-              "col": 10,
-              "row": 0,
+              "col": 6,
+              "row": 4,
               "w": 2,
               "h": 2
             },
@@ -132,11 +116,11 @@
             "facing": "right",
             "seat": "chair",
             "enter": "draw",
-            "tier": "hero",
+            "tier": "ambient",
             "reveal": "pop",
             "color": "ink",
             "sync": {
-              "phrase": "late night"
+              "phrase": "little money"
             }
           }
         ]

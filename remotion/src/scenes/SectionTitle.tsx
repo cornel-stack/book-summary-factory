@@ -36,10 +36,14 @@ export const SectionTitle: React.FC<{
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const titleY = interpolate(frame, [6, 20], [36, 0], {
+  const titleIn = interpolate(frame, [6, 20], [36, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
+  // never freeze: a slow continuous bob after the title lands
+  const bob = Math.sin((frame - 20) / 26) * 4;
+  const titleY = titleIn + (frame > 20 ? bob : 0);
+  const kickerBob = Math.sin((frame - 20) / 26 + 0.6) * 3;
   // Approximate title width to size the marker (no text metrics at render time).
   const approxW = Math.min(
     VIDEO.width - LAYOUT.safeMargin * 2,
@@ -97,6 +101,7 @@ export const SectionTitle: React.FC<{
             letterSpacing: 8,
             color: brand.accent,
             opacity: titleOpacity,
+            transform: `translateY(${kickerBob}px)`,
           }}
         >
           {kicker}

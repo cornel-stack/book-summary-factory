@@ -2,28 +2,28 @@
   "id": "atomic-habits-s02",
   "brand": "readlark",
   "format": "short",
-  "title": "The Valley of Disappointment — Atomic Habits",
-  "short_hook": "The Valley of Disappointment",
+  "title": "Systems Over Goals — Atomic Habits",
+  "short_hook": "Systems Over Goals",
   "book": {
     "title": "Atomic Habits",
     "author": "James Clear",
     "year": 2018
   },
-  "description": "Most people get the valley of disappointment completely backwards. A 60-second idea from Atomic Habits.",
+  "description": "Most people get systems over goals completely backwards. A 60-second idea from Atomic Habits.",
   "tags": [
     "atomic habits",
     "james clear",
-    "book summary",
+    "atomic habits summary",
     "habits",
-    "the valley of disappointment"
+    "systems over goals"
   ],
   "thumbnail": {
-    "headline": "The Valley of Disappointment",
+    "headline": "Systems Over Goals",
     "cast": "alex",
     "pose": "presenting",
     "expression": "happy",
     "props": [
-      "mountain"
+      "gears"
     ]
   },
   "voice": "en-US-AndrewNeural",
@@ -35,7 +35,7 @@
     {
       "id": "hook",
       "type": "character_scene",
-      "narration": "Most people get the valley of disappointment completely backwards. It comes straight from Atomic Habits.",
+      "narration": "Most people get systems over goals completely backwards. It comes straight from Atomic Habits.",
       "visual": {
         "stage": "plain",
         "elements": [
@@ -59,69 +59,56 @@
     },
     {
       "id": "idea",
-      "narration": "Here is the trap that stops almost everyone. You put in the work for weeks, and nothing visible seems to happen. Effort and results split apart, and you feel completely stuck. So picture an ice cube sitting in a freezing room. Twenty five degrees, twenty six, twenty seven. Still frozen solid. Nothing. Then at thirty two, one more single degree, and suddenly it cracks and begins to melt.",
+      "narration": "Everybody wants the trophy. Both the winner and the loser of a championship shared the exact same goal, so the goal cannot be what separated them. What separated them was the system, the daily process each one actually ran. Goals set a direction, but systems drive the progress. Fall in love with the boring repetition and the results take care of themselves.",
       "type": "character_scene",
       "visual": {
-        "title": "The valley",
-        "stage": "outdoor",
+        "title": "Love the process",
+        "stage": "stage-spotlight",
         "elements": [
           {
-            "kind": "path",
+            "kind": "figure",
             "at": {
-              "col": 2,
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "omar",
+            "pose": "presenting",
+            "expression": "happy",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "sync": {
+              "phrase": "the system"
+            }
+          },
+          {
+            "kind": "gears",
+            "at": {
+              "col": 8,
               "row": 2,
-              "w": 8,
+              "w": 4,
               "h": 4
             },
             "cast": "alex",
             "facing": "right",
             "seat": "chair",
             "enter": "draw",
-            "tier": "ambient",
-            "color": "ink"
-          },
-          {
-            "kind": "figure",
-            "at": {
-              "col": 4,
-              "row": 1,
-              "w": 4,
-              "h": 5
-            },
-            "cast": "alex",
-            "poses": [
-              "facepalm",
-              "standing"
-            ],
-            "expressions": [
-              "tired",
-              {
-                "value": "worried",
-                "sync": {
-                  "phrase": "nothing visible"
-                }
-              }
-            ],
-            "facing": "right",
-            "seat": "chair",
-            "enter": "draw",
-            "effects": [
-              {
-                "kind": "sweat_drop",
-                "sync": {
-                  "phrase": "nothing visible"
-                }
-              }
-            ],
             "tier": "hero",
+            "reveal": "draw",
             "color": "ink",
-            "label": "stuck"
+            "sync": {
+              "phrase": "daily process"
+            }
           },
           {
-            "kind": "clock",
+            "kind": "trophy",
             "at": {
-              "col": 10,
-              "row": 0,
+              "col": 6,
+              "row": 4,
               "w": 2,
               "h": 2
             },
@@ -129,11 +116,11 @@
             "facing": "right",
             "seat": "chair",
             "enter": "draw",
-            "tier": "hero",
+            "tier": "ambient",
             "reveal": "pop",
             "color": "ink",
             "sync": {
-              "phrase": "work for weeks"
+              "phrase": "the trophy"
             }
           }
         ]

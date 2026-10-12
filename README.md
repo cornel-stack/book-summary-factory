@@ -29,6 +29,32 @@ Narration audio is the source of truth for all timing:
 - **edge-tts** (Python) — narration audio + word boundaries
 - **ffmpeg / ffprobe** — audio measurement (and later video stitching)
 
+### TTS providers (resilience)
+
+`generate_audio.py` is provider-pluggable via `TTS_PROVIDER` (default `auto`):
+
+- **edge** — free Microsoft Edge neural voices, no key, `WordBoundary` timings.
+  Primary, but Microsoft's endpoint **periodically 403s globally** (local *and*
+  CI), and its commercial-use terms are a gray area.
+- **azure** — official Azure Cognitive Services Speech: the *same* neural voices
+  + native word-boundary events, commercial-licensed, reliable. Free tier
+  0.5M chars/month. Set `AZURE_SPEECH_KEY` (+ `AZURE_SPEECH_REGION`, default
+  `eastus`). Locally: export the env vars. In CI: add repo **secrets**
+  `AZURE_SPEECH_KEY` / `AZURE_SPEECH_REGION` (the render workflows already read
+  them and `apt install libasound2`).
+- **kokoro** — [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M): fully
+  **offline, free-forever, Apache-2.0** (commercial-safe), no key/quota, with
+  native per-word timestamps. Default voice **`af_heart`** (override
+  `KOKORO_VOICE`). Install: `pip install -r requirements-kokoro.txt` (+
+  `apt install espeak-ng`; on CPU/CI install the CPU torch wheel first — see that
+  file). CPU-bound (~real time), so great for shorts locally; prefer edge/azure
+  in CI for 30-min longforms.
+
+`auto` probes edge once; if it's down it falls back to Azure (if key'd) then to
+Kokoro (if installed), else exits with guidance. Every provider emits the
+identical per-word timing contract, so sync + captions are unaffected by which
+one runs. Force one with `TTS_PROVIDER=edge|azure|kokoro`.
+
 ## Repo layout
 
 ```

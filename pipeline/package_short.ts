@@ -4,8 +4,7 @@
  *   youtube.txt    — title (≤100 chars, incl. #Shorts) + description
  *   tiktok.txt     — caption + ≤5 niche hashtags
  *   instagram.txt  — caption (fuller) + hashtags
- * Tone differs per platform; the CTA follows the brand's prelaunch flag; every
- * PerCuriam description ends with the legal disclaimer.
+ * Tone differs per platform; the CTA follows the brand's prelaunch flag.
  *
  *   npx tsx pipeline/package_short.ts <short-id>   → output/<short-id>/
  */
@@ -14,6 +13,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { Script } from "../remotion/src/schema.js";
 import { getBrand, activeCta } from "../config/brands.js";
+import { SHORTS_ENDCARD_SECONDS } from "../remotion/src/theme.js";
 
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -54,6 +54,11 @@ function main() {
   const disclaimer = brand.disclaimer ? `\n\n${brand.disclaimer}` : "";
   const shortTags = [...script.tags, brand.id, "shorts"];
 
+  // The end-card is now ~1s (loop/duration > a long outro), so the CTA lives in
+  // the CAPTIONS + a PINNED COMMENT instead. Build that pinned block once.
+  const pinned = [script.pinned_comment, cta].filter(Boolean).join("\n");
+  const pinnedBlock = ["", "— PINNED COMMENT (pin this) —", pinned];
+
   // YouTube Shorts — title must carry #Shorts and stay ≤100 chars.
   let ytTitle = `${script.title}`.replace(/\s+/g, " ").trim();
   const suffix = " #Shorts";
@@ -67,6 +72,7 @@ function main() {
     cta,
     hashtags(shortTags, 8),
     disclaimer,
+    ...pinnedBlock,
   ].join("\n").trimEnd() + "\n";
 
   // TikTok — punchy caption + ≤5 niche hashtags.
@@ -76,6 +82,7 @@ function main() {
     cta,
     hashtags(shortTags, 5),
     disclaimer,
+    ...pinnedBlock,
   ].join("\n").trimEnd() + "\n";
 
   // Instagram Reels — fuller caption, hashtags at the end.
@@ -86,14 +93,35 @@ function main() {
     "",
     hashtags(shortTags, 8),
     disclaimer,
+    ...pinnedBlock,
   ].join("\n").trimEnd() + "\n";
+
+  // Loop/duration metadata for the producer.
+  let durSec = 0;
+  try {
+    const mf = JSON.parse(readFileSync(join(buildDir, "manifest.json"), "utf8"));
+    durSec = mf.totalDurationInFrames / mf.fps;
+  } catch {
+    /* manifest optional here */
+  }
+  const notes = [
+    `SHORT NOTES — ${id}`,
+    "",
+    `Loop replay: ${script.loop ? "YES — final line flows into the opening; replays seamlessly (watch the seam)" : "no"}`,
+    `Length: ${durSec ? durSec.toFixed(1) + "s" : "?"}  (target 35–50s${script.max_seconds ? `; override allows up to ${script.max_seconds}s` : ""})`,
+    `End-card: ~${SHORTS_ENDCARD_SECONDS}s — brand CTA is in the captions + pinned comment, NOT a long outro`,
+    "",
+    "PINNED COMMENT (pin this):",
+    "  " + pinned.replace(/\n/g, "\n  "),
+  ].join("\n") + "\n";
 
   writeFileSync(join(outDir, "youtube.txt"), youtube);
   writeFileSync(join(outDir, "tiktok.txt"), tiktok);
   writeFileSync(join(outDir, "instagram.txt"), instagram);
+  writeFileSync(join(outDir, "short-notes.txt"), notes);
 
   console.log(`Packaged short → ${outDir}`);
-  for (const f of [`${id}.mp4`, "captions.srt", "youtube.txt", "tiktok.txt", "instagram.txt"]) console.log(`  ✓ ${f}`);
+  for (const f of [`${id}.mp4`, "captions.srt", "youtube.txt", "tiktok.txt", "instagram.txt", "short-notes.txt"]) console.log(`  ✓ ${f}`);
 }
 
 main();

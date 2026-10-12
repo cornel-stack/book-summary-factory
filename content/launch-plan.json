@@ -1,0 +1,222 @@
+[
+  {
+    "order": 1,
+    "slug": "atomic-habits",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018,
+    "category": "Habits & Productivity",
+    "week": "Week 1",
+    "status": "done",
+    "produced_date": "2026-10-12"
+  },
+  {
+    "order": 2,
+    "slug": "the-psychology-of-money",
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "year": 2020,
+    "category": "Money & Investing",
+    "week": "Week 1",
+    "status": "done",
+    "produced_date": "2026-10-12"
+  },
+  {
+    "order": 3,
+    "slug": "deep-work",
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "year": 2016,
+    "category": "Habits & Productivity",
+    "week": "Week 1",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 4,
+    "slug": "the-7-habits-of-highly-effective-people",
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Stephen R. Covey",
+    "year": 1989,
+    "category": "Habits & Productivity",
+    "week": "Week 1",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 5,
+    "slug": "how-to-win-friends-and-influence-people",
+    "title": "How to Win Friends and Influence People",
+    "author": "Dale Carnegie",
+    "year": 1936,
+    "category": "Communication",
+    "week": "Week 1",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 6,
+    "slug": "the-let-them-theory",
+    "title": "The Let Them Theory",
+    "author": "Mel Robbins",
+    "year": 2024,
+    "category": "Mindset & Self-Help",
+    "week": "Week 2",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 7,
+    "slug": "rich-dad-poor-dad",
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "year": 1997,
+    "category": "Money & Investing",
+    "week": "Week 2",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 8,
+    "slug": "the-courage-to-be-disliked",
+    "title": "The Courage to Be Disliked",
+    "author": "Ichiro Kishimi & Fumitake Koga",
+    "year": 2013,
+    "category": "Philosophy",
+    "week": "Week 2",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 9,
+    "slug": "the-5-am-club",
+    "title": "The 5 AM Club",
+    "author": "Robin Sharma",
+    "year": 2018,
+    "category": "Habits & Productivity",
+    "week": "Week 2",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 10,
+    "slug": "cant-hurt-me",
+    "title": "Can't Hurt Me",
+    "author": "David Goggins",
+    "year": 2018,
+    "category": "Motivation & Discipline",
+    "week": "Week 2",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 11,
+    "slug": "the-48-laws-of-power",
+    "title": "The 48 Laws of Power",
+    "author": "Robert Greene",
+    "year": 1998,
+    "category": "Psychology",
+    "week": "Week 3",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 12,
+    "slug": "the-mountain-is-you",
+    "title": "The Mountain Is You",
+    "author": "Brianna Wiest",
+    "year": 2020,
+    "category": "Mindset & Self-Help",
+    "week": "Week 3",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 13,
+    "slug": "die-with-zero",
+    "title": "Die With Zero",
+    "author": "Bill Perkins",
+    "year": 2020,
+    "category": "Money & Investing",
+    "week": "Week 3",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 14,
+    "slug": "ikigai",
+    "title": "Ikigai",
+    "author": "H\u00e9ctor Garc\u00eda & Francesc Miralles",
+    "year": 2016,
+    "category": "Purpose & Meaning",
+    "week": "Week 3",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 15,
+    "slug": "never-split-the-difference",
+    "title": "Never Split the Difference",
+    "author": "Chris Voss",
+    "year": 2016,
+    "category": "Communication",
+    "week": "Week 3",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 16,
+    "slug": "think-and-grow-rich",
+    "title": "Think and Grow Rich",
+    "author": "Napoleon Hill",
+    "year": 1937,
+    "category": "Money & Investing",
+    "week": "Week 4",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 17,
+    "slug": "dopamine-nation",
+    "title": "Dopamine Nation",
+    "author": "Anna Lembke",
+    "year": 2021,
+    "category": "Psychology",
+    "week": "Week 4",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 18,
+    "slug": "the-almanack-of-naval-ravikant",
+    "title": "The Almanack of Naval Ravikant",
+    "author": "Eric Jorgenson",
+    "year": 2020,
+    "category": "Money & Investing",
+    "week": "Week 4",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 19,
+    "slug": "the-four-agreements",
+    "title": "The Four Agreements",
+    "author": "Don Miguel Ruiz",
+    "year": 1997,
+    "category": "Mindset & Self-Help",
+    "week": "Week 4",
+    "status": "queued",
+    "produced_date": null
+  },
+  {
+    "order": 20,
+    "slug": "meditations",
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "year": 180,
+    "category": "Mindset & Self-Help",
+    "week": "Week 4",
+    "status": "queued",
+    "produced_date": null
+  }
+]

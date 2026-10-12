@@ -33,6 +33,10 @@ export const PROP_KINDS = [
   "mountain", "path", "staircase", "scale", "hourglass", "clock", "calendar", "trophy", "target",
   "seedling", "sapling", "tree", "brain", "heart", "gears", "ladder", "wall", "gift", "phone",
   "bed", "dumbbell", "shoe", "coffee", "snowball",
+  // money / data graphics (Phase 16)
+  "coins", "dollar", "bargraph", "piechart", "trendup", "percent",
+  // habit-specific illustrations (Phase 17)
+  "dominoes", "checkmark", "brick",
 ] as const;
 
 export const EXPRESSIONS = [
@@ -119,7 +123,7 @@ export const CtaVisual = z.object({
 });
 
 /** A single drawable element in a character scene (figure or prop). */
-export const CAST_IDS = ["alex", "sage", "max", "maya", "pip"] as const;
+export const CAST_IDS = ["alex", "sage", "max", "maya", "pip", "jade", "omar", "nadia", "theo", "rosa", "kwame", "lena", "deshawn"] as const;
 
 /** An expression swing: a bare name, or a name that starts on a spoken phrase. */
 const ExpressionCue = z.union([
@@ -213,7 +217,12 @@ export const ListCardVisual = z.object({
 
 export const StatChartVisual = z.object({
   label: z.string().min(1),
-  mode: z.enum(["line", "bars"]).default("line"),
+  // line/bars/area = trends; pie = share; number = one big kinetic figure.
+  mode: z.enum(["line", "bars", "area", "pie", "number"]).default("line"),
+  // Number formatting applied to every value (animated count-up).
+  prefix: z.string().optional(), // e.g. "$"
+  suffix: z.string().optional(), // e.g. "B", "%", "×"
+  decimals: z.number().int().min(0).max(2).optional(),
   datapoints: z
     .array(
       z.object({
@@ -236,6 +245,35 @@ export const RecapCardVisual = z.object({
   items: z.array(RecapItem).min(1),
 });
 
+/** A comparison / mini-table: two columns, each a heading + rows (Phase 16). */
+const CompareItem = z.union([
+  z.string().transform((label) => ({ label, sync: undefined })),
+  z.object({ label: wordLimit(6), sync: Sync.optional() }),
+]);
+const CompareColumn = z.object({
+  heading: wordLimit(4),
+  items: z.array(CompareItem).min(1),
+});
+export const CompareVisual = z.object({
+  title: wordLimit(6).optional(),
+  left: CompareColumn,
+  right: CompareColumn,
+});
+
+/** A general NxM data table (Phase 17): a header row + data rows that animate
+ *  in one at a time. `columns` includes the corner/row-label header; each row's
+ *  first cell is its label and the rest are the values. */
+const TableRow = z.object({
+  cells: z.array(wordLimit(4)).min(2).max(4),
+  sync: Sync.optional(),
+  highlight: z.boolean().optional(), // emphasise this row (flame tint)
+});
+export const TableVisual = z.object({
+  title: wordLimit(6).optional(),
+  columns: z.array(wordLimit(3)).min(2).max(4),
+  rows: z.array(TableRow).min(2).max(6),
+});
+
 // ---------- Discriminated union of scenes ----------
 
 const SceneBase = {
@@ -250,13 +288,32 @@ export const Scene = z.discriminatedUnion("type", [
   z.object({ ...SceneBase, type: z.literal("list_card"), visual: ListCardVisual }),
   z.object({ ...SceneBase, type: z.literal("stat_chart"), visual: StatChartVisual }),
   z.object({ ...SceneBase, type: z.literal("recap_card"), visual: RecapCardVisual }),
+  z.object({ ...SceneBase, type: z.literal("compare"), visual: CompareVisual }),
+  z.object({ ...SceneBase, type: z.literal("table"), visual: TableVisual }),
   z.object({ ...SceneBase, type: z.literal("cta"), visual: CtaVisual }),
 ]);
 
 // ---------- Top-level script ----------
 
-export const BRAND_IDS = ["readlark", "percuriam"] as const;
+export const BRAND_IDS = ["readlark"] as const;
 export const FORMATS = ["longform", "short"] as const;
+
+// Content categories (Phase 14 — session-time machinery). Double as the YouTube
+// playlist names and the end-screen grouping key. Curated to cover the ReadLark
+// launch plan; ingest_launch_plan.ts maps each book's loose category onto one.
+export const CATEGORIES = [
+  "Habits & Productivity",
+  "Money & Investing",
+  "Psychology",
+  "Philosophy",
+  "Communication",
+  "Motivation & Discipline",
+  "Mindset & Self-Help",
+  "Health & Fitness",
+  "Purpose & Meaning",
+  "Business & Leadership",
+  "Science & Tech",
+] as const;
 
 export const Script = z.object({
   id: z.string().min(1),
@@ -265,7 +322,7 @@ export const Script = z.object({
   brand: z.enum(BRAND_IDS).default("readlark"),
   // longform = 16:9 Main composition; short = 9:16 vertical (30–60s), burned-in captions.
   format: z.enum(FORMATS).default("longform"),
-  // The source book (ReadLark). Optional — PerCuriam (law) content has no book.
+  // The source book. Optional (non-book explainer content may omit it).
   book: z
     .object({
       title: z.string().min(1),
@@ -277,22 +334,36 @@ export const Script = z.object({
   tags: z.array(z.string()).default([]),
   thumbnail: z.object({
     headline: wordLimit(5),
+    // Hybrid thumbnail (Phase 17): 2–4 BIG bold punch words in Anton, stacked.
+    // Falls back to headline words if omitted.
+    punch_words: z.array(z.string()).min(1).max(4).optional(),
     subline: z.string().optional(),
     cast: z.enum(CAST_IDS).default("alex"),
     pose: StickPose.default("thinking"),
     expression: z.enum(EXPRESSIONS).default("shocked"),
     props: z.array(PropKind).max(2).default([]),
+    // One punch accent color behind the text block (hex). Defaults to brand ink.
+    bg: z.string().optional(),
+    // Draw a spotlight ring (default) or an arrow pointing at the subject.
+    pointer: z.enum(["spotlight", "arrow", "none"]).default("spotlight"),
   }),
   voice: z.string().default("en-US-AndrewNeural"),
   // Narration pace: -18% (~150 wpm) is the confirmed channel default (set in
   // generate_audio.py); override here per video if needed.
   rate: z.string().optional(),
   // Target length (minutes) for longform. Optional — the real enforcement lives
-  // in build_manifest.ts, which reads the BRAND's min_minutes policy (ReadLark
-  // 30, PerCuriam 13) and the brand default target. Shorts ignore this (30–60s).
+  // in build_manifest.ts, which reads the brand's min_minutes policy (ReadLark
+  // 30) and the brand default target. Shorts ignore this (30–60s).
   target_minutes: z.number().positive().optional(),
   // On-screen hook line for a short (first ~2s claim/question). Longform ignores.
   short_hook: z.string().optional(),
+  // Engagement question for the PINNED COMMENT (session-time machinery). The
+  // playbook writes it with the script — tied to the book/topic. Shorts also use
+  // it to carry the CTA line.
+  pinned_comment: z.string().optional(),
+  // Longform hook (Phase 14): the CORE-PROMISE sentence/phrase — a verbatim
+  // substring of early narration. Lint checks it is spoken within the first 15s.
+  promise: z.string().optional(),
   // Channel template metadata — read by the script generator + future tooling.
   template: z
     .object({
@@ -300,10 +371,24 @@ export const Script = z.object({
       hook: z.enum(["direct", "cold-open"]).default("direct"),
     })
     .default({ framing: "book-structure", hook: "direct" }),
+  // SEO (Phase 14): EXACTLY 3 title variants for YouTube's native A/B test
+  // (longform). [0] SEARCH-LED (book title verbatim at the start, ≤70 chars best),
+  // [1] CURIOSITY-LED (open loop / question), [2] BENEFIT-LED (outcome-first).
+  // All ≤100 chars and non-misleading. The search-led variant is the default title.
+  title_variants: z.array(z.string().min(1).max(100)).length(3).optional(),
+  // Content category → playlist + end-screen grouping (session time).
+  category: z.enum(CATEGORIES).optional(),
+  // Shorts only: seamless replay — the final narration line flows into the
+  // opening line and the last visual matches the opening frame composition.
+  loop: z.boolean().optional(),
+  // Shorts only: explicit duration ceiling override (seconds, ≤175) for
+  // DELIBERATE long-short experiments. Relaxes the 55s lint warning. Default band
+  // stays 35–50s.
+  max_seconds: z.number().positive().max(175).optional(),
   scenes: z.array(Scene).min(1),
 }).superRefine((s, ctx) => {
   // Long-form structural rules only apply to longform book-structure videos
-  // that declare a book (PerCuriam law content uses "explainer" framing and no book).
+  // that declare a book (non-book explainer content uses "explainer" framing).
   if (s.format === "longform" && s.template.framing === "book-structure" && s.book) {
     const lookahead = s.template.hook === "cold-open" ? 2 : 1;
     const n = s.scenes.slice(0, lookahead).map((sc) => sc.narration).join(" ").toLowerCase();
@@ -373,6 +458,13 @@ export function collectScenePhrases(scene: Scene): string[] {
       break;
     case "stat_chart":
       scene.visual.datapoints.forEach((d) => push(d.sync));
+      break;
+    case "compare":
+      scene.visual.left.items.forEach((i) => push(i.sync));
+      scene.visual.right.items.forEach((i) => push(i.sync));
+      break;
+    case "table":
+      scene.visual.rows.forEach((r) => push(r.sync));
       break;
     case "quote_card":
     case "cta":

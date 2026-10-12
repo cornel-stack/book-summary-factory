@@ -18,13 +18,22 @@ import { fileURLToPath } from "node:url";
 
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
-// Deterministic package file set (see pipeline/package.ts).
+// Package file set (see package.ts / package_short.ts). The gh path downloads
+// ALL release assets; this list is only the curl fallback, so it's a superset
+// across longform + short and skips any that don't exist for a given video.
 const files = (id: string) => [
-  `${id}.mp4`,
+  `${id}-summary.mp4`, // longform (search-first filename)
+  `${id}.mp4`, // short
   "captions.srt",
   "thumbnail.png",
   "thumbnail-1280x720.png",
   "description.txt",
+  "upload-notes.txt",
+  "retention-map.txt",
+  "youtube.txt",
+  "tiktok.txt",
+  "instagram.txt",
+  "short-notes.txt",
 ];
 
 function repoSlug(): string {
@@ -94,8 +103,10 @@ function main() {
   }
 
   console.log(`\n✓ ${id} ready in ${dest}`);
-  if (existsSync(join(dest, `${id}.mp4`))) console.log(`  video:       ${join(dest, `${id}.mp4`)}`);
+  const mp4 = [`${id}-summary.mp4`, `${id}.mp4`].find((f) => existsSync(join(dest, f)));
+  if (mp4) console.log(`  video:       ${join(dest, mp4)}`);
   if (existsSync(join(dest, "description.txt"))) console.log(`  description:  ${join(dest, "description.txt")}`);
+  if (existsSync(join(dest, "upload-notes.txt"))) console.log(`  upload notes: ${join(dest, "upload-notes.txt")}`);
 }
 
 main();

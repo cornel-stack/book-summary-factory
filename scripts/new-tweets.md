@@ -12,9 +12,7 @@ Output: `content/tweets/<brand>/<YYYY-Www>.md` (one file per ISO week), with a
 
 ## Rules
 - ≤ 280 characters each. ≤ 2 hashtags total per tweet (often zero reads better).
-- Brand voice: ReadLark = practical/literary; PerCuriam = calm, myth-busting.
-- **PerCuriam:** never give state-specific rules as universal; add "(varies by
-  state)" or "general info, not legal advice" when the topic is sensitive.
+- Brand voice: ReadLark = practical, a little literary.
 - Prelaunch: it's fine to tease ("launching soon") but don't spam a link daily.
 - Tie to that day's video/article topic so the week is coherent.
 

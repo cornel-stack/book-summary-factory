@@ -9,7 +9,7 @@ import type { WordTiming } from "../schema";
  * word is shown on a paper chip in the safe zone. The CURRENT word gets the
  * brand's caption treatment — a translucent wash behind it plus a colored tick
  * at the caption line's left edge — mirroring each app's sentence-sync motif
- * (ReadLark: amber wash + coral tick; PerCuriam: amber wash + navy tick).
+ * (amber wash + coral tick).
  */
 type Line = { words: WordTiming[]; start: number; end: number };
 
