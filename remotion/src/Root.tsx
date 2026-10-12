@@ -2,7 +2,6 @@ import React from "react";
 import { Composition, Still } from "remotion";
 import { Video } from "./Video";
 import { ShortVideo } from "./ShortVideo";
-import { BrandSheet } from "./BrandSheet";
 import { Thumbnail } from "./Thumbnail";
 import { CastSheetPoses, CastSheetExpr } from "./CastSheet";
 import { CastGestureSheet } from "./CastGestureSheet";
@@ -122,7 +121,6 @@ export const RemotionRoot: React.FC = () => {
           height: props.manifest.height,
         })}
       />
-      <Still id="BrandSheet" component={BrandSheet} width={1920} height={1080} />
     </>
   );
 };

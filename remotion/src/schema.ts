@@ -255,19 +255,24 @@ export const Scene = z.discriminatedUnion("type", [
 
 // ---------- Top-level script ----------
 
-export const BRAND_IDS = ["readlark", "percuriam"] as const;
+export const BRAND_IDS = ["readlark"] as const;
 export const FORMATS = ["longform", "short"] as const;
 
 // Content categories (Phase 14 — session-time machinery). Double as the YouTube
-// playlist names and the end-screen grouping key. Match the content-queue.
+// playlist names and the end-screen grouping key. Curated to cover the ReadLark
+// launch plan; ingest_launch_plan.ts maps each book's loose category onto one.
 export const CATEGORIES = [
   "Habits & Productivity",
   "Money & Investing",
   "Psychology",
-  "Business & Leadership",
+  "Philosophy",
+  "Communication",
+  "Motivation & Discipline",
+  "Mindset & Self-Help",
   "Health & Fitness",
+  "Purpose & Meaning",
+  "Business & Leadership",
   "Science & Tech",
-  "Everyday Law",
 ] as const;
 
 export const Script = z.object({
@@ -277,7 +282,7 @@ export const Script = z.object({
   brand: z.enum(BRAND_IDS).default("readlark"),
   // longform = 16:9 Main composition; short = 9:16 vertical (30–60s), burned-in captions.
   format: z.enum(FORMATS).default("longform"),
-  // The source book (ReadLark). Optional — PerCuriam (law) content has no book.
+  // The source book. Optional (non-book explainer content may omit it).
   book: z
     .object({
       title: z.string().min(1),
@@ -300,8 +305,8 @@ export const Script = z.object({
   // generate_audio.py); override here per video if needed.
   rate: z.string().optional(),
   // Target length (minutes) for longform. Optional — the real enforcement lives
-  // in build_manifest.ts, which reads the BRAND's min_minutes policy (ReadLark
-  // 30, PerCuriam 13) and the brand default target. Shorts ignore this (30–60s).
+  // in build_manifest.ts, which reads the brand's min_minutes policy (ReadLark
+  // 30) and the brand default target. Shorts ignore this (30–60s).
   target_minutes: z.number().positive().optional(),
   // On-screen hook line for a short (first ~2s claim/question). Longform ignores.
   short_hook: z.string().optional(),
@@ -336,7 +341,7 @@ export const Script = z.object({
   scenes: z.array(Scene).min(1),
 }).superRefine((s, ctx) => {
   // Long-form structural rules only apply to longform book-structure videos
-  // that declare a book (PerCuriam law content uses "explainer" framing and no book).
+  // that declare a book (non-book explainer content uses "explainer" framing).
   if (s.format === "longform" && s.template.framing === "book-structure" && s.book) {
     const lookahead = s.template.hook === "cold-open" ? 2 : 1;
     const n = s.scenes.slice(0, lookahead).map((sc) => sc.narration).join(" ").toLowerCase();

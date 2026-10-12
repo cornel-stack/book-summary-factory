@@ -1,8 +1,8 @@
 name: Scheduled render
 
-# Multi-brand daily factory (Phase 13). One weekday run at 06:47 Africa/Nairobi
-# (EAT) renders everything due — the ReadLark long-form, the PerCuriam long-form,
-# and the day's shorts — into ONE bundle Release `content-<date>`, ready by 09:00
+# Daily book-summary factory (ReadLark). One weekday run at 06:47 Africa/Nairobi
+# (EAT) renders everything due — the day's long-form book summary
+# and its shorts — into ONE bundle Release `content-<date>`, ready by 09:00
 # local. Due = scheduled entries with publish_date ≤ today (self-heals a failed
 # day); if nothing is due today it pre-renders tomorrow's (lookahead). On success
 # each entry flips to "rendered" (bot commit, [skip ci]); failures open an issue.

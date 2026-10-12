@@ -4,8 +4,7 @@
  *   youtube.txt    — title (≤100 chars, incl. #Shorts) + description
  *   tiktok.txt     — caption + ≤5 niche hashtags
  *   instagram.txt  — caption (fuller) + hashtags
- * Tone differs per platform; the CTA follows the brand's prelaunch flag; every
- * PerCuriam description ends with the legal disclaimer.
+ * Tone differs per platform; the CTA follows the brand's prelaunch flag.
  *
  *   npx tsx pipeline/package_short.ts <short-id>   → output/<short-id>/
  */

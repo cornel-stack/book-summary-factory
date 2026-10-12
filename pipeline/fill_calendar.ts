@@ -56,7 +56,7 @@ function main() {
   const format = arg("format") ?? "longform";
   const perDay = Math.max(1, parseInt(arg("per-day") ?? "1", 10));
   if (!start || !/^\d{4}-\d{2}-\d{2}$/.test(start) || !idsRaw) {
-    console.error("Usage: npm run calendar:fill -- --start YYYY-MM-DD --ids id1,id2,... [--brand readlark|percuriam] [--format longform|short] [--per-day N]");
+    console.error("Usage: npm run calendar:fill -- --start YYYY-MM-DD --ids id1,id2,... [--brand readlark] [--format longform|short] [--per-day N]");
     process.exit(1);
   }
   if (!(BRAND_IDS as readonly string[]).includes(brand)) { console.error(`✖ bad --brand ${brand}`); process.exit(1); }

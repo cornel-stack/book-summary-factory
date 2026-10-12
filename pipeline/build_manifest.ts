@@ -150,10 +150,10 @@ function main() {
     `Manifest: ${scenes.length} scenes, ${cursor} frames (${totalSec}s @ ${VIDEO.fps}fps)`,
   );
 
-  // Runtime guard (Phase 13 — brand-aware, HARD-FAILS). The policy comes from the
-  // BRAND (config/brands.ts), not a global constant: ReadLark long-form ≥ 30 min,
-  // PerCuriam long-form ≥ 13 min (default target 15). Shorts must land 20–70s
-  // (one 30–60s clip). Audio is truth — this guards a mis-paced cut before any
+  // Runtime guard (HARD-FAILS). The policy comes from the brand (config/brands.ts),
+  // not a global constant: ReadLark long-form ≥ 30 min (default target 32).
+  // Shorts must land 20–70s (or within a `target_minutes` window for 2-min
+  // socials). Audio is truth — this guards a mis-paced cut before any
   // render minutes are spent.
   {
     const brand = getBrand(script.brand);

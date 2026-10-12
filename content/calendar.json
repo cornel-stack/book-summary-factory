@@ -1,38 +1,5 @@
 [
   {
-    "video_id": "percuriam-security-deposits",
-    "brand": "percuriam",
-    "format": "longform",
-    "publish_date": "2026-10-12",
-    "status": "published",
-    "category": "Everyday Law",
-    "published_date": "2026-10-09"
-  },
-  {
-    "video_id": "percuriam-security-deposits-s01",
-    "brand": "percuriam",
-    "format": "short",
-    "publish_date": "2026-10-12",
-    "status": "scheduled",
-    "category": "Everyday Law"
-  },
-  {
-    "video_id": "percuriam-security-deposits-s02",
-    "brand": "percuriam",
-    "format": "short",
-    "publish_date": "2026-10-12",
-    "status": "scheduled",
-    "category": "Everyday Law"
-  },
-  {
-    "video_id": "percuriam-security-deposits-s03",
-    "brand": "percuriam",
-    "format": "short",
-    "publish_date": "2026-10-12",
-    "status": "scheduled",
-    "category": "Everyday Law"
-  },
-  {
     "video_id": "atomic-habits",
     "brand": "readlark",
     "format": "longform",

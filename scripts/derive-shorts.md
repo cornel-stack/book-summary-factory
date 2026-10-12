@@ -1,8 +1,7 @@
 # Playbook — deriving shorts from long-form
 
-`pipeline/derive_shorts.ts` turns a long-form script into one vertical short per
-principle/section. It works for **both brands** (ReadLark book summaries and
-PerCuriam law explainers). This doc is how to make the output good.
+`pipeline/derive_shorts.ts` turns a long-form ReadLark book summary into one
+vertical short per principle/section. This doc is how to make the output good.
 
 ```
 npx tsx pipeline/derive_shorts.ts <source-id> [--max N]
@@ -71,10 +70,3 @@ When a hand-fix recurs across many shorts, encode it back here (or into
 - Generated hooks are generic → always rewrite (tracked; a future pass could
   pull the section's own punchiest line as the hook).
 - Figures derived from left-placed long-form scenes aren't centered → recenter.
-
-## PerCuriam note
-
-Deriving from a PerCuriam long-form yields law shorts automatically. Keep the
-disclaimer discipline: the end-card already carries it (brand layer), and
-`package_short.ts` appends it to every description. Never let a derived hook
-imply a universal rule where the source said "in most US states".

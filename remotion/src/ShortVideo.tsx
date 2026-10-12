@@ -23,7 +23,7 @@ function hexA(hex: string, a: number) {
   return `${hex}${aa}`;
 }
 
-/** The brand end-card: wordmark + domain + CTA chip (+ disclaimer for PerCuriam). */
+/** The brand end-card: wordmark + domain + CTA chip. */
 const ShortEndCard: React.FC<{ brand: Brand }> = ({ brand }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

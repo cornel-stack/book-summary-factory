@@ -13,7 +13,7 @@
  * Flipping `prelaunch` here changes every CTA across every output in one place.
  */
 
-export type BrandId = "readlark" | "percuriam";
+export type BrandId = "readlark";
 
 export interface CaptionTreatment {
   /** Wash color painted behind the current spoken word in burned-in captions. */
@@ -64,7 +64,7 @@ export interface Brand {
     /** CTA chip on the end-card. */
     chip: Chip;
   };
-  /** Takeaway / disclaimer chip style used in scenes (PerCuriam leans on this). */
+  /** Takeaway chip style used in scenes. */
   chip: Chip;
   /** The ONLY gradient allowed anywhere (ReadLark Dawn, end-card hero only). */
   gradient?: { from: string; to: string; angleDeg: number };
@@ -72,7 +72,7 @@ export interface Brand {
   // --- CTA copy (prelaunch flag selects which is live) ---
   cta_prelaunch: string;
   cta_live: string;
-  /** Mandatory legal/ethical line (PerCuriam). Shown on end-cards + in every description. */
+  /** Optional legal/ethical line, shown on end-cards + in descriptions if set. */
   disclaimer?: string;
 }
 
@@ -108,40 +108,6 @@ export const BRANDS: Record<BrandId, Brand> = {
 
     cta_prelaunch: "Launching soon — follow for updates",
     cta_live: "Download ReadLark",
-  },
-
-  percuriam: {
-    id: "percuriam",
-    name: "PerCuriam",
-    wordmark: "PerCuriam",
-    domain: "percuriam.app",
-    prelaunch: true,
-    min_minutes: 13,
-    default_target_minutes: 15,
-
-    paper: "#FAF7F2", // surface.reading
-    accent: "#1A2B4A", // brand navy — on-paper emphasis, underlines, badges, chart focal
-    accentOnInk: "#A9BBD8", // dark-theme navy — accent items ON characters (deep navy would vanish)
-    accentInk: "#1A2B4A", // navy is dark enough to carry white text directly
-    highlight: "#F2E3B3", // amber — washes / marker swipes
-    divider: "#E7E2DA", // ground lines / card rules in PerCuriam scenes
-
-    caption: {
-      wash: "#F2E3B3", // amber wash
-      washOpacity: 0.5,
-      tick: "#1A2B4A", // navy tick
-    },
-
-    chrome: {
-      bg: "#1A2B4A",
-      text: "#E8E4DE",
-      chip: { bg: "#2A2210", text: "#E0B45C" }, // CTA chip
-    },
-    chip: { bg: "#FDF3DC", text: "#8A5A00" }, // takeaway + disclaimer chip
-
-    cta_prelaunch: "Launching soon — follow for updates",
-    cta_live: "Get PerCuriam",
-    disclaimer: "Educational content — not legal advice.",
   },
 };
 
