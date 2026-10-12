@@ -85,6 +85,7 @@ function main() {
         }
     } else if (scene.type === "stat_chart") scene.visual.datapoints.forEach((d) => add(d.sync));
     else if (scene.type === "list_card" || scene.type === "recap_card") scene.visual.items.forEach((it) => add((it as { sync?: { phrase: string } }).sync));
+    else if (scene.type === "compare") [...scene.visual.left.items, ...scene.visual.right.items].forEach((it) => add((it as { sync?: { phrase: string } }).sync));
     else if (scene.type === "section_title") add(scene.visual.sync);
   }
 
@@ -130,6 +131,20 @@ function main() {
     if (shortTotal > cap)
       warns.push(`short is ${shortTotal.toFixed(1)}s (> ${cap}s${script.max_seconds ? " override" : " — target 35–50s; set max_seconds for a deliberate long short"})`);
     if (!script.short_hook) warns.push("no short_hook — the 2s hook needs an on-screen claim in the first ~60 frames");
+  }
+
+  // ── Phase 16 — visual richness nudges (warnings) ───────────────────────────
+  const ENUM = /\b(two|three|four|five|six|seven|eight|nine|ten)\b[\s\S]{0,40}?\b(ideas?|steps?|laws?|rules?|reasons?|skills?|ways?|things?|types?|kinds?|lessons?|parts?|traits?|habits?|questions?|principles?|levels?|stages?|pillars?)\b/i;
+  const SHOWN = new Set(["list_card", "compare", "recap_card", "stat_chart"]);
+  for (const scene of script.scenes) {
+    if (scene.type === "character_scene") {
+      const heroes = scene.visual.elements.filter(
+        (el) => el.kind === "figure" || (el.kind !== "crowd" && (el.reveal ?? (el.tier === "ambient" ? "wash" : "draw")) === "draw"),
+      );
+      if (heroes.length <= 1) warns.push(`lone graphic in "${scene.id}" — add a metaphor/data prop or a 2nd figure (never a lone figure)`);
+    }
+    const em = scene.narration.match(ENUM);
+    if (em && !SHOWN.has(scene.type)) warns.push(`"${scene.id}" narrates a list ("${em[0].slice(0, 32)}…") but doesn't show it — use list_card / compare / stat_chart`);
   }
 
   events.sort((a, b) => a - b);

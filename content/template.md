@@ -239,6 +239,31 @@ possible.** Concrete rules (lint-enforced):
    8 s rule. The levers are (a) more sub-reveals/spots, (b) a faster `rate`, or
    (c) shorter per-scene narration — pick deliberately per video.
 
+## 4e. Motion graphics & data — SHOW, don't say (Phase 16)
+
+The channel is hand-drawn charm **plus** slick animated data. Every scene must
+MOVE and the screen must SHOW what the voice says. Hard rules (lint-nudged):
+
+- **Never a lone figure.** A `character_scene` has the figure PLUS ≥1–2
+  metaphor/data props (`reveal:"pop"/"wash"`, sync'd). Money talk → draw money:
+  `coins`, `dollar`, `moneybag`, `bargraph`, `piechart`, `trendup`, `percent`,
+  `scale`, `clock`. Pair the figure on one side, the graphic(s) on the other.
+- **Show every list.** If the narration enumerates ("five ideas", "three steps",
+  "two skills", "the four laws"), it MUST appear as a `list_card` (items spring
+  in, sync'd per item) — never narrated over a single figure. The lint warns.
+- **Show every number.** Any figure/stat → a `stat_chart`:
+  - `mode:"number"` — one big kinetic count-up ("$84.5B", "37×", "90%"); set
+    `prefix`/`suffix`/`decimals`.
+  - `mode:"bars"` / `"line"` / `"area"` — growing bars / progressive line with a
+    soft fill; values count up as each point lands. Use for trends & comparisons.
+  - `mode:"pie"` — share of a whole (wedges sweep in).
+- **Compare with the table.** "X vs Y" → a `compare` scene: `left`/`right`
+  columns (heading + items), rows slide in column-by-column with a center "vs".
+  (e.g. getting-rich vs staying-rich, goals vs systems, saver vs spender.)
+- **Density still rules (§4c/§4d):** something new every 6–10 s, nothing newest
+  for > 8 s. Lists, charts, compare, and prop-reveals all count — prefer them
+  over a static figure holding the screen.
+
 ## 5. Verb → pose + effect cheat-sheet (cast-aware)
 
 | Narration beat | cast + pose / expression | effect |

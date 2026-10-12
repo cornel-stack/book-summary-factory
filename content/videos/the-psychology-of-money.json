@@ -27,7 +27,10 @@
     "cast": "alex",
     "pose": "thinking",
     "expression": "curious",
-    "props": ["moneybag", "brain"]
+    "props": [
+      "moneybag",
+      "brain"
+    ]
   },
   "voice": "en-US-AndrewNeural",
   "target_minutes": 32,
@@ -51,7 +54,9 @@
       "visual": {
         "title": "The Psychology of Money",
         "emphasis": "underline",
-        "sync": { "phrase": "Psychology of Money" }
+        "sync": {
+          "phrase": "Psychology of Money"
+        }
       }
     },
     {
@@ -74,18 +79,47 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking", "presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
             "expression": "curious",
-            "holding": { "prop": "book", "hand": "right" },
+            "holding": {
+              "prop": "book",
+              "hand": "right"
+            },
             "label": "the reader"
           },
           {
             "kind": "brain",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 0, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "behavior problem" }
+            "at": {
+              "col": 0,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "behavior problem"
+            }
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -101,8 +135,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "presenting"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "let's dig in"
           },
@@ -110,34 +152,71 @@
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "staying wealthy" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "staying wealthy"
+            }
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
     },
     {
       "id": "intro-c",
-      "type": "character_scene",
+      "type": "list_card",
       "narration": "Housel organizes all of this as a set of short lessons, and we have gathered them into five simple ideas. First, money is behavior, not math. Second, what money is really for. Third, how wealth actually grows. Fourth, the daily habits that keep it. And fifth, how to survive an uncertain world. So grab the one idea from each part that hits hardest, and let's begin where every money story truly begins. Inside your own head.",
       "visual": {
-        "title": "Five simple ideas",
-        "stage": "stage-spotlight",
-        "elements": [
+        "title": "Five big ideas",
+        "items": [
           {
-            "kind": "figure",
-            "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["presenting"],
-            "expression": "happy",
-            "label": "the roadmap"
+            "label": "Money is behavior",
+            "icon": "tick",
+            "sync": {
+              "phrase": "money is behavior"
+            }
           },
           {
-            "kind": "staircase",
-            "tier": "hero",
-            "reveal": "wash",
-            "at": { "col": 8, "row": 1, "w": 3, "h": 4 },
-            "sync": { "phrase": "five simple ideas" }
+            "label": "What it's for",
+            "icon": "tick",
+            "sync": {
+              "phrase": "money is really for"
+            }
+          },
+          {
+            "label": "How wealth grows",
+            "icon": "tick",
+            "sync": {
+              "phrase": "wealth actually grows"
+            }
+          },
+          {
+            "label": "Habits that keep it",
+            "icon": "tick",
+            "sync": {
+              "phrase": "daily habits"
+            }
+          },
+          {
+            "label": "Surviving uncertainty",
+            "icon": "tick",
+            "sync": {
+              "phrase": "survive an uncertain"
+            }
           }
         ]
       }
@@ -176,10 +255,36 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing"],
-            "expressions": ["worried", { "value": "shocked", "sync": { "phrase": "only shot" } }],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
+            "expressions": [
+              "worried",
+              {
+                "value": "shocked",
+                "sync": {
+                  "phrase": "only shot"
+                }
+              }
+            ],
             "label": "different life"
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -195,16 +300,30 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 2, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking"],
+            "at": {
+              "col": 2,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
             "expression": "worried",
             "label": "invests scared"
           },
           {
             "kind": "figure",
             "cast": "pip",
-            "at": { "col": 7, "row": 1, "w": 4, "h": 5 },
-            "poses": ["celebrating"],
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "celebrating"
+            ],
             "expression": "happy",
             "facing": "left",
             "label": "invests fearless"
@@ -219,9 +338,27 @@
       "visual": {
         "title": "What to do",
         "items": [
-          { "label": "Stop judging others", "icon": "tick", "sync": { "phrase": "stop judging" } },
-          { "label": "Find your hidden story", "icon": "tick", "sync": { "phrase": "hidden story" } },
-          { "label": "Question where it came from", "icon": "arrow", "sync": { "phrase": "came from" } }
+          {
+            "label": "Stop judging others",
+            "icon": "tick",
+            "sync": {
+              "phrase": "stop judging"
+            }
+          },
+          {
+            "label": "Find your hidden story",
+            "icon": "tick",
+            "sync": {
+              "phrase": "hidden story"
+            }
+          },
+          {
+            "label": "Question where it came from",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "came from"
+            }
+          }
         ]
       }
     },
@@ -236,10 +373,29 @@
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking", "standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "standing"
+            ],
             "expression": "curious",
             "label": "where it began"
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -267,8 +423,15 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
             "expression": "neutral",
             "label": "the lucky one"
           },
@@ -276,8 +439,26 @@
             "kind": "mountain",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
-            "sync": { "phrase": "mountaineering accident" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "mountaineering accident"
+            }
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -293,8 +474,15 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
             "expression": "curious",
             "label": "the broad middle"
           },
@@ -302,8 +490,26 @@
             "kind": "scale",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "same thing" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "same thing"
+            }
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -319,10 +525,29 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "humility"
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -335,8 +560,18 @@
         "title": "Part 1 recap",
         "scope": "mid",
         "items": [
-          { "label": "No one is crazy", "sync": { "phrase": "No one is crazy" } },
-          { "label": "Luck and risk", "sync": { "phrase": "luck and risk" } }
+          {
+            "label": "No one is crazy",
+            "sync": {
+              "phrase": "No one is crazy"
+            }
+          },
+          {
+            "label": "Luck and risk",
+            "sync": {
+              "phrase": "luck and risk"
+            }
+          }
         ]
       }
     },
@@ -351,11 +586,36 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["pointing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "pointing"
+            ],
             "expression": "curious",
-            "effects": [{ "kind": "question_marks", "sync": { "phrase": "actually for" } }],
+            "effects": [
+              {
+                "kind": "question_marks",
+                "sync": {
+                  "phrase": "actually for"
+                }
+              }
+            ],
             "label": "the real goal"
+          },
+          {
+            "kind": "brain",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -394,17 +654,51 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["celebrating", "panicking"],
-            "expressions": ["happy", { "value": "shocked", "sync": { "phrase": "blown up" } }],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "celebrating",
+              "panicking"
+            ],
+            "expressions": [
+              "happy",
+              {
+                "value": "shocked",
+                "sync": {
+                  "phrase": "blown up"
+                }
+              }
+            ],
             "label": "more, more, more"
           },
           {
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "a little extra" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "a little extra"
+            }
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -420,8 +714,16 @@
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "shrugging"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "shrugging"
+            ],
             "expression": "tired",
             "label": "never wins"
           },
@@ -429,8 +731,26 @@
             "kind": "ladder",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 1, "w": 2, "h": 4 },
-            "sync": { "phrase": "someone with more" }
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 2,
+              "h": 4
+            },
+            "sync": {
+              "phrase": "someone with more"
+            }
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -446,8 +766,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "enough"
           },
@@ -455,8 +783,26 @@
             "kind": "heart",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "freedom, family" }
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "freedom, family"
+            }
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -472,10 +818,29 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["celebrating", "panicking"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "celebrating",
+              "panicking"
+            ],
             "expression": "shocked",
             "label": "threw it away"
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -503,8 +868,16 @@
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "celebrating"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
             "expression": "happy",
             "label": "my day, my call"
           },
@@ -512,8 +885,26 @@
             "kind": "clock",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "control your own time" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "control your own time"
+            }
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -529,10 +920,29 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking", "standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "standing"
+            ],
             "expression": "happy",
             "label": "calmer, freer"
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -544,9 +954,27 @@
       "visual": {
         "title": "Buy freedom",
         "items": [
-          { "label": "Save to say no", "icon": "tick", "sync": { "phrase": "say no" } },
-          { "label": "Keep fixed costs low", "icon": "tick", "sync": { "phrase": "fixed costs low" } },
-          { "label": "Widen your options", "icon": "arrow", "sync": { "phrase": "widen your options" } }
+          {
+            "label": "Save to say no",
+            "icon": "tick",
+            "sync": {
+              "phrase": "say no"
+            }
+          },
+          {
+            "label": "Keep fixed costs low",
+            "icon": "tick",
+            "sync": {
+              "phrase": "fixed costs low"
+            }
+          },
+          {
+            "label": "Widen your options",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "widen your options"
+            }
+          }
         ]
       }
     },
@@ -573,8 +1001,15 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["celebrating"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "celebrating"
+            ],
             "expression": "happy",
             "label": "look at me"
           },
@@ -582,8 +1017,26 @@
             "kind": "house",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
-            "sync": { "phrase": "expensive things" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "expensive things"
+            }
+          },
+          {
+            "kind": "brain",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -599,8 +1052,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking", "standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "standing"
+            ],
             "expression": "curious",
             "label": "unseen"
           },
@@ -608,8 +1069,26 @@
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "fade",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "did not spend" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "did not spend"
+            }
+          },
+          {
+            "kind": "coins",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -625,10 +1104,28 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "quiet wealth"
+          },
+          {
+            "kind": "heart",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -644,8 +1141,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking", "standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "standing"
+            ],
             "expression": "curious",
             "label": "look closer"
           },
@@ -653,8 +1158,26 @@
             "kind": "house",
             "tier": "hero",
             "reveal": "fade",
-            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
-            "sync": { "phrase": "out of sight" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "out of sight"
+            }
+          },
+          {
+            "kind": "coins",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -667,9 +1190,24 @@
         "title": "Part 2 recap",
         "scope": "mid",
         "items": [
-          { "label": "Know your enough", "sync": { "phrase": "feel enough" } },
-          { "label": "Freedom is the goal", "sync": { "phrase": "control of your time" } },
-          { "label": "Wealth is invisible", "sync": { "phrase": "real wealth" } }
+          {
+            "label": "Know your enough",
+            "sync": {
+              "phrase": "feel enough"
+            }
+          },
+          {
+            "label": "Freedom is the goal",
+            "sync": {
+              "phrase": "control of your time"
+            }
+          },
+          {
+            "label": "Wealth is invisible",
+            "sync": {
+              "phrase": "real wealth"
+            }
+          }
         ]
       }
     },
@@ -684,11 +1222,36 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["pointing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "pointing"
+            ],
             "expression": "happy",
-            "effects": [{ "kind": "idea_flash", "sync": { "phrase": "two quiet forces" } }],
+            "effects": [
+              {
+                "kind": "idea_flash",
+                "sync": {
+                  "phrase": "two quiet forces"
+                }
+              }
+            ],
             "label": "the engine"
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -724,9 +1287,27 @@
         "label": "Buffett's fortune over time",
         "mode": "line",
         "datapoints": [
-          { "label": "age 30", "value": 1, "sync": { "phrase": "since he was a child" } },
-          { "label": "age 60", "value": 12, "sync": { "phrase": "sixtieth birthday" } },
-          { "label": "age 90", "value": 100, "sync": { "phrase": "absurd" } }
+          {
+            "label": "age 30",
+            "value": 1,
+            "sync": {
+              "phrase": "since he was a child"
+            }
+          },
+          {
+            "label": "age 60",
+            "value": 12,
+            "sync": {
+              "phrase": "sixtieth birthday"
+            }
+          },
+          {
+            "label": "age 90",
+            "value": 100,
+            "sync": {
+              "phrase": "absurd"
+            }
+          }
         ]
       }
     },
@@ -741,8 +1322,15 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
             "expression": "shocked",
             "label": "feels like magic"
           },
@@ -750,8 +1338,26 @@
             "kind": "snowball",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "look impossible" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "look impossible"
+            }
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -767,8 +1373,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "presenting"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "never interrupt"
           },
@@ -776,8 +1390,26 @@
             "kind": "tree",
             "tier": "hero",
             "reveal": "wash",
-            "at": { "col": 8, "row": 1, "w": 3, "h": 4 },
-            "sync": { "phrase": "heavy lifting" }
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "sync": {
+              "phrase": "heavy lifting"
+            }
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -793,8 +1425,16 @@
           {
             "kind": "figure",
             "cast": "pip",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "celebrating"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
             "expression": "happy",
             "label": "the early starter"
           },
@@ -802,8 +1442,26 @@
             "kind": "seedling",
             "tier": "hero",
             "reveal": "wash",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "extra decade" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "extra decade"
+            }
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -821,6 +1479,60 @@
       }
     },
     {
+      "id": "p3-7-compare",
+      "type": "compare",
+      "narration": "Here is the split in one view. Getting rich needs optimism, taking risk, and boldness. Staying rich needs humility, fear, and plain survival.",
+      "visual": {
+        "title": "Two opposite skills",
+        "left": {
+          "heading": "Getting rich",
+          "items": [
+            {
+              "label": "Optimism",
+              "sync": {
+                "phrase": "optimism"
+              }
+            },
+            {
+              "label": "Taking risk",
+              "sync": {
+                "phrase": "taking risk"
+              }
+            },
+            {
+              "label": "Boldness",
+              "sync": {
+                "phrase": "boldness"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Staying rich",
+          "items": [
+            {
+              "label": "Humility",
+              "sync": {
+                "phrase": "humility"
+              }
+            },
+            {
+              "label": "Fear",
+              "sync": {
+                "phrase": "fear"
+              }
+            },
+            {
+              "label": "Survival",
+              "sync": {
+                "phrase": "survival"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": "p3-7-story",
       "type": "character_scene",
       "narration": "Getting money takes optimism, risk, and the courage to put yourself out there. But keeping money takes the exact opposite. It takes humility, and a quiet fear that whatever you just made can be taken away just as fast. Plenty of people get rich. Far fewer manage to stay rich, because staying rich demands something unglamorous. It demands survival.",
@@ -831,10 +1543,36 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking"],
-            "expressions": ["curious", { "value": "worried", "sync": { "phrase": "taken away" } }],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "worried",
+                "sync": {
+                  "phrase": "taken away"
+                }
+              }
+            ],
             "label": "stay rich"
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -850,8 +1588,15 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
             "expression": "curious",
             "label": "stay in the game"
           },
@@ -859,8 +1604,26 @@
             "kind": "wall",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 3 },
-            "sync": { "phrase": "unbreakable" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "unbreakable"
+            }
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -872,9 +1635,27 @@
       "visual": {
         "title": "Plan to survive",
         "items": [
-          { "label": "Be unbreakable", "icon": "tick", "sync": { "phrase": "unbreakable" } },
-          { "label": "Plan for setbacks", "icon": "tick", "sync": { "phrase": "go wrong" } },
-          { "label": "Stay flexible", "icon": "arrow", "sync": { "phrase": "flexible" } }
+          {
+            "label": "Be unbreakable",
+            "icon": "tick",
+            "sync": {
+              "phrase": "unbreakable"
+            }
+          },
+          {
+            "label": "Plan for setbacks",
+            "icon": "tick",
+            "sync": {
+              "phrase": "go wrong"
+            }
+          },
+          {
+            "label": "Stay flexible",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "flexible"
+            }
+          }
         ]
       }
     },
@@ -901,8 +1682,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "celebrating"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
             "expression": "happy",
             "label": "the tail"
           },
@@ -910,8 +1699,26 @@
             "kind": "target",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "really" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "really"
+            }
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -927,10 +1734,29 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking", "standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "standing"
+            ],
             "expression": "happy",
             "label": "survive the small losses"
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -946,10 +1772,28 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "keep showing up"
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -962,9 +1806,24 @@
         "title": "Part 3 recap",
         "scope": "mid",
         "items": [
-          { "label": "Compounding needs time", "sync": { "phrase": "compounding" } },
-          { "label": "Survival keeps wealth", "sync": { "phrase": "survival" } },
-          { "label": "Tails drive results", "sync": { "phrase": "few rare tails" } }
+          {
+            "label": "Compounding needs time",
+            "sync": {
+              "phrase": "compounding"
+            }
+          },
+          {
+            "label": "Survival keeps wealth",
+            "sync": {
+              "phrase": "survival"
+            }
+          },
+          {
+            "label": "Tails drive results",
+            "sync": {
+              "phrase": "few rare tails"
+            }
+          }
         ]
       }
     },
@@ -979,11 +1838,36 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["pointing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "pointing"
+            ],
             "expression": "curious",
-            "effects": [{ "kind": "exclamation", "sync": { "phrase": "one daily habit" } }],
+            "effects": [
+              {
+                "kind": "exclamation",
+                "sync": {
+                  "phrase": "one daily habit"
+                }
+              }
+            ],
             "label": "the fuel"
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1022,8 +1906,15 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["sitting"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "sitting"
+            ],
             "seat": "desk",
             "expression": "happy",
             "label": "the gap"
@@ -1032,8 +1923,26 @@
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "minus your ego" }
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "minus your ego"
+            }
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1049,8 +1958,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "options"
           },
@@ -1058,8 +1975,26 @@
             "kind": "seedling",
             "tier": "hero",
             "reveal": "wash",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "real choices" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "real choices"
+            }
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1075,10 +2010,28 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "you control this"
+          },
+          {
+            "kind": "percent",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1094,8 +2047,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "the gap"
           },
@@ -1103,8 +2064,26 @@
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "different universe" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "different universe"
+            }
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1132,17 +2111,50 @@
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing"],
-            "expressions": ["tired", { "value": "happy", "sync": { "phrase": "sleep at night" } }],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
+            "expressions": [
+              "tired",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "sleep at night"
+                }
+              }
+            ],
             "label": "stick to it"
           },
           {
             "kind": "bed",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 3, "w": 3, "h": 2 },
-            "sync": { "phrase": "stay invested" }
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "stay invested"
+            }
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1158,10 +2170,29 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking", "standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "standing"
+            ],
             "expression": "curious",
             "label": "hold through fear"
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1177,10 +2208,28 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "boring wins"
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1196,10 +2245,29 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "keep it simple"
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1227,8 +2295,15 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
             "expression": "curious",
             "label": "cushion"
           },
@@ -1236,8 +2311,26 @@
             "kind": "bridge",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 7, "row": 3, "w": 4, "h": 2 },
-            "sync": { "phrase": "go wrong" }
+            "at": {
+              "col": 7,
+              "row": 3,
+              "w": 4,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "go wrong"
+            }
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1253,10 +2346,28 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
             "expression": "happy",
             "label": "built-in slack"
+          },
+          {
+            "kind": "moneybag",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1268,9 +2379,27 @@
       "visual": {
         "title": "Build in slack",
         "items": [
-          { "label": "Keep an emergency fund", "icon": "tick", "sync": { "phrase": "emergency fund" } },
-          { "label": "Don't invest soon-money", "icon": "tick", "sync": { "phrase": "need soon" } },
-          { "label": "Expect lower returns", "icon": "arrow", "sync": { "phrase": "lower than the brochure" } }
+          {
+            "label": "Keep an emergency fund",
+            "icon": "tick",
+            "sync": {
+              "phrase": "emergency fund"
+            }
+          },
+          {
+            "label": "Don't invest soon-money",
+            "icon": "tick",
+            "sync": {
+              "phrase": "need soon"
+            }
+          },
+          {
+            "label": "Expect lower returns",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "lower than the brochure"
+            }
+          }
         ]
       }
     },
@@ -1282,9 +2411,24 @@
         "title": "Part 4 recap",
         "scope": "mid",
         "items": [
-          { "label": "Save, save, save", "sync": { "phrase": "Save more" } },
-          { "label": "Reasonable over rational", "sync": { "phrase": "reasonable" } },
-          { "label": "Room for error", "sync": { "phrase": "room for error" } }
+          {
+            "label": "Save, save, save",
+            "sync": {
+              "phrase": "Save more"
+            }
+          },
+          {
+            "label": "Reasonable over rational",
+            "sync": {
+              "phrase": "reasonable"
+            }
+          },
+          {
+            "label": "Room for error",
+            "sync": {
+              "phrase": "room for error"
+            }
+          }
         ]
       }
     },
@@ -1299,11 +2443,36 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
             "expression": "curious",
-            "effects": [{ "kind": "thought_bubble", "sync": { "phrase": "future itself" } }],
+            "effects": [
+              {
+                "kind": "thought_bubble",
+                "sync": {
+                  "phrase": "future itself"
+                }
+              }
+            ],
             "label": "what's next"
+          },
+          {
+            "kind": "hourglass",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1342,8 +2511,15 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking"],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
             "expression": "shocked",
             "label": "nobody saw it"
           },
@@ -1351,8 +2527,26 @@
             "kind": "hourglass",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 3 },
-            "sync": { "phrase": "study of surprises" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "study of surprises"
+            }
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1368,10 +2562,29 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "thinking"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "thinking"
+            ],
             "expression": "curious",
             "label": "future you"
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1387,10 +2600,28 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "adapt"
+          },
+          {
+            "kind": "scale",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1406,10 +2637,29 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking", "presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
             "expression": "curious",
             "label": "bend, don't break"
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1447,10 +2697,36 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing"],
-            "expressions": ["worried", { "value": "happy", "sync": { "phrase": "hold through the fear" } }],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
+            "expressions": [
+              "worried",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "hold through the fear"
+                }
+              }
+            ],
             "label": "price of admission"
+          },
+          {
+            "kind": "coins",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1466,8 +2742,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing", "presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "it recovers"
           },
@@ -1476,8 +2760,26 @@
             "variant": "up",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 1, "w": 2, "h": 3 },
-            "sync": { "phrase": "new highs" }
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 2,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "new highs"
+            }
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1505,16 +2807,30 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 2, "row": 1, "w": 4, "h": 5 },
-            "poses": ["panicking"],
+            "at": {
+              "col": 2,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "panicking"
+            ],
             "expression": "worried",
             "label": "sky is falling"
           },
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 7, "row": 1, "w": 4, "h": 5 },
-            "poses": ["standing"],
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
             "expression": "happy",
             "facing": "left",
             "label": "keep building"
@@ -1533,10 +2849,28 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
             "expression": "curious",
             "label": "stay skeptical"
+          },
+          {
+            "kind": "hourglass",
+            "tier": "hero",
+            "reveal": "wash",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1552,8 +2886,16 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["presenting", "celebrating"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "presenting",
+              "celebrating"
+            ],
             "expression": "happy",
             "label": "both at once"
           },
@@ -1561,8 +2903,26 @@
             "kind": "staircase",
             "tier": "hero",
             "reveal": "wash",
-            "at": { "col": 8, "row": 1, "w": 3, "h": 4 },
-            "sync": { "phrase": "trends upward" }
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "sync": {
+              "phrase": "trends upward"
+            }
+          },
+          {
+            "kind": "trendup",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1590,16 +2950,30 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 2, "row": 1, "w": 4, "h": 5 },
-            "poses": ["panicking"],
+            "at": {
+              "col": 2,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "panicking"
+            ],
             "expression": "shocked",
             "label": "the trader"
           },
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 7, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking"],
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
             "expression": "worried",
             "facing": "left",
             "label": "the saver"
@@ -1618,8 +2992,16 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["thinking", "standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "standing"
+            ],
             "expression": "curious",
             "label": "whose game?"
           },
@@ -1627,8 +3009,26 @@
             "kind": "gears",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "different time horizon" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "different time horizon"
+            }
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "slide",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1644,10 +3044,28 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "your game"
+          },
+          {
+            "kind": "clock",
+            "tier": "hero",
+            "reveal": "pop",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            }
           }
         ]
       }
@@ -1660,9 +3078,24 @@
         "title": "Part 5 recap",
         "scope": "mid",
         "items": [
-          { "label": "Expect surprises", "sync": { "phrase": "Expect surprises" } },
-          { "label": "Volatility is the fee", "sync": { "phrase": "fee for growth" } },
-          { "label": "Reasonable optimist", "sync": { "phrase": "reasonable optimist" } }
+          {
+            "label": "Expect surprises",
+            "sync": {
+              "phrase": "Expect surprises"
+            }
+          },
+          {
+            "label": "Volatility is the fee",
+            "sync": {
+              "phrase": "fee for growth"
+            }
+          },
+          {
+            "label": "Reasonable optimist",
+            "sync": {
+              "phrase": "reasonable optimist"
+            }
+          }
         ]
       }
     },
@@ -1674,11 +3107,36 @@
         "title": "The whole book",
         "scope": "final",
         "items": [
-          { "label": "Behavior over math", "sync": { "phrase": "about behavior" } },
-          { "label": "Enough and freedom", "sync": { "phrase": "buy back your freedom" } },
-          { "label": "Time, survival, tails", "sync": { "phrase": "time and survival" } },
-          { "label": "Save and leave room", "sync": { "phrase": "room for error" } },
-          { "label": "Reasonable optimist", "sync": { "phrase": "reasonable optimist" } }
+          {
+            "label": "Behavior over math",
+            "sync": {
+              "phrase": "about behavior"
+            }
+          },
+          {
+            "label": "Enough and freedom",
+            "sync": {
+              "phrase": "buy back your freedom"
+            }
+          },
+          {
+            "label": "Time, survival, tails",
+            "sync": {
+              "phrase": "time and survival"
+            }
+          },
+          {
+            "label": "Save and leave room",
+            "sync": {
+              "phrase": "room for error"
+            }
+          },
+          {
+            "label": "Reasonable optimist",
+            "sync": {
+              "phrase": "reasonable optimist"
+            }
+          }
         ]
       }
     },
@@ -1689,7 +3147,9 @@
       "visual": {
         "title": "Wealth is quiet",
         "emphasis": "underline",
-        "sync": { "phrase": "Wealth is quiet" }
+        "sync": {
+          "phrase": "Wealth is quiet"
+        }
       }
     },
     {
