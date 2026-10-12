@@ -89,7 +89,7 @@
           {
             "kind": "heart",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 0,
               "row": 0,
@@ -552,13 +552,14 @@
         "elements": [
           {
             "kind": "path",
-            "tier": "ambient",
+            "tier": "hero",
             "at": {
               "col": 2,
               "row": 2,
               "w": 8,
               "h": 4
-            }
+            },
+            "reveal": "draw"
           },
           {
             "kind": "figure",
@@ -1040,7 +1041,7 @@
           {
             "kind": "brain",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 8,
               "row": 2,
@@ -1120,7 +1121,7 @@
           {
             "kind": "shoe",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 10,
               "row": 3,
@@ -1339,7 +1340,7 @@
           {
             "kind": "target",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 10,
               "row": 1,
@@ -1399,7 +1400,7 @@
           {
             "kind": "heart",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 9,
               "row": 1,
@@ -1466,7 +1467,7 @@
           {
             "kind": "heart",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 10,
               "row": 1,
@@ -1563,7 +1564,7 @@
           {
             "kind": "gears",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 8,
               "row": 2,
@@ -1928,7 +1929,7 @@
           {
             "kind": "brain",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 10,
               "row": 1,
@@ -2429,7 +2430,7 @@
           {
             "kind": "calendar",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 8,
               "row": 2,
@@ -3079,7 +3080,7 @@
           {
             "kind": "scale",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 8,
               "row": 2,
@@ -3235,7 +3236,7 @@
           {
             "kind": "calendar",
             "tier": "hero",
-            "reveal": "pop",
+            "reveal": "draw",
             "at": {
               "col": 9,
               "row": 1,

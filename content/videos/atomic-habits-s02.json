@@ -77,7 +77,8 @@
             "facing": "right",
             "seat": "chair",
             "enter": "draw",
-            "tier": "ambient",
+            "tier": "hero",
+            "reveal": "draw",
             "color": "ink"
           },
           {
