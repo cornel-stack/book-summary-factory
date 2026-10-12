@@ -1,0 +1,255 @@
+{
+  "id": "atomic-habits-social-01",
+  "brand": "readlark",
+  "format": "short",
+  "title": "How Tiny Habits Rewire Your Life — Atomic Habits",
+  "short_hook": "1% better every day",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "The core of Atomic Habits in two minutes — why 1% better every day compounds, why systems beat goals, how every habit is a vote for your identity, and the simple laws that make good habits stick.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "self improvement"
+  ],
+  "thumbnail": {
+    "headline": "1% Better Every Day",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "snowball"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "target_minutes": 2.2,
+  "template": {
+    "framing": "explainer",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Here's the entire core of Atomic Habits by James Clear in two minutes. Master this one idea, and changing your life stops feeling impossible.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["presenting"],
+            "expression": "happy",
+            "seat": "none",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "math",
+      "type": "stat_chart",
+      "narration": "One percent worse every day, and after a year you shrink to almost nothing. One percent better every day, and you grow nearly thirty seven times stronger. Tiny habits compound.",
+      "visual": {
+        "label": "The 1% rule",
+        "mode": "line",
+        "datapoints": [
+          { "label": "1% worse", "value": 0.03, "sync": { "phrase": "almost nothing" } },
+          { "label": "1% better", "value": 37, "sync": { "phrase": "thirty seven times" } }
+        ]
+      }
+    },
+    {
+      "id": "systems",
+      "type": "section_title",
+      "narration": "So stop obsessing over goals. You do not rise to the level of your goals. You fall to the level of your systems. The system is simply what you repeat.",
+      "visual": {
+        "title": "Systems beat goals",
+        "emphasis": "underline",
+        "sync": { "phrase": "your systems" }
+      }
+    },
+    {
+      "id": "valley",
+      "type": "character_scene",
+      "narration": "At first, progress feels invisible. You water the seed and see nothing. This is the valley of disappointment, where most people quit. Push through, and the breakthrough finally arrives.",
+      "visual": {
+        "title": "The valley",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["standing"],
+            "expressions": [
+              "curious",
+              { "value": "happy", "sync": { "phrase": "breakthrough" } }
+            ],
+            "seat": "none",
+            "label": "keep going",
+            "effects": [
+              { "kind": "idea_flash", "sync": { "phrase": "breakthrough" } }
+            ]
+          },
+          {
+            "kind": "seedling",
+            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "water the seed" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "identity",
+      "type": "character_scene",
+      "narration": "Here's the real shift. Every action you take is a vote for the person you want to become. You don't just read a book. You become a reader. Habits build identity.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["pointing"],
+            "expression": "happy",
+            "seat": "none",
+            "label": "cast a vote",
+            "effects": [
+              { "kind": "sparkles", "sync": { "phrase": "a vote" } }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "laws-title",
+      "type": "section_title",
+      "narration": "To build any habit, James Clear gives us four simple laws. Four switches you can flip starting right now.",
+      "visual": {
+        "title": "The four laws",
+        "emphasis": "circle"
+      }
+    },
+    {
+      "id": "laws-list",
+      "type": "list_card",
+      "narration": "Make it obvious, so you can't miss the cue. Make it attractive, so you crave it. Make it easy, so starting takes no effort. And make it satisfying, so your brain repeats it.",
+      "visual": {
+        "title": "Make it...",
+        "items": [
+          { "label": "Obvious", "icon": "tick", "sync": { "phrase": "obvious" } },
+          { "label": "Attractive", "icon": "tick", "sync": { "phrase": "attractive" } },
+          { "label": "Easy", "icon": "tick", "sync": { "phrase": "easy" } },
+          { "label": "Satisfying", "icon": "tick", "sync": { "phrase": "satisfying" } }
+        ]
+      }
+    },
+    {
+      "id": "two-minute",
+      "type": "character_scene",
+      "narration": "The easiest place to start? The two minute rule. Shrink any habit until it takes two minutes. Read one page. Do one push up. Just show up. Mastery comes later.",
+      "visual": {
+        "title": "Two-minute rule",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["presenting"],
+            "expression": "happy",
+            "seat": "none",
+            "label": "two minutes",
+            "effects": [
+              { "kind": "exclamation", "sync": { "phrase": "just show up" } }
+            ]
+          },
+          {
+            "kind": "clock",
+            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "two minute rule" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "environment",
+      "type": "character_scene",
+      "narration": "And willpower is overrated. Design your environment instead. Put the good habit right in your path, and the bad one out of reach. Make it easy to do the right thing.",
+      "visual": {
+        "title": "Design the room",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["standing"],
+            "expression": "happy",
+            "seat": "none",
+            "label": "shape the room"
+          },
+          {
+            "kind": "phone",
+            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "out of reach" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "recap",
+      "type": "recap_card",
+      "narration": "So remember. Tiny gains compound. Systems beat your goals. Every habit is a vote for your identity. And the two minute rule makes it easy to begin.",
+      "visual": {
+        "title": "Remember this",
+        "scope": "final",
+        "items": [
+          { "label": "Tiny gains compound", "sync": { "phrase": "compound" } },
+          { "label": "Systems beat goals", "sync": { "phrase": "Systems beat" } },
+          { "label": "Vote for identity", "sync": { "phrase": "identity" } },
+          { "label": "Make it easy", "sync": { "phrase": "easy to begin" } }
+        ]
+      }
+    },
+    {
+      "id": "payoff",
+      "type": "character_scene",
+      "narration": "That's why they're called atomic habits. Small, powerful, and the building blocks of a remarkable life. You don't need a huge revolution. You just need one percent.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["celebrating"],
+            "expression": "happy",
+            "seat": "none",
+            "holding": { "prop": "trophy", "hand": "right" },
+            "label": "atomic",
+            "effects": [
+              { "kind": "sparkles", "sync": { "phrase": "remarkable life" } }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow ReadLark for the full breakdown and the next big idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

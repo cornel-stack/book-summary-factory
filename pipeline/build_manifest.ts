@@ -156,14 +156,28 @@ function main() {
     const problems: string[] = [];
 
     if (script.format === "short") {
-      if (actualSec < 20 || actualSec > 70) {
+      // Two short products share the vertical pipeline: a classic 30–60s clip
+      // (no target_minutes) and a longer, vertical-native SOCIAL video (declares
+      // target_minutes, e.g. 2.2). When a target is set, enforce ±15% of it with
+      // a 90s floor; otherwise keep the 20–70s window.
+      if (script.target_minutes != null) {
+        const target = script.target_minutes;
+        const lo = target * 0.85;
+        const hi = target * 1.15;
+        if (actualSec < 90) {
+          problems.push(`social short is ${actualSec.toFixed(1)}s — below the 90s floor`);
+        }
+        if (actualMin < lo || actualMin > hi) {
+          problems.push(`outside ±15% of target ${target} min (${(lo * 60).toFixed(0)}–${(hi * 60).toFixed(0)}s)`);
+        }
+      } else if (actualSec < 20 || actualSec > 70) {
         problems.push(`short is ${actualSec.toFixed(1)}s — outside the 20–70s window (aim 30–60s)`);
       }
       if (problems.length) {
         console.error(`\n✖ runtime guard (${brand.id} short): ${problems.join("; ")}.\n  Trim or expand the narration.\n`);
         process.exit(1);
       }
-      console.log(`✓ short runtime ${actualSec.toFixed(1)}s (${brand.id}) — within the 30–60s band`);
+      console.log(`✓ short runtime ${actualSec.toFixed(1)}s (${brand.id})`);
     } else {
       const target = script.target_minutes ?? brand.default_target_minutes;
       const lo = target * 0.9;

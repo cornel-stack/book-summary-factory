@@ -1,0 +1,232 @@
+{
+  "id": "atomic-habits-social-02",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Why You Can't Stick to Habits — Atomic Habits",
+  "short_hook": "It's not willpower",
+  "book": {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018
+  },
+  "description": "You don't lack willpower — you lack a system. The environment, habit-stacking, and two-minute tricks from Atomic Habits that make good habits automatic.",
+  "tags": [
+    "atomic habits",
+    "james clear",
+    "book summary",
+    "habits",
+    "productivity"
+  ],
+  "thumbnail": {
+    "headline": "It's Not Willpower",
+    "cast": "alex",
+    "pose": "thinking",
+    "expression": "curious",
+    "props": ["coffee"]
+  },
+  "voice": "en-US-AndrewNeural",
+  "target_minutes": 2.2,
+  "template": {
+    "framing": "explainer",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "If you keep breaking your habits, it is not because you are lazy. Atomic Habits proved the real problem is your setup, not your willpower. Fix the setup, and everything changes.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["presenting"],
+            "expression": "happy",
+            "seat": "none",
+            "label": "real talk"
+          }
+        ]
+      }
+    },
+    {
+      "id": "env-title",
+      "type": "section_title",
+      "narration": "You do not need more discipline. You need a better environment. Make the right choice the easy choice, and good habits start to run almost by themselves.",
+      "visual": {
+        "title": "Shape your space",
+        "emphasis": "underline",
+        "sync": { "phrase": "better environment" }
+      }
+    },
+    {
+      "id": "stacking",
+      "type": "character_scene",
+      "narration": "Here is a simple trick called habit stacking. Attach a new habit onto one you already do every day. After my coffee, I write one line. The old routine becomes the new cue, so you barely have to think about it.",
+      "visual": {
+        "title": "Habit stacking",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["standing"],
+            "expression": "happy",
+            "seat": "none",
+            "label": "stack it on"
+          },
+          {
+            "kind": "coffee",
+            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "after my coffee" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "environment",
+      "type": "character_scene",
+      "narration": "Next, design your space on purpose. Put the book on your pillow, and the phone in another room. Out of sight, out of mind. You stop fighting yourself all day long, because the easy path is now the good one.",
+      "visual": {
+        "title": "Out of sight",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["pointing"],
+            "expression": "happy",
+            "seat": "none",
+            "label": "design it"
+          },
+          {
+            "kind": "phone",
+            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "another room" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "twomin-title",
+      "type": "section_title",
+      "narration": "And when a habit still feels far too big to start, shrink it. This is the famous two minute rule from James Clear.",
+      "visual": {
+        "title": "Two-minute rule",
+        "emphasis": "circle"
+      }
+    },
+    {
+      "id": "twomin",
+      "type": "character_scene",
+      "narration": "Make it so small it feels almost silly. Read one page. Do one push up. Just start. Showing up is the real habit, and the size can grow later.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["presenting"],
+            "expression": "happy",
+            "seat": "none",
+            "label": "two minutes",
+            "effects": [
+              { "kind": "exclamation", "sync": { "phrase": "just start" } }
+            ]
+          },
+          {
+            "kind": "clock",
+            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
+            "sync": { "phrase": "so small" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "easy-list",
+      "type": "list_card",
+      "narration": "So make the habit easy. Shrink the habit down. Stack it on a routine you have. Show up every single day. And repeat it until it feels completely automatic.",
+      "visual": {
+        "title": "Make it easy",
+        "items": [
+          { "label": "Shrink it down", "icon": "tick", "sync": { "phrase": "Shrink" } },
+          { "label": "Stack it on", "icon": "tick", "sync": { "phrase": "Stack it" } },
+          { "label": "Show up daily", "icon": "tick", "sync": { "phrase": "Show up" } },
+          { "label": "Repeat it", "icon": "tick", "sync": { "phrase": "repeat it" } }
+        ]
+      }
+    },
+    {
+      "id": "consistency",
+      "type": "character_scene",
+      "narration": "One last rule that saves everyone. Never miss twice. Missing once is just an accident, and life happens to all of us. But missing twice quietly starts a brand new habit, the one you really do not want.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["standing"],
+            "expressions": [
+              "curious",
+              { "value": "happy", "sync": { "phrase": "never miss twice" } }
+            ],
+            "seat": "none",
+            "label": "never twice"
+          }
+        ]
+      }
+    },
+    {
+      "id": "recap",
+      "type": "recap_card",
+      "narration": "So remember this. Fix your environment first. Stack new habits on old ones. Use the two minute rule. And never miss twice.",
+      "visual": {
+        "title": "Remember this",
+        "scope": "final",
+        "items": [
+          { "label": "Fix environment", "sync": { "phrase": "environment" } },
+          { "label": "Stack your habits", "sync": { "phrase": "Stack new" } },
+          { "label": "Two-minute rule", "sync": { "phrase": "two minute rule" } },
+          { "label": "Never miss twice", "sync": { "phrase": "never miss" } }
+        ]
+      }
+    },
+    {
+      "id": "payoff",
+      "type": "character_scene",
+      "narration": "Change your systems, and the habits take care of themselves. That is how you finally make good habits stick for good.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
+            "poses": ["celebrating"],
+            "expression": "happy",
+            "seat": "none",
+            "label": "systems win",
+            "effects": [
+              { "kind": "sparkles", "sync": { "phrase": "stick for good" } }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow ReadLark for more big book ideas made simple.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}
