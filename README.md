@@ -42,10 +42,18 @@ Narration audio is the source of truth for all timing:
   `eastus`). Locally: export the env vars. In CI: add repo **secrets**
   `AZURE_SPEECH_KEY` / `AZURE_SPEECH_REGION` (the render workflows already read
   them and `apt install libasound2`).
+- **kokoro** — [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M): fully
+  **offline, free-forever, Apache-2.0** (commercial-safe), no key/quota, with
+  native per-word timestamps. Default voice **`af_heart`** (override
+  `KOKORO_VOICE`). Install: `pip install -r requirements-kokoro.txt` (+
+  `apt install espeak-ng`; on CPU/CI install the CPU torch wheel first — see that
+  file). CPU-bound (~real time), so great for shorts locally; prefer edge/azure
+  in CI for 30-min longforms.
 
-`auto` probes edge once; if it's down and a key is set, it falls back to Azure;
-otherwise it exits with guidance. Both providers emit the identical per-word
-timing contract, so sync + captions are unaffected by which one runs.
+`auto` probes edge once; if it's down it falls back to Azure (if key'd) then to
+Kokoro (if installed), else exits with guidance. Every provider emits the
+identical per-word timing contract, so sync + captions are unaffected by which
+one runs. Force one with `TTS_PROVIDER=edge|azure|kokoro`.
 
 ## Repo layout
 
