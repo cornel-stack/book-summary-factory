@@ -1,6 +1,6 @@
 {
   "id": "percuriam-security-deposits",
-  "title": "Getting Your Security Deposit Back — The Complete Guide",
+  "title": "Security Deposit Laws Explained: How to Get Your Money Back",
   "brand": "percuriam",
   "format": "longform",
   "template": {
@@ -45,24 +45,61 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "standing", "thinking" ],
-            "expressions": [ "worried", { "value": "shocked", "sync": { "phrase": "keeps the entire deposit" } } ],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "thinking"
+            ],
+            "expressions": [
+              "worried",
+              {
+                "value": "shocked",
+                "sync": {
+                  "phrase": "keeps the entire deposit"
+                }
+              }
+            ],
             "label": "broom clean",
-            "effects": [ { "kind": "question_marks", "sync": { "phrase": "just how renting works" } } ]
+            "effects": [
+              {
+                "kind": "question_marks",
+                "sync": {
+                  "phrase": "just how renting works"
+                }
+              }
+            ]
           },
           {
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
-            "sync": { "phrase": "keeps the entire deposit" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "keeps the entire deposit"
+            }
           },
           {
             "kind": "door",
             "tier": "ambient",
-            "at": { "col": 0, "row": 1, "w": 2, "h": 5 },
-            "sync": { "phrase": "handed back the keys" }
+            "at": {
+              "col": 0,
+              "row": 1,
+              "w": 2,
+              "h": 5
+            },
+            "sync": {
+              "phrase": "handed back the keys"
+            }
           }
         ]
       }
@@ -87,24 +124,45 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "the map"
           },
           {
             "kind": "scale",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "the law",
-            "sync": { "phrase": "what the law" }
+            "sync": {
+              "phrase": "what the law"
+            }
           },
           {
             "kind": "book",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "check your own state" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "check your own state"
+            }
           }
         ]
       }
@@ -118,7 +176,9 @@
         "number": 1,
         "title": "What They Can Keep",
         "emphasis": "underline",
-        "sync": { "phrase": "actually keep" }
+        "sync": {
+          "phrase": "actually keep"
+        }
       }
     },
     {
@@ -126,10 +186,14 @@
       "type": "section_title",
       "narration": "Section one. Damage versus normal wear and tear.",
       "visual": {
-        "role": "principle", "number": 1, "part": 1,
+        "role": "principle",
+        "number": 1,
+        "part": 1,
         "title": "Damage Vs Wear And Tear",
         "emphasis": "circle",
-        "sync": { "phrase": "wear and tear" },
+        "sync": {
+          "phrase": "wear and tear"
+        },
         "memory": "house"
       }
     },
@@ -144,25 +208,53 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "the core rule",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "normal wear and tear" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "normal wear and tear"
+                }
+              }
+            ]
           },
           {
             "kind": "house",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "ordinary aging",
-            "sync": { "phrase": "ordinary aging" }
+            "sync": {
+              "phrase": "ordinary aging"
+            }
           },
           {
             "kind": "scale",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "actual damage" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "actual damage"
+            }
           }
         ]
       }
@@ -178,24 +270,54 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "thinking", "presenting" ],
-            "expressions": [ "curious", { "value": "shocked", "sync": { "phrase": "fist sized hole" } } ],
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "shocked",
+                "sync": {
+                  "phrase": "fist sized hole"
+                }
+              }
+            ],
             "label": "two apartments"
           },
           {
             "kind": "wall",
-            "at": { "col": 6, "row": 1, "w": 3, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
             "label": "the damage",
-            "sync": { "phrase": "beyond ordinary living" }
+            "sync": {
+              "phrase": "beyond ordinary living"
+            }
           },
           {
             "kind": "scale",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "wear and tear" }
+            "at": {
+              "col": 10,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "wear and tear"
+            }
           }
         ]
       }
@@ -207,9 +329,27 @@
       "visual": {
         "title": "Know the line",
         "items": [
-          { "label": "Learn the test", "icon": "tick", "sync": { "phrase": "remember the test" } },
-          { "label": "Refuse aging charges", "icon": "box", "sync": { "phrase": "simple aging" } },
-          { "label": "Ask them to explain", "icon": "arrow", "sync": { "phrase": "explain exactly" } }
+          {
+            "label": "Learn the test",
+            "icon": "tick",
+            "sync": {
+              "phrase": "remember the test"
+            }
+          },
+          {
+            "label": "Refuse aging charges",
+            "icon": "box",
+            "sync": {
+              "phrase": "simple aging"
+            }
+          },
+          {
+            "label": "Ask them to explain",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "explain exactly"
+            }
+          }
         ]
       }
     },
@@ -224,25 +364,62 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "thinking", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "lived in" } } ],
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "lived in"
+                }
+              }
+            ],
             "label": "real mess?",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "the test is still the same" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "the test is still the same"
+                }
+              }
+            ]
           },
           {
             "kind": "house",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "genuinely dirty",
-            "sync": { "phrase": "genuinely dirty" }
+            "sync": {
+              "phrase": "genuinely dirty"
+            }
           },
           {
             "kind": "scale",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "routine professional cleaning" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "routine professional cleaning"
+            }
           }
         ]
       }
@@ -252,10 +429,14 @@
       "type": "section_title",
       "narration": "Section two. The itemized deduction statement.",
       "visual": {
-        "role": "principle", "number": 2, "part": 1,
+        "role": "principle",
+        "number": 2,
+        "part": 1,
         "title": "The Itemized Statement",
         "emphasis": "circle",
-        "sync": { "phrase": "itemized deduction statement" },
+        "sync": {
+          "phrase": "itemized deduction statement"
+        },
         "memory": "book"
       }
     },
@@ -270,24 +451,45 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "the written list"
           },
           {
             "kind": "book",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "each deduction",
-            "sync": { "phrase": "each deduction" }
+            "sync": {
+              "phrase": "each deduction"
+            }
           },
           {
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "keeps any part" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "keeps any part"
+            }
           }
         ]
       }
@@ -303,18 +505,48 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "thinking", "pointing" ],
-            "expressions": [ "worried", { "value": "curious", "sync": { "phrase": "weak ones stand out" } } ],
+            "poses": [
+              "thinking",
+              "pointing"
+            ],
+            "expressions": [
+              "worried",
+              {
+                "value": "curious",
+                "sync": {
+                  "phrase": "weak ones stand out"
+                }
+              }
+            ],
             "label": "line by line",
-            "effects": [ { "kind": "idea_flash", "sync": { "phrase": "fog clears" } } ]
+            "effects": [
+              {
+                "kind": "idea_flash",
+                "sync": {
+                  "phrase": "fog clears"
+                }
+              }
+            ]
           },
           {
             "kind": "book",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "the statement",
-            "sync": { "phrase": "written down and justified" }
+            "sync": {
+              "phrase": "written down and justified"
+            }
           }
         ]
       }
@@ -326,9 +558,27 @@
       "visual": {
         "title": "Work the statement",
         "items": [
-          { "label": "Request the list", "icon": "tick", "sync": { "phrase": "request the itemized list" } },
-          { "label": "Read every line", "icon": "box", "sync": { "phrase": "read every line" } },
-          { "label": "Flag aging charges", "icon": "arrow", "sync": { "phrase": "normal aging" } }
+          {
+            "label": "Request the list",
+            "icon": "tick",
+            "sync": {
+              "phrase": "request the itemized list"
+            }
+          },
+          {
+            "label": "Read every line",
+            "icon": "box",
+            "sync": {
+              "phrase": "read every line"
+            }
+          },
+          {
+            "label": "Flag aging charges",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "normal aging"
+            }
+          }
         ]
       }
     },
@@ -337,10 +587,14 @@
       "type": "section_title",
       "narration": "Section three. The deadline to return your money.",
       "visual": {
-        "role": "principle", "number": 3, "part": 1,
+        "role": "principle",
+        "number": 3,
+        "part": 1,
         "title": "The Return Deadline",
         "emphasis": "circle",
-        "sync": { "phrase": "return your money" },
+        "sync": {
+          "phrase": "return your money"
+        },
         "memory": "calendar"
       }
     },
@@ -355,24 +609,46 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting", "pointing" ],
+            "poses": [
+              "presenting",
+              "pointing"
+            ],
             "expression": "happy",
             "label": "a hard deadline"
           },
           {
             "kind": "calendar",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "varies by state",
-            "sync": { "phrase": "varies by state" }
+            "sync": {
+              "phrase": "varies by state"
+            }
           },
           {
             "kind": "clock",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "set number of days" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "set number of days"
+            }
           }
         ]
       }
@@ -388,25 +664,62 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
-            "expressions": [ "worried", { "value": "happy", "sync": { "phrase": "strongest card" } } ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expressions": [
+              "worried",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "strongest card"
+                }
+              }
+            ],
             "label": "the window passes",
-            "effects": [ { "kind": "sparkles", "sync": { "phrase": "owe you even more" } } ]
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "owe you even more"
+                }
+              }
+            ]
           },
           {
             "kind": "calendar",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "the deadline",
-            "sync": { "phrase": "blowing the deadline" }
+            "sync": {
+              "phrase": "blowing the deadline"
+            }
           },
           {
             "kind": "clock",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "exact deadline" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "exact deadline"
+            }
           }
         ]
       }
@@ -418,9 +731,27 @@
       "visual": {
         "title": "Mind the clock",
         "items": [
-          { "label": "Look up your deadline", "icon": "tick", "sync": { "phrase": "exact deadline" } },
-          { "label": "Mark the key date", "icon": "box", "sync": { "phrase": "handed over the keys" } },
-          { "label": "Silence can help you", "icon": "arrow", "sync": { "phrase": "passes in silence" } }
+          {
+            "label": "Look up your deadline",
+            "icon": "tick",
+            "sync": {
+              "phrase": "exact deadline"
+            }
+          },
+          {
+            "label": "Mark the key date",
+            "icon": "box",
+            "sync": {
+              "phrase": "handed over the keys"
+            }
+          },
+          {
+            "label": "Silence can help you",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "passes in silence"
+            }
+          }
         ]
       }
     },
@@ -435,25 +766,54 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting", "pointing" ],
+            "poses": [
+              "presenting",
+              "pointing"
+            ],
             "expression": "happy",
             "label": "in writing",
-            "effects": [ { "kind": "idea_flash", "sync": { "phrase": "thirty second move" } } ]
+            "effects": [
+              {
+                "kind": "idea_flash",
+                "sync": {
+                  "phrase": "thirty second move"
+                }
+              }
+            ]
           },
           {
             "kind": "book",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "forwarding address",
-            "sync": { "phrase": "forwarding address" }
+            "sync": {
+              "phrase": "forwarding address"
+            }
           },
           {
             "kind": "clock",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "reset that clock" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "reset that clock"
+            }
           }
         ]
       }
@@ -466,9 +826,24 @@
         "title": "Part one, in short",
         "scope": "mid",
         "items": [
-          { "label": "Damage, not wear", "sync": { "phrase": "normal wear and tear" } },
-          { "label": "Itemized statement owed", "sync": { "phrase": "itemized statement" } },
-          { "label": "Deadline varies by state", "sync": { "phrase": "varies by state" } }
+          {
+            "label": "Damage, not wear",
+            "sync": {
+              "phrase": "normal wear and tear"
+            }
+          },
+          {
+            "label": "Itemized statement owed",
+            "sync": {
+              "phrase": "itemized statement"
+            }
+          },
+          {
+            "label": "Deadline varies by state",
+            "sync": {
+              "phrase": "varies by state"
+            }
+          }
         ]
       }
     },
@@ -481,7 +856,9 @@
         "number": 2,
         "title": "How You Get It Back",
         "emphasis": "underline",
-        "sync": { "phrase": "actually get it back" }
+        "sync": {
+          "phrase": "actually get it back"
+        }
       }
     },
     {
@@ -495,18 +872,47 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "thinking" ],
-            "expressions": [ "worried", { "value": "curious", "sync": { "phrase": "build your case" } } ],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
+            "expressions": [
+              "worried",
+              {
+                "value": "curious",
+                "sync": {
+                  "phrase": "build your case"
+                }
+              }
+            ],
             "label": "your word?",
-            "effects": [ { "kind": "question_marks", "sync": { "phrase": "word against the landlord" } } ]
+            "effects": [
+              {
+                "kind": "question_marks",
+                "sync": {
+                  "phrase": "word against the landlord"
+                }
+              }
+            ]
           },
           {
             "kind": "scale",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
-            "sync": { "phrase": "one with proof" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "one with proof"
+            }
           }
         ]
       }
@@ -516,10 +922,14 @@
       "type": "section_title",
       "narration": "Section four. Photos at move-in and move-out.",
       "visual": {
-        "role": "principle", "number": 4, "part": 2,
+        "role": "principle",
+        "number": 4,
+        "part": 2,
         "title": "Move-In Move-Out Photos",
         "emphasis": "circle",
-        "sync": { "phrase": "move in and move out" },
+        "sync": {
+          "phrase": "move in and move out"
+        },
         "memory": "phone"
       }
     },
@@ -534,25 +944,62 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "strongest evidence" } } ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "strongest evidence"
+                }
+              }
+            ],
             "label": "before and after",
-            "effects": [ { "kind": "idea_flash", "sync": { "phrase": "Document the unit" } } ]
+            "effects": [
+              {
+                "kind": "idea_flash",
+                "sync": {
+                  "phrase": "Document the unit"
+                }
+              }
+            ]
           },
           {
             "kind": "phone",
-            "at": { "col": 7, "row": 2, "w": 3, "h": 4 },
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 4
+            },
             "label": "timestamped photos",
-            "sync": { "phrase": "Timestamped pictures" }
+            "sync": {
+              "phrase": "Timestamped pictures"
+            }
           },
           {
             "kind": "house",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "every room" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "every room"
+            }
           }
         ]
       }
@@ -568,25 +1015,62 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "celebrating" ],
-            "expressions": [ "worried", { "value": "happy", "sync": { "phrase": "over in seconds" } } ],
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
+            "expressions": [
+              "worried",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "over in seconds"
+                }
+              }
+            ],
             "label": "simple proof",
-            "effects": [ { "kind": "sparkles", "sync": { "phrase": "simple proof" } } ]
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "simple proof"
+                }
+              }
+            ]
           },
           {
             "kind": "phone",
-            "at": { "col": 6, "row": 2, "w": 3, "h": 4 },
+            "at": {
+              "col": 6,
+              "row": 2,
+              "w": 3,
+              "h": 4
+            },
             "label": "the before shot",
-            "sync": { "phrase": "clear shot from move in" }
+            "sync": {
+              "phrase": "clear shot from move in"
+            }
           },
           {
             "kind": "scale",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "flips the whole conversation" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "flips the whole conversation"
+            }
           }
         ]
       }
@@ -598,9 +1082,27 @@
       "visual": {
         "title": "Build the evidence",
         "items": [
-          { "label": "Photos at move-in", "icon": "tick", "sync": { "phrase": "at move in" } },
-          { "label": "Repeat at move-out", "icon": "box", "sync": { "phrase": "repeat it at move out" } },
-          { "label": "Save it all", "icon": "arrow", "sync": { "phrase": "save everything" } }
+          {
+            "label": "Photos at move-in",
+            "icon": "tick",
+            "sync": {
+              "phrase": "at move in"
+            }
+          },
+          {
+            "label": "Repeat at move-out",
+            "icon": "box",
+            "sync": {
+              "phrase": "repeat it at move out"
+            }
+          },
+          {
+            "label": "Save it all",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "save everything"
+            }
+          }
         ]
       }
     },
@@ -609,10 +1111,14 @@
       "type": "section_title",
       "narration": "Section five. When the landlord just won't pay.",
       "visual": {
-        "role": "principle", "number": 5, "part": 2,
+        "role": "principle",
+        "number": 5,
+        "part": 2,
         "title": "When They Won't Pay",
         "emphasis": "circle",
-        "sync": { "phrase": "won't pay" },
+        "sync": {
+          "phrase": "won't pay"
+        },
         "memory": "scale"
       }
     },
@@ -627,24 +1133,45 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "one rung at a time"
           },
           {
             "kind": "ladder",
-            "at": { "col": 6, "row": 1, "w": 3, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
             "label": "the steps",
-            "sync": { "phrase": "ladder of steps" }
+            "sync": {
+              "phrase": "ladder of steps"
+            }
           },
           {
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "rather just pay" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "rather just pay"
+            }
           }
         ]
       }
@@ -660,26 +1187,55 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "sitting", "presenting" ],
+            "poses": [
+              "sitting",
+              "presenting"
+            ],
             "seat": "desk",
             "expression": "curious",
             "label": "short and calm",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "amount owed" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "amount owed"
+                }
+              }
+            ]
           },
           {
             "kind": "book",
-            "at": { "col": 7, "row": 2, "w": 3, "h": 3 },
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
             "label": "the letter",
-            "sync": { "phrase": "demand letter" }
+            "sync": {
+              "phrase": "demand letter"
+            }
           },
           {
             "kind": "gift",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "clear date to pay" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "clear date to pay"
+            }
           }
         ]
       }
@@ -691,9 +1247,27 @@
       "visual": {
         "title": "Escalate in order",
         "items": [
-          { "label": "Send a demand letter", "icon": "tick", "sync": { "phrase": "written demand" } },
-          { "label": "File in small claims", "icon": "box", "sync": { "phrase": "small claims court" } },
-          { "label": "Bring your proof", "icon": "arrow", "sync": { "phrase": "photos and your paper trail" } }
+          {
+            "label": "Send a demand letter",
+            "icon": "tick",
+            "sync": {
+              "phrase": "written demand"
+            }
+          },
+          {
+            "label": "File in small claims",
+            "icon": "box",
+            "sync": {
+              "phrase": "small claims court"
+            }
+          },
+          {
+            "label": "Bring your proof",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "photos and your paper trail"
+            }
+          }
         ]
       }
     },
@@ -702,10 +1276,14 @@
       "type": "section_title",
       "narration": "Section six. The penalties landlords face.",
       "visual": {
-        "role": "principle", "number": 6, "part": 2,
+        "role": "principle",
+        "number": 6,
+        "part": 2,
         "title": "Penalties Landlords Face",
         "emphasis": "circle",
-        "sync": { "phrase": "penalties landlords face" },
+        "sync": {
+          "phrase": "penalties landlords face"
+        },
         "memory": "scale"
       }
     },
@@ -720,24 +1298,46 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting", "pointing" ],
+            "poses": [
+              "presenting",
+              "pointing"
+            ],
             "expression": "happy",
             "label": "a penalty on top"
           },
           {
             "kind": "scale",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "bad faith",
-            "sync": { "phrase": "bad faith" }
+            "sync": {
+              "phrase": "bad faith"
+            }
           },
           {
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "two or even three times" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "two or even three times"
+            }
           }
         ]
       }
@@ -753,25 +1353,62 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "celebrating" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "gets paid" } } ],
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "gets paid"
+                }
+              }
+            ],
             "label": "informed tenant",
-            "effects": [ { "kind": "money", "sync": { "phrase": "far bigger bill" } } ]
+            "effects": [
+              {
+                "kind": "money",
+                "sync": {
+                  "phrase": "far bigger bill"
+                }
+              }
+            ]
           },
           {
             "kind": "scale",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "double or triple",
-            "sync": { "phrase": "double or triple" }
+            "sync": {
+              "phrase": "double or triple"
+            }
           },
           {
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "expensive choice" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "expensive choice"
+            }
           }
         ]
       }
@@ -783,9 +1420,27 @@
       "visual": {
         "title": "Use the leverage",
         "items": [
-          { "label": "Check for bad-faith damages", "icon": "tick", "sync": { "phrase": "extra damages for bad faith" } },
-          { "label": "Mention it calmly", "icon": "box", "sync": { "phrase": "mention it calmly" } },
-          { "label": "Never bluff", "icon": "arrow", "sync": { "phrase": "never bluff" } }
+          {
+            "label": "Check for bad-faith damages",
+            "icon": "tick",
+            "sync": {
+              "phrase": "extra damages for bad faith"
+            }
+          },
+          {
+            "label": "Mention it calmly",
+            "icon": "box",
+            "sync": {
+              "phrase": "mention it calmly"
+            }
+          },
+          {
+            "label": "Never bluff",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "never bluff"
+            }
+          }
         ]
       }
     },
@@ -800,25 +1455,62 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "celebrating" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "simply to know" } } ],
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "simply to know"
+                }
+              }
+            ],
             "label": "get free help",
-            "effects": [ { "kind": "sparkles", "sync": { "phrase": "tilts the table" } } ]
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "tilts the table"
+                }
+              }
+            ]
           },
           {
             "kind": "phone",
-            "at": { "col": 6, "row": 2, "w": 3, "h": 4 },
+            "at": {
+              "col": 6,
+              "row": 2,
+              "w": 3,
+              "h": 4
+            },
             "label": "free hotline",
-            "sync": { "phrase": "free tenant hotline" }
+            "sync": {
+              "phrase": "free tenant hotline"
+            }
           },
           {
             "kind": "heart",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "help renters" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "help renters"
+            }
           }
         ]
       }
@@ -831,9 +1523,24 @@
         "title": "Part two, in short",
         "scope": "mid",
         "items": [
-          { "label": "Photos are proof", "sync": { "phrase": "turn your word into proof" } },
-          { "label": "Demand, then sue", "sync": { "phrase": "demand letter first" } },
-          { "label": "Bad faith costs them", "sync": { "phrase": "bad faith withholding" } }
+          {
+            "label": "Photos are proof",
+            "sync": {
+              "phrase": "turn your word into proof"
+            }
+          },
+          {
+            "label": "Demand, then sue",
+            "sync": {
+              "phrase": "demand letter first"
+            }
+          },
+          {
+            "label": "Bad faith costs them",
+            "sync": {
+              "phrase": "bad faith withholding"
+            }
+          }
         ]
       }
     },
@@ -845,11 +1552,36 @@
         "title": "The whole guide",
         "scope": "final",
         "items": [
-          { "label": "Damage, not wear", "sync": { "phrase": "real damage" } },
-          { "label": "Itemized by deadline", "sync": { "phrase": "itemized statement" } },
-          { "label": "Photograph everything", "sync": { "phrase": "Photograph the place" } },
-          { "label": "Demand, then small claims", "sync": { "phrase": "small claims court" } },
-          { "label": "Bad faith costs them", "sync": { "phrase": "the penalties" } }
+          {
+            "label": "Damage, not wear",
+            "sync": {
+              "phrase": "real damage"
+            }
+          },
+          {
+            "label": "Itemized by deadline",
+            "sync": {
+              "phrase": "itemized statement"
+            }
+          },
+          {
+            "label": "Photograph everything",
+            "sync": {
+              "phrase": "Photograph the place"
+            }
+          },
+          {
+            "label": "Demand, then small claims",
+            "sync": {
+              "phrase": "small claims court"
+            }
+          },
+          {
+            "label": "Bad faith costs them",
+            "sync": {
+              "phrase": "the penalties"
+            }
+          }
         ]
       }
     },
@@ -860,7 +1592,9 @@
       "visual": {
         "title": "It's Your Money",
         "emphasis": "circle",
-        "sync": { "phrase": "your money" }
+        "sync": {
+          "phrase": "your money"
+        }
       }
     },
     {
@@ -872,5 +1606,12 @@
         "style": "corner"
       }
     }
-  ]
+  ],
+  "title_variants": [
+    "Security Deposit Laws Explained: How to Get Your Money Back",
+    "Your Landlord Kept Your Deposit — Is That Even Legal?",
+    "Get Your Full Security Deposit Back (Know Your Rights)"
+  ],
+  "category": "Everyday Law",
+  "pinned_comment": "Has a landlord ever kept your deposit unfairly? What happened? 👇 (educational, not legal advice)"
 }

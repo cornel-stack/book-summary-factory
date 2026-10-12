@@ -279,6 +279,36 @@ the title. Use sparingly; it costs time.
 **Rule:** the hook must name the book (title or author) — it's both good
 practice and schema-enforced under book-structure.
 
+**Promise tag (Phase 14, lint-enforced):** set the top-level `promise` field to a
+verbatim phrase from the first scene(s) that states the video's CORE PROMISE — the
+payoff a viewer stays for. The lint FAILS if that phrase isn't spoken within the
+first **15 s**. Keep it concrete ("decide who you become", "get your deposit
+back"), not vague. The first scene must also show a visual change within 3 s (the
+hand's draw-in already satisfies this).
+
+---
+
+## 6b. YouTube packaging & SEO (Phase 14 — ranking)
+
+YouTube is a funnel: impressions → CTR (title+thumbnail) → retention →
+satisfaction → session. Search is the discovery surface for a new channel;
+Suggested is the long-term one. Pack for it:
+
+- **`title_variants` — EXACTLY 3** (YouTube's native A/B test takes 3). All ≤100
+  chars, never misleading (the video must deliver the claim):
+  1. **SEARCH-LED** — begins with the book title verbatim, e.g.
+     `Atomic Habits Summary: 1% Better Every Day` (aim ≤70 chars). This is the
+     default `title` and becomes the description's first (search-visible) line.
+  2. **CURIOSITY-LED** — an open loop / question ("Why Your Goals Keep Failing You").
+  3. **BENEFIT-LED** — outcome-first ("Build Habits That Actually Stick").
+- **Book title verbatim** must appear in variant (1), the description's first
+  line, and the MP4 filename (`<slug>-summary.mp4`) — all handled by the packager;
+  the lint FAILS if it's missing from variant (1) or the description.
+- **`category`** — one of the fixed set (e.g. "Habits & Productivity"). Drives the
+  playlist + end-screen grouping in `upload-notes.txt`.
+- **`pinned_comment`** — one engagement question tied to the book, e.g. "Which of
+  the four laws do you break most? 👇". Goes in the pinned comment (session time).
+
 ---
 
 ## 7. CTA copy (non-salesy)
@@ -366,6 +396,11 @@ changes.
       ≥1 seated-desk scene; ≥1 held prop; ≥3 stat_chart/list moments.
 - [ ] Labels within word limits (figure ≤6, list ≤5, recap ≤4, headline ≤5).
 - [ ] `description` is prose only — chapters are auto-generated (§8b).
+- [ ] **`title_variants`** set (exactly 3: search / curiosity / benefit); variant
+      (1) starts with the book title and is the default `title` (§6b).
+- [ ] **`category`** set; **`pinned_comment`** written; **`promise`** tagged
+      (verbatim phrase, spoken ≤15 s — lint-enforced §6).
+- [ ] `description` first sentence names the book title (search-visible line 1).
 
 ---
 

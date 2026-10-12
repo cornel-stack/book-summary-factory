@@ -23,7 +23,7 @@ import {
   type ManifestScene,
   type WordTiming,
 } from "../remotion/src/schema.js";
-import { VIDEO, VIDEO_VERTICAL, SCENE_PADDING_FRAMES } from "../remotion/src/theme.js";
+import { VIDEO, VIDEO_VERTICAL, SCENE_PADDING_FRAMES, SHORTS_ENDCARD_SECONDS } from "../remotion/src/theme.js";
 import { resolvePhraseTime } from "../remotion/src/drawing/sync.js";
 import { getBrand } from "../config/brands.js";
 
@@ -104,7 +104,13 @@ function main() {
     const audioAbs = join(REPO, "remotion", "public", audioRel);
     const audioDurationSec = ffprobeDurationSec(audioAbs);
     const audioFrames = Math.ceil(audioDurationSec * VIDEO.fps);
-    const durationInFrames = audioFrames + SCENE_PADDING_FRAMES;
+    // Phase 14: a SHORT's end-card (cta) is capped to ~1s — a long brand outro
+    // bleeds the loop / view-duration metric. The CTA now lives in the captions +
+    // pinned comment, so the end-card only needs a brief brand sting.
+    const durationInFrames =
+      script.format === "short" && scene.type === "cta"
+        ? Math.max(1, Math.round(SHORTS_ENDCARD_SECONDS * VIDEO.fps))
+        : audioFrames + SCENE_PADDING_FRAMES;
 
     const startFrame = cursor;
     cursor += durationInFrames;

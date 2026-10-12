@@ -22,7 +22,9 @@
     "cast": "alex",
     "pose": "pointing",
     "expression": "happy",
-    "props": ["target"]
+    "props": [
+      "target"
+    ]
   },
   "voice": "en-US-AndrewNeural",
   "target_minutes": 2.2,
@@ -41,8 +43,15 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "new you"
@@ -57,7 +66,9 @@
       "visual": {
         "title": "Become, don't just do",
         "emphasis": "underline",
-        "sync": { "phrase": "who you become" }
+        "sync": {
+          "phrase": "who you become"
+        }
       }
     },
     {
@@ -71,19 +82,38 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["pointing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "pointing"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "one vote",
             "effects": [
-              { "kind": "sparkles", "sync": { "phrase": "a vote" } }
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "a vote"
+                }
+              }
             ]
           },
           {
             "kind": "target",
-            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "want to become" }
+            "at": {
+              "col": 8,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "want to become"
+            }
           }
         ]
       }
@@ -107,11 +137,23 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "standing"
+            ],
             "expressions": [
               "curious",
-              { "value": "happy", "sync": { "phrase": "results naturally follow" } }
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "results naturally follow"
+                }
+              }
             ],
             "seat": "none",
             "label": "be a runner"
@@ -126,9 +168,27 @@
       "visual": {
         "title": "Build identity",
         "items": [
-          { "label": "Decide who", "icon": "arrow", "sync": { "phrase": "Decide" } },
-          { "label": "Prove it daily", "icon": "arrow", "sync": { "phrase": "Prove it" } },
-          { "label": "Repeat the vote", "icon": "arrow", "sync": { "phrase": "repeat the vote" } }
+          {
+            "label": "Decide who",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "Decide"
+            }
+          },
+          {
+            "label": "Prove it daily",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "Prove it"
+            }
+          },
+          {
+            "label": "Repeat the vote",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "repeat the vote"
+            }
+          }
         ]
       }
     },
@@ -143,19 +203,38 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "proof",
             "effects": [
-              { "kind": "idea_flash", "sync": { "phrase": "self image" } }
+              {
+                "kind": "idea_flash",
+                "sync": {
+                  "phrase": "self image"
+                }
+              }
             ]
           },
           {
             "kind": "book",
-            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "one page" }
+            "at": {
+              "col": 8,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "one page"
+            }
           }
         ]
       }
@@ -168,10 +247,30 @@
         "title": "Remember this",
         "scope": "final",
         "items": [
-          { "label": "Identity over goals", "sync": { "phrase": "identity over goals" } },
-          { "label": "Every action votes", "sync": { "phrase": "a vote" } },
-          { "label": "Start tiny", "sync": { "phrase": "Start tiny" } },
-          { "label": "Repeat daily", "sync": { "phrase": "repeat it daily" } }
+          {
+            "label": "Identity over goals",
+            "sync": {
+              "phrase": "identity over goals"
+            }
+          },
+          {
+            "label": "Every action votes",
+            "sync": {
+              "phrase": "a vote"
+            }
+          },
+          {
+            "label": "Start tiny",
+            "sync": {
+              "phrase": "Start tiny"
+            }
+          },
+          {
+            "label": "Repeat daily",
+            "sync": {
+              "phrase": "repeat it daily"
+            }
+          }
         ]
       }
     },
@@ -185,14 +284,29 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["celebrating"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "celebrating"
+            ],
             "expression": "happy",
             "seat": "none",
-            "holding": { "prop": "trophy", "hand": "right" },
+            "holding": {
+              "prop": "trophy",
+              "hand": "right"
+            },
             "label": "that's you",
             "effects": [
-              { "kind": "sparkles", "sync": { "phrase": "who you are" } }
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "who you are"
+                }
+              }
             ]
           }
         ]
@@ -207,5 +321,9 @@
         "style": "card"
       }
     }
-  ]
+  ],
+  "category": "Habits & Productivity",
+  "pinned_comment": "What tiny habit are you starting today? 👇",
+  "loop": true,
+  "max_seconds": 160
 }

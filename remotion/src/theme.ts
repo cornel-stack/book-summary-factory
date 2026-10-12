@@ -28,6 +28,17 @@ export const SHORT_SAFE = {
 } as const;
 
 /**
+ * Shorts optimization (Phase 14). Shorts rank on view-duration-relative-to-length
+ * + loops, NOT CTR — so a LONG brand end-card bleeds the %-watched + loop metric.
+ * The end-card is capped to ~1s; the CTA moves to the platform captions + the
+ * pinned comment; a small persistent wordmark watermark carries the brand through
+ * the body instead. Edit SHORTS_ENDCARD_SECONDS to tune the cap.
+ */
+export const SHORTS_ENDCARD_SECONDS = 1.0;
+/** Target length band for shorts (seconds). Lint warns beyond `warn`. */
+export const SHORTS_DURATION = { min: 35, max: 50, warn: 55 } as const;
+
+/**
  * Silent padding (in frames) appended after each scene's narration so that
  * one scene's audio doesn't bump straight into the next.
  */

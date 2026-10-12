@@ -43,8 +43,15 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "watch this"
@@ -60,8 +67,20 @@
         "label": "The 1% rule",
         "mode": "line",
         "datapoints": [
-          { "label": "1% worse", "value": 0.03, "sync": { "phrase": "almost nothing" } },
-          { "label": "1% better", "value": 37, "sync": { "phrase": "thirty seven times" } }
+          {
+            "label": "1% worse",
+            "value": 0.03,
+            "sync": {
+              "phrase": "almost nothing"
+            }
+          },
+          {
+            "label": "1% better",
+            "value": 37,
+            "sync": {
+              "phrase": "thirty seven times"
+            }
+          }
         ]
       }
     },
@@ -72,7 +91,9 @@
       "visual": {
         "title": "Systems beat goals",
         "emphasis": "underline",
-        "sync": { "phrase": "your systems" }
+        "sync": {
+          "phrase": "your systems"
+        }
       }
     },
     {
@@ -86,22 +107,46 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "standing"
+            ],
             "expressions": [
               "curious",
-              { "value": "happy", "sync": { "phrase": "breakthrough" } }
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "breakthrough"
+                }
+              }
             ],
             "seat": "none",
             "label": "keep going",
             "effects": [
-              { "kind": "idea_flash", "sync": { "phrase": "breakthrough" } }
+              {
+                "kind": "idea_flash",
+                "sync": {
+                  "phrase": "breakthrough"
+                }
+              }
             ]
           },
           {
             "kind": "seedling",
-            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "water the seed" }
+            "at": {
+              "col": 8,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "water the seed"
+            }
           }
         ]
       }
@@ -116,13 +161,25 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["pointing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "pointing"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "cast a vote",
             "effects": [
-              { "kind": "sparkles", "sync": { "phrase": "a vote" } }
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "a vote"
+                }
+              }
             ]
           }
         ]
@@ -144,10 +201,34 @@
       "visual": {
         "title": "Make it...",
         "items": [
-          { "label": "Obvious", "icon": "tick", "sync": { "phrase": "obvious" } },
-          { "label": "Attractive", "icon": "tick", "sync": { "phrase": "attractive" } },
-          { "label": "Easy", "icon": "tick", "sync": { "phrase": "easy" } },
-          { "label": "Satisfying", "icon": "tick", "sync": { "phrase": "satisfying" } }
+          {
+            "label": "Obvious",
+            "icon": "tick",
+            "sync": {
+              "phrase": "obvious"
+            }
+          },
+          {
+            "label": "Attractive",
+            "icon": "tick",
+            "sync": {
+              "phrase": "attractive"
+            }
+          },
+          {
+            "label": "Easy",
+            "icon": "tick",
+            "sync": {
+              "phrase": "easy"
+            }
+          },
+          {
+            "label": "Satisfying",
+            "icon": "tick",
+            "sync": {
+              "phrase": "satisfying"
+            }
+          }
         ]
       }
     },
@@ -162,19 +243,38 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "two minutes",
             "effects": [
-              { "kind": "exclamation", "sync": { "phrase": "just show up" } }
+              {
+                "kind": "exclamation",
+                "sync": {
+                  "phrase": "just show up"
+                }
+              }
             ]
           },
           {
             "kind": "clock",
-            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "two minute rule" }
+            "at": {
+              "col": 8,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "two minute rule"
+            }
           }
         ]
       }
@@ -190,16 +290,30 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "standing"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "shape the room"
           },
           {
             "kind": "phone",
-            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "out of reach" }
+            "at": {
+              "col": 8,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "out of reach"
+            }
           }
         ]
       }
@@ -212,10 +326,30 @@
         "title": "Remember this",
         "scope": "final",
         "items": [
-          { "label": "Tiny gains compound", "sync": { "phrase": "compound" } },
-          { "label": "Systems beat goals", "sync": { "phrase": "Systems beat" } },
-          { "label": "Vote for identity", "sync": { "phrase": "identity" } },
-          { "label": "Make it easy", "sync": { "phrase": "easy to begin" } }
+          {
+            "label": "Tiny gains compound",
+            "sync": {
+              "phrase": "compound"
+            }
+          },
+          {
+            "label": "Systems beat goals",
+            "sync": {
+              "phrase": "Systems beat"
+            }
+          },
+          {
+            "label": "Vote for identity",
+            "sync": {
+              "phrase": "identity"
+            }
+          },
+          {
+            "label": "Make it easy",
+            "sync": {
+              "phrase": "easy to begin"
+            }
+          }
         ]
       }
     },
@@ -229,14 +363,29 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["celebrating"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "celebrating"
+            ],
             "expression": "happy",
             "seat": "none",
-            "holding": { "prop": "trophy", "hand": "right" },
+            "holding": {
+              "prop": "trophy",
+              "hand": "right"
+            },
             "label": "atomic",
             "effects": [
-              { "kind": "sparkles", "sync": { "phrase": "remarkable life" } }
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "remarkable life"
+                }
+              }
             ]
           }
         ]
@@ -251,5 +400,8 @@
         "style": "card"
       }
     }
-  ]
+  ],
+  "category": "Habits & Productivity",
+  "pinned_comment": "What tiny habit are you starting today? 👇",
+  "max_seconds": 160
 }

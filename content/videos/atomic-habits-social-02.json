@@ -22,7 +22,9 @@
     "cast": "alex",
     "pose": "thinking",
     "expression": "curious",
-    "props": ["coffee"]
+    "props": [
+      "coffee"
+    ]
   },
   "voice": "en-US-AndrewNeural",
   "target_minutes": 2.2,
@@ -41,8 +43,15 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "real talk"
@@ -57,7 +66,9 @@
       "visual": {
         "title": "Shape your space",
         "emphasis": "underline",
-        "sync": { "phrase": "better environment" }
+        "sync": {
+          "phrase": "better environment"
+        }
       }
     },
     {
@@ -71,16 +82,30 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "standing"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "stack it on"
           },
           {
             "kind": "coffee",
-            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "after my coffee" }
+            "at": {
+              "col": 8,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "after my coffee"
+            }
           }
         ]
       }
@@ -96,16 +121,30 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["pointing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "pointing"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "design it"
           },
           {
             "kind": "phone",
-            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "another room" }
+            "at": {
+              "col": 8,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "another room"
+            }
           }
         ]
       }
@@ -129,19 +168,38 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["presenting"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "two minutes",
             "effects": [
-              { "kind": "exclamation", "sync": { "phrase": "just start" } }
+              {
+                "kind": "exclamation",
+                "sync": {
+                  "phrase": "just start"
+                }
+              }
             ]
           },
           {
             "kind": "clock",
-            "at": { "col": 8, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "so small" }
+            "at": {
+              "col": 8,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "so small"
+            }
           }
         ]
       }
@@ -153,10 +211,34 @@
       "visual": {
         "title": "Make it easy",
         "items": [
-          { "label": "Shrink it down", "icon": "tick", "sync": { "phrase": "Shrink" } },
-          { "label": "Stack it on", "icon": "tick", "sync": { "phrase": "Stack it" } },
-          { "label": "Show up daily", "icon": "tick", "sync": { "phrase": "Show up" } },
-          { "label": "Repeat it", "icon": "tick", "sync": { "phrase": "repeat it" } }
+          {
+            "label": "Shrink it down",
+            "icon": "tick",
+            "sync": {
+              "phrase": "Shrink"
+            }
+          },
+          {
+            "label": "Stack it on",
+            "icon": "tick",
+            "sync": {
+              "phrase": "Stack it"
+            }
+          },
+          {
+            "label": "Show up daily",
+            "icon": "tick",
+            "sync": {
+              "phrase": "Show up"
+            }
+          },
+          {
+            "label": "Repeat it",
+            "icon": "tick",
+            "sync": {
+              "phrase": "repeat it"
+            }
+          }
         ]
       }
     },
@@ -170,11 +252,23 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["standing"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "standing"
+            ],
             "expressions": [
               "curious",
-              { "value": "happy", "sync": { "phrase": "never miss twice" } }
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "never miss twice"
+                }
+              }
             ],
             "seat": "none",
             "label": "never twice"
@@ -190,10 +284,30 @@
         "title": "Remember this",
         "scope": "final",
         "items": [
-          { "label": "Fix environment", "sync": { "phrase": "environment" } },
-          { "label": "Stack your habits", "sync": { "phrase": "Stack new" } },
-          { "label": "Two-minute rule", "sync": { "phrase": "two minute rule" } },
-          { "label": "Never miss twice", "sync": { "phrase": "never miss" } }
+          {
+            "label": "Fix environment",
+            "sync": {
+              "phrase": "environment"
+            }
+          },
+          {
+            "label": "Stack your habits",
+            "sync": {
+              "phrase": "Stack new"
+            }
+          },
+          {
+            "label": "Two-minute rule",
+            "sync": {
+              "phrase": "two minute rule"
+            }
+          },
+          {
+            "label": "Never miss twice",
+            "sync": {
+              "phrase": "never miss"
+            }
+          }
         ]
       }
     },
@@ -207,13 +321,25 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 4 },
-            "poses": ["celebrating"],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "poses": [
+              "celebrating"
+            ],
             "expression": "happy",
             "seat": "none",
             "label": "systems win",
             "effects": [
-              { "kind": "sparkles", "sync": { "phrase": "stick for good" } }
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "stick for good"
+                }
+              }
             ]
           }
         ]
@@ -228,5 +354,8 @@
         "style": "card"
       }
     }
-  ]
+  ],
+  "category": "Habits & Productivity",
+  "pinned_comment": "What tiny habit are you starting today? 👇",
+  "max_seconds": 160
 }

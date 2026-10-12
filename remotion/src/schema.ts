@@ -258,6 +258,18 @@ export const Scene = z.discriminatedUnion("type", [
 export const BRAND_IDS = ["readlark", "percuriam"] as const;
 export const FORMATS = ["longform", "short"] as const;
 
+// Content categories (Phase 14 — session-time machinery). Double as the YouTube
+// playlist names and the end-screen grouping key. Match the content-queue.
+export const CATEGORIES = [
+  "Habits & Productivity",
+  "Money & Investing",
+  "Psychology",
+  "Business & Leadership",
+  "Health & Fitness",
+  "Science & Tech",
+  "Everyday Law",
+] as const;
+
 export const Script = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
@@ -293,6 +305,13 @@ export const Script = z.object({
   target_minutes: z.number().positive().optional(),
   // On-screen hook line for a short (first ~2s claim/question). Longform ignores.
   short_hook: z.string().optional(),
+  // Engagement question for the PINNED COMMENT (session-time machinery). The
+  // playbook writes it with the script — tied to the book/topic. Shorts also use
+  // it to carry the CTA line.
+  pinned_comment: z.string().optional(),
+  // Longform hook (Phase 14): the CORE-PROMISE sentence/phrase — a verbatim
+  // substring of early narration. Lint checks it is spoken within the first 15s.
+  promise: z.string().optional(),
   // Channel template metadata — read by the script generator + future tooling.
   template: z
     .object({
@@ -300,6 +319,20 @@ export const Script = z.object({
       hook: z.enum(["direct", "cold-open"]).default("direct"),
     })
     .default({ framing: "book-structure", hook: "direct" }),
+  // SEO (Phase 14): EXACTLY 3 title variants for YouTube's native A/B test
+  // (longform). [0] SEARCH-LED (book title verbatim at the start, ≤70 chars best),
+  // [1] CURIOSITY-LED (open loop / question), [2] BENEFIT-LED (outcome-first).
+  // All ≤100 chars and non-misleading. The search-led variant is the default title.
+  title_variants: z.array(z.string().min(1).max(100)).length(3).optional(),
+  // Content category → playlist + end-screen grouping (session time).
+  category: z.enum(CATEGORIES).optional(),
+  // Shorts only: seamless replay — the final narration line flows into the
+  // opening line and the last visual matches the opening frame composition.
+  loop: z.boolean().optional(),
+  // Shorts only: explicit duration ceiling override (seconds, ≤175) for
+  // DELIBERATE long-short experiments. Relaxes the 55s lint warning. Default band
+  // stays 35–50s.
+  max_seconds: z.number().positive().max(175).optional(),
   scenes: z.array(Scene).min(1),
 }).superRefine((s, ctx) => {
   // Long-form structural rules only apply to longform book-structure videos

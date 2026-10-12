@@ -1,6 +1,6 @@
 {
   "id": "atomic-habits",
-  "title": "Atomic Habits by James Clear — Full Animated Summary",
+  "title": "Atomic Habits Summary: 1% Better Every Day (Full Breakdown)",
   "book": {
     "title": "Atomic Habits",
     "author": "James Clear",
@@ -44,7 +44,9 @@
       "visual": {
         "title": "Atomic Habits",
         "emphasis": "underline",
-        "sync": { "phrase": "Atomic Habits" }
+        "sync": {
+          "phrase": "Atomic Habits"
+        }
       }
     },
     {
@@ -67,25 +69,50 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "thinking", "presenting" ],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
             "expression": "curious",
-            "holding": { "prop": "book", "hand": "right" },
+            "holding": {
+              "prop": "book",
+              "hand": "right"
+            },
             "label": "that's you"
           },
           {
             "kind": "heart",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 0, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "rebuilt his life" }
+            "at": {
+              "col": 0,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "rebuilt his life"
+            }
           },
           {
             "kind": "gears",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "larger system" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "larger system"
+            }
           }
         ]
       }
@@ -101,31 +128,67 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "standing", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "they compound" } } ],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "they compound"
+                }
+              }
+            ],
             "label": "get better",
-            "effects": [ { "kind": "idea_flash", "sync": { "phrase": "one percent better" } } ]
+            "effects": [
+              {
+                "kind": "idea_flash",
+                "sync": {
+                  "phrase": "one percent better"
+                }
+              }
+            ]
           },
           {
             "kind": "lightbulb",
             "state": "on",
-            "at": { "col": 8, "row": 1, "w": 2, "h": 3 },
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 2,
+              "h": 3
+            },
             "color": "accent",
             "label": "the idea",
-            "sync": { "phrase": "one percent better" }
+            "sync": {
+              "phrase": "one percent better"
+            }
           },
           {
             "kind": "snowball",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 0, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "they compound" }
+            "at": {
+              "col": 0,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "they compound"
+            }
           }
         ]
       }
     },
-
     {
       "id": "intro-c",
       "type": "character_scene",
@@ -137,25 +200,62 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "four laws" } } ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "four laws"
+                }
+              }
+            ],
             "label": "step by step",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "part one" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "part one"
+                }
+              }
+            ]
           },
           {
             "kind": "book",
-            "at": { "col": 6, "row": 2, "w": 3, "h": 3 },
+            "at": {
+              "col": 6,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
             "label": "two halves",
-            "sync": { "phrase": "two halves" }
+            "sync": {
+              "phrase": "two halves"
+            }
           },
           {
             "kind": "gears",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "the method" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "the method"
+            }
           }
         ]
       }
@@ -169,19 +269,24 @@
         "number": 1,
         "title": "Why Tiny Changes Win",
         "emphasis": "underline",
-        "sync": { "phrase": "tiny changes" }
+        "sync": {
+          "phrase": "tiny changes"
+        }
       }
     },
-
     {
       "id": "p1-1-title",
       "type": "section_title",
       "narration": "Principle one. The compound curve.",
       "visual": {
-        "role": "principle", "number": 1, "part": 1,
+        "role": "principle",
+        "number": 1,
+        "part": 1,
         "title": "The Compound Curve",
         "emphasis": "circle",
-        "sync": { "phrase": "compound curve" },
+        "sync": {
+          "phrase": "compound curve"
+        },
         "memory": "snowball"
       }
     },
@@ -193,10 +298,28 @@
         "label": "1% better, every day",
         "mode": "line",
         "datapoints": [
-          { "label": "Start", "value": 1, "sync": { "phrase": "Start at one" } },
-          { "label": "Month one", "value": 4 },
-          { "label": "Month six", "value": 13 },
-          { "label": "One year", "value": 37, "sync": { "phrase": "thirty seven times" } }
+          {
+            "label": "Start",
+            "value": 1,
+            "sync": {
+              "phrase": "Start at one"
+            }
+          },
+          {
+            "label": "Month one",
+            "value": 4
+          },
+          {
+            "label": "Month six",
+            "value": 13
+          },
+          {
+            "label": "One year",
+            "value": 37,
+            "sync": {
+              "phrase": "thirty seven times"
+            }
+          }
         ]
       }
     },
@@ -208,9 +331,27 @@
         "label": "Marginal gains add up",
         "mode": "bars",
         "datapoints": [
-          { "label": "Each tweak", "value": 1, "sync": { "phrase": "just one percent" } },
-          { "label": "Stacked", "value": 9, "sync": { "phrase": "marginal gains" } },
-          { "label": "Champions", "value": 37, "sync": { "phrase": "champions" } }
+          {
+            "label": "Each tweak",
+            "value": 1,
+            "sync": {
+              "phrase": "just one percent"
+            }
+          },
+          {
+            "label": "Stacked",
+            "value": 9,
+            "sync": {
+              "phrase": "marginal gains"
+            }
+          },
+          {
+            "label": "Champions",
+            "value": 37,
+            "sync": {
+              "phrase": "champions"
+            }
+          }
         ]
       }
     },
@@ -225,24 +366,60 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "standing" ],
-            "expressions": [ "curious", { "value": "worried", "sync": { "phrase": "wrong direction" } } ],
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "worried",
+                "sync": {
+                  "phrase": "wrong direction"
+                }
+              }
+            ],
             "label": "the drift",
-            "effects": [ { "kind": "sweat_drop", "sync": { "phrase": "nearly nothing" } } ]
+            "effects": [
+              {
+                "kind": "sweat_drop",
+                "sync": {
+                  "phrase": "nearly nothing"
+                }
+              }
+            ]
           },
           {
             "kind": "wall",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "the drift",
-            "sync": { "phrase": "drags you down" }
+            "sync": {
+              "phrase": "drags you down"
+            }
           },
           {
             "kind": "bed",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "late night" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "late night"
+            }
           }
         ]
       }
@@ -258,30 +435,66 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "standing", "presenting" ],
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "facing": "right",
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "They multiply" } } ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "They multiply"
+                }
+              }
+            ],
             "label": "every day",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "every day" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "every day"
+                }
+              }
+            ]
           },
           {
             "kind": "snowball",
-            "at": { "col": 6, "row": 2, "w": 5, "h": 4 },
+            "at": {
+              "col": 6,
+              "row": 2,
+              "w": 5,
+              "h": 4
+            },
             "label": "it grows",
-            "sync": { "phrase": "They multiply" }
+            "sync": {
+              "phrase": "They multiply"
+            }
           },
           {
             "kind": "staircase",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "boring rep" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "boring rep"
+            }
           }
         ]
       }
     },
-
     {
       "id": "p1-1-list",
       "type": "list_card",
@@ -289,9 +502,27 @@
       "visual": {
         "title": "Work the curve",
         "items": [
-          { "label": "Define your one percent", "icon": "tick", "sync": { "phrase": "one percent" } },
-          { "label": "Protect the streak", "icon": "box", "sync": { "phrase": "protect the streak" } },
-          { "label": "Judge the trajectory", "icon": "arrow", "sync": { "phrase": "the trajectory" } }
+          {
+            "label": "Define your one percent",
+            "icon": "tick",
+            "sync": {
+              "phrase": "one percent"
+            }
+          },
+          {
+            "label": "Protect the streak",
+            "icon": "box",
+            "sync": {
+              "phrase": "protect the streak"
+            }
+          },
+          {
+            "label": "Judge the trajectory",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "the trajectory"
+            }
+          }
         ]
       }
     },
@@ -300,10 +531,14 @@
       "type": "section_title",
       "narration": "Principle two. The valley of disappointment.",
       "visual": {
-        "role": "principle", "number": 2, "part": 1,
+        "role": "principle",
+        "number": 2,
+        "part": 1,
         "title": "The Valley of Disappointment",
         "emphasis": "circle",
-        "sync": { "phrase": "valley of disappointment" },
+        "sync": {
+          "phrase": "valley of disappointment"
+        },
         "memory": "mountain"
       }
     },
@@ -318,23 +553,58 @@
           {
             "kind": "path",
             "tier": "ambient",
-            "at": { "col": 2, "row": 2, "w": 8, "h": 4 }
+            "at": {
+              "col": 2,
+              "row": 2,
+              "w": 8,
+              "h": 4
+            }
           },
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "facepalm", "standing" ],
-            "expressions": [ "tired", { "value": "worried", "sync": { "phrase": "nothing visible" } } ],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "facepalm",
+              "standing"
+            ],
+            "expressions": [
+              "tired",
+              {
+                "value": "worried",
+                "sync": {
+                  "phrase": "nothing visible"
+                }
+              }
+            ],
             "label": "stuck",
-            "effects": [ { "kind": "sweat_drop", "sync": { "phrase": "nothing visible" } } ]
+            "effects": [
+              {
+                "kind": "sweat_drop",
+                "sync": {
+                  "phrase": "nothing visible"
+                }
+              }
+            ]
           },
           {
             "kind": "clock",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "work for weeks" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "work for weeks"
+            }
           }
         ]
       }
@@ -350,25 +620,62 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "celebrating" ],
-            "expressions": [ "worried", { "value": "happy", "sync": { "phrase": "the breakthrough" } } ],
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
+            "expressions": [
+              "worried",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "the breakthrough"
+                }
+              }
+            ],
             "label": "it's working",
-            "effects": [ { "kind": "sparkles", "sync": { "phrase": "the breakthrough" } } ]
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "the breakthrough"
+                }
+              }
+            ]
           },
           {
             "kind": "mountain",
-            "at": { "col": 6, "row": 1, "w": 5, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 5,
+              "h": 5
+            },
             "label": "the summit",
-            "sync": { "phrase": "the breakthrough" }
+            "sync": {
+              "phrase": "the breakthrough"
+            }
           },
           {
             "kind": "trophy",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "break through" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "break through"
+            }
           }
         ]
       }
@@ -380,13 +687,30 @@
       "visual": {
         "title": "Survive the valley",
         "items": [
-          { "label": "Expect the flat stretch", "icon": "tick", "sync": { "phrase": "expect the flat" } },
-          { "label": "Love the daily rep", "icon": "box", "sync": { "phrase": "daily rep" } },
-          { "label": "Measure tiny wins", "icon": "arrow", "sync": { "phrase": "tiny wins" } }
+          {
+            "label": "Expect the flat stretch",
+            "icon": "tick",
+            "sync": {
+              "phrase": "expect the flat"
+            }
+          },
+          {
+            "label": "Love the daily rep",
+            "icon": "box",
+            "sync": {
+              "phrase": "daily rep"
+            }
+          },
+          {
+            "label": "Measure tiny wins",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "tiny wins"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "p1-2-bamboo",
       "type": "character_scene",
@@ -398,24 +722,54 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "thinking", "celebrating" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "fifth year" } } ],
+            "poses": [
+              "thinking",
+              "celebrating"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "fifth year"
+                }
+              }
+            ],
             "label": "wait for it"
           },
           {
             "kind": "tree",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "ninety feet",
-            "sync": { "phrase": "ninety feet" }
+            "sync": {
+              "phrase": "ninety feet"
+            }
           },
           {
             "kind": "seedling",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 4, "w": 2, "h": 2 },
-            "sync": { "phrase": "underground" }
+            "at": {
+              "col": 10,
+              "row": 4,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "underground"
+            }
           }
         ]
       }
@@ -425,10 +779,14 @@
       "type": "section_title",
       "narration": "Principle three. Systems over goals.",
       "visual": {
-        "role": "principle", "number": 3, "part": 1,
+        "role": "principle",
+        "number": 3,
+        "part": 1,
         "title": "Systems Over Goals",
         "emphasis": "circle",
-        "sync": { "phrase": "Systems over goals" },
+        "sync": {
+          "phrase": "Systems over goals"
+        },
         "memory": "gears"
       }
     },
@@ -443,24 +801,54 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "thinking", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "the system" } } ],
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "the system"
+                }
+              }
+            ],
             "label": "run the system"
           },
           {
             "kind": "gears",
-            "at": { "col": 6, "row": 1, "w": 3, "h": 4 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
             "label": "the system",
-            "sync": { "phrase": "the system" }
+            "sync": {
+              "phrase": "the system"
+            }
           },
           {
             "kind": "target",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "same goals" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "same goals"
+            }
           }
         ]
       }
@@ -476,30 +864,66 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "latent potential" } } ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "latent potential"
+                }
+              }
+            ],
             "label": "keep running",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "your systems" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "your systems"
+                }
+              }
+            ]
           },
           {
             "kind": "mountain",
-            "at": { "col": 6, "row": 1, "w": 5, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 5,
+              "h": 5
+            },
             "label": "the reservoir",
-            "sync": { "phrase": "latent potential" }
+            "sync": {
+              "phrase": "latent potential"
+            }
           },
           {
             "kind": "staircase",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "finish line" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "finish line"
+            }
           }
         ]
       }
     },
-
     {
       "id": "p1-3-list",
       "type": "list_card",
@@ -507,9 +931,27 @@
       "visual": {
         "title": "Build the system",
         "items": [
-          { "label": "Ask about the system", "icon": "tick", "sync": { "phrase": "what system" } },
-          { "label": "Repeat on bad days", "icon": "box", "sync": { "phrase": "worst day" } },
-          { "label": "Fix, don't scrap", "icon": "arrow", "sync": { "phrase": "fix the system" } }
+          {
+            "label": "Ask about the system",
+            "icon": "tick",
+            "sync": {
+              "phrase": "what system"
+            }
+          },
+          {
+            "label": "Repeat on bad days",
+            "icon": "box",
+            "sync": {
+              "phrase": "worst day"
+            }
+          },
+          {
+            "label": "Fix, don't scrap",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "fix the system"
+            }
+          }
         ]
       }
     },
@@ -521,13 +963,27 @@
         "title": "Part one, in short",
         "scope": "mid",
         "items": [
-          { "label": "Systems beat goals", "sync": { "phrase": "systems beat your goals" } },
-          { "label": "Small gains compound", "sync": { "phrase": "Small gains compound" } },
-          { "label": "Trust the valley", "sync": { "phrase": "the valley" } }
+          {
+            "label": "Systems beat goals",
+            "sync": {
+              "phrase": "systems beat your goals"
+            }
+          },
+          {
+            "label": "Small gains compound",
+            "sync": {
+              "phrase": "Small gains compound"
+            }
+          },
+          {
+            "label": "Trust the valley",
+            "sync": {
+              "phrase": "the valley"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "part2",
       "type": "section_title",
@@ -537,7 +993,9 @@
         "number": 2,
         "title": "You Become Your Habits",
         "emphasis": "underline",
-        "sync": { "phrase": "your habits" }
+        "sync": {
+          "phrase": "your habits"
+        }
       }
     },
     {
@@ -551,18 +1009,47 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "thinking" ],
-            "expressions": [ "curious", { "value": "worried", "sync": { "phrase": "still quit" } } ],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "thinking"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "worried",
+                "sync": {
+                  "phrase": "still quit"
+                }
+              }
+            ],
             "label": "who are you?",
-            "effects": [ { "kind": "question_marks", "sync": { "phrase": "who you believe" } } ]
+            "effects": [
+              {
+                "kind": "question_marks",
+                "sync": {
+                  "phrase": "who you believe"
+                }
+              }
+            ]
           },
           {
             "kind": "brain",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
-            "sync": { "phrase": "tiny habits win" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "tiny habits win"
+            }
           }
         ]
       }
@@ -572,10 +1059,14 @@
       "type": "section_title",
       "narration": "Principle four. Identity over outcomes.",
       "visual": {
-        "role": "principle", "number": 4, "part": 2,
+        "role": "principle",
+        "number": 4,
+        "part": 2,
         "title": "Identity Over Outcomes",
         "emphasis": "circle",
-        "sync": { "phrase": "Identity over outcomes" },
+        "sync": {
+          "phrase": "Identity over outcomes"
+        },
         "memory": "target"
       }
     },
@@ -591,25 +1082,54 @@
             "kind": "crowd",
             "count": 6,
             "arrangement": "row",
-            "at": { "col": 0, "row": 4, "w": 12, "h": 2 },
-            "sync": { "phrase": "Most people" }
+            "at": {
+              "col": 0,
+              "row": 4,
+              "w": 12,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "Most people"
+            }
           },
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "I am a runner",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "I am a runner" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "I am a runner"
+                }
+              }
+            ]
           },
           {
             "kind": "shoe",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "runners simply" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "runners simply"
+            }
           }
         ]
       }
@@ -625,24 +1145,45 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 0, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 0,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "inside out"
           },
           {
             "kind": "target",
-            "at": { "col": 6, "row": 1, "w": 5, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 5,
+              "h": 5
+            },
             "label": "the rings",
-            "sync": { "phrase": "three layers" }
+            "sync": {
+              "phrase": "three layers"
+            }
           },
           {
             "kind": "brain",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "your identity" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "your identity"
+            }
           }
         ]
       }
@@ -654,13 +1195,30 @@
       "visual": {
         "title": "Become the type",
         "items": [
-          { "label": "Decide the type", "icon": "tick", "sync": { "phrase": "type of person" } },
-          { "label": "Prove it small", "icon": "box", "sync": { "phrase": "prove it to yourself" } },
-          { "label": "What would they do", "icon": "arrow", "sync": { "phrase": "healthy person do" } }
+          {
+            "label": "Decide the type",
+            "icon": "tick",
+            "sync": {
+              "phrase": "type of person"
+            }
+          },
+          {
+            "label": "Prove it small",
+            "icon": "box",
+            "sync": {
+              "phrase": "prove it to yourself"
+            }
+          },
+          {
+            "label": "What would they do",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "healthy person do"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "p2-1-smoker",
       "type": "character_scene",
@@ -672,24 +1230,45 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "I'm not a smoker"
           },
           {
             "kind": "speech",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 3 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 3
+            },
             "label": "two answers",
-            "sync": { "phrase": "quit smoking" }
+            "sync": {
+              "phrase": "quit smoking"
+            }
           },
           {
             "kind": "brain",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "already quietly become" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "already quietly become"
+            }
           }
         ]
       }
@@ -699,10 +1278,14 @@
       "type": "section_title",
       "narration": "Principle five. Every action is a vote.",
       "visual": {
-        "role": "principle", "number": 5, "part": 2,
+        "role": "principle",
+        "number": 5,
+        "part": 2,
         "title": "Every Action A Vote",
         "emphasis": "circle",
-        "sync": { "phrase": "action is a vote" },
+        "sync": {
+          "phrase": "action is a vote"
+        },
         "memory": "shoe"
       }
     },
@@ -719,24 +1302,53 @@
             "count": 7,
             "arrangement": "cluster",
             "tint": "#BBD0DD",
-            "at": { "col": 0, "row": 4, "w": 12, "h": 2 },
-            "sync": { "phrase": "tiny election" }
+            "at": {
+              "col": 0,
+              "row": 4,
+              "w": 12,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "tiny election"
+            }
           },
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "standing", "celebrating" ],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
             "expression": "happy",
             "label": "one more vote",
-            "effects": [ { "kind": "sparkles", "sync": { "phrase": "the majority" } } ]
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "the majority"
+                }
+              }
+            ]
           },
           {
             "kind": "target",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "single vote" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "single vote"
+            }
           }
         ]
       }
@@ -752,21 +1364,51 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 0, "w": 5, "h": 6 },
+            "at": {
+              "col": 1,
+              "row": 0,
+              "w": 5,
+              "h": 6
+            },
             "pose": "sitting",
             "seat": "desk",
             "facing": "right",
-            "holding": { "prop": "book", "hand": "right" },
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "become a reader" } } ],
+            "holding": {
+              "prop": "book",
+              "hand": "right"
+            },
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "become a reader"
+                }
+              }
+            ],
             "label": "a reader",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "become a reader" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "become a reader"
+                }
+              }
+            ]
           },
           {
             "kind": "heart",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 9, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "part of your identity" }
+            "at": {
+              "col": 9,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "part of your identity"
+            }
           }
         ]
       }
@@ -792,25 +1434,62 @@
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "standing", "celebrating" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "new identity" } } ],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "new identity"
+                }
+              }
+            ],
             "label": "becoming",
-            "effects": [ { "kind": "sparkles", "sync": { "phrase": "new identity" } } ]
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "new identity"
+                }
+              }
+            ]
           },
           {
             "kind": "heart",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "a writer" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "a writer"
+            }
           },
           {
             "kind": "trophy",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 0, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "the real prize" }
+            "at": {
+              "col": 0,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "the real prize"
+            }
           }
         ]
       }
@@ -823,13 +1502,27 @@
         "title": "Part two, in short",
         "scope": "mid",
         "items": [
-          { "label": "Change your identity", "sync": { "phrase": "through identity" } },
-          { "label": "Every action votes", "sync": { "phrase": "action is a vote" } },
-          { "label": "Majority, not perfection", "sync": { "phrase": "the majority" } }
+          {
+            "label": "Change your identity",
+            "sync": {
+              "phrase": "through identity"
+            }
+          },
+          {
+            "label": "Every action votes",
+            "sync": {
+              "phrase": "action is a vote"
+            }
+          },
+          {
+            "label": "Majority, not perfection",
+            "sync": {
+              "phrase": "the majority"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "part3",
       "type": "section_title",
@@ -839,7 +1532,9 @@
         "number": 3,
         "title": "Obvious And Attractive",
         "emphasis": "underline",
-        "sync": { "phrase": "make it attractive" }
+        "sync": {
+          "phrase": "make it attractive"
+        }
       }
     },
     {
@@ -853,8 +1548,15 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "presenting" ],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "the engine"
           },
@@ -862,8 +1564,15 @@
             "kind": "gears",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
-            "sync": { "phrase": "four simple laws" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "four simple laws"
+            }
           }
         ]
       }
@@ -875,10 +1584,34 @@
       "visual": {
         "title": "The habit loop",
         "items": [
-          { "label": "Cue", "icon": "tick", "sync": { "phrase": "a cue" } },
-          { "label": "Craving", "icon": "box", "sync": { "phrase": "a craving" } },
-          { "label": "Response", "icon": "arrow", "sync": { "phrase": "the response" } },
-          { "label": "Reward", "icon": "tick", "sync": { "phrase": "the reward itself" } }
+          {
+            "label": "Cue",
+            "icon": "tick",
+            "sync": {
+              "phrase": "a cue"
+            }
+          },
+          {
+            "label": "Craving",
+            "icon": "box",
+            "sync": {
+              "phrase": "a craving"
+            }
+          },
+          {
+            "label": "Response",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "the response"
+            }
+          },
+          {
+            "label": "Reward",
+            "icon": "tick",
+            "sync": {
+              "phrase": "the reward itself"
+            }
+          }
         ]
       }
     },
@@ -887,10 +1620,14 @@
       "type": "section_title",
       "narration": "Law one. Make it obvious.",
       "visual": {
-        "role": "principle", "number": 6, "part": 3,
+        "role": "principle",
+        "number": 6,
+        "part": 3,
         "title": "Make It Obvious",
         "emphasis": "circle",
-        "sync": { "phrase": "Make it obvious" },
+        "sync": {
+          "phrase": "Make it obvious"
+        },
         "memory": "phone"
       }
     },
@@ -905,30 +1642,61 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 0, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 0,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "the teacher"
           },
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 7, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "left",
             "enter": "walk",
-            "poses": [ "standing", "presenting" ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "temptation",
-            "sync": { "phrase": "temptation strolls in" },
-            "effects": [ { "kind": "motion_lines", "sync": { "phrase": "temptation strolls in" } } ]
+            "sync": {
+              "phrase": "temptation strolls in"
+            },
+            "effects": [
+              {
+                "kind": "motion_lines",
+                "sync": {
+                  "phrase": "temptation strolls in"
+                }
+              }
+            ]
           },
           {
             "kind": "phone",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 5, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "phone glowing" }
+            "at": {
+              "col": 5,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "phone glowing"
+            }
           }
         ]
       }
@@ -944,25 +1712,62 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "thinking", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "habit stacking" } } ],
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "habit stacking"
+                }
+              }
+            ],
             "label": "stack it",
-            "effects": [ { "kind": "thought_bubble", "sync": { "phrase": "habit stacking" } } ]
+            "effects": [
+              {
+                "kind": "thought_bubble",
+                "sync": {
+                  "phrase": "habit stacking"
+                }
+              }
+            ]
           },
           {
             "kind": "coffee",
-            "at": { "col": 7, "row": 2, "w": 3, "h": 4 },
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 4
+            },
             "label": "morning coffee",
-            "sync": { "phrase": "pour my morning coffee" }
+            "sync": {
+              "phrase": "pour my morning coffee"
+            }
           },
           {
             "kind": "gears",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "built right into" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "built right into"
+            }
           }
         ]
       }
@@ -974,13 +1779,30 @@
       "visual": {
         "title": "Make it obvious",
         "items": [
-          { "label": "Time and place", "icon": "tick", "sync": { "phrase": "this time" } },
-          { "label": "Stack on an old one", "icon": "box", "sync": { "phrase": "Stack the new habit" } },
-          { "label": "Cues in sight", "icon": "arrow", "sync": { "phrase": "plain sight" } }
+          {
+            "label": "Time and place",
+            "icon": "tick",
+            "sync": {
+              "phrase": "this time"
+            }
+          },
+          {
+            "label": "Stack on an old one",
+            "icon": "box",
+            "sync": {
+              "phrase": "Stack the new habit"
+            }
+          },
+          {
+            "label": "Cues in sight",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "plain sight"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "p3-1-point",
       "type": "character_scene",
@@ -992,26 +1814,55 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "pointing", "presenting" ],
+            "poses": [
+              "pointing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "green light",
-            "effects": [ { "kind": "exclamation", "sync": { "phrase": "full awareness" } } ]
+            "effects": [
+              {
+                "kind": "exclamation",
+                "sync": {
+                  "phrase": "full awareness"
+                }
+              }
+            ]
           },
           {
             "kind": "arrow",
             "variant": "up",
-            "at": { "col": 6, "row": 1, "w": 3, "h": 4 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
             "label": "point at it",
-            "sync": { "phrase": "pointing and calling" }
+            "sync": {
+              "phrase": "pointing and calling"
+            }
           },
           {
             "kind": "phone",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "impossible to ignore" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "impossible to ignore"
+            }
           }
         ]
       }
@@ -1021,10 +1872,14 @@
       "type": "section_title",
       "narration": "Law two. Make it attractive.",
       "visual": {
-        "role": "principle", "number": 7, "part": 3,
+        "role": "principle",
+        "number": 7,
+        "part": 3,
         "title": "Make It Attractive",
         "emphasis": "circle",
-        "sync": { "phrase": "Make it attractive" },
+        "sync": {
+          "phrase": "Make it attractive"
+        },
         "memory": "moneybag"
       }
     },
@@ -1039,22 +1894,50 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 4, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "presenting", "standing" ],
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "presenting",
+              "standing"
+            ],
             "expression": "happy",
-            "holding": { "prop": "moneybag", "hand": "right" },
+            "holding": {
+              "prop": "moneybag",
+              "hand": "right"
+            },
             "label": "easy dopamine",
             "effects": [
-              { "kind": "sparkles", "sync": { "phrase": "easy dopamine" } },
-              { "kind": "money", "sync": { "phrase": "craves the hit" } }
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "easy dopamine"
+                }
+              },
+              {
+                "kind": "money",
+                "sync": {
+                  "phrase": "craves the hit"
+                }
+              }
             ]
           },
           {
             "kind": "brain",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "Your brain" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "Your brain"
+            }
           }
         ]
       }
@@ -1070,25 +1953,62 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "celebrating" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "temptation bundling" } } ],
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "temptation bundling"
+                }
+              }
+            ],
             "label": "pair them up",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "the fun thing" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "the fun thing"
+                }
+              }
+            ]
           },
           {
             "kind": "dumbbell",
-            "at": { "col": 6, "row": 2, "w": 2, "h": 3 },
+            "at": {
+              "col": 6,
+              "row": 2,
+              "w": 2,
+              "h": 3
+            },
             "label": "the chore",
-            "sync": { "phrase": "treadmill" }
+            "sync": {
+              "phrase": "treadmill"
+            }
           },
           {
             "kind": "heart",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "want to do" }
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "want to do"
+            }
           }
         ]
       }
@@ -1100,13 +2020,30 @@
       "visual": {
         "title": "Make it tempting",
         "items": [
-          { "label": "Bundle with fun", "icon": "tick", "sync": { "phrase": "Bundle the habit" } },
-          { "label": "Join a tribe", "icon": "box", "sync": { "phrase": "a tribe" } },
-          { "label": "You get to", "icon": "arrow", "sync": { "phrase": "You get to" } }
+          {
+            "label": "Bundle with fun",
+            "icon": "tick",
+            "sync": {
+              "phrase": "Bundle the habit"
+            }
+          },
+          {
+            "label": "Join a tribe",
+            "icon": "box",
+            "sync": {
+              "phrase": "a tribe"
+            }
+          },
+          {
+            "label": "You get to",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "You get to"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "p3-2-dopamine",
       "type": "character_scene",
@@ -1118,25 +2055,62 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "anticipate one" } } ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "anticipate one"
+                }
+              }
+            ],
             "label": "the wanting",
-            "effects": [ { "kind": "sparkles", "sync": { "phrase": "anticipate one" } } ]
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "anticipate one"
+                }
+              }
+            ]
           },
           {
             "kind": "brain",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 4 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
             "label": "dopamine",
-            "sync": { "phrase": "brain science" }
+            "sync": {
+              "phrase": "brain science"
+            }
           },
           {
             "kind": "heart",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 4, "w": 2, "h": 2 },
-            "sync": { "phrase": "the craving" }
+            "at": {
+              "col": 10,
+              "row": 4,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "the craving"
+            }
           }
         ]
       }
@@ -1146,10 +2120,14 @@
       "type": "section_title",
       "narration": "Principle eight. Design your environment.",
       "visual": {
-        "role": "principle", "number": 8, "part": 3,
+        "role": "principle",
+        "number": 8,
+        "part": 3,
         "title": "Design Your Environment",
         "emphasis": "circle",
-        "sync": { "phrase": "Design your environment" },
+        "sync": {
+          "phrase": "Design your environment"
+        },
         "memory": "door"
       }
     },
@@ -1164,26 +2142,56 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "thinking", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "better room" } } ],
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "better room"
+                }
+              }
+            ],
             "label": "design it"
           },
           {
             "kind": "door",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "your world",
-            "sync": { "phrase": "your environment" }
+            "sync": {
+              "phrase": "your environment"
+            }
           },
           {
             "kind": "lightbulb",
             "state": "on",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
             "color": "accent",
-            "sync": { "phrase": "invisible hand" }
+            "sync": {
+              "phrase": "invisible hand"
+            }
           }
         ]
       }
@@ -1199,25 +2207,54 @@
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
             "expression": "happy",
             "label": "the architect",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "least resistance" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "least resistance"
+                }
+              }
+            ]
           },
           {
             "kind": "coffee",
-            "at": { "col": 6, "row": 2, "w": 2, "h": 3 },
+            "at": {
+              "col": 6,
+              "row": 2,
+              "w": 2,
+              "h": 3
+            },
             "label": "in reach",
-            "sync": { "phrase": "on the counter" }
+            "sync": {
+              "phrase": "on the counter"
+            }
           },
           {
             "kind": "wall",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "a genuine hassle" }
+            "at": {
+              "col": 10,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "a genuine hassle"
+            }
           }
         ]
       }
@@ -1229,13 +2266,30 @@
       "visual": {
         "title": "Engineer the space",
         "items": [
-          { "label": "Add friction to bad", "icon": "tick", "sync": { "phrase": "Add friction" } },
-          { "label": "Remove friction from good", "icon": "box", "sync": { "phrase": "Remove friction" } },
-          { "label": "One place per habit", "icon": "arrow", "sync": { "phrase": "its own place" } }
+          {
+            "label": "Add friction to bad",
+            "icon": "tick",
+            "sync": {
+              "phrase": "Add friction"
+            }
+          },
+          {
+            "label": "Remove friction from good",
+            "icon": "box",
+            "sync": {
+              "phrase": "Remove friction"
+            }
+          },
+          {
+            "label": "One place per habit",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "its own place"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "p3-3-study",
       "type": "character_scene",
@@ -1247,25 +2301,53 @@
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "move the water",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "a different room" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "a different room"
+                }
+              }
+            ]
           },
           {
             "kind": "coffee",
-            "at": { "col": 6, "row": 2, "w": 2, "h": 3 },
+            "at": {
+              "col": 6,
+              "row": 2,
+              "w": 2,
+              "h": 3
+            },
             "label": "eye level",
-            "sync": { "phrase": "eye level" }
+            "sync": {
+              "phrase": "eye level"
+            }
           },
           {
             "kind": "door",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 2, "w": 2, "h": 2 },
-            "sync": { "phrase": "hospital study" }
+            "at": {
+              "col": 10,
+              "row": 2,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "hospital study"
+            }
           }
         ]
       }
@@ -1278,13 +2360,27 @@
         "title": "Part three, in short",
         "scope": "mid",
         "items": [
-          { "label": "Make it obvious", "sync": { "phrase": "obvious" } },
-          { "label": "Make it attractive", "sync": { "phrase": "attractive" } },
-          { "label": "Design the room", "sync": { "phrase": "design your environment" } }
+          {
+            "label": "Make it obvious",
+            "sync": {
+              "phrase": "obvious"
+            }
+          },
+          {
+            "label": "Make it attractive",
+            "sync": {
+              "phrase": "attractive"
+            }
+          },
+          {
+            "label": "Design the room",
+            "sync": {
+              "phrase": "design your environment"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "part4",
       "type": "section_title",
@@ -1294,7 +2390,9 @@
         "number": 4,
         "title": "Easy And Satisfying",
         "emphasis": "underline",
-        "sync": { "phrase": "make it satisfying" }
+        "sync": {
+          "phrase": "make it satisfying"
+        }
       }
     },
     {
@@ -1308,17 +2406,39 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "standing" ],
-            "expressions": [ "tired", { "value": "curious", "sync": { "phrase": "made or lost" } } ],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
+            "expressions": [
+              "tired",
+              {
+                "value": "curious",
+                "sync": {
+                  "phrase": "made or lost"
+                }
+              }
+            ],
             "label": "show up"
           },
           {
             "kind": "calendar",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
-            "sync": { "phrase": "gray, boring days" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "gray, boring days"
+            }
           }
         ]
       }
@@ -1328,10 +2448,14 @@
       "type": "section_title",
       "narration": "Law three. Make it easy.",
       "visual": {
-        "role": "principle", "number": 9, "part": 4,
+        "role": "principle",
+        "number": 9,
+        "part": 4,
         "title": "Make It Easy",
         "emphasis": "circle",
-        "sync": { "phrase": "Make it easy" },
+        "sync": {
+          "phrase": "Make it easy"
+        },
         "memory": "book"
       }
     },
@@ -1346,25 +2470,61 @@
           {
             "kind": "figure",
             "cast": "pip",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing" ],
-            "expressions": [ "happy", { "value": "shocked", "sync": { "phrase": "two days" } } ],
+            "poses": [
+              "standing"
+            ],
+            "expressions": [
+              "happy",
+              {
+                "value": "shocked",
+                "sync": {
+                  "phrase": "two days"
+                }
+              }
+            ],
             "label": "one page?",
-            "effects": [ { "kind": "exclamation", "sync": { "phrase": "two days" } } ]
+            "effects": [
+              {
+                "kind": "exclamation",
+                "sync": {
+                  "phrase": "two days"
+                }
+              }
+            ]
           },
           {
             "kind": "book",
-            "at": { "col": 7, "row": 2, "w": 4, "h": 3 },
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 4,
+              "h": 3
+            },
             "label": "one page",
-            "sync": { "phrase": "Read a single page" }
+            "sync": {
+              "phrase": "Read a single page"
+            }
           },
           {
             "kind": "hourglass",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "two minute rule" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "two minute rule"
+            }
           }
         ]
       }
@@ -1380,18 +2540,48 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "showing up" } } ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "showing up"
+                }
+              }
+            ],
             "label": "gateway step",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "automatic" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "automatic"
+                }
+              }
+            ]
           },
           {
             "kind": "door",
-            "at": { "col": 7, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "the gateway",
-            "sync": { "phrase": "a gateway" }
+            "sync": {
+              "phrase": "a gateway"
+            }
           }
         ]
       }
@@ -1403,13 +2593,30 @@
       "visual": {
         "title": "The two minute rule",
         "items": [
-          { "label": "Two minutes or less", "icon": "tick", "sync": { "phrase": "two minutes or less" } },
-          { "label": "Reduce the friction", "icon": "box", "sync": { "phrase": "Reduce the friction" } },
-          { "label": "Just show up", "icon": "arrow", "sync": { "phrase": "showing up" } }
+          {
+            "label": "Two minutes or less",
+            "icon": "tick",
+            "sync": {
+              "phrase": "two minutes or less"
+            }
+          },
+          {
+            "label": "Reduce the friction",
+            "icon": "box",
+            "sync": {
+              "phrase": "Reduce the friction"
+            }
+          },
+          {
+            "label": "Just show up",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "showing up"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "p4-1-decisive",
       "type": "character_scene",
@@ -1421,25 +2628,55 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
             "enter": "walk",
-            "poses": [ "walking", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "decisive moment" } } ],
+            "poses": [
+              "walking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "decisive moment"
+                }
+              }
+            ],
             "label": "just the cab"
           },
           {
             "kind": "clock",
-            "at": { "col": 7, "row": 1, "w": 3, "h": 3 },
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
             "label": "before dawn",
-            "sync": { "phrase": "before dawn" }
+            "sync": {
+              "phrase": "before dawn"
+            }
           },
           {
             "kind": "door",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "two minute version" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "two minute version"
+            }
           }
         ]
       }
@@ -1449,10 +2686,14 @@
       "type": "section_title",
       "narration": "Law four. Make it satisfying.",
       "visual": {
-        "role": "principle", "number": 10, "part": 4,
+        "role": "principle",
+        "number": 10,
+        "part": 4,
         "title": "Make It Satisfying",
         "emphasis": "circle",
-        "sync": { "phrase": "Make it satisfying" },
+        "sync": {
+          "phrase": "Make it satisfying"
+        },
         "memory": "calendar"
       }
     },
@@ -1467,18 +2708,48 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "celebrating" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "small reward" } } ],
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "small reward"
+                }
+              }
+            ],
             "label": "feel it today",
-            "effects": [ { "kind": "sparkles", "sync": { "phrase": "worth repeating" } } ]
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "worth repeating"
+                }
+              }
+            ]
           },
           {
             "kind": "gift",
-            "at": { "col": 7, "row": 2, "w": 3, "h": 3 },
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
             "label": "the reward",
-            "sync": { "phrase": "small reward" }
+            "sync": {
+              "phrase": "small reward"
+            }
           }
         ]
       }
@@ -1494,26 +2765,60 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 0, "w": 5, "h": 6 },
+            "at": {
+              "col": 1,
+              "row": 0,
+              "w": 5,
+              "h": 6
+            },
             "pose": "sitting",
             "seat": "desk",
             "facing": "right",
-            "expressions": [ "happy", { "value": "happy", "sync": { "phrase": "never miss twice" } } ],
+            "expressions": [
+              "happy",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "never miss twice"
+                }
+              }
+            ],
             "label": "never miss twice",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "break the streak" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "break the streak"
+                }
+              }
+            ]
           },
           {
             "kind": "calendar",
-            "at": { "col": 8, "row": 1, "w": 3, "h": 4 },
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
             "label": "the streak",
-            "sync": { "phrase": "chain of marks" }
+            "sync": {
+              "phrase": "chain of marks"
+            }
           },
           {
             "kind": "trophy",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "satisfying" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "satisfying"
+            }
           }
         ]
       }
@@ -1525,13 +2830,30 @@
       "visual": {
         "title": "Close the loop",
         "items": [
-          { "label": "Reward it now", "icon": "tick", "sync": { "phrase": "immediate little reward" } },
-          { "label": "Track the habit", "icon": "box", "sync": { "phrase": "Track the habit" } },
-          { "label": "Never miss twice", "icon": "arrow", "sync": { "phrase": "miss twice" } }
+          {
+            "label": "Reward it now",
+            "icon": "tick",
+            "sync": {
+              "phrase": "immediate little reward"
+            }
+          },
+          {
+            "label": "Track the habit",
+            "icon": "box",
+            "sync": {
+              "phrase": "Track the habit"
+            }
+          },
+          {
+            "label": "Never miss twice",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "miss twice"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "p4-2-paperclip",
       "type": "character_scene",
@@ -1543,26 +2865,60 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 0, "w": 5, "h": 6 },
+            "at": {
+              "col": 1,
+              "row": 0,
+              "w": 5,
+              "h": 6
+            },
             "pose": "sitting",
             "seat": "desk",
             "facing": "right",
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "shown up" } } ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "shown up"
+                }
+              }
+            ],
             "label": "one more call",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "visible proof" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "visible proof"
+                }
+              }
+            ]
           },
           {
             "kind": "calendar",
-            "at": { "col": 8, "row": 1, "w": 3, "h": 4 },
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
             "label": "the jars",
-            "sync": { "phrase": "paper clips" }
+            "sync": {
+              "phrase": "paper clips"
+            }
           },
           {
             "kind": "trophy",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "built a career" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "built a career"
+            }
           }
         ]
       }
@@ -1578,25 +2934,62 @@
           {
             "kind": "figure",
             "cast": "max",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
-            "expressions": [ "worried", { "value": "happy", "sync": { "phrase": "Accountability" } } ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expressions": [
+              "worried",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "Accountability"
+                }
+              }
+            ],
             "label": "real stakes",
-            "effects": [ { "kind": "sweat_drop", "sync": { "phrase": "instant cost" } } ]
+            "effects": [
+              {
+                "kind": "sweat_drop",
+                "sync": {
+                  "phrase": "instant cost"
+                }
+              }
+            ]
           },
           {
             "kind": "speech",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 3 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 3
+            },
             "label": "the contract",
-            "sync": { "phrase": "habit contract" }
+            "sync": {
+              "phrase": "habit contract"
+            }
           },
           {
             "kind": "moneybag",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "twenty dollars" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "twenty dollars"
+            }
           }
         ]
       }
@@ -1609,13 +3002,27 @@
         "title": "Part four, in short",
         "scope": "mid",
         "items": [
-          { "label": "Make it easy", "sync": { "phrase": "easy" } },
-          { "label": "Make it satisfying", "sync": { "phrase": "satisfying" } },
-          { "label": "Never miss twice", "sync": { "phrase": "break" } }
+          {
+            "label": "Make it easy",
+            "sync": {
+              "phrase": "easy"
+            }
+          },
+          {
+            "label": "Make it satisfying",
+            "sync": {
+              "phrase": "satisfying"
+            }
+          },
+          {
+            "label": "Never miss twice",
+            "sync": {
+              "phrase": "break"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "part5",
       "type": "section_title",
@@ -1625,7 +3032,9 @@
         "number": 5,
         "title": "Staying In The Game",
         "emphasis": "underline",
-        "sync": { "phrase": "Staying in the game" }
+        "sync": {
+          "phrase": "Staying in the game"
+        }
       }
     },
     {
@@ -1639,18 +3048,47 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 3, "row": 1, "w": 4, "h": 5 },
-            "poses": [ "standing" ],
-            "expressions": [ "tired", { "value": "curious", "sync": { "phrase": "years" } } ],
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "poses": [
+              "standing"
+            ],
+            "expressions": [
+              "tired",
+              {
+                "value": "curious",
+                "sync": {
+                  "phrase": "years"
+                }
+              }
+            ],
             "label": "stay in it",
-            "effects": [ { "kind": "zzz", "sync": { "phrase": "habits get boring" } } ]
+            "effects": [
+              {
+                "kind": "zzz",
+                "sync": {
+                  "phrase": "habits get boring"
+                }
+              }
+            ]
           },
           {
             "kind": "scale",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 8, "row": 2, "w": 3, "h": 3 },
-            "sync": { "phrase": "the real enemy" }
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "sync": {
+              "phrase": "the real enemy"
+            }
           }
         ]
       }
@@ -1660,10 +3098,14 @@
       "type": "section_title",
       "narration": "Principle eleven. The Goldilocks rule.",
       "visual": {
-        "role": "principle", "number": 11, "part": 5,
+        "role": "principle",
+        "number": 11,
+        "part": 5,
         "title": "The Goldilocks Rule",
         "emphasis": "circle",
-        "sync": { "phrase": "Goldilocks rule" },
+        "sync": {
+          "phrase": "Goldilocks rule"
+        },
         "memory": "scale"
       }
     },
@@ -1678,38 +3120,73 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "just right"
           },
           {
             "kind": "scale",
-            "at": { "col": 6, "row": 1, "w": 5, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 5,
+              "h": 5
+            },
             "label": "the balance",
-            "sync": { "phrase": "Goldilocks rule" }
+            "sync": {
+              "phrase": "Goldilocks rule"
+            }
           },
           {
             "kind": "target",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "sweet spot" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "sweet spot"
+            }
           },
           {
             "kind": "gears",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 4, "w": 2, "h": 2 },
-            "sync": { "phrase": "just manageable enough" }
+            "at": {
+              "col": 10,
+              "row": 4,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "just manageable enough"
+            }
           },
           {
             "kind": "bed",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 0, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "get bored and drift" }
+            "at": {
+              "col": 0,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "get bored and drift"
+            }
           }
         ]
       }
@@ -1725,19 +3202,49 @@
           {
             "kind": "figure",
             "cast": "alex",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "presenting" ],
-            "expressions": [ "tired", { "value": "happy", "sync": { "phrase": "the pros" } } ],
+            "poses": [
+              "standing",
+              "presenting"
+            ],
+            "expressions": [
+              "tired",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "the pros"
+                }
+              }
+            ],
             "label": "show up anyway",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "stick to the schedule" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "stick to the schedule"
+                }
+              }
+            ]
           },
           {
             "kind": "calendar",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 9, "row": 1, "w": 2, "h": 2 },
-            "sync": { "phrase": "do not feel like it" }
+            "at": {
+              "col": 9,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "do not feel like it"
+            }
           }
         ]
       }
@@ -1749,13 +3256,30 @@
       "visual": {
         "title": "Stay engaged",
         "items": [
-          { "label": "Just manageable edge", "icon": "tick", "sync": { "phrase": "just manageable edge" } },
-          { "label": "Schedule, not mood", "icon": "box", "sync": { "phrase": "a schedule" } },
-          { "label": "Push past boredom", "icon": "arrow", "sync": { "phrase": "the boredom itself" } }
+          {
+            "label": "Just manageable edge",
+            "icon": "tick",
+            "sync": {
+              "phrase": "just manageable edge"
+            }
+          },
+          {
+            "label": "Schedule, not mood",
+            "icon": "box",
+            "sync": {
+              "phrase": "a schedule"
+            }
+          },
+          {
+            "label": "Push past boredom",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "the boredom itself"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "p5-1-flow",
       "type": "character_scene",
@@ -1767,39 +3291,82 @@
           {
             "kind": "figure",
             "cast": "pip",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "standing", "celebrating" ],
+            "poses": [
+              "standing",
+              "celebrating"
+            ],
             "expression": "happy",
             "label": "just hard enough",
-            "effects": [ { "kind": "sparkles", "sync": { "phrase": "video games" } } ]
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "video games"
+                }
+              }
+            ]
           },
           {
             "kind": "scale",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "label": "the edge",
-            "sync": { "phrase": "edge of your ability" }
+            "sync": {
+              "phrase": "edge of your ability"
+            }
           },
           {
             "kind": "target",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "nudging the bar up" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "nudging the bar up"
+            }
           },
           {
             "kind": "brain",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 4, "w": 2, "h": 2 },
-            "sync": { "phrase": "between boredom and anxiety" }
+            "at": {
+              "col": 10,
+              "row": 4,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "between boredom and anxiety"
+            }
           },
           {
             "kind": "gears",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 0, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "right alongside your skill" }
+            "at": {
+              "col": 0,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "right alongside your skill"
+            }
           }
         ]
       }
@@ -1809,10 +3376,14 @@
       "type": "section_title",
       "narration": "Principle twelve. Play to your strengths.",
       "visual": {
-        "role": "principle", "number": 12, "part": 5,
+        "role": "principle",
+        "number": 12,
+        "part": 5,
         "title": "Play To Your Strengths",
         "emphasis": "circle",
-        "sync": { "phrase": "Play to your strengths" },
+        "sync": {
+          "phrase": "Play to your strengths"
+        },
         "memory": "brain"
       }
     },
@@ -1827,38 +3398,82 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "thinking", "presenting" ],
-            "expressions": [ "curious", { "value": "happy", "sync": { "phrase": "your nature" } } ],
+            "poses": [
+              "thinking",
+              "presenting"
+            ],
+            "expressions": [
+              "curious",
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "your nature"
+                }
+              }
+            ],
             "label": "choose well"
           },
           {
             "kind": "brain",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 4 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
             "label": "your wiring",
-            "sync": { "phrase": "talent, and genes" }
+            "sync": {
+              "phrase": "talent, and genes"
+            }
           },
           {
             "kind": "target",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "an advantage" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "an advantage"
+            }
           },
           {
             "kind": "scale",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "shape the odds" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "shape the odds"
+            }
           },
           {
             "kind": "mountain",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 0, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "endless uphill work" }
+            "at": {
+              "col": 0,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "endless uphill work"
+            }
           }
         ]
       }
@@ -1874,26 +3489,55 @@
           {
             "kind": "figure",
             "cast": "maya",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "walking", "presenting" ],
+            "poses": [
+              "walking",
+              "presenting"
+            ],
             "enter": "walk",
             "expression": "happy",
             "label": "find your fit",
-            "effects": [ { "kind": "nod", "sync": { "phrase": "exploit it" } } ]
+            "effects": [
+              {
+                "kind": "nod",
+                "sync": {
+                  "phrase": "exploit it"
+                }
+              }
+            ]
           },
           {
             "kind": "path",
-            "at": { "col": 6, "row": 2, "w": 5, "h": 3 },
+            "at": {
+              "col": 6,
+              "row": 2,
+              "w": 5,
+              "h": 3
+            },
             "label": "the search",
-            "sync": { "phrase": "explore" }
+            "sync": {
+              "phrase": "explore"
+            }
           },
           {
             "kind": "seedling",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "suits who you are" }
+            "at": {
+              "col": 10,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "suits who you are"
+            }
           }
         ]
       }
@@ -1905,13 +3549,30 @@
       "visual": {
         "title": "Fit the habit to you",
         "items": [
-          { "label": "Explore widely first", "icon": "tick", "sync": { "phrase": "Explore widely" } },
-          { "label": "Exploit your strengths", "icon": "box", "sync": { "phrase": "exploit your strengths" } },
-          { "label": "Make it sustainable", "icon": "arrow", "sync": { "phrase": "actually sustain" } }
+          {
+            "label": "Explore widely first",
+            "icon": "tick",
+            "sync": {
+              "phrase": "Explore widely"
+            }
+          },
+          {
+            "label": "Exploit your strengths",
+            "icon": "box",
+            "sync": {
+              "phrase": "exploit your strengths"
+            }
+          },
+          {
+            "label": "Make it sustainable",
+            "icon": "arrow",
+            "sync": {
+              "phrase": "actually sustain"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "p5-2-phelps",
       "type": "character_scene",
@@ -1923,38 +3584,73 @@
           {
             "kind": "figure",
             "cast": "sage",
-            "at": { "col": 1, "row": 1, "w": 4, "h": 5 },
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
             "facing": "right",
-            "poses": [ "presenting" ],
+            "poses": [
+              "presenting"
+            ],
             "expression": "happy",
             "label": "fit the arena"
           },
           {
             "kind": "trophy",
-            "at": { "col": 6, "row": 1, "w": 4, "h": 4 },
+            "at": {
+              "col": 6,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
             "label": "two champions",
-            "sync": { "phrase": "Olympic champions" }
+            "sync": {
+              "phrase": "Olympic champions"
+            }
           },
           {
             "kind": "dumbbell",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 5, "row": 0, "w": 2, "h": 2 },
-            "sync": { "phrase": "built to run" }
+            "at": {
+              "col": 5,
+              "row": 0,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "built to run"
+            }
           },
           {
             "kind": "target",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 10, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "suits you" }
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "suits you"
+            }
           },
           {
             "kind": "snowball",
             "tier": "hero",
             "reveal": "pop",
-            "at": { "col": 0, "row": 3, "w": 2, "h": 2 },
-            "sync": { "phrase": "compounds far faster" }
+            "at": {
+              "col": 0,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "sync": {
+              "phrase": "compounds far faster"
+            }
           }
         ]
       }
@@ -1967,13 +3663,27 @@
         "title": "Part five, in short",
         "scope": "mid",
         "items": [
-          { "label": "Stay at the edge", "sync": { "phrase": "Goldilocks edge" } },
-          { "label": "Love the boring days", "sync": { "phrase": "boring days" } },
-          { "label": "Play your game", "sync": { "phrase": "fits your nature" } }
+          {
+            "label": "Stay at the edge",
+            "sync": {
+              "phrase": "Goldilocks edge"
+            }
+          },
+          {
+            "label": "Love the boring days",
+            "sync": {
+              "phrase": "boring days"
+            }
+          },
+          {
+            "label": "Play your game",
+            "sync": {
+              "phrase": "fits your nature"
+            }
+          }
         ]
       }
     },
-
     {
       "id": "systems-quote",
       "type": "quote_card",
@@ -1992,11 +3702,36 @@
         "title": "The whole book",
         "scope": "final",
         "items": [
-          { "label": "Trust your systems", "sync": { "phrase": "trust your systems" } },
-          { "label": "Cast daily votes", "sync": { "phrase": "cast a daily vote" } },
-          { "label": "Obvious and attractive", "sync": { "phrase": "obvious and attractive" } },
-          { "label": "Easy and satisfying", "sync": { "phrase": "easy and satisfying" } },
-          { "label": "Never get bored", "sync": { "phrase": "never get bored" } }
+          {
+            "label": "Trust your systems",
+            "sync": {
+              "phrase": "trust your systems"
+            }
+          },
+          {
+            "label": "Cast daily votes",
+            "sync": {
+              "phrase": "cast a daily vote"
+            }
+          },
+          {
+            "label": "Obvious and attractive",
+            "sync": {
+              "phrase": "obvious and attractive"
+            }
+          },
+          {
+            "label": "Easy and satisfying",
+            "sync": {
+              "phrase": "easy and satisfying"
+            }
+          },
+          {
+            "label": "Never get bored",
+            "sync": {
+              "phrase": "never get bored"
+            }
+          }
         ]
       }
     },
@@ -2007,7 +3742,9 @@
       "visual": {
         "title": "Tiny Is The Point",
         "emphasis": "circle",
-        "sync": { "phrase": "smaller start" }
+        "sync": {
+          "phrase": "smaller start"
+        }
       }
     },
     {
@@ -2019,5 +3756,13 @@
         "style": "corner"
       }
     }
-  ]
+  ],
+  "category": "Habits & Productivity",
+  "pinned_comment": "Which of the four laws do you break most — making it obvious, attractive, easy, or satisfying? Drop it below 👇",
+  "title_variants": [
+    "Atomic Habits Summary: 1% Better Every Day (Full Breakdown)",
+    "Why Your Goals Keep Failing You (It's Not Willpower)",
+    "Build Habits That Actually Stick — The Atomic Habits System"
+  ],
+  "promise": "decide who you become"
 }

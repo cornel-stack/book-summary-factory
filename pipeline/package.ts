@@ -83,12 +83,24 @@ function buildChapters(script: Script, manifest: Manifest): string {
   return ["Chapters:", ...deduped].join("\n");
 }
 
+/** ≤n hashtags from tags (YouTube favors a few strong tags, not a wall). */
+function hashtagLine(tags: string[], n = 3): string {
+  return tags.slice(0, n).map((t) => `#${t.replace(/[^a-z0-9]+/gi, "")}`).join(" ");
+}
+
+/**
+ * description.txt (Phase 14 — search-first + A/B titles). It is a PRODUCER
+ * WORKSHEET: it LEADS with the 3 title variants to paste into YouTube's native
+ * A/B test, then (below a separator) the actual description BODY to paste into
+ * the description field. The BODY's first two lines are keyword-rich (search
+ * shows them): line 1 = the search-led hook (book title verbatim), lines 2-3 =
+ * value summary → chapters → ≤3 hashtags → brand/CTA → SRT note → footer.
+ */
 function buildDescription(script: Script, manifest: Manifest): string {
   const brand = getBrand(script.brand);
-  const tagLine = script.tags.map((t) => `#${t.replace(/\s+/g, "")}`).join(" ");
+  const variants = script.title_variants ?? [script.title];
+  const searchLed = variants[0] ?? script.title; // line-1 keyword hook (book title first)
   const cta = `${activeCta(brand)} — ${brand.domain}`;
-  // ReadLark: cite the source book + a commentary disclaimer. PerCuriam: the
-  // legal disclaimer is mandatory in every description.
   const attribution = script.book
     ? `Based on "${script.book.title}" by ${script.book.author}` +
       (script.book.year ? ` (${script.book.year})` : "")
@@ -98,20 +110,102 @@ function buildDescription(script: Script, manifest: Manifest): string {
     : "— This is an original educational summary for discussion; it is not " +
       "affiliated with or endorsed by the author or publisher. Quotes are the " +
       "author's, used for commentary.";
-  return [
-    script.title,
+  const srtNote = "📄 Accurate subtitles: upload the included captions.srt in YouTube Studio.";
+
+  const body = [
+    searchLed, // line 1 — keyword hook (what search displays)
     "",
-    script.description,
+    script.description, // 2-3 line value summary
     "",
     buildChapters(script, manifest),
     "",
-    cta,
-    ...(attribution ? ["", attribution] : []),
+    hashtagLine(script.tags, 3),
     "",
-    tagLine,
+    cta,
+    ...(attribution ? [attribution] : []),
+    srtNote,
     "",
     footer,
   ].join("\n");
+
+  if (!script.title_variants) return body + "\n";
+  const titlesBlock = [
+    "TITLES (paste all 3 into YouTube's A/B test — search / curiosity / benefit):",
+    ...script.title_variants.map((t, i) => `  ${i + 1}. ${t}`),
+    "",
+    "─".repeat(60),
+    "DESCRIPTION (paste everything below this line):",
+    "",
+  ].join("\n");
+  return `${titlesBlock}${body}\n`;
+}
+
+type CalEntry = { video_id: string; brand?: string; format?: string; publish_date?: string; category?: string; status?: string };
+
+/** Read content/calendar.json defensively (array OR { entries: [...] }). */
+function readCalendar(): CalEntry[] {
+  try {
+    const raw = JSON.parse(readFileSync(join(REPO, "content", "calendar.json"), "utf8"));
+    const arr = Array.isArray(raw) ? raw : raw.entries ?? [];
+    return Array.isArray(arr) ? arr : [];
+  } catch {
+    return [];
+  }
+}
+
+/** Two end-screen link suggestions from calendar history: most-recent
+ *  same-category long-form + most-recent long-form overall (the "anchor"). */
+function endScreenPicks(videoId: string, category?: string): { label: string; id: string }[] {
+  const priors = readCalendar()
+    .filter((e) => e.format === "longform" && e.video_id !== videoId && (e.status === "rendered" || e.status === "published"))
+    .sort((a, b) => (b.publish_date ?? "").localeCompare(a.publish_date ?? ""));
+  const picks: { label: string; id: string }[] = [];
+  const sameCat = category ? priors.find((e) => e.category === category) : undefined;
+  if (sameCat) picks.push({ label: "most recent same-category", id: sameCat.video_id });
+  const anchor = priors.find((e) => e.video_id !== sameCat?.video_id);
+  if (anchor) picks.push({ label: "most recent (anchor)", id: anchor.video_id });
+  return picks.filter((p, i, a) => a.findIndex((x) => x.id === p.id) === i).slice(0, 2);
+}
+
+/** upload-notes.txt — session-time machinery the producer acts on manually. */
+function buildUploadNotes(script: Script, videoId: string): string {
+  const out: string[] = ["UPLOAD NOTES — " + videoId, ""];
+  out.push(`1. PLAYLIST: ${script.category ?? "(set `category` in the script)"}`, "");
+  out.push("2. END SCREEN — link these 2 earlier videos:");
+  const picks = endScreenPicks(videoId, script.category);
+  if (picks.length === 0) {
+    out.push("   (no prior rendered videos on the channel yet — use the Subscribe + 'latest upload' end-screen elements instead)");
+  } else {
+    picks.forEach((p) => out.push(`   • ${p.label}: ${p.id}`));
+    if (picks.length < 2) out.push("   (only one prior found — use the Subscribe element for the second slot)");
+  }
+  out.push("");
+  out.push("3. PINNED COMMENT:");
+  out.push(`   ${script.pinned_comment ?? "(add a `pinned_comment` engagement question to the script)"}`);
+  return out.join("\n") + "\n";
+}
+
+/** retention-map.txt — every scene @ timestamp so a retention-graph dip maps to
+ *  an exact scene id + TYPE (feeds the monthly tuning ritual). */
+function buildRetentionMap(script: Script, manifest: Manifest): string {
+  const startById = new Map(manifest.scenes.map((m) => [m.id, m.startFrame]));
+  const fps = manifest.fps;
+  const lines: string[] = [
+    `Retention map — ${script.id}`,
+    "Screenshot YouTube's audience-retention graph; map each dip to the scene + TYPE below.",
+    "",
+    "time    scene                   type              part",
+  ];
+  let part = 0;
+  for (const scene of script.scenes) {
+    if (scene.type === "section_title" && scene.visual.role === "part") part = scene.visual.number ?? part + 1;
+    const start = startById.get(scene.id);
+    if (start === undefined) continue;
+    lines.push(
+      `${chapterTime(start, fps).padStart(5)}   ${scene.id.padEnd(22)}  ${scene.type.padEnd(16)}  ${part > 0 ? `part ${part}` : "—"}`,
+    );
+  }
+  return lines.join("\n") + "\n";
 }
 
 function main() {
@@ -139,19 +233,25 @@ function main() {
   const png = requireFile(join(buildDir, "thumbnail.png"), "thumbnail (1080p)");
   const png720 = requireFile(join(buildDir, "thumbnail-720.png"), "thumbnail (720p)");
 
-  copyFileSync(mp4, join(outDir, `${videoId}.mp4`));
+  // Search-first filename: the book title lives in the MP4 name itself.
+  const mp4Name = `${videoId}-summary.mp4`;
+  copyFileSync(mp4, join(outDir, mp4Name));
   copyFileSync(srt, join(outDir, "captions.srt"));
   copyFileSync(png, join(outDir, "thumbnail.png"));
   copyFileSync(png720, join(outDir, "thumbnail-1280x720.png"));
   writeFileSync(join(outDir, "description.txt"), buildDescription(script, manifest));
+  writeFileSync(join(outDir, "upload-notes.txt"), buildUploadNotes(script, videoId));
+  writeFileSync(join(outDir, "retention-map.txt"), buildRetentionMap(script, manifest));
 
   console.log(`Packaged → ${outDir}`);
   for (const f of [
-    `${videoId}.mp4`,
+    mp4Name,
     "captions.srt",
     "thumbnail.png",
     "thumbnail-1280x720.png",
     "description.txt",
+    "upload-notes.txt",
+    "retention-map.txt",
   ]) {
     console.log(`  ✓ ${f}`);
   }

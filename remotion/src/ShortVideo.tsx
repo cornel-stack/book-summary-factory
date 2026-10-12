@@ -125,22 +125,54 @@ const HookOverlay: React.FC<{ hook: string; frame: number; brand: Brand }> = ({ 
   </div>
 );
 
-/** One short scene: a vertical-native scene (1080×1920) + burned captions. The
- *  end-card scenes render full-frame brand chrome instead. */
+/** Small persistent brand wordmark carried through every body scene — replaces
+ *  the long brand outro (Phase 14) so loop/view-duration metrics aren't bled. */
+const Watermark: React.FC<{ brand: Brand }> = ({ brand }) => (
+  <div
+    style={{
+      position: "absolute",
+      top: 70,
+      width: "100%",
+      textAlign: "center",
+      fontFamily: FONTS.heading,
+      fontWeight: 700,
+      fontSize: 40,
+      letterSpacing: 1,
+      color: COLORS.ink,
+      opacity: 0.4,
+      pointerEvents: "none",
+    }}
+  >
+    {brand.wordmark}
+  </div>
+);
+
+/** One short scene: a vertical-native scene (1080×1920) + burned captions + a
+ *  persistent watermark. The end-card renders brand chrome (~1s) — or, for a
+ *  loop short, just the watermark so the replay is seamless (no brand outro). */
 const ShortScene: React.FC<{
   scene: RenderProps["script"]["scenes"][number];
   words: RenderProps["manifest"]["scenes"][number]["words"];
   isHook: boolean;
   hook?: string;
-}> = ({ scene, words, isHook, hook }) => {
+  loop?: boolean;
+}> = ({ scene, words, isHook, hook, loop }) => {
   const frame = useCurrentFrame();
   const brand = useBrand();
 
-  if (scene.type === "cta") return <ShortEndCard brand={brand} />;
+  if (scene.type === "cta")
+    return loop ? (
+      <AbsoluteFill style={{ backgroundColor: brand.paper }}>
+        <Watermark brand={brand} />
+      </AbsoluteFill>
+    ) : (
+      <ShortEndCard brand={brand} />
+    );
 
   return (
     <AbsoluteFill style={{ backgroundColor: brand.paper, overflow: "hidden" }}>
       <VerticalScene scene={scene} words={words} isHook={isHook} />
+      <Watermark brand={brand} />
       {isHook && hook && <HookOverlay hook={hook} frame={frame} brand={brand} />}
     </AbsoluteFill>
   );
@@ -158,7 +190,7 @@ export const ShortVideo: React.FC<RenderProps> = ({ script, manifest }) => {
           return (
             <Sequence key={m.id} from={m.startFrame} durationInFrames={m.durationInFrames} name={`${m.id} (${m.type})`}>
               <Audio src={staticFile(m.audioFile)} />
-              <ShortScene scene={scene} words={m.words} isHook={i === 0} hook={script.short_hook} />
+              <ShortScene scene={scene} words={m.words} isHook={i === 0} hook={script.short_hook} loop={script.loop} />
             </Sequence>
           );
         })}

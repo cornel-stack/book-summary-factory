@@ -22,7 +22,18 @@ const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const CAL = join(REPO, "content", "calendar.json");
 
 type Status = "scheduled" | "rendered" | "published";
-type Entry = { video_id: string; brand: string; format: string; publish_date: string; status: Status };
+type Entry = {
+  video_id: string;
+  brand: string;
+  format: string;
+  publish_date: string;
+  status: Status;
+  // Phase 14 — session-time machinery: category drives playlists + end-screen
+  // grouping; the dates let end-screen picks use true render/publish history.
+  category?: string;
+  rendered_date?: string;
+  published_date?: string;
+};
 
 function arg(name: string): string | undefined {
   const i = process.argv.indexOf(`--${name}`);
