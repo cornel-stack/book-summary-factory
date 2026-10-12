@@ -15,6 +15,10 @@ on:
         description: "Render chunks (fan-out width). Blank = auto: ~1 per 2200 frames, capped at 20."
         required: false
         default: ""
+      release_tag:
+        description: "Release tag to publish into (blank = the video id)."
+        required: false
+        default: ""
   # Reusable: the scheduler (scheduled-render.yml) calls this inline so it can
   # flip calendar status on success. Same inputs as the manual dispatch.
   workflow_call:
