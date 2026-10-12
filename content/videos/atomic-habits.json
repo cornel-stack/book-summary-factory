@@ -64,7 +64,7 @@
     {
       "id": "intro-1",
       "type": "character_scene",
-      "narration": "First, who is James Clear. He was a baseball player whose skull was shattered by a flying bat in high school, an injury so severe he was placed in a medically induced coma. His comeback was not a burst of willpower. It was years of small, boring, repeated choices that slowly rebuilt his life, until he became an all star athlete and then one of the most read writers on habits alive.",
+      "narration": "First, who is James Clear. He was a baseball player whose skull was shattered by a flying bat in high school, an injury so severe he was placed in a medically induced coma. His comeback was not a burst of willpower. It was years of small, boring, repeated choices that slowly rebuilt his life, until he became an all star athlete and then one of the most read writers on habits alive. He did not learn this from a lecture hall. He learned it the hard way, which is why every idea in this book is built to survive real life, not just a good mood.",
       "visual": {
         "title": "Who wrote it",
         "stage": "room",
@@ -78,7 +78,7 @@
     {
       "id": "intro-2",
       "type": "character_scene",
-      "narration": "So why does this book matter to you. Because most people believe change requires a huge push, a dramatic overhaul, a new year resolution made of pure grit. Clear argues the opposite. Lasting change is the product of hundreds of tiny decisions that compound quietly in the dark, long before you ever see a result. Meet Alex, our stand in for you, who is tired of starting over every Monday.",
+      "narration": "So why does this book matter to you. Because most people believe change requires a huge push, a dramatic overhaul, a new year resolution made of pure grit. Clear argues the opposite. Lasting change is the product of hundreds of tiny decisions that compound quietly in the dark, long before you ever see a result. Meet Alex, our stand in for you, who is tired of starting over every Monday. Alex has read the books and tried the apps, yet keeps slipping back a few days later. If that sounds familiar, the problem was never your willpower. It was the approach.",
       "visual": {
         "title": "Why it matters",
         "stage": "desk-office",
@@ -91,7 +91,7 @@
     {
       "id": "intro-3",
       "type": "stat_chart",
-      "narration": "And this is not a fringe idea. Atomic Habits has sold well over twenty million copies worldwide, and for years it has sat near the top of the best seller lists week after week. Numbers like that do not come from clever marketing. They come from readers who tried one small change, watched it actually work, and then told everyone they knew.",
+      "narration": "And this is not a fringe idea. Atomic Habits has sold well over twenty million copies worldwide, and for years it has sat near the top of the best seller lists week after week. Numbers like that do not come from clever marketing. They come from readers who tried one small change, watched it actually work, and then told everyone they knew. When an idea spreads that widely, it is usually because it is simple enough to use and true enough to keep working.",
       "visual": {
         "label": "Copies sold worldwide",
         "mode": "number",
@@ -130,7 +130,7 @@
     {
       "id": "pr1-1",
       "type": "character_scene",
-      "narration": "Here is the idea that makes the whole book work. A habit is a compound interest machine for your behavior. The same way a little money left alone grows into a fortune, a tiny action repeated grows into a transformed life. The problem is that in the beginning the effects are so small they feel invisible, so almost everyone quits before the curve turns up.",
+      "narration": "Here is the idea that makes the whole book work. A habit is a compound interest machine for your behavior. The same way a little money left alone grows into a fortune, a tiny action repeated grows into a transformed life. The problem is that in the beginning the effects are so small they feel invisible, so almost everyone quits before the curve turns up. The people who succeed are rarely the most talented. They are the ones who kept depositing tiny actions long after it stopped feeling exciting, trusting the math before they could see the balance.",
       "visual": {
         "title": "Compound interest",
         "stage": "outdoor",
@@ -160,7 +160,7 @@
     {
       "id": "pr1-2",
       "type": "character_scene",
-      "narration": "This is why habits feel disappointing. You expect progress to be a straight line, but it moves along a plateau Clear calls the valley of disappointment. Picture an ice cube in a cold room. You raise the temperature one degree at a time and nothing happens, nothing happens, nothing happens, then at thirty two degrees the ice melts. The melting looked sudden. It was built by every degree before it.",
+      "narration": "This is why habits feel disappointing. You expect progress to be a straight line, but it moves along a plateau Clear calls the valley of disappointment. Picture an ice cube in a cold room. You raise the temperature one degree at a time and nothing happens, nothing happens, nothing happens, then at thirty two degrees the ice melts. The melting looked sudden. It was built by every degree before it. Your habits work the same way. The breakthrough feels like a lucky moment, but it is the sum of every unglamorous rep you logged while nothing seemed to happen. Do not quit at thirty one degrees.",
       "visual": {
         "title": "Valley of disappointment",
         "stage": "room",
@@ -174,7 +174,7 @@
     {
       "id": "pr1-3",
       "type": "character_scene",
-      "narration": "Clear tells a story that proves it. British Cycling was a joke for a hundred years, until a new coach obsessed over tiny marginal gains. He tweaked the seats, repainted the truck floor to spot dust, even taught the riders the best way to wash their hands to avoid colds. None of it mattered on its own. Together, those one percent improvements turned a losing team into Olympic and Tour de France champions within a few short years.",
+      "narration": "Clear tells a story that proves it. British Cycling was a joke for a hundred years, until a new coach obsessed over tiny marginal gains. He tweaked the seats, repainted the truck floor to spot dust, even taught the riders the best way to wash their hands to avoid colds. None of it mattered on its own. Together, those one percent improvements turned a losing team into Olympic and Tour de France champions within a few short years. The lesson is not that one tweak was magic. It is that dozens of tiny advantages, each too small to notice, add up to a gap nobody can close.",
       "visual": {
         "title": "Marginal gains",
         "stage": "outdoor",
@@ -224,7 +224,7 @@
     {
       "id": "pr2-2",
       "type": "character_scene",
-      "narration": "Think about what this means for a bad day. A system does not care whether you feel motivated. It just asks, did you run the process today, yes or no. That takes the pressure off the outcome, which you cannot control, and puts it on the action, which you always can. Stop obsessing over the number on the scale, and start obsessing over whether you showed up. Love the system, and the scale takes care of itself.",
+      "narration": "Here is where the idea gets genuinely freeing. Think about what this means for a bad day. A system does not care whether you feel motivated. It just asks, did you run the process today, yes or no. That takes the pressure off the outcome, which you cannot control, and puts it on the action, which you always can. Stop obsessing over the number on the scale, and start obsessing over whether you showed up. Love the system, and the scale takes care of itself.",
       "visual": {
         "title": "Run the process",
         "stage": "desk-office",
@@ -244,7 +244,7 @@
     {
       "id": "pr2b-1",
       "type": "character_scene",
-      "narration": "Here is the most important chart in the book, and almost nobody draws it right. We expect our effort to pay off in a straight diagonal line. We expect that if we put in the work, the results should arrive on schedule, evenly, day by day. Clear calls this expectation the great lie of self improvement, because reality does not work that way at all. Your real progress hides for a long time, flat and frustrating, and then it erupts all at once.",
+      "narration": "Let me show you the picture that quietly ruins most people's progress. Here is the most important chart in the book, and almost nobody draws it right. We expect our effort to pay off in a straight diagonal line. We expect that if we put in the work, the results should arrive on schedule, evenly, day by day. Clear calls this expectation the great lie of self improvement, because reality does not work that way at all. Your real progress hides for a long time, flat and frustrating, and then it erupts all at once.",
       "visual": {
         "title": "The great lie",
         "stage": "desk-office",
@@ -271,7 +271,7 @@
     {
       "id": "p1-recap",
       "type": "recap_card",
-      "narration": "Quick recap of part one. First, habits are compound interest, so tiny gains stack into enormous outcomes. Second, you climb through a valley of disappointment and a long plateau before results appear. And third, you do not rise to your goals, you fall to your systems.",
+      "narration": "Before we go deeper, let us lock part one into memory, because everything ahead rests on it. Quick recap of part one. First, habits are compound interest, so tiny gains stack into enormous outcomes. Second, you climb through a valley of disappointment and a long plateau before results appear. And third, you do not rise to your goals, you fall to your systems.",
       "visual": {
         "title": "Part one recap",
         "scope": "mid",
@@ -291,7 +291,7 @@
     {
       "id": "p2-rehook",
       "type": "character_scene",
-      "narration": "You now know why tiny habits win. But none of it sticks until you fix the one thing almost everyone skips, the thing underneath every habit, which is who you believe you are. Get this wrong and every system collapses. Get it right and good habits feel like coming home.",
+      "narration": "You now know why tiny habits win. But none of it sticks until you fix the one thing almost everyone skips, the thing underneath every habit, which is who you believe you are. Get this wrong and every system collapses. Get it right and good habits feel like coming home. This separates people who change for a season from people who change for good, so slow down with me here.",
       "visual": {
         "title": "The deepest layer",
         "stage": "plain",
@@ -310,7 +310,7 @@
     {
       "id": "pr3-1",
       "type": "character_scene",
-      "narration": "Clear draws three layers of change, like rings inside each other. The outer ring is outcomes, what you get. The middle ring is processes, what you do. The deepest ring is identity, what you believe. Most people start at the outer ring, chasing a result. Lasting change starts at the center, by changing the belief about the kind of person you are.",
+      "narration": "Clear draws three layers of change, like rings inside each other. The outer ring is outcomes, what you get. The middle ring is processes, what you do. The deepest ring is identity, what you believe. Most people start at the outer ring, chasing a result. Lasting change starts at the center, by changing the belief about the kind of person you are. Work from the outside in and you are always chasing a result you do not yet have. Work from the inside out and every action confirms who you already are, a feeling you can repeat forever.",
       "visual": {
         "title": "Three layers",
         "stage": "room",
@@ -351,7 +351,7 @@
     {
       "id": "pr3-3",
       "type": "character_scene",
-      "narration": "And this is why most resolutions die in February. People set an outcome goal, lose weight, get rich, then white knuckle through actions that war with how they still see themselves. If you believe you are messy, no tidy system survives you for long. But change the belief first, decide you are a tidy person, and the tidy actions start to feel like simply being yourself. Behavior that is out of line with the self will not last. Behavior that confirms the self repeats on its own.",
+      "narration": "And this is why most resolutions die in February. People set an outcome goal, lose weight, get rich, then white knuckle through actions that war with how they still see themselves. If you believe you are messy, no tidy system survives you for long. But change the belief first, decide you are a tidy person, and the tidy actions start to feel like simply being yourself. Behavior that is out of line with the self will not last. Behavior that confirms the self repeats on its own. So the question is not what do I want to achieve. It is who do I wish to become. Answer that honestly and the daily actions stop feeling like a fight and start feeling like proof.",
       "visual": {
         "title": "Belief comes first",
         "stage": "room",
@@ -432,7 +432,7 @@
     {
       "id": "p2-recap",
       "type": "recap_card",
-      "narration": "Recap of part two. True change runs three layers deep, and the deepest one is identity. Every action is a vote for who you are becoming. Habits and identity feed each other in a loop. And every habit runs the same four step cycle of cue, craving, response, and reward.",
+      "narration": "Let us pin down part two before we start building. Recap of part two. True change runs three layers deep, and the deepest one is identity. Every action is a vote for who you are becoming. Habits and identity feed each other in a loop. And every habit runs the same four step cycle of cue, craving, response, and reward.",
       "visual": {
         "title": "Part two recap",
         "scope": "mid",
@@ -452,7 +452,7 @@
     {
       "id": "p3-rehook",
       "type": "character_scene",
-      "narration": "Maybe you are thinking, I already know what to do, I just do not do it. Good, because the next four parts are the four laws that turn knowing into doing, whether you feel like it or not. The first law attacks the cue. We are going to make the good habit impossible to miss.",
+      "narration": "Maybe you are thinking, I already know what to do, I just do not do it. Good, because the next four parts are the four laws that turn knowing into doing, whether you feel like it or not. The first law attacks the cue. We are going to make the good habit impossible to miss. From here on, every part is practical, something you can test the moment this video ends, just levers you can pull.",
       "visual": {
         "title": "Turn knowing into doing",
         "stage": "plain",
@@ -486,7 +486,7 @@
     {
       "id": "pr5-1",
       "type": "character_scene",
-      "narration": "The first tool is an implementation intention, which is a fancy name for a simple sentence. I will do this behavior at this time in this place. Instead of saying I will exercise more, you say I will walk for ten minutes at seven in the morning in my kitchen. Research found people who wrote that exact sentence were far more likely to follow through, because the cue is now scheduled.",
+      "narration": "Most good intentions die because they never get a time and a place to live. The first tool fixes exactly that. The first tool is an implementation intention, which is a fancy name for a simple sentence. I will do this behavior at this time in this place. Instead of saying I will exercise more, you say I will walk for ten minutes at seven in the morning in my kitchen. Research found people who wrote that exact sentence were far more likely to follow through, because the cue is now scheduled.",
       "visual": {
         "title": "Name the cue",
         "stage": "desk-office",
@@ -528,7 +528,7 @@
     {
       "id": "pr5-3",
       "type": "character_scene",
-      "narration": "The third tool is to design your environment. We think we choose our habits, but we mostly respond to what is in front of us. Put the apple on the counter and the cookies out of sight. Lay your gym clothes by the bed. Clear says environment is the invisible hand that shapes behavior, so make the cues for good habits obvious and the cues for bad ones disappear.",
+      "narration": "The third tool is to design your environment. We think we choose our habits, but we mostly respond to what is in front of us. Put the apple on the counter and the cookies out of sight. Lay your gym clothes by the bed. Clear says environment is the invisible hand that shapes behavior, so make the cues for good habits obvious and the cues for bad ones disappear. The beautiful part is that your environment keeps working even when your motivation does not. Set the room up once, and it nudges you the right way all day without any effort from you.",
       "visual": {
         "title": "Design your space",
         "stage": "room",
@@ -576,7 +576,7 @@
     {
       "id": "pr5b-2",
       "type": "character_scene",
-      "narration": "Clear tells the story of an executive who cut his smoking habit by redesigning his life around invisibility. The key insight is that self control is a short term strategy, not a long term one. You cannot white knuckle your way past a tempting cue a thousand times a day and expect to win. The people who look the most disciplined are usually just the ones who arranged their world so the temptation almost never shows up.",
+      "narration": "Clear tells the story of an executive who cut his smoking habit by redesigning his life around invisibility. The key insight is that self control is a short term strategy, not a long term one. You cannot white knuckle your way past a tempting cue a thousand times a day and expect to win. The people who look the most disciplined are usually just the ones who arranged their world so the temptation almost never shows up. So stop admiring their iron will and start copying their setup. They did not out muscle the craving. They made sure the craving never got a chance to start in the first place.",
       "visual": {
         "title": "Discipline is design",
         "stage": "desk-office",
@@ -590,7 +590,7 @@
     {
       "id": "p3-recap",
       "type": "recap_card",
-      "narration": "Part three in three lines. Write an implementation intention so the cue has a time and place. Stack the new habit onto an old one. Design your environment so good cues are everywhere, and make the cues for bad habits disappear.",
+      "narration": "Part three in three lines. Write an implementation intention so the cue has a time and place. Stack the new habit onto an old one. Design your environment so good cues are everywhere, and make the cues for bad habits disappear. Get the first law right and you are already halfway there, because a habit you cannot forget to start is a habit that has a real chance to stick.",
       "visual": {
         "title": "Part three recap",
         "scope": "mid",
@@ -629,7 +629,7 @@
     {
       "id": "pr6-1",
       "type": "character_scene",
-      "narration": "The key tool here is temptation bundling. You pair something you need to do with something you want to do. Only watch your favorite show while you are on the exercise bike. Only listen to the podcast you love while cleaning the house. The thing you want becomes the reward that makes the thing you need suddenly attractive.",
+      "narration": "The key tool here is temptation bundling. You pair something you need to do with something you want to do. Only watch your favorite show while you are on the exercise bike. Only listen to the podcast you love while cleaning the house. The thing you want becomes the reward that makes the thing you need suddenly attractive. Your brain stops dreading the hard thing because it is now wrapped around something it already loves, and in time the habit you avoided becomes the part of the day you look forward to.",
       "visual": {
         "title": "Temptation bundling",
         "stage": "room",
@@ -703,7 +703,7 @@
     {
       "id": "p4-recap",
       "type": "recap_card",
-      "narration": "Part four, short and sweet. Bundle a habit you need with a treat you want. Surround yourself with a tribe where the behavior you want is already normal. Reframe have to into get to. Make it attractive and the craving works for you instead of against you.",
+      "narration": "Let us bank the second law before we move on. Part four, short and sweet. Bundle a habit you need with a treat you want. Surround yourself with a tribe where the behavior you want is already normal. Reframe have to into get to. Make it attractive and the craving works for you instead of against you.",
       "visual": {
         "title": "Part four recap",
         "scope": "mid",
@@ -723,7 +723,7 @@
     {
       "id": "p5-rehook",
       "type": "character_scene",
-      "narration": "Here is where most advice fails you. It tells you to want it more and try harder. Clear says the opposite. Do not rely on willpower, because willpower runs out. Instead, make the good habit so easy that doing it takes less effort than skipping it. This is the law that finally gets you off the couch.",
+      "narration": "Here is where most advice fails you. It tells you to want it more and try harder. Clear says the opposite. Do not rely on willpower, because willpower runs out. Instead, make the good habit so easy that doing it takes less effort than skipping it. This is the law that finally gets you off the couch. Notice the shift in strategy here. We are no longer trying to become stronger people. We are trying to become smarter designers, shrinking the habit until starting is the easy choice and quitting is the hard one.",
       "visual": {
         "title": "Make effort tiny",
         "stage": "plain",
@@ -817,7 +817,7 @@
     {
       "id": "p5-recap",
       "type": "recap_card",
-      "narration": "Part five in brief. Shrink the habit with the two minute rule so starting is almost effortless. Reduce friction by removing the steps between you and the action. Follow the law of least effort, and use one time actions that pay off for years. Make it easy, and you stop needing willpower at all.",
+      "narration": "Here is the third law boiled down so it sticks. Part five in brief. Shrink the habit with the two minute rule so starting is almost effortless. Reduce friction by removing the steps between you and the action. Follow the law of least effort, and use one time actions that pay off for years. Make it easy, and you stop needing willpower at all.",
       "visual": {
         "title": "Part five recap",
         "scope": "mid",
@@ -837,7 +837,7 @@
     {
       "id": "p6-rehook",
       "type": "character_scene",
-      "narration": "You have made the habit obvious, attractive, and easy. There is one problem left, and it is the quiet killer. The good habits we want pay off in the future, but our brains crave a reward right now. The fourth law closes that gap. We are going to make doing the right thing feel good immediately.",
+      "narration": "You have made the habit obvious, attractive, and easy. There is one problem left, and it is the quiet killer. The good habits we want pay off in the future, but our brains crave a reward right now. The fourth law closes that gap. We are going to make doing the right thing feel good immediately. This is the law that keeps the other three alive. Obvious, attractive, and easy get you started, but satisfying is what makes you come back tomorrow, until the habit no longer needs you to decide.",
       "visual": {
         "title": "Close the gap",
         "stage": "plain",
@@ -994,7 +994,7 @@
     {
       "id": "p6-recap",
       "type": "recap_card",
-      "narration": "Part six, the finish line of the laws. Give good habits an immediate reward so your brain votes to repeat them. Track the habit and watch the chain grow, and whatever happens, never miss twice. Make bad habits unsatisfying with a real cost, and learn to fall in love with boredom.",
+      "narration": "Part six, the finish line of the laws. Give good habits an immediate reward so your brain votes to repeat them. Track the habit and watch the chain grow, and whatever happens, never miss twice. Make bad habits unsatisfying with a real cost, and learn to fall in love with boredom. That is the full set of laws now in your hands, four to build the habits you want and four inversions to break the ones you do not. The theory is finished. From here it is all about the doing.",
       "visual": {
         "title": "Part six recap",
         "scope": "mid",
