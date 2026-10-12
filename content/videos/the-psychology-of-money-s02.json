@@ -101,6 +101,22 @@
             "sync": {
               "phrase": "mountaineering accident"
             }
+          },
+          {
+            "kind": "scale",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "pop",
+            "color": "ink"
           }
         ]
       }
