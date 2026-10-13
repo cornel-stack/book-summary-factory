@@ -3,6 +3,7 @@ import { Composition, Still } from "remotion";
 import { Video } from "./Video";
 import { ShortVideo } from "./ShortVideo";
 import { Thumbnail } from "./Thumbnail";
+import { CoverThumbnail, type CoverThumbProps } from "./CoverThumbnail";
 import { CastSheetPoses, CastSheetExpr } from "./CastSheet";
 import { CastGestureSheet } from "./CastGestureSheet";
 import { CastSideSheet } from "./CastSideSheet";
@@ -91,6 +92,21 @@ export const RemotionRoot: React.FC = () => {
       <Still id="CastSideSheet" component={CastSideSheet} width={VIDEO.width} height={VIDEO.height} />
       <Still id="CastCheckSheet" component={CastCheckSheet} width={VIDEO.width} height={VIDEO.height} />
       <Still id="CastSideExprCheck" component={CastSideExprCheck} width={VIDEO.width} height={VIDEO.height} />
+      <Still
+        id="CoverThumbnail"
+        component={CoverThumbnail}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          cover: "covers/atomic-habits.jpeg",
+          kicker: "ANIMATED SUMMARY",
+          words: ["WHY TINY", "HABITS", "WIN"],
+          cast: "jade",
+          pose: "pointing",
+          expression: "happy",
+          brand: "readlark",
+        } satisfies CoverThumbProps}
+      />
       <Still id="PropSheet" component={PropSheet} width={VIDEO.width} height={VIDEO.height} />
       <Still id="StageSheet" component={StageSheet} width={VIDEO.width} height={VIDEO.height} />
       <Composition id="TravelTest" component={TravelTest} width={VIDEO.width} height={VIDEO.height} fps={VIDEO.fps} durationInFrames={130} />

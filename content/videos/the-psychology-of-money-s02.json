@@ -1,0 +1,140 @@
+{
+  "id": "the-psychology-of-money-s02",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Luck And Risk — The Psychology of Money",
+  "short_hook": "Luck And Risk",
+  "book": {
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "year": 2020
+  },
+  "description": "Most people get luck and risk completely backwards. A 60-second idea from The Psychology of Money.",
+  "tags": [
+    "the psychology of money",
+    "morgan housel",
+    "psychology of money summary",
+    "money",
+    "luck and risk"
+  ],
+  "thumbnail": {
+    "headline": "Luck And Risk",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "scale"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Most people get luck and risk completely backwards. It comes straight from The Psychology of Money.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "In nineteen sixty eight, Bill Gates attended one of the only high schools on earth with a computer. One in a million odds. He later said that without that school, there would have been no Microsoft. That is luck, the part of success we hate to admit. Gates was brilliant and driven, absolutely. But he also won a lottery of birth and timing that millions of equally gifted kids never got. Luck and skill are so tangled that we almost never separate them honestly, especially when we are the lucky one. We love to tell a clean story of pure talent, because it feels better and sells more books, but the honest version almost always has a lucky door somebody happened to walk through.",
+      "type": "character_scene",
+      "visual": {
+        "title": "The right school",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "theo",
+            "pose": "sitting",
+            "expression": "happy",
+            "facing": "right",
+            "seat": "desk",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "sync": {
+              "phrase": "Bill Gates"
+            }
+          },
+          {
+            "kind": "scale",
+            "at": {
+              "col": 8,
+              "row": 2,
+              "w": 4,
+              "h": 4
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "lottery of birth"
+            }
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "state": "on",
+            "tier": "ambient",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "a lucky door"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "the-psychology-of-money-s01",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Experience Shapes You — The Psychology of Money",
+  "short_hook": "Experience Shapes You",
+  "book": {
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "year": 2020
+  },
+  "description": "Here's the one idea that makes experience shapes you finally click. A 60-second idea from The Psychology of Money.",
+  "tags": [
+    "the psychology of money",
+    "morgan housel",
+    "psychology of money summary",
+    "money",
+    "experience shapes you"
+  ],
+  "thumbnail": {
+    "headline": "Experience Shapes You",
+    "cast": "alex",
+    "pose": "presenting",
+    "expression": "happy",
+    "props": [
+      "brain"
+    ]
+  },
+  "voice": "en-US-AndrewNeural",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "Here's the one idea that makes experience shapes you finally click. It comes straight from The Psychology of Money.",
+      "visual": {
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 3,
+              "row": 1,
+              "w": 6,
+              "h": 5
+            },
+            "poses": [
+              "presenting"
+            ],
+            "expression": "happy",
+            "label": "watch this"
+          }
+        ]
+      }
+    },
+    {
+      "id": "idea",
+      "narration": "No one is crazy with money, Housel says, even when they look it. Think about how differently two people can see the same world. Someone who grew up in the Great Depression learned that the stock market is a casino that eats your savings, so they hoard cash for the rest of their life. Someone born in nineteen seventy came of age when stocks soared, so they pour everything in without blinking. Same country, opposite lessons, and both feel obviously correct, because each person is reacting to the tiny slice of history they personally lived through. Neither of them studied a chart and chose wrong. They simply trusted what their own life had burned into them, which is exactly what you and I quietly do too.",
+      "type": "character_scene",
+      "visual": {
+        "title": "Shaped by your era",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "cast": "omar",
+            "pose": "standing",
+            "expression": "worried",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "color": "ink",
+            "sync": {
+              "phrase": "the Great Depression"
+            }
+          },
+          {
+            "kind": "coins",
+            "at": {
+              "col": 8,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "hero",
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "hoard cash"
+            }
+          },
+          {
+            "kind": "trendup",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "cast": "alex",
+            "facing": "right",
+            "seat": "chair",
+            "enter": "draw",
+            "tier": "ambient",
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "burned into them"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "type": "cta",
+      "narration": "Follow for the full breakdown, and the next idea.",
+      "visual": {
+        "text": "Follow for more",
+        "style": "card"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1068 @@
+{
+  "id": "the-psychology-of-money",
+  "title": "The Psychology of Money Summary: How Behavior Beats Brains",
+  "brand": "readlark",
+  "format": "longform",
+  "book": { "title": "The Psychology of Money", "author": "Morgan Housel", "year": 2020 },
+  "description": "The Psychology of Money by Morgan Housel argues that doing well with money has little to do with intelligence and everything to do with behavior. This summary walks through the book's timeless lessons: why no one is crazy about money, how luck and risk shape every outcome, the quiet power of knowing when you have enough, the confounding magic of compounding, and why survival matters more than being right. You will learn why real wealth is the money you do not see, why freedom is the highest dividend money pays, why your savings rate beats your income, why reasonable beats rational, and how leaving room for error lets you stay in the game long enough to win. By the end you will have a calmer, saner relationship with money built on behavior, not brilliance.",
+  "tags": [
+    "the psychology of money",
+    "morgan housel",
+    "psychology of money summary",
+    "money",
+    "personal finance",
+    "investing",
+    "compounding",
+    "wealth",
+    "saving money",
+    "financial freedom",
+    "behavioral finance",
+    "money mindset",
+    "book summary"
+  ],
+  "thumbnail": {
+    "headline": "Behavior Beats Brains",
+    "punch_words": ["BEHAVIOR", "BEATS", "BRAINS"],
+    "cast": "alex",
+    "pose": "pointing",
+    "expression": "shocked",
+    "props": ["moneybag", "trendup"],
+    "pointer": "spotlight"
+  },
+  "voice": "en-US-AndrewNeural",
+  "target_minutes": 33,
+  "pinned_comment": "What is your number for enough? And which lesson hit hardest, luck, compounding, or freedom? Tell me below.",
+  "promise": "has little to do with how smart you are",
+  "title_variants": [
+    "The Psychology of Money Summary: How Behavior Beats Brains",
+    "Why Smart People Go Broke (And Janitors Get Rich)",
+    "Master Your Money by Fixing How You Behave"
+  ],
+  "category": "Money & Investing",
+  "template": { "framing": "book-structure", "hook": "direct" },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "In The Psychology of Money, Morgan Housel proves that doing well with money has little to do with how smart you are, and almost everything to do with how you behave. Meet two men. Ronald Read was a janitor and gas station attendant who died with eight million dollars. Richard Fuscone was a Harvard educated executive who went broke. Same era, opposite endings, decided by behavior alone.",
+      "visual": {
+        "title": "Two very different lives",
+        "stage": "stage-spotlight",
+        "elements": [
+          { "kind": "figure", "cast": "deshawn", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "happy", "enter": "draw", "sync": { "phrase": "a janitor" } },
+          { "kind": "figure", "cast": "max", "at": { "col": 8, "row": 1, "w": 4, "h": 5 }, "pose": "panicking", "expression": "shocked", "facing": "left", "enter": "draw", "sync": { "phrase": "went broke" } },
+          { "kind": "moneybag", "at": { "col": 5, "row": 3, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "eight million dollars" } }
+        ]
+      }
+    },
+    {
+      "id": "cta-hook",
+      "type": "cta",
+      "narration": "Full notes are in the description below. Subscribe if you want the next great book broken down just like this one.",
+      "visual": { "text": "Full notes below — subscribe for the next one.", "style": "card" }
+    },
+    {
+      "id": "intro-1",
+      "type": "character_scene",
+      "narration": "First, who is Morgan Housel. He is not a Wall Street trader shouting at a screen. He is a writer and investor who spent years as a financial columnist, watching brilliant people make foolish money decisions and ordinary people quietly get rich. He noticed something strange. Money is not a math problem you solve with a spreadsheet. It is a soft skill, where how you behave matters more than what you know. So instead of formulas, he collected stories, short lessons about the weird ways we all think about money. Those pieces became a blog read by millions, and eventually this short book that has since sold millions of copies and quietly changed how a whole generation handles their savings.",
+      "visual": {
+        "title": "Who wrote it",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "sage", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "Morgan Housel" } },
+          { "kind": "brain", "at": { "col": 8, "row": 2, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "soft skill" } },
+          { "kind": "book", "at": { "col": 10, "row": 3, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "sold millions of copies" } }
+        ]
+      }
+    },
+    {
+      "id": "intro-2",
+      "type": "character_scene",
+      "narration": "So why does this matter to you. Because money touches every part of modern life, yet almost nobody is taught how to think about it. You can be a genius with a perfect credit score and still blow up, or flip burgers your whole life and retire comfortable. Meet Alex, our stand in for you, who earns a decent living but feels one bad month from disaster, and secretly wonders why the people who win with money are not always the smartest in the room. If that sounds familiar, the problem was never your intelligence. It was your relationship with money.",
+      "visual": {
+        "title": "Why it matters",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "thinking", "expression": "tired", "enter": "walk", "facing": "right", "sync": { "phrase": "Meet Alex" }, "effects": [ { "kind": "thought_bubble", "sync": { "phrase": "one bad month" } } ] },
+          { "kind": "dollar", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "sync": { "phrase": "relationship with money" } }
+        ]
+      }
+    },
+    {
+      "id": "intro-3",
+      "type": "stat_chart",
+      "narration": "Go back to Ronald Read, the janitor. He had no salary to envy and no secret formula. He simply bought shares of solid companies he understood, and then did the one thing almost nobody manages. He waited. For decades. By the time he died at ninety two, those patient investments had quietly grown into an estate worth eight million dollars, most of which he left to his local library and hospital. No paycheck like that ever touched his account. Time did the heavy lifting.",
+      "visual": {
+        "label": "Ronald Read's estate",
+        "mode": "number",
+        "prefix": "$",
+        "suffix": "M",
+        "datapoints": [
+          { "label": "estate", "value": 8, "sync": { "phrase": "eight million dollars" } }
+        ]
+      }
+    },
+    {
+      "id": "intro-4",
+      "type": "character_scene",
+      "narration": "Here is the thread running through every page. Finance is taught like physics, with rules and equations, as if the right answer always wins. But money is not physics. It is psychology, full of ego, fear, pride, and the stories we tell ourselves at two in the morning. That is why a quiet janitor can out invest a Harvard financier. The spreadsheet was never the hard part. You are. Across these lessons, Housel shows you how to get out of your own way. Numbers can tell you what happened, but they can never tell you how it felt to live through it, and your feelings are what actually move your money.",
+      "visual": {
+        "title": "Not physics, psychology",
+        "stage": "plain",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "thinking", "expression": "curious", "enter": "draw", "sync": { "phrase": "money is not physics" } },
+          { "kind": "brain", "at": { "col": 8, "row": 2, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "state": "on", "sync": { "phrase": "It is psychology" } },
+          { "kind": "scale", "at": { "col": 10, "row": 3, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "how it felt" } }
+        ]
+      }
+    },
+
+    {
+      "id": "p1-title",
+      "type": "section_title",
+      "narration": "Part one. No one is crazy with money.",
+      "visual": { "role": "part", "number": 1, "title": "No One Is Crazy", "emphasis": "underline", "sync": { "phrase": "No one is crazy" } }
+    },
+    {
+      "id": "pr1-title",
+      "type": "section_title",
+      "narration": "Principle one. Your experience shapes everything.",
+      "visual": { "role": "principle", "number": 1, "part": 1, "title": "Experience Shapes You", "emphasis": "circle", "memory": "brain", "sync": { "phrase": "Your experience shapes" } }
+    },
+    {
+      "id": "pr1-1",
+      "type": "character_scene",
+      "narration": "No one is crazy with money, Housel says, even when they look it. Think about how differently two people can see the same world. Someone who grew up in the Great Depression learned that the stock market is a casino that eats your savings, so they hoard cash for the rest of their life. Someone born in nineteen seventy came of age when stocks soared, so they pour everything in without blinking. Same country, opposite lessons, and both feel obviously correct, because each person is reacting to the tiny slice of history they personally lived through. Neither of them studied a chart and chose wrong. They simply trusted what their own life had burned into them, which is exactly what you and I quietly do too.",
+      "visual": {
+        "title": "Shaped by your era",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "omar", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "worried", "enter": "draw", "sync": { "phrase": "the Great Depression" } },
+          { "kind": "coins", "at": { "col": 8, "row": 3, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "hoard cash" } },
+          { "kind": "trendup", "at": { "col": 10, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "burned into them" } }
+        ]
+      }
+    },
+    {
+      "id": "pr1-2",
+      "type": "compare",
+      "narration": "Take a decision that looks insane from the outside. The lowest income households spend more on lottery tickets than almost anyone else. Crazy, right. But picture their world. If you are living paycheck to paycheck, the normal path to a dream, savings and patience, feels impossible. A lottery ticket is the only moment you get to buy the same hope the rich already own. It is not stupid. It is desperation wearing the mask of a long shot.",
+      "visual": {
+        "title": "How each sees it",
+        "left": {
+          "heading": "The wealthy",
+          "items": [
+            { "label": "Save and wait", "sync": { "phrase": "savings and patience" } },
+            { "label": "A ticket seems silly" }
+          ]
+        },
+        "right": {
+          "heading": "The struggling",
+          "items": [
+            { "label": "No room to save" },
+            { "label": "A ticket buys hope", "sync": { "phrase": "buy the same hope" } }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr1-3",
+      "type": "character_scene",
+      "narration": "Here is the humbling part. The amount of personal financial experience any of us has is almost nothing. If you were born in nineteen seventy, you have lived through a sliver of economic history, a rounding error next to the centuries that came before. Yet we base our entire worldview on that sliver, then judge everyone else as foolish. Once you see this, you get gentler with others, and, more importantly, gentler with your own past mistakes. You were doing your best with the slice you were handed.",
+      "visual": {
+        "title": "A tiny slice",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "thinking", "expression": "curious", "enter": "draw", "sync": { "phrase": "worldview" } },
+          { "kind": "hourglass", "at": { "col": 8, "row": 2, "w": 3, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "centuries that came before" } },
+          { "kind": "crowd", "at": { "col": 6, "row": 4, "w": 5, "h": 2 }, "count": 4, "arrangement": "row", "tint": "sky", "tier": "ambient" }
+        ]
+      }
+    },
+    {
+      "id": "pr1-apply",
+      "type": "list_card",
+      "narration": "So what do you do with this. First, stop assuming people are crazy, because behind every strange money choice is a person shaped by a life you have not lived. Second, hold your own views a little looser. And third, build a plan that fits your psychology, not a stranger's spreadsheet. Those three moves turn judgment into understanding.",
+      "visual": {
+        "title": "What to do",
+        "items": [
+          { "label": "Assume they're not crazy", "icon": "tick", "sync": { "phrase": "people are crazy" } },
+          { "label": "Hold views loosely", "icon": "tick", "sync": { "phrase": "a little looser" } },
+          { "label": "Fit your psychology", "icon": "tick", "sync": { "phrase": "fits your psychology" } }
+        ]
+      }
+    },
+    {
+      "id": "pr2-title",
+      "type": "section_title",
+      "narration": "Principle two. Luck and risk are siblings.",
+      "visual": { "role": "principle", "number": 2, "part": 1, "title": "Luck And Risk", "emphasis": "circle", "memory": "scale", "sync": { "phrase": "Luck and risk" } }
+    },
+    {
+      "id": "pr2-1",
+      "type": "character_scene",
+      "narration": "In nineteen sixty eight, Bill Gates attended one of the only high schools on earth with a computer. One in a million odds. He later said that without that school, there would have been no Microsoft. That is luck, the part of success we hate to admit. Gates was brilliant and driven, absolutely. But he also won a lottery of birth and timing that millions of equally gifted kids never got. Luck and skill are so tangled that we almost never separate them honestly, especially when we are the lucky one. We love to tell a clean story of pure talent, because it feels better and sells more books, but the honest version almost always has a lucky door somebody happened to walk through.",
+      "visual": {
+        "title": "The right school",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "theo", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "sitting", "seat": "desk", "expression": "happy", "enter": "draw", "sync": { "phrase": "Bill Gates" } },
+          { "kind": "scale", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "lottery of birth" } },
+          { "kind": "lightbulb", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "state": "on", "tier": "ambient", "sync": { "phrase": "a lucky door" } }
+        ]
+      }
+    },
+    {
+      "id": "pr2-2",
+      "type": "character_scene",
+      "narration": "Now the twin nobody mentions. Gates had a best friend named Kent Evans, just as smart, just as obsessed with computers. They were going to conquer the world together. But before graduation, Kent died in a mountaineering accident, a one in a million tragedy. Same brilliance, same school, opposite outcome, decided by chance alone. Risk is just luck wearing a darker coat. If we give the winners full credit for skill, we quietly blame the losers for failures that were never fully theirs either.",
+      "visual": {
+        "title": "The other twin",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "pip", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "worried", "enter": "draw", "sync": { "phrase": "Kent Evans" } },
+          { "kind": "mountain", "at": { "col": 7, "row": 1, "w": 5, "h": 5 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "a mountaineering accident" } },
+          { "kind": "scale", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "a darker coat" } }
+        ]
+      }
+    },
+    {
+      "id": "pr2-quote",
+      "type": "quote_card",
+      "narration": "Housel's warning is simple. Nothing is as good or as bad as it seems. When you win, you had some help. When you lose, you faced some headwinds.",
+      "visual": {
+        "quote": "Nothing is as good or as bad as it seems.",
+        "attribution": "Morgan Housel, The Psychology of Money",
+        "cast": "sage"
+      }
+    },
+    {
+      "id": "pr2-apply",
+      "type": "list_card",
+      "narration": "So here is how to handle luck and risk like an adult. First, be careful who you praise and who you blame, because outcomes are noisy. Second, when things go right, stay humble, you had tailwinds. And third, build in room to be wrong, because risk can erase a good decision overnight. Respect both twins and you stop betting your future on a single roll.",
+      "visual": {
+        "title": "Luck and risk",
+        "items": [
+          { "label": "Judge outcomes carefully", "icon": "tick", "sync": { "phrase": "who you blame" } },
+          { "label": "Stay humble when winning", "icon": "tick", "sync": { "phrase": "stay humble" } },
+          { "label": "Leave room to be wrong", "icon": "tick", "sync": { "phrase": "room to be wrong" } }
+        ]
+      }
+    },
+    {
+      "id": "p1-recap",
+      "type": "recap_card",
+      "narration": "Before part two, let us lock in part one. First, no one is crazy, every money choice makes sense to the person making it. Second, your tiny slice of experience shapes everything you believe. And third, luck and risk are siblings, so judge winners and losers with humility. Hold those three and the rest of the book clicks into place.",
+      "visual": {
+        "title": "Part one recap",
+        "scope": "mid",
+        "items": [
+          { "label": "No one is crazy", "sync": { "phrase": "no one is crazy" } },
+          { "label": "Experience shapes belief", "sync": { "phrase": "slice of experience" } },
+          { "label": "Luck and risk", "sync": { "phrase": "luck and risk are siblings" } }
+        ]
+      }
+    },
+
+    {
+      "id": "p2-title",
+      "type": "section_title",
+      "narration": "Part two. The games the rich keep losing.",
+      "visual": { "role": "part", "number": 2, "title": "Games The Rich Lose", "emphasis": "underline", "sync": { "phrase": "the rich keep losing" } }
+    },
+    {
+      "id": "p2-rehook",
+      "type": "character_scene",
+      "narration": "You now know money is driven by behavior, not brains. But here is where even the winners crash. The people who already have millions still manage to lose it all, and the reason is a single word most of us never learn to say. Enough.",
+      "visual": {
+        "title": "Even winners crash",
+        "stage": "plain",
+        "elements": [
+          { "kind": "figure", "cast": "max", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "panicking", "expression": "shocked", "enter": "draw", "sync": { "phrase": "lose it all" } },
+          { "kind": "moneybag", "at": { "col": 8, "row": 3, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "already have millions" } },
+          { "kind": "wall", "at": { "col": 10, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "Enough" } }
+        ]
+      }
+    },
+    {
+      "id": "pr3-title",
+      "type": "section_title",
+      "narration": "Principle three. Know when you have enough.",
+      "visual": { "role": "principle", "number": 3, "part": 2, "title": "Know Your Enough", "emphasis": "circle", "memory": "scale", "sync": { "phrase": "when you have enough" } }
+    },
+    {
+      "id": "pr3-1",
+      "type": "character_scene",
+      "narration": "Meet Rajat Gupta. He rose from the slums of India to run a famous consulting firm, sat on corporate boards, and was worth over one hundred million dollars. By any measure, he had won. But it was not enough. He wanted to be a billionaire, so he leaked secret boardroom tips to a hedge fund manager and landed in federal prison. Bernie Madoff was already a wildly successful, legitimate businessman before he ran the largest fraud in history. Both men had everything, and risked all of it for more they did not even need.",
+      "visual": {
+        "title": "Everything, risked",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "max", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "worried", "enter": "walk", "facing": "left", "sync": { "phrase": "Rajat Gupta" } },
+          { "kind": "moneybag", "at": { "col": 8, "row": 2, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "a billionaire" } },
+          { "kind": "wall", "at": { "col": 10, "row": 3, "w": 2, "h": 3 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "federal prison" } }
+        ]
+      }
+    },
+    {
+      "id": "pr3-2",
+      "type": "character_scene",
+      "narration": "Why do people with everything risk it all. Because the goalpost keeps moving. Modern life runs on comparison, and there is always someone richer to measure against, your neighbor, a stranger online, a younger version of your boss. If your definition of enough is always just above what you have, you are chasing a horizon that moves as you walk. The only way to win that race is to decide, on purpose, that you already have enough, and truly mean it.",
+      "visual": {
+        "title": "The moving goalpost",
+        "stage": "street",
+        "elements": [
+          { "kind": "figure", "cast": "jade", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "walking", "expression": "tired", "enter": "draw", "sync": { "phrase": "the goalpost keeps moving" } },
+          { "kind": "target", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "a horizon that moves" } },
+          { "kind": "crowd", "at": { "col": 6, "row": 4, "w": 5, "h": 2 }, "count": 5, "arrangement": "cluster", "tint": "sand", "tier": "ambient" }
+        ]
+      }
+    },
+    {
+      "id": "pr3-quote",
+      "type": "quote_card",
+      "narration": "Housel names the skill directly. The hardest financial skill is getting the goalpost to stop moving. Enough is not too little. It is knowing that more can quietly cost you everything.",
+      "visual": {
+        "quote": "The hardest financial skill is getting the goalpost to stop moving.",
+        "attribution": "Morgan Housel, The Psychology of Money",
+        "cast": "sage"
+      }
+    },
+    {
+      "id": "pr3-apply",
+      "type": "list_card",
+      "narration": "So protect yourself from the hunger that has no bottom. First, define your enough in writing, a real number and a real life. Second, refuse the comparison game, because someone will always have more. And third, remember the things that cannot be bought back, your freedom, family, and reputation, are the ones most worth keeping.",
+      "visual": {
+        "title": "Find your enough",
+        "items": [
+          { "label": "Define enough in writing", "icon": "box", "sync": { "phrase": "in writing" } },
+          { "label": "Quit the comparison game", "icon": "box", "sync": { "phrase": "the comparison game" } },
+          { "label": "Protect the unbuyable", "icon": "box", "sync": { "phrase": "cannot be bought back" } }
+        ]
+      }
+    },
+    {
+      "id": "pr4-title",
+      "type": "section_title",
+      "narration": "Principle four. Compounding is pure magic.",
+      "visual": { "role": "principle", "number": 4, "part": 2, "title": "Compounding Is Magic", "emphasis": "circle", "memory": "snowball", "sync": { "phrase": "Compounding is pure magic" } }
+    },
+    {
+      "id": "pr4-1",
+      "type": "character_scene",
+      "narration": "Everyone knows Warren Buffett is a great investor. Almost no one understands his real secret. Buffett started investing seriously when he was ten years old. By thirty, he was already a millionaire. That is impressive, but it is not the point. The point is he never stopped. His skill is investing, but his secret is time. If Buffett had started at thirty and retired at sixty, like a normal person, you would never have heard his name. Nearly all of his legendary fortune was earned after an age when most people are long done. He simply let the same steady returns ride, year after year, decade after decade, until the snowball grew far bigger than anyone could have imagined.",
+      "visual": {
+        "title": "The real secret",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "omar", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "sitting", "seat": "desk", "expression": "happy", "enter": "draw", "holding": { "prop": "book", "hand": "right" }, "sync": { "phrase": "Warren Buffett" } },
+          { "kind": "snowball", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "his secret is time" } },
+          { "kind": "clock", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "decade after decade" } }
+        ]
+      }
+    },
+    {
+      "id": "pr4-chart",
+      "type": "stat_chart",
+      "narration": "Put numbers on it and your jaw drops. Warren Buffett's net worth is around eighty four billion dollars. But here is the staggering part. Over eighty one billion of it arrived after his sixty fifth birthday. His wealth did not grow in a straight line, it exploded late, because compounding does almost nothing for years and then everything at once. The lesson is not pick better stocks. It is start early, and whatever you do, do not interrupt it.",
+      "visual": {
+        "label": "Buffett's net worth by age",
+        "mode": "bars",
+        "prefix": "$",
+        "suffix": "B",
+        "decimals": 1,
+        "datapoints": [
+          { "label": "age thirty", "value": 1 },
+          { "label": "after sixty five", "value": 3 },
+          { "label": "today", "value": 84.5, "sync": { "phrase": "eighty four billion dollars" } }
+        ]
+      }
+    },
+    {
+      "id": "pr4-2",
+      "type": "character_scene",
+      "narration": "Here is how counterintuitive compounding really is. Scientists long assumed ice ages came from brutally cold winters. Wrong. They come from mild summers, summers too weak to melt the previous winter's snow, so a little leftover ice builds up, reflects more sunlight, cools the earth, and stacks over thousands of years into sheets a mile thick. Not one big force. A small force, repeated. Your money works exactly the same way. The boring, repeated deposit is the glacier that slowly reshapes your whole life. No single winter ever did the work. It was the quiet accumulation, the part nobody was watching, that eventually buried whole continents under ice.",
+      "visual": {
+        "title": "Small force, repeated",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "maya", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "curious", "enter": "draw", "sync": { "phrase": "ice ages" } },
+          { "kind": "snowball", "at": { "col": 8, "row": 3, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "mild summers" } },
+          { "kind": "mountain", "at": { "col": 7, "row": 1, "w": 5, "h": 4 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "buried whole continents" } }
+        ]
+      }
+    },
+    {
+      "id": "pr4-apply",
+      "type": "list_card",
+      "narration": "So treat time as your greatest asset, because it is. First, start now, even tiny, because years matter more than dollars. Second, never interrupt it needlessly, since selling in a panic resets the entire clock. And third, be patient enough to let boring compounding become spectacular. You do not need to be a genius. You need to be unbreakably consistent for a very long time.",
+      "visual": {
+        "title": "Let it compound",
+        "items": [
+          { "label": "Start now, even tiny", "icon": "arrow", "sync": { "phrase": "start now" } },
+          { "label": "Never interrupt it", "icon": "arrow", "sync": { "phrase": "never interrupt it" } },
+          { "label": "Stay consistent for decades", "icon": "arrow", "sync": { "phrase": "unbreakably consistent" } }
+        ]
+      }
+    },
+    {
+      "id": "pr5-title",
+      "type": "section_title",
+      "narration": "Principle five. Getting rich is not keeping it.",
+      "visual": { "role": "principle", "number": 5, "part": 2, "title": "Getting vs Staying Rich", "emphasis": "circle", "memory": "scale", "sync": { "phrase": "Getting rich" } }
+    },
+    {
+      "id": "pr5-1",
+      "type": "character_scene",
+      "narration": "Jesse Livermore was the greatest stock trader of his era. On the worst day of the nineteen twenty nine crash, while the world burned, he made the equivalent of three billion dollars betting it all down. He was on top of the world. Then he kept pushing, kept betting bigger, lost everything, and ended broke. There was also a third partner alongside Buffett and Munger in the early days, named Rick Guerin. He was just as sharp, but he was impatient and used borrowed money. One downturn wiped him out, and history forgot his name.",
+      "visual": {
+        "title": "On top, then gone",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "kwame", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "shocked", "enter": "draw", "holding": { "prop": "moneybag", "hand": "right" }, "sync": { "phrase": "Jesse Livermore" } },
+          { "kind": "bargraph", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "three billion dollars" } },
+          { "kind": "wall", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "Rick Guerin" } }
+        ]
+      }
+    },
+    {
+      "id": "pr5-compare",
+      "type": "compare",
+      "narration": "These are two completely different skills, and almost nobody has both. Getting wealthy takes optimism, risk taking, and the nerve to put yourself out there. Staying wealthy takes the opposite, humility, fear that it could all vanish, and frugality so you survive the bad years. Getting money and keeping money are not the same game. One is about being bold. The other is about being able to stick around long enough for the boldness to pay off.",
+      "visual": {
+        "title": "Two money skills",
+        "left": {
+          "heading": "Getting rich",
+          "items": [
+            { "label": "Optimism and risk", "sync": { "phrase": "optimism, risk taking" } },
+            { "label": "Put yourself out there", "sync": { "phrase": "put yourself out there" } }
+          ]
+        },
+        "right": {
+          "heading": "Staying rich",
+          "items": [
+            { "label": "Humility and fear", "sync": { "phrase": "humility, fear" } },
+            { "label": "Frugality to survive", "sync": { "phrase": "frugality so you survive" } }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr5-2",
+      "type": "character_scene",
+      "narration": "So the single word that matters most in money is survival. Not the biggest returns, not the smartest trade, survival. Compounding only works if you can stay in the game for decades without being forced out. That means you plan to endure, not to win every single year. You keep cash that earns nothing, so that one bad break never ends your story. The people who last are rarely the most daring. They are the ones still standing when everyone else has been knocked out.",
+      "visual": {
+        "title": "Survive, then win",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "deshawn", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "happy", "enter": "draw", "sync": { "phrase": "survival" } },
+          { "kind": "path", "at": { "col": 7, "row": 3, "w": 5, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "stay in the game" } },
+          { "kind": "tree", "at": { "col": 9, "row": 1, "w": 2, "h": 3 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "still standing" } }
+        ]
+      }
+    },
+    {
+      "id": "p2-recap",
+      "type": "recap_card",
+      "narration": "Lock in part two before we move on. First, know when you have enough, or the moving goalpost will ruin you. Second, compounding is magic, so time matters more than brilliance. And third, getting rich and staying rich are different skills, and survival beats everything. Behavior is still quietly running the whole show.",
+      "visual": {
+        "title": "Part two recap",
+        "scope": "mid",
+        "items": [
+          { "label": "Know your enough", "sync": { "phrase": "when you have enough" } },
+          { "label": "Compounding is magic", "sync": { "phrase": "compounding is magic" } },
+          { "label": "Survival beats all", "sync": { "phrase": "survival beats everything" } }
+        ]
+      }
+    },
+
+    {
+      "id": "p3-title",
+      "type": "section_title",
+      "narration": "Part three. The hidden shape of success.",
+      "visual": { "role": "part", "number": 3, "title": "The Shape Of Success", "emphasis": "underline", "sync": { "phrase": "hidden shape of success" } }
+    },
+    {
+      "id": "p3-rehook",
+      "type": "character_scene",
+      "narration": "You have seen why survival matters. Now a stranger truth. Even among the people who do everything right, almost all of their success comes from a tiny handful of moments. Miss how that works, and you will quit at exactly the wrong time.",
+      "visual": {
+        "title": "A few big moments",
+        "stage": "plain",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "pointing", "expression": "curious", "enter": "draw", "sync": { "phrase": "a tiny handful" } },
+          { "kind": "target", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "the wrong time" } },
+          { "kind": "lightbulb", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "state": "on", "tier": "ambient", "sync": { "phrase": "survival matters" } }
+        ]
+      }
+    },
+    {
+      "id": "pr6-title",
+      "type": "section_title",
+      "narration": "Principle six. A few tails drive everything.",
+      "visual": { "role": "principle", "number": 6, "part": 3, "title": "Tails Drive Everything", "emphasis": "circle", "memory": "trendup", "sync": { "phrase": "tails drive everything" } }
+    },
+    {
+      "id": "pr6-1",
+      "type": "character_scene",
+      "narration": "Walt Disney made over four hundred cartoons in his early years. Most of them lost money, and his studio nearly went bankrupt more than once. Then came one film, Snow White, a single tail event that earned so much it wiped out all the debt and built an empire. One success paid for hundreds of failures. This is how the world actually works. A small number of events account for the majority of all outcomes, in business, in investing, and in your own career. If he had given up after the hundredth flop, like most sensible people would, the entire empire would never have existed at all.",
+      "visual": {
+        "title": "One film changed it",
+        "stage": "stage-spotlight",
+        "elements": [
+          { "kind": "figure", "cast": "rosa", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "presenting", "expression": "happy", "enter": "draw", "sync": { "phrase": "Walt Disney" } },
+          { "kind": "trophy", "at": { "col": 8, "row": 2, "w": 3, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "Snow White" } },
+          { "kind": "bargraph", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "the entire empire" } }
+        ]
+      }
+    },
+    {
+      "id": "pr6-table",
+      "type": "table",
+      "narration": "Look at the whole stock market over decades and you see the same pattern, brutally clear. Out of thousands of public companies, about forty percent were basically total failures that lost nearly all of their value. Most of the rest just drifted, going nowhere in particular. A tiny group, around seven percent of companies, performed so extraordinarily well that they alone drove almost all of the market's gains. The index wins because of the few, not the many.",
+      "visual": {
+        "title": "Where gains come from",
+        "columns": ["Group", "Share", "Result"],
+        "rows": [
+          { "cells": ["Big losers", "Forty percent", "Lost nearly all"], "sync": { "phrase": "forty percent" } },
+          { "cells": ["The middle", "Most of rest", "Went nowhere"] },
+          { "cells": ["The few winners", "Seven percent", "Drove the gains"], "highlight": true, "sync": { "phrase": "seven percent" } }
+        ]
+      }
+    },
+    {
+      "id": "pr6-2",
+      "type": "character_scene",
+      "narration": "Here is what tails mean for you. You can be wrong half the time and still make a fortune, as long as the few times you are right, you are really right. A venture fund expects most of its bets to fail. Your own life is the same, most of your efforts, applications, and ideas will fizzle, and that is completely normal. So when something is not working, do not conclude you are broken. Failing often is simply the price of catching the rare win that changes everything.",
+      "visual": {
+        "title": "Wrong often, win big",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "nadia", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "curious", "enter": "draw", "sync": { "phrase": "wrong half the time" } },
+          { "kind": "scale", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "most of its bets to fail" } },
+          { "kind": "checkmark", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "the rare win" } }
+        ]
+      }
+    },
+    {
+      "id": "pr6-apply",
+      "type": "list_card",
+      "narration": "So play the game of tails on purpose. First, keep showing up, because you cannot predict which attempt is the big one. Second, do not judge yourself on any single result, judge the whole portfolio of your efforts. And third, survive the many small losses, so you are still there for the rare, enormous win.",
+      "visual": {
+        "title": "Play for tails",
+        "items": [
+          { "label": "Keep showing up", "icon": "tick", "sync": { "phrase": "keep showing up" } },
+          { "label": "Judge the whole portfolio", "icon": "tick", "sync": { "phrase": "the whole portfolio" } },
+          { "label": "Survive for the win", "icon": "tick", "sync": { "phrase": "the rare, enormous win" } }
+        ]
+      }
+    },
+    {
+      "id": "pr7-title",
+      "type": "section_title",
+      "narration": "Principle seven. Wealth is what you cannot see.",
+      "visual": { "role": "principle", "number": 7, "part": 3, "title": "Wealth You Cannot See", "emphasis": "circle", "memory": "moneybag", "sync": { "phrase": "what you cannot see" } }
+    },
+    {
+      "id": "pr7-1",
+      "type": "character_scene",
+      "narration": "Housel calls it the man in the car paradox. You see someone drive by in a gorgeous sports car, and for a second you think, wow, that person must be impressive. But be honest, you are not admiring the driver. You are imagining yourself behind that wheel. The driver is invisible, you only see the car. We buy expensive things to earn respect and admiration from other people, but the cruel joke is that they skip right past us and covet the object instead. Nobody is as impressed by your stuff as you hope.",
+      "visual": {
+        "title": "Nobody sees you",
+        "stage": "street",
+        "elements": [
+          { "kind": "figure", "cast": "jade", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "shocked", "enter": "draw", "sync": { "phrase": "the man in the car paradox" } },
+          { "kind": "moneybag", "at": { "col": 8, "row": 3, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "respect and admiration" } },
+          { "kind": "crowd", "at": { "col": 6, "row": 4, "w": 5, "h": 2 }, "count": 5, "arrangement": "queue", "tint": "sky", "tier": "ambient" }
+        ]
+      }
+    },
+    {
+      "id": "pr7-2",
+      "type": "compare",
+      "narration": "This reveals the difference between rich and wealthy, and they are not the same thing at all. Rich is income, a big salary, a financed car, visible spending you can see. Wealth is the money you did not spend, the investments, the options, the freedom hidden from view. Rich is the shiny new thing. Wealth is the bank balance you never showed anyone. The painful irony is that the spending which makes you look rich is the very thing that stops you from becoming wealthy.",
+      "visual": {
+        "title": "Rich versus wealthy",
+        "left": {
+          "heading": "Rich",
+          "items": [
+            { "label": "A big salary", "sync": { "phrase": "a big salary" } },
+            { "label": "Spending you can see", "sync": { "phrase": "visible spending you can see" } }
+          ]
+        },
+        "right": {
+          "heading": "Wealthy",
+          "items": [
+            { "label": "Money you didn't spend", "sync": { "phrase": "the money you did not spend" } },
+            { "label": "Freedom hidden from view", "sync": { "phrase": "freedom hidden from view" } }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr7-quote",
+      "type": "quote_card",
+      "narration": "Remember this line. Wealth is the nice cars not purchased. It is the money not spent. What you do not see is the whole point.",
+      "visual": {
+        "quote": "Wealth is the nice cars not purchased. It is the money not spent.",
+        "attribution": "Morgan Housel, The Psychology of Money",
+        "cast": "sage"
+      }
+    },
+    {
+      "id": "pr7-apply",
+      "type": "list_card",
+      "narration": "So stop chasing the look of money and build the thing itself. First, admire wealth you cannot see, because the quiet saver is often the real winner. Second, spend on what you actually value, not on an audience that is not even watching. And third, remember every purchase is a trade against your future freedom.",
+      "visual": {
+        "title": "Build real wealth",
+        "items": [
+          { "label": "Value the invisible", "icon": "tick", "sync": { "phrase": "wealth you cannot see" } },
+          { "label": "Ignore the audience", "icon": "tick", "sync": { "phrase": "an audience" } },
+          { "label": "Guard future freedom", "icon": "tick", "sync": { "phrase": "your future freedom" } }
+        ]
+      }
+    },
+    {
+      "id": "p3-recap",
+      "type": "recap_card",
+      "narration": "Part three, locked in. First, a few tails drive nearly all of your results, so keep showing up. Second, you can be wrong often and still win big. And third, real wealth is the money you do not see or spend, not the car in the driveway. Appearances lie, and patience quietly pays.",
+      "visual": {
+        "title": "Part three recap",
+        "scope": "mid",
+        "items": [
+          { "label": "Tails drive results", "sync": { "phrase": "tails drive nearly all" } },
+          { "label": "Wrong often, win big", "sync": { "phrase": "wrong often" } },
+          { "label": "Wealth is unseen", "sync": { "phrase": "the money you do not see" } }
+        ]
+      }
+    },
+
+    {
+      "id": "p4-title",
+      "type": "section_title",
+      "narration": "Part four. What money can truly buy.",
+      "visual": { "role": "part", "number": 4, "title": "What Money Buys", "emphasis": "underline", "sync": { "phrase": "money can truly buy" } }
+    },
+    {
+      "id": "p4-rehook",
+      "type": "character_scene",
+      "narration": "You know now that invisible wealth beats a flashy car. But what is all that wealth actually for. The answer is not a yacht or a bigger house. It is something far more valuable, the one thing money is the only tool able to purchase.",
+      "visual": {
+        "title": "What is it for",
+        "stage": "plain",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "thinking", "expression": "curious", "enter": "draw", "sync": { "phrase": "invisible wealth" } },
+          { "kind": "clock", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "the only tool" } },
+          { "kind": "house", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "a bigger house" } }
+        ]
+      }
+    },
+    {
+      "id": "pr8-title",
+      "type": "section_title",
+      "narration": "Principle eight. Freedom is the real dividend.",
+      "visual": { "role": "principle", "number": 8, "part": 4, "title": "Freedom Is The Dividend", "emphasis": "circle", "memory": "clock", "sync": { "phrase": "the real dividend" } }
+    },
+    {
+      "id": "pr8-1",
+      "type": "character_scene",
+      "narration": "Ask people what truly makes them happy, and the answer is almost never a specific number in the bank. It is control. The ability to wake up and decide, on your own terms, what to do, who to do it with, and for how long. Housel argues the highest dividend money pays is the power to control your time. A modest income with full control over your schedule can feel far richer than a huge salary that owns every hour of your day. Using money to buy freedom is the smartest purchase there is. That is why some of the happiest people you will ever meet earn far less than you would guess, yet own something priceless, an open calendar nobody else controls.",
+      "visual": {
+        "title": "Control is the prize",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "lena", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "happy", "enter": "draw", "sync": { "phrase": "makes them happy" } },
+          { "kind": "clock", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "control your time" } },
+          { "kind": "coffee", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "an open calendar" } }
+        ]
+      }
+    },
+    {
+      "id": "pr8-stat",
+      "type": "stat_chart",
+      "narration": "There is real research behind this. When scholars studied what truly makes people feel good about their lives, the strongest factor was not wealth and not a big house. It was a sense of control, having the autonomy to do what you want, when you want. People consistently rank that freedom above a higher paycheck. So every dollar you save is not just money. It is a tiny piece of future control, a down payment on being your own boss.",
+      "visual": {
+        "label": "What predicts well-being",
+        "mode": "bars",
+        "datapoints": [
+          { "label": "income", "value": 3 },
+          { "label": "possessions", "value": 2 },
+          { "label": "control of time", "value": 9, "sync": { "phrase": "a sense of control" } }
+        ]
+      }
+    },
+    {
+      "id": "pr8-2",
+      "type": "character_scene",
+      "narration": "The people who learn this too late all tell us the same thing. At the end of their careers, almost no one wishes they had worked more hours to afford a nicer watch. They wish they had used their money to buy back their time, to be present, to choose their own days. Alex finally realizes the goal was never to be the richest person in the room. It was to reach the morning where no one owns your calendar but you.",
+      "visual": {
+        "title": "The real goal",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "happy", "enter": "draw", "sync": { "phrase": "worked more hours" } },
+          { "kind": "calendar", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "owns your calendar" } },
+          { "kind": "clock", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "buy back their time" } }
+        ]
+      }
+    },
+    {
+      "id": "pr8-apply",
+      "type": "list_card",
+      "narration": "So spend money to win back your time. First, value flexibility over flash, because a free afternoon beats a nicer logo. Second, build savings specifically as freedom, where each dollar is a vote for independence. And third, say no to money that costs you your life, because time is the one thing you can never earn back.",
+      "visual": {
+        "title": "Buy your freedom",
+        "items": [
+          { "label": "Choose flexibility over flash", "icon": "tick", "sync": { "phrase": "flexibility over flash" } },
+          { "label": "Save for independence", "icon": "tick", "sync": { "phrase": "a vote for independence" } },
+          { "label": "Guard your time", "icon": "tick", "sync": { "phrase": "time is the one thing" } }
+        ]
+      }
+    },
+    {
+      "id": "pr9-title",
+      "type": "section_title",
+      "narration": "Principle nine. Be reasonable, not coldly rational.",
+      "visual": { "role": "principle", "number": 9, "part": 4, "title": "Reasonable Over Rational", "emphasis": "circle", "memory": "heart", "sync": { "phrase": "not coldly rational" } }
+    },
+    {
+      "id": "pr9-1",
+      "type": "character_scene",
+      "narration": "Finance textbooks want you to be perfectly rational, a cold calculator maximizing every last decimal. But you are a human being who has to sleep at night. Housel says aim to be reasonable instead. A slightly lower return that lets you stay calm through a crash is worth far more than an optimal strategy you abandon in a panic. The best plan on paper is useless if its ups and downs make you quit. A strategy you can actually live with beats a brilliant one you cannot.",
+      "visual": {
+        "title": "Sleep at night",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "max", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "sitting", "seat": "desk", "expression": "worried", "enter": "draw", "sync": { "phrase": "perfectly rational" } },
+          { "kind": "bed", "at": { "col": 8, "row": 3, "w": 4, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "sleep at night" } },
+          { "kind": "scale", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "reasonable instead" } }
+        ]
+      }
+    },
+    {
+      "id": "pr9-2",
+      "type": "character_scene",
+      "narration": "Housel practices this himself. He paid off his house in full, with no mortgage, even though every spreadsheet screams that is a terrible financial move, since cheap debt would let him invest more. He knows it is not optimal. He does not care. The feeling of owning his home outright, of real independence, helps him sleep and stick to his plan for decades. That emotional staying power is worth more than the extra points a calculator promises. Love your strategy enough to keep it.",
+      "visual": {
+        "title": "He owns it outright",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "sage", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "happy", "enter": "draw", "sync": { "phrase": "paid off his house" } },
+          { "kind": "house", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "no mortgage" } },
+          { "kind": "heart", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "Love your strategy" } }
+        ]
+      }
+    },
+    {
+      "id": "pr9-quote",
+      "type": "quote_card",
+      "narration": "His rule of thumb. Do not aim to be coldly rational. Aim to be merely reasonable. Reasonable keeps you in the game when rational would make you quit.",
+      "visual": {
+        "quote": "Do not aim to be coldly rational. Aim to be merely reasonable.",
+        "attribution": "Morgan Housel, The Psychology of Money",
+        "cast": "sage"
+      }
+    },
+    {
+      "id": "pr10-title",
+      "type": "section_title",
+      "narration": "Principle ten. Just save the money.",
+      "visual": { "role": "principle", "number": 10, "part": 4, "title": "Just Save Money", "emphasis": "circle", "memory": "coins", "sync": { "phrase": "save the money" } }
+    },
+    {
+      "id": "pr10-1",
+      "type": "character_scene",
+      "narration": "Here is maybe the most practical idea in the whole book. Your savings rate matters far more than your income or your investment returns. You cannot control the market, and you cannot always control your salary. But you can almost always control how much you spend. Building wealth has little to do with how much you earn, and nearly everything to do with the gap you create between what you make and what you spend. A high income with no savings is just a fancier way to stay broke. The size of that gap, not the size of the paycheck, is what slowly turns an ordinary salary into real and lasting wealth.",
+      "visual": {
+        "title": "Mind the gap",
+        "stage": "desk-office",
+        "elements": [
+          { "kind": "figure", "cast": "nadia", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "sitting", "seat": "desk", "expression": "happy", "enter": "draw", "sync": { "phrase": "Your savings rate" } },
+          { "kind": "coins", "at": { "col": 8, "row": 3, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "how much you spend" } },
+          { "kind": "piechart", "at": { "col": 8, "row": 1, "w": 3, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "real and lasting wealth" } }
+        ]
+      }
+    },
+    {
+      "id": "pr10-chart",
+      "type": "stat_chart",
+      "narration": "Think about what actually drives wealth. You do not control whether the market goes up ten percent or down twenty. You have limited say over your paycheck. But your spending is almost entirely yours to decide. That is why two people earning the very same income can end up worlds apart, one saves a quarter of every check, the other saves nothing. Same salary, opposite futures, decided by the one lever you fully control.",
+      "visual": {
+        "label": "How much you control",
+        "mode": "bars",
+        "suffix": "%",
+        "datapoints": [
+          { "label": "the market", "value": 5 },
+          { "label": "your income", "value": 30 },
+          { "label": "your spending", "value": 95, "sync": { "phrase": "almost entirely yours" } }
+        ]
+      }
+    },
+    {
+      "id": "pr10-2",
+      "type": "compare",
+      "narration": "Saving is really about the gap between your ego and your income. People spend to show off, to keep up, to prove something to strangers. The less you need that external approval, the more of your income quietly becomes savings. And you do not even need a reason to save, that is the whole point. Savings with no specific goal buys you flexibility, options, and the power to wait for a better opportunity. The spender chases status. The saver quietly buys freedom.",
+      "visual": {
+        "title": "Spender vs saver",
+        "left": {
+          "heading": "The spender",
+          "items": [
+            { "label": "Spends to show off", "sync": { "phrase": "spend to show off" } },
+            { "label": "Chases status", "sync": { "phrase": "chases status" } }
+          ]
+        },
+        "right": {
+          "heading": "The saver",
+          "items": [
+            { "label": "Keeps the gap", "sync": { "phrase": "the gap between your ego" } },
+            { "label": "Buys options and freedom", "sync": { "phrase": "flexibility, options" } }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr10-apply",
+      "type": "list_card",
+      "narration": "So make saving your quiet superpower. First, pay yourself first, moving money the day you get paid, before you can spend it. Second, let your ego go, because you do not need to impress anyone. And third, save with no goal at all, since that flexibility is itself the goal.",
+      "visual": {
+        "title": "Save like a pro",
+        "items": [
+          { "label": "Pay yourself first", "icon": "arrow", "sync": { "phrase": "pay yourself first" } },
+          { "label": "Shrink your ego", "icon": "arrow", "sync": { "phrase": "let your ego go" } },
+          { "label": "Save without a goal", "icon": "arrow", "sync": { "phrase": "save with no goal" } }
+        ]
+      }
+    },
+    {
+      "id": "p4-recap",
+      "type": "recap_card",
+      "narration": "Part four, in a nutshell. First, the real dividend money pays is freedom, control over your own time. Second, be reasonable, not coldly rational, and pick a plan you can actually stick with. And third, your savings rate beats your income, so mind the gap. Money is a tool for a life, not a scoreboard.",
+      "visual": {
+        "title": "Part four recap",
+        "scope": "mid",
+        "items": [
+          { "label": "Freedom over money", "sync": { "phrase": "control over your own time" } },
+          { "label": "Reasonable beats rational", "sync": { "phrase": "reasonable, not coldly rational" } },
+          { "label": "Save the gap", "sync": { "phrase": "your savings rate" } }
+        ]
+      }
+    },
+
+    {
+      "id": "p5-title",
+      "type": "section_title",
+      "narration": "Part five. Surviving an uncertain future.",
+      "visual": { "role": "part", "number": 5, "title": "Surviving The Future", "emphasis": "underline", "sync": { "phrase": "an uncertain future" } }
+    },
+    {
+      "id": "p5-rehook",
+      "type": "character_scene",
+      "narration": "You have the behaviors now, enough, patience, freedom, and saving. But the future will mock every forecast you ever make. The last piece is not a prediction. It is how to build a plan that survives being wrong, because at some point, you will be.",
+      "visual": {
+        "title": "You will be wrong",
+        "stage": "plain",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "curious", "enter": "draw", "sync": { "phrase": "every forecast" } },
+          { "kind": "scale", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "survives being wrong" } },
+          { "kind": "hourglass", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "the future" } }
+        ]
+      }
+    },
+    {
+      "id": "pr11-title",
+      "type": "section_title",
+      "narration": "Principle eleven. Always leave room for error.",
+      "visual": { "role": "principle", "number": 11, "part": 5, "title": "Room For Error", "emphasis": "circle", "memory": "scale", "sync": { "phrase": "room for error" } }
+    },
+    {
+      "id": "pr11-1",
+      "type": "character_scene",
+      "narration": "The single most important part of any plan is planning for the plan to not go according to plan. Housel calls this room for error, or a margin of safety. It is the gap between what you can survive and what you expect to happen. If you can only endure a mild downturn, a severe one destroys you. But if you can survive the worst case, the normal case becomes easy. Room for error lets you stay in the game long enough for the odds and compounding to finally work in your favor.",
+      "visual": {
+        "title": "A margin of safety",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "deshawn", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "curious", "enter": "draw", "sync": { "phrase": "according to plan" } },
+          { "kind": "scale", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "a margin of safety" } },
+          { "kind": "wall", "at": { "col": 7, "row": 1, "w": 2, "h": 3 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "the worst case" } }
+        ]
+      }
+    },
+    {
+      "id": "pr11-2",
+      "type": "character_scene",
+      "narration": "The point of a margin of safety is to make predictions unnecessary. You do not need to know exactly what will go wrong, only that something will. So you keep more cash than seems logical, you avoid betting everything on one outcome, and you never use so much debt that a single bad year can wipe you out. People see that caution and call it inefficient. Then the storm comes, the efficient ones are gone, and the cautious ones are still standing, free to buy the wreckage.",
+      "visual": {
+        "title": "Predictions unnecessary",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "maya", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "happy", "enter": "draw", "sync": { "phrase": "predictions unnecessary" } },
+          { "kind": "coins", "at": { "col": 8, "row": 3, "w": 3, "h": 3 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "more cash than seems logical" } },
+          { "kind": "tree", "at": { "col": 9, "row": 1, "w": 2, "h": 3 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "still standing" } }
+        ]
+      }
+    },
+    {
+      "id": "pr11-quote",
+      "type": "quote_card",
+      "narration": "The core idea in one line. The most important part of every plan is planning on your plan not going according to plan.",
+      "visual": {
+        "quote": "The most important part of every plan is planning on your plan not going according to plan.",
+        "attribution": "Morgan Housel, The Psychology of Money",
+        "cast": "sage"
+      }
+    },
+    {
+      "id": "pr11-apply",
+      "type": "list_card",
+      "narration": "So build your plan to bend, not break. First, keep an emergency buffer bigger than feels reasonable. Second, avoid single points of failure, no one stock and no one bet. And third, simply assume you will be wrong, and make sure that being wrong is survivable.",
+      "visual": {
+        "title": "Plan to bend",
+        "items": [
+          { "label": "Keep a big buffer", "icon": "box", "sync": { "phrase": "an emergency buffer" } },
+          { "label": "Avoid single points failing", "icon": "box", "sync": { "phrase": "single points of failure" } },
+          { "label": "Make wrong survivable", "icon": "box", "sync": { "phrase": "being wrong is survivable" } }
+        ]
+      }
+    },
+    {
+      "id": "pr12-title",
+      "type": "section_title",
+      "narration": "Principle twelve. Pay the price of admission.",
+      "visual": { "role": "principle", "number": 12, "part": 5, "title": "The Price Of Admission", "emphasis": "circle", "memory": "trendup", "sync": { "phrase": "the price of admission" } }
+    },
+    {
+      "id": "pr12-1",
+      "type": "character_scene",
+      "narration": "Every great return has a price tag, and most people refuse to pay it. The price of strong market returns is volatility, fear, doubt, and stomach churning drops along the way. The mistake is seeing that volatility as a fine, a punishment to avoid, when it is really a fee, the admission price for getting in. Think of it like a theme park ticket. The scary ride is exactly what you came for. If you want the returns, you have to be willing to sit through the terror without jumping off. The investors who win are not the ones who dodge the fear. They are the ones who understand it is simply the cost of the ticket, and pay it without flinching.",
+      "visual": {
+        "title": "A fee, not a fine",
+        "stage": "street",
+        "elements": [
+          { "kind": "figure", "cast": "kwame", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "worried", "enter": "draw", "sync": { "phrase": "a price tag" } },
+          { "kind": "trendup", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "a fee" } },
+          { "kind": "scale", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "the cost of the ticket" } }
+        ]
+      }
+    },
+    {
+      "id": "pr12-stat",
+      "type": "stat_chart",
+      "narration": "Here is the reward for paying that fee. Over the last century, the stock market endured crashes, world wars, and dozens of recessions, and still delivered extraordinary long term growth. A single dollar left invested for decades became hundreds. But you only collected that growth if you stayed in your seat through every terrifying drop. The ones who sold at the bottom, just to feel safe, locked in the loss and missed the entire recovery.",
+      "visual": {
+        "label": "One dollar invested",
+        "mode": "line",
+        "prefix": "$",
+        "datapoints": [
+          { "label": "start", "value": 1, "sync": { "phrase": "A single dollar" } },
+          { "label": "crashes", "value": 3 },
+          { "label": "decades later", "value": 200, "sync": { "phrase": "became hundreds" } }
+        ]
+      }
+    },
+    {
+      "id": "pr12-2",
+      "type": "character_scene",
+      "narration": "One last trap. Pessimism always sounds smarter than optimism. A voice warning of collapse seems wise and caring, while an optimist sounds like they are trying to sell you something. But over history, the optimists have been right. The world gets messier in the short run and far better over the long run. Just make sure you are playing your own game. A day trader and a retiree are not playing the same sport, so never take your cues from someone with a completely different time horizon than you.",
+      "visual": {
+        "title": "Play your own game",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "rosa", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "standing", "expression": "happy", "enter": "draw", "sync": { "phrase": "the optimists have been right" } },
+          { "kind": "trendup", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "your own game" } },
+          { "kind": "crowd", "at": { "col": 6, "row": 4, "w": 5, "h": 2 }, "count": 4, "arrangement": "row", "tint": "coral", "tier": "ambient" }
+        ]
+      }
+    },
+    {
+      "id": "pr12-apply",
+      "type": "list_card",
+      "narration": "So handle the future with a clear head. First, treat volatility as the fee, not a fine, and refuse to panic sell at the bottom. Second, stay optimistic about the long run, because history keeps rewarding it. And third, know your own game, and ignore the noise meant for someone else.",
+      "visual": {
+        "title": "Face the future",
+        "items": [
+          { "label": "Volatility is the fee", "icon": "tick", "sync": { "phrase": "treat volatility as the fee" } },
+          { "label": "Stay long-term optimistic", "icon": "tick", "sync": { "phrase": "optimistic about the long run" } },
+          { "label": "Know your own game", "icon": "tick", "sync": { "phrase": "know your own game" } }
+        ]
+      }
+    },
+    {
+      "id": "p5-recap",
+      "type": "recap_card",
+      "narration": "Part five, locked in. First, always leave room for error, so that being wrong never ends you. Second, volatility is the fee for great returns, not a fine, so stay invested through it. And third, bet on optimism over the long run, while always playing your own game. Survive, stay in, and let time do the rest.",
+      "visual": {
+        "title": "Part five recap",
+        "scope": "mid",
+        "items": [
+          { "label": "Leave room for error", "sync": { "phrase": "room for error" } },
+          { "label": "Pay the fee", "sync": { "phrase": "the fee for great returns" } },
+          { "label": "Play your own game", "sync": { "phrase": "playing your own game" } }
+        ]
+      }
+    },
+
+    {
+      "id": "apply-1",
+      "type": "character_scene",
+      "narration": "So how does Housel himself handle money, after studying all of this. It is almost boringly simple. He keeps a higher percentage of his assets in cash than most experts would ever advise, purely for peace of mind. He invests the rest in low cost index funds, and then does nothing, for decades. He is not trying to beat the market. He is trying to not get knocked out of it. His whole strategy is built to help him sleep well and stay in the game long enough for compounding to win.",
+      "visual": {
+        "title": "His own portfolio",
+        "stage": "room",
+        "elements": [
+          { "kind": "figure", "cast": "sage", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "sitting", "seat": "desk", "expression": "happy", "enter": "draw", "holding": { "prop": "book", "hand": "right" }, "sync": { "phrase": "boringly simple" } },
+          { "kind": "piechart", "at": { "col": 8, "row": 2, "w": 4, "h": 4 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "index funds" } },
+          { "kind": "coins", "at": { "col": 7, "row": 1, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "stay in the game" } }
+        ]
+      }
+    },
+    {
+      "id": "apply-2",
+      "type": "list_card",
+      "narration": "So before you click away, make the psychology work for you, starting today. First, define your enough, so the goalpost finally stops moving. Second, raise your savings rate, the one lever you truly control. Third, buy freedom, not stuff, because your time is the real prize. And fourth, pick a plan you can hold through every storm. Do these, and the money quietly takes care of itself.",
+      "visual": {
+        "title": "Your turn today",
+        "items": [
+          { "label": "Define your enough", "icon": "tick", "sync": { "phrase": "define your enough" } },
+          { "label": "Raise your savings rate", "icon": "tick", "sync": { "phrase": "raise your savings rate" } },
+          { "label": "Buy freedom, not stuff", "icon": "tick", "sync": { "phrase": "buy freedom, not stuff" } },
+          { "label": "Hold through every storm", "icon": "tick", "sync": { "phrase": "hold through every storm" } }
+        ]
+      }
+    },
+    {
+      "id": "final-recap",
+      "type": "recap_card",
+      "narration": "Let us tie the whole book together. No one is crazy, since every money choice is shaped by a life you have not lived. Luck and risk decide more than skill, so stay humble. Know when you have enough, and let compounding do its slow magic. Real wealth is unseen, and its greatest gift is freedom over your time. Save relentlessly, be reasonable over rational, and always leave room for error. Doing well with money is a behavior, not an IQ test.",
+      "visual": {
+        "title": "The whole book",
+        "scope": "final",
+        "items": [
+          { "label": "No one is crazy", "sync": { "phrase": "No one is crazy" } },
+          { "label": "Enough and compounding", "sync": { "phrase": "when you have enough" } },
+          { "label": "Wealth buys freedom", "sync": { "phrase": "freedom over your time" } },
+          { "label": "Behavior, not IQ", "sync": { "phrase": "not an IQ test" } }
+        ]
+      }
+    },
+    {
+      "id": "close",
+      "type": "character_scene",
+      "narration": "So here is the one line to carry out of The Psychology of Money. Getting rich and staying rich are two different skills, and both are won by behavior, not brilliance. You do not need to predict the future or beat the market. You need to save more than you think you should, want less than you could, and give it time. Control your money, so that it never controls you. Be the patient janitor, not the broke genius.",
+      "visual": {
+        "title": "Behavior, not brilliance",
+        "stage": "outdoor",
+        "elements": [
+          { "kind": "figure", "cast": "alex", "at": { "col": 1, "row": 1, "w": 4, "h": 5 }, "pose": "celebrating", "expression": "happy", "enter": "draw", "sync": { "phrase": "behavior, not brilliance" } },
+          { "kind": "mountain", "at": { "col": 7, "row": 1, "w": 5, "h": 5 }, "reveal": "draw", "color": "accent", "sync": { "phrase": "the patient janitor" } },
+          { "kind": "tree", "at": { "col": 6, "row": 4, "w": 2, "h": 2 }, "reveal": "pop", "tier": "ambient", "sync": { "phrase": "give it time" } }
+        ]
+      }
+    },
+    {
+      "id": "cta-close",
+      "type": "cta",
+      "narration": "What is your number for enough. Tell me in the comments, and subscribe for the next book broken down just like this.",
+      "visual": { "text": "What's your 'enough'? Tell me below.", "style": "corner" }
+    }
+  ]
+}
