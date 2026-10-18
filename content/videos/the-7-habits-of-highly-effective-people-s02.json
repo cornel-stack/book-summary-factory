@@ -1,0 +1,250 @@
+{
+  "id": "the-7-habits-of-highly-effective-people-s02",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Your Urgent Tasks Are Why You're Stuck ⏰ #7habits",
+  "short_hook": "Urgent tasks keep you stuck",
+  "book": {
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Stephen R. Covey",
+    "year": 1989
+  },
+  "description": "Covey's time management matrix: why quadrant two is where your life actually changes. From The 7 Habits of Highly Effective People by Stephen R. Covey. Follow ReadLark for one book a day.",
+  "tags": [
+    "7 habits",
+    "stephen covey",
+    "self improvement",
+    "book summary",
+    "shorts",
+    "time management",
+    "productivity"
+  ],
+  "pinned_comment": "Which box do you spend most of your day in? Be honest 👇",
+  "thumbnail": {
+    "headline": "Urgent tasks keep you stuck"
+  },
+  "voice": "en-US-AndrewNeural",
+  "rate": "-5%",
+  "loop": true,
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "kinetic",
+      "narration": "The urgent stuff on your to do list is exactly why you never get ahead.",
+      "visual": {
+        "layout": "hook",
+        "text": "Urgent tasks keep you stuck",
+        "accent": [
+          "Urgent"
+        ],
+        "icon": "clock"
+      }
+    },
+    {
+      "id": "questions",
+      "type": "kinetic",
+      "narration": "Stephen Covey sorted every task by two questions. Is it urgent? Is it important?",
+      "visual": {
+        "layout": "statement",
+        "text": "Urgent? Important?",
+        "accent": [
+          "Important?"
+        ],
+        "icon": "scale"
+      }
+    },
+    {
+      "id": "matrix",
+      "type": "kinetic",
+      "narration": "That gives you four boxes. Crises and deadlines. Important things that aren't urgent. Interruptions. And pure time wasters.",
+      "visual": {
+        "layout": "steps",
+        "title": "The time matrix",
+        "items": [
+          {
+            "label": "Crises and deadlines",
+            "sync": {
+              "phrase": "Crises and deadlines"
+            }
+          },
+          {
+            "label": "Important, not urgent",
+            "sync": {
+              "phrase": "Important things"
+            }
+          },
+          {
+            "label": "Interruptions",
+            "sync": {
+              "phrase": "Interruptions"
+            }
+          },
+          {
+            "label": "Time wasters",
+            "sync": {
+              "phrase": "pure time wasters"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "reacting",
+      "type": "kinetic",
+      "narration": "Most people live in box one and box three, reacting all day long, and wondering why nothing improves.",
+      "visual": {
+        "layout": "statement",
+        "text": "Reacting all day",
+        "accent": [
+          "Reacting"
+        ],
+        "icon": "phone",
+        "sync": {
+          "phrase": "reacting all day"
+        }
+      }
+    },
+    {
+      "id": "rehook",
+      "type": "kinetic",
+      "narration": "But the people who win live in box two.",
+      "visual": {
+        "layout": "statement",
+        "text": "Winners live in box 2",
+        "accent": [
+          "box",
+          "2"
+        ],
+        "icon": "trophy",
+        "sync": {
+          "phrase": "live in box two"
+        }
+      }
+    },
+    {
+      "id": "box2",
+      "type": "kinetic",
+      "narration": "Box two is exercise, planning, learning and real relationships. Nobody ever calls you in a panic about them.",
+      "visual": {
+        "layout": "icons",
+        "title": "Box two",
+        "items": [
+          {
+            "icon": "dumbbell",
+            "label": "Exercise",
+            "sync": {
+              "phrase": "is exercise"
+            }
+          },
+          {
+            "icon": "calendar",
+            "label": "Planning",
+            "sync": {
+              "phrase": "planning"
+            }
+          },
+          {
+            "icon": "book",
+            "label": "Learning",
+            "sync": {
+              "phrase": "learning"
+            }
+          },
+          {
+            "icon": "heart",
+            "label": "Relationships",
+            "sync": {
+              "phrase": "real relationships"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "neglect",
+      "type": "kinetic",
+      "narration": "So they get ignored, until neglect turns them into a box one crisis. A health scare. A broken relationship.",
+      "visual": {
+        "layout": "statement",
+        "text": "Neglect becomes a crisis",
+        "accent": [
+          "crisis"
+        ],
+        "icon": "hourglass",
+        "sync": {
+          "phrase": "turns them into"
+        }
+      }
+    },
+    {
+      "id": "sunday",
+      "type": "kinetic",
+      "narration": "The fix takes ten minutes. Every Sunday, list your roles. Pick one box two goal for each. Schedule those first, before anything else.",
+      "visual": {
+        "layout": "steps",
+        "title": "Every Sunday",
+        "items": [
+          {
+            "label": "List your roles",
+            "sync": {
+              "phrase": "list your roles"
+            }
+          },
+          {
+            "label": "One goal per role",
+            "sync": {
+              "phrase": "Pick one box two goal"
+            }
+          },
+          {
+            "label": "Schedule them first",
+            "sync": {
+              "phrase": "Schedule those first"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "whisper",
+      "type": "kinetic",
+      "narration": "Urgent will always shout. Important only whispers. Learn to hear the whisper.",
+      "visual": {
+        "layout": "versus",
+        "left": {
+          "label": "Urgent shouts",
+          "icon": "phone",
+          "sync": {
+            "phrase": "Urgent will always shout"
+          }
+        },
+        "right": {
+          "label": "Important whispers",
+          "icon": "heart",
+          "sync": {
+            "phrase": "Important only whispers"
+          }
+        },
+        "winner": "right"
+      }
+    },
+    {
+      "id": "loop",
+      "type": "kinetic",
+      "narration": "That's The Seven Habits by Stephen Covey. Because",
+      "visual": {
+        "layout": "statement",
+        "text": "The 7 Habits · Stephen Covey",
+        "accent": [
+          "7",
+          "Habits"
+        ],
+        "icon": "book"
+      }
+    }
+  ]
+}

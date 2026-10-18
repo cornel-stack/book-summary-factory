@@ -1,0 +1,3501 @@
+{
+  "id": "the-7-habits-of-highly-effective-people",
+  "title": "The 7 Habits of Highly Effective People Summary: Every Habit Explained",
+  "brand": "readlark",
+  "format": "longform",
+  "book": {
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Stephen R. Covey",
+    "year": 1989
+  },
+  "description": "The 7 Habits of Highly Effective People by Stephen R. Covey is one of the most influential personal development books ever written, and this summary walks through all of it. You will learn the inside out approach, the maturity continuum from dependence to interdependence, and every habit: be proactive, begin with the end in mind, put first things first, think win-win, seek first to understand then to be understood, synergize, and sharpen the saw. Along the way: the circle of influence, the funeral exercise, the time management matrix, the emotional bank account, and empathic listening.",
+  "tags": [
+    "7 habits of highly effective people",
+    "stephen covey",
+    "7 habits summary",
+    "the 7 habits",
+    "be proactive",
+    "time management matrix",
+    "emotional bank account",
+    "win win",
+    "sharpen the saw",
+    "personal development",
+    "self improvement",
+    "book summary"
+  ],
+  "thumbnail": {
+    "headline": "Seven Habits That Work",
+    "punch_words": [
+      "7 HABITS",
+      "THAT",
+      "WORK"
+    ],
+    "cast": "sage",
+    "pose": "pointing",
+    "expression": "happy",
+    "props": [
+      "target",
+      "calendar"
+    ],
+    "pointer": "spotlight"
+  },
+  "voice": "en-US-AndrewNeural",
+  "target_minutes": 32,
+  "pinned_comment": "Which habit do you struggle with most, being proactive, first things first, or listening to understand? Tell me below, and which book I should do next.",
+  "promise": "real success is not about tricks or techniques",
+  "title_variants": [
+    "The 7 Habits of Highly Effective People Summary: Every Habit Explained",
+    "Why Most Productivity Advice Fails (Covey Knew in 1989)",
+    "Take Control of Your Life With 7 Timeless Habits"
+  ],
+  "category": "Habits & Productivity",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "In The Seven Habits of Highly Effective People, Stephen Covey argues that real success is not about tricks or techniques, it is about character. His book has sold more than forty million copies because it offers a complete operating system for your life. By the end of this video, you will have every habit, plus the single question that changed how I plan every week.",
+      "visual": {
+        "title": "An operating system for life",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Stephen Covey"
+            },
+            "pose": "pointing"
+          },
+          {
+            "kind": "book",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "forty million copies"
+            }
+          },
+          {
+            "kind": "gears",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "operating system"
+            },
+            "tier": "ambient"
+          }
+        ]
+      }
+    },
+    {
+      "id": "intro-1",
+      "type": "character_scene",
+      "narration": "Covey tells a story about a quiet Sunday morning on a New York subway. A man sat down with his children, who began yelling and throwing things, while he just sat there, eyes closed. Covey was irritated, and finally asked him to control his kids. The man looked up and said softly, we just came from the hospital where their mother died about an hour ago. I don't know what to think, and I guess they don't either. In that instant, everything Covey felt changed. He later wrote that he no longer had to control his attitude or his behavior. His heart was simply filled with the man's pain.",
+      "visual": {
+        "title": "The subway story",
+        "stage": "street",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "omar",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "tired",
+            "enter": "draw",
+            "sync": {
+              "phrase": "sat down with his children"
+            },
+            "pose": "sitting",
+            "seat": "chair"
+          },
+          {
+            "kind": "figure",
+            "cast": "theo",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "angry",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Covey was irritated"
+            },
+            "pose": "standing",
+            "facing": "left",
+            "expressions": [
+              {
+                "value": "angry"
+              },
+              {
+                "value": "shocked",
+                "sync": {
+                  "phrase": "their mother died"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "intro-2",
+      "type": "quote_card",
+      "narration": "That is a paradigm shift. Covey says we do not see the world as it is. We see it as we are, through the maps in our heads. Change the map, and your behavior changes instantly, without any willpower at all. That is why this book starts on the inside, with how you see, before it ever tells you what to do.",
+      "visual": {
+        "quote": "We see the world, not as it is, but as we are, or as we are conditioned to see it.",
+        "attribution": "Stephen R. Covey",
+        "cast": "maya"
+      }
+    },
+    {
+      "id": "intro-3",
+      "type": "compare",
+      "narration": "Covey studied two hundred years of success literature and noticed a shift. For the first hundred and fifty years, it focused on the character ethic, things like integrity, humility, courage and patience. After the First World War, it switched to the personality ethic, public image, positive thinking and quick techniques. Techniques can work for a while. But without character underneath, people eventually see through them.",
+      "visual": {
+        "title": "Two kinds of success advice",
+        "left": {
+          "heading": "Character ethic",
+          "items": [
+            {
+              "label": "Integrity",
+              "sync": {
+                "phrase": "like integrity"
+              }
+            },
+            {
+              "label": "Humility and courage",
+              "sync": {
+                "phrase": "humility, courage"
+              }
+            },
+            {
+              "label": "Patience",
+              "sync": {
+                "phrase": "and patience"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Personality ethic",
+          "items": [
+            {
+              "label": "Public image",
+              "sync": {
+                "phrase": "public image"
+              }
+            },
+            {
+              "label": "Positive thinking",
+              "sync": {
+                "phrase": "positive thinking"
+              }
+            },
+            {
+              "label": "Quick techniques",
+              "sync": {
+                "phrase": "quick techniques"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "p1-title",
+      "type": "section_title",
+      "narration": "Part one. The inside out approach.",
+      "visual": {
+        "title": "The Inside Out Approach",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "inside out approach"
+        },
+        "role": "part",
+        "number": 1
+      }
+    },
+    {
+      "id": "pr1-title",
+      "type": "section_title",
+      "narration": "Principle one. Habits are knowledge, skill and desire.",
+      "visual": {
+        "title": "What A Habit Really Is",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Habits are knowledge"
+        },
+        "role": "principle",
+        "number": 1,
+        "part": 1,
+        "memory": "gears"
+      }
+    },
+    {
+      "id": "pr1-1",
+      "type": "list_card",
+      "narration": "Covey defines a habit as the overlap of three things. Knowledge is the what and the why. Skill is the how. And desire is the want to. Miss any one of them and the habit never forms. You can know listening matters, and even know how to do it, but if you do not want to, nothing changes.",
+      "visual": {
+        "title": "A habit needs all three",
+        "items": [
+          {
+            "label": "Knowledge: what and why",
+            "sync": {
+              "phrase": "Knowledge is the what"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Skill: the how",
+            "sync": {
+              "phrase": "Skill is the how"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Desire: the want to",
+            "sync": {
+              "phrase": "desire is the want to"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr1-2",
+      "type": "character_scene",
+      "narration": "Then Covey retells the fable of the goose that laid golden eggs. A poor farmer finds one golden egg each day and grows rich, then greedy. Impatient, he kills the goose to get all the eggs at once, and finds nothing inside. Covey calls this the P P C balance. P is production, the golden eggs. P C is production capability, the goose. Effectiveness means caring for both. Push only for production and you lose the goose. Obsess only over the goose and you never produce.",
+      "visual": {
+        "title": "The golden goose",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "pip",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "poor farmer"
+            },
+            "poses": [
+              "standing",
+              "celebrating"
+            ]
+          },
+          {
+            "kind": "coins",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "one golden egg"
+            }
+          },
+          {
+            "kind": "heart",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "caring for both"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr1-3",
+      "type": "character_scene",
+      "narration": "You see this everywhere. A manager who burns out the team to hit one quarter's numbers. A student who crams and forgets everything a week later. Your body, your relationships and your skills are all geese. Feed them, and the eggs keep coming. And if that idea was useful, ReadLark breaks down a new book every single day. Subscribe so tomorrow's book lands in your feed. Now let's see how the habits fit together.",
+      "visual": {
+        "title": "Feed the goose",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "nadia",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "burns out the team"
+            },
+            "pose": "panicking",
+            "effects": [
+              {
+                "kind": "sweat_drop"
+              }
+            ]
+          },
+          {
+            "kind": "bargraph",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "one quarter's numbers"
+            }
+          },
+          {
+            "kind": "seedling",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "Feed them"
+            }
+          }
+        ]
+      },
+      "subscribe": {
+        "phrase": "Subscribe so tomorrow's book",
+        "line": "1 book · every day"
+      }
+    },
+    {
+      "id": "pr2-title",
+      "type": "section_title",
+      "narration": "Principle two. The maturity continuum.",
+      "visual": {
+        "title": "The Maturity Continuum",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "maturity continuum"
+        },
+        "role": "principle",
+        "number": 2,
+        "part": 1,
+        "memory": "staircase"
+      }
+    },
+    {
+      "id": "pr2-1",
+      "type": "table",
+      "narration": "The habits move you along what Covey calls the maturity continuum. Dependence is the paradigm of you. You take care of me, and you are to blame. Independence is the paradigm of I. I can do it, I am responsible. Interdependence is the paradigm of we. We can cooperate and create something greater together. Our culture celebrates independence, but the biggest results in life come from interdependence.",
+      "visual": {
+        "title": "From you to we",
+        "columns": [
+          "Stage",
+          "Paradigm",
+          "Sounds like"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Dependence",
+              "You",
+              "You take care"
+            ],
+            "sync": {
+              "phrase": "Dependence is the paradigm"
+            }
+          },
+          {
+            "cells": [
+              "Independence",
+              "I",
+              "I can do it"
+            ],
+            "sync": {
+              "phrase": "Independence is the paradigm"
+            }
+          },
+          {
+            "cells": [
+              "Interdependence",
+              "We",
+              "We can cooperate"
+            ],
+            "sync": {
+              "phrase": "Interdependence is the paradigm"
+            },
+            "highlight": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr2-2",
+      "type": "character_scene",
+      "narration": "That gives the book its shape. The first habits are the private victory, mastering yourself so you move from dependence to independence. The middle habits are the public victory, working well with others. The last habit renews everything. Covey's point is that private victories come before public ones. You cannot be a trusted partner to anyone until you can keep promises to yourself. That is why the order of the habits matters so much.",
+      "visual": {
+        "title": "Private before public",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "private victory"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "staircase",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "from dependence to independence"
+            }
+          },
+          {
+            "kind": "trophy",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "public victory"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "p1-recap",
+      "type": "recap_card",
+      "narration": "Part one in a breath. We see the world as we are, so change starts inside. A habit needs knowledge, skill and desire. Protect the goose, not just the eggs. And grow from dependence, to independence, to interdependence.",
+      "visual": {
+        "title": "Part one recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Change starts inside",
+            "sync": {
+              "phrase": "change starts inside"
+            }
+          },
+          {
+            "label": "Knowledge, skill, desire",
+            "sync": {
+              "phrase": "knowledge, skill and desire"
+            }
+          },
+          {
+            "label": "Protect the goose",
+            "sync": {
+              "phrase": "Protect the goose"
+            }
+          },
+          {
+            "label": "Grow toward we",
+            "sync": {
+              "phrase": "to interdependence"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-title",
+      "type": "section_title",
+      "narration": "Part two. The private victory.",
+      "visual": {
+        "title": "The Private Victory",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "The private victory"
+        },
+        "role": "part",
+        "number": 2
+      }
+    },
+    {
+      "id": "p2-rehook",
+      "type": "character_scene",
+      "narration": "Here is the uncomfortable truth at the center of part two. Most of what frustrates you, your boss, the economy, other people's moods, is outside your control. But the way you respond is always yours. The private victory is about taking that back, and it starts with a single word Covey turned into a philosophy. Proactive. Covey's habits put you back in the driver's seat, one choice at a time.",
+      "visual": {
+        "title": "What is yours to control",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "lena",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "outside your control"
+            },
+            "poses": [
+              "standing",
+              "shrugging"
+            ]
+          },
+          {
+            "kind": "wall",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "your boss"
+            }
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "Proactive"
+            },
+            "state": "on"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr3-title",
+      "type": "section_title",
+      "narration": "Habit one. Be proactive.",
+      "visual": {
+        "title": "Habit 1: Be Proactive",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Be proactive"
+        },
+        "role": "principle",
+        "number": 3,
+        "part": 2,
+        "memory": "lightbulb"
+      }
+    },
+    {
+      "id": "pr3-1",
+      "type": "character_scene",
+      "narration": "Covey draws on Viktor Frankl, the psychiatrist who survived the Nazi death camps. Stripped of everything, Frankl realized there was one freedom no one could take, the freedom to choose his response. Covey puts the lesson this way. Between stimulus and response, there is a space. In that space lies our power to choose. Reactive people let feelings, circumstances and other people fill that space for them. Proactive people fill it with their values. That one idea is the root of every other habit in the book.",
+      "visual": {
+        "title": "The space to choose",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Viktor Frankl"
+            },
+            "pose": "thinking"
+          },
+          {
+            "kind": "wall",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "Stripped of everything"
+            }
+          },
+          {
+            "kind": "heart",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "fill it with their values"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr3-2",
+      "type": "compare",
+      "narration": "You can hear the difference in language. Reactive people say, there is nothing I can do. That is just the way I am. He makes me so mad. I have to. Proactive people say, let's look at our alternatives. I can choose a different approach. I control my own feelings. I choose to. Listen to yourself for a day and notice which column you live in.",
+      "visual": {
+        "title": "Listen to your words",
+        "left": {
+          "heading": "Reactive",
+          "items": [
+            {
+              "label": "Nothing I can do",
+              "sync": {
+                "phrase": "nothing I can do"
+              }
+            },
+            {
+              "label": "That's just me",
+              "sync": {
+                "phrase": "the way I am"
+              }
+            },
+            {
+              "label": "He makes me mad",
+              "sync": {
+                "phrase": "makes me so mad"
+              }
+            },
+            {
+              "label": "I have to",
+              "sync": {
+                "phrase": "I have to"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Proactive",
+          "items": [
+            {
+              "label": "Look at alternatives",
+              "sync": {
+                "phrase": "look at our alternatives"
+              }
+            },
+            {
+              "label": "A different approach",
+              "sync": {
+                "phrase": "choose a different approach"
+              }
+            },
+            {
+              "label": "I control my feelings",
+              "sync": {
+                "phrase": "control my own feelings"
+              }
+            },
+            {
+              "label": "I choose to",
+              "sync": {
+                "phrase": "I choose to"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr3-3",
+      "type": "character_scene",
+      "narration": "Next, draw two circles. Your circle of concern holds everything you care about, the news, the economy, your health, your kids. Inside it sits a smaller circle of influence, the things you can actually do something about. Reactive people focus on concern, and their influence shrinks. Proactive people pour their energy into influence, and it grows. Work on what you can change, and you will be surprised how much you can. Even small actions inside your circle, done consistently, start to expand it outward.",
+      "visual": {
+        "title": "Concern versus influence",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "kwame",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "draw two circles"
+            },
+            "pose": "pointing"
+          },
+          {
+            "kind": "target",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "circle of influence"
+            }
+          },
+          {
+            "kind": "trendup",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "and it grows"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr3-4",
+      "type": "list_card",
+      "narration": "Covey offers a thirty day test. For thirty days, work only in your circle of influence. Make small commitments and keep them. Be a light, not a judge. Be a model, not a critic. Be part of the solution, not part of the problem. At the end of the month, notice how much more control you feel.",
+      "visual": {
+        "title": "The thirty day test",
+        "items": [
+          {
+            "label": "Small promises, kept",
+            "sync": {
+              "phrase": "small commitments"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "A light, not a judge",
+            "sync": {
+              "phrase": "a light, not a judge"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "A model, not a critic",
+            "sync": {
+              "phrase": "a model, not a critic"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Part of the solution",
+            "sync": {
+              "phrase": "part of the solution"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr4-title",
+      "type": "section_title",
+      "narration": "Habit two. Begin with the end in mind.",
+      "visual": {
+        "title": "Habit 2: Begin With The End",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Begin with the end in mind"
+        },
+        "role": "principle",
+        "number": 4,
+        "part": 2,
+        "memory": "target"
+      }
+    },
+    {
+      "id": "pr4-1",
+      "type": "character_scene",
+      "narration": "Covey asks you to imagine something unsettling. You are walking into a funeral, and as you look into the casket, you realize it is your own. Several people will speak. A family member, a friend, a colleague and someone from your community. What would you want each of them to say about you. What character did you show. What difference did you make. Your honest answers reveal what success really means to you. Write those answers down. They are the first draft of the life you actually want.",
+      "visual": {
+        "title": "Your own funeral",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "rosa",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "walking into a funeral"
+            },
+            "pose": "standing",
+            "expressions": [
+              {
+                "value": "worried"
+              },
+              {
+                "value": "curious",
+                "sync": {
+                  "phrase": "What would you want"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "speech",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "Several people will speak"
+            }
+          },
+          {
+            "kind": "heart",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "What difference did you make"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr4-2",
+      "type": "character_scene",
+      "narration": "This habit rests on a simple idea. All things are created twice. A house is built first as a blueprint, then in brick and wood. Your life works the same way. If you do not design the first creation yourself, other people and circumstances will design it for you. And Covey draws a sharp line between leading your life and merely managing it. A clear first creation makes thousands of small daily decisions much easier.",
+      "visual": {
+        "title": "Created twice",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "theo",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "created twice"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "house",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "built first as a blueprint"
+            }
+          },
+          {
+            "kind": "path",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "other people and circumstances"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr4-3",
+      "type": "quote_card",
+      "narration": "In one of his most famous lines, he puts it like this. Management is efficiency in climbing the ladder of success. Leadership determines whether the ladder is leaning against the right wall.",
+      "visual": {
+        "quote": "Management is efficiency in climbing the ladder of success; leadership determines whether the ladder is leaning against the right wall.",
+        "attribution": "Stephen R. Covey",
+        "cast": "sage"
+      }
+    },
+    {
+      "id": "pr4-4",
+      "type": "list_card",
+      "narration": "The tool for the first creation is a personal mission statement. Covey suggests writing down the kind of person you want to be, what you want to do, and the values your choices will rest on. Build it around your roles, as a partner, a parent, a professional, a friend. Then keep it close, and revise it as you grow. It becomes the constitution for your life.",
+      "visual": {
+        "title": "Your mission statement",
+        "items": [
+          {
+            "label": "Who you want to be",
+            "sync": {
+              "phrase": "the kind of person"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "What you want to do",
+            "sync": {
+              "phrase": "what you want to do"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Your core values",
+            "sync": {
+              "phrase": "the values your choices"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Built around your roles",
+            "sync": {
+              "phrase": "around your roles"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr4-5",
+      "type": "character_scene",
+      "narration": "Covey also warns about what sits at your center. If your life is centered on money, work, pleasure, or even a spouse, your security rises and falls with them. Lose the job and you lose yourself. A principle centered life is different. Principles like fairness, honesty and service do not change when circumstances do, so neither do you. Covey's suggestion is to center your life on timeless principles, and let everything else orbit around them.",
+      "visual": {
+        "title": "What is at your center?",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "deshawn",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "what sits at your center"
+            },
+            "pose": "thinking"
+          },
+          {
+            "kind": "moneybag",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "centered on money"
+            }
+          },
+          {
+            "kind": "scale",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "principle centered life"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr5-title",
+      "type": "section_title",
+      "narration": "Habit three. Put first things first.",
+      "visual": {
+        "title": "Habit 3: First Things First",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Put first things first"
+        },
+        "role": "principle",
+        "number": 5,
+        "part": 2,
+        "memory": "calendar"
+      }
+    },
+    {
+      "id": "pr5-1",
+      "type": "table",
+      "narration": "Habit two decides what matters. Habit three is about doing it. Covey sorts every activity by two questions. Is it urgent, and is it important. Quadrant one is urgent and important, crises and deadlines. Quadrant two is important but not urgent, planning, relationships, exercise and learning. Quadrant three is urgent but not important, most interruptions and many meetings. Quadrant four is neither, busywork and time wasters. The labels matter less than the habit of asking both questions.",
+      "visual": {
+        "title": "The time matrix",
+        "columns": [
+          "Quadrant",
+          "Type",
+          "Examples"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "One",
+              "Urgent, important",
+              "Crises, deadlines"
+            ],
+            "sync": {
+              "phrase": "Quadrant one"
+            }
+          },
+          {
+            "cells": [
+              "Two",
+              "Important, not urgent",
+              "Planning, relationships"
+            ],
+            "sync": {
+              "phrase": "Quadrant two"
+            },
+            "highlight": true
+          },
+          {
+            "cells": [
+              "Three",
+              "Urgent, unimportant",
+              "Interruptions, meetings"
+            ],
+            "sync": {
+              "phrase": "Quadrant three"
+            }
+          },
+          {
+            "cells": [
+              "Four",
+              "Neither",
+              "Busywork, time wasters"
+            ],
+            "sync": {
+              "phrase": "Quadrant four"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr5-2",
+      "type": "character_scene",
+      "narration": "Effective people live in quadrant two. That sounds simple, but quadrant two never shouts. Nobody calls you in a panic to say go for a run or have a deep conversation with your daughter. So it gets pushed aside, until neglect turns it into a quadrant one crisis, a health scare, a broken relationship, a missed opportunity. Time in quadrant two shrinks quadrant one. Covey argues that many people spend huge amounts of time in quadrants three and four, while believing they are handling quadrant one.",
+      "visual": {
+        "title": "Live in quadrant two",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "jade",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "live in quadrant two"
+            },
+            "pose": "sitting",
+            "seat": "desk"
+          },
+          {
+            "kind": "dumbbell",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "go for a run"
+            }
+          },
+          {
+            "kind": "hourglass",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "until neglect"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr5-3",
+      "type": "character_scene",
+      "narration": "And here is the question I promised at the start. Covey asks, what one thing could you do, that you are not doing now, that if you did it regularly, would make a tremendous positive difference in your life. Most people know the answer instantly. The reason they are not doing it is that it is quadrant two. So plan weekly, not daily, and give that one thing a home in your calendar. For most people it is something simple, like exercise, a weekly date night or an hour of reading.",
+      "visual": {
+        "title": "The one-thing question",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "the question I promised"
+            },
+            "poses": [
+              "thinking",
+              "celebrating"
+            ]
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "what one thing"
+            },
+            "state": "on"
+          },
+          {
+            "kind": "calendar",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "plan weekly"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr5-4",
+      "type": "list_card",
+      "narration": "Covey's weekly planning has four simple steps. Identify your roles. Select a goal or two for each role. Schedule those goals into the week before anything else. Then adapt daily, adjusting as life happens, without losing sight of what matters.",
+      "visual": {
+        "title": "Plan your week",
+        "items": [
+          {
+            "label": "Identify your roles",
+            "sync": {
+              "phrase": "Identify your roles"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Pick goals per role",
+            "sync": {
+              "phrase": "Select a goal"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Schedule them first",
+            "sync": {
+              "phrase": "Schedule those goals"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Adapt daily",
+            "sync": {
+              "phrase": "adapt daily"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr6-title",
+      "type": "section_title",
+      "narration": "Principle six. Delegate for results.",
+      "visual": {
+        "title": "Delegate For Results",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Delegate for results"
+        },
+        "role": "principle",
+        "number": 6,
+        "part": 2,
+        "memory": "gears"
+      }
+    },
+    {
+      "id": "pr6-1",
+      "type": "compare",
+      "narration": "You cannot live in quadrant two if you do everything yourself. Covey describes two kinds of delegation. Gofer delegation means go for this, go for that, tell me when it's done. You stay buried in the details. Stewardship delegation focuses on results instead of methods. You agree on the outcome, the guidelines, the resources, and how results will be judged, then you let the person choose the how. It takes more time up front, but it multiplies what you can accomplish many times over.",
+      "visual": {
+        "title": "Two kinds of delegation",
+        "left": {
+          "heading": "Gofer",
+          "items": [
+            {
+              "label": "Go for this, that",
+              "sync": {
+                "phrase": "go for this"
+              }
+            },
+            {
+              "label": "Manage every method",
+              "sync": {
+                "phrase": "buried in the details"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Stewardship",
+          "items": [
+            {
+              "label": "Agree on results",
+              "sync": {
+                "phrase": "results instead of methods"
+              }
+            },
+            {
+              "label": "They choose the how",
+              "sync": {
+                "phrase": "choose the how"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr6-2",
+      "type": "character_scene",
+      "narration": "Covey tested this with his seven year old son, Stephen. The job was the lawn, and the result was simple, green and clean. Covey explained the outcome, said his son could do it any way he liked, and agreed they would walk the yard together twice a week to check. For days nothing happened. Then his son broke down, picked up the trash, and from that moment kept the yard green and clean for years. It took trust, patience and a clear result, but Covey never had to manage the lawn again.",
+      "visual": {
+        "title": "Green and clean",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "seven year old son"
+            },
+            "pose": "presenting",
+            "facing": "right"
+          },
+          {
+            "kind": "figure",
+            "cast": "pip",
+            "at": {
+              "col": 5,
+              "row": 2,
+              "w": 3,
+              "h": 4
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "green and clean"
+            },
+            "pose": "standing",
+            "facing": "left",
+            "expressions": [
+              {
+                "value": "worried"
+              },
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "picked up the trash"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "tree",
+            "at": {
+              "col": 9,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "kept the yard"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-recap",
+      "type": "recap_card",
+      "narration": "That is the private victory. Be proactive, and focus on what you can influence. Begin with the end in mind, with a mission statement. Put first things first, living in quadrant two. And delegate for results, not methods. Master these, and you are ready to work powerfully with other people.",
+      "visual": {
+        "title": "Private victory recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Be proactive",
+            "sync": {
+              "phrase": "Be proactive"
+            }
+          },
+          {
+            "label": "Begin with the end",
+            "sync": {
+              "phrase": "Begin with the end in mind"
+            }
+          },
+          {
+            "label": "Live in quadrant two",
+            "sync": {
+              "phrase": "living in quadrant two"
+            }
+          },
+          {
+            "label": "Delegate for results",
+            "sync": {
+              "phrase": "delegate for results"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "p3-title",
+      "type": "section_title",
+      "narration": "Part three. The public victory.",
+      "visual": {
+        "title": "The Public Victory",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "The public victory"
+        },
+        "role": "part",
+        "number": 3
+      }
+    },
+    {
+      "id": "p3-rehook",
+      "type": "character_scene",
+      "narration": "Now for the harder part. Other people. You can plan your week perfectly and still watch a single argument ruin it. Covey's insight is that trust works like money. Every interaction either adds to it or takes from it. And most of us are overdrawn with the people who matter most, without even realizing it. Trust is the hidden currency behind every family, team and friendship.",
+      "visual": {
+        "title": "Trust works like money",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "angry",
+            "enter": "draw",
+            "sync": {
+              "phrase": "a single argument"
+            },
+            "pose": "facepalm",
+            "effects": [
+              {
+                "kind": "anger_marks"
+              }
+            ]
+          },
+          {
+            "kind": "moneybag",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "trust works like money"
+            }
+          },
+          {
+            "kind": "heart",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "matter most"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr7-title",
+      "type": "section_title",
+      "narration": "Principle seven. The emotional bank account.",
+      "visual": {
+        "title": "The Emotional Bank Account",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "emotional bank account"
+        },
+        "role": "principle",
+        "number": 7,
+        "part": 3,
+        "memory": "moneybag"
+      }
+    },
+    {
+      "id": "pr7-1",
+      "type": "character_scene",
+      "narration": "An emotional bank account is the amount of trust in a relationship. When the balance is high, communication is easy, and even your mistakes are forgiven. When it is overdrawn, every word is misread. You walk on eggshells. Deposits are made through courtesy, kindness, honesty and keeping your word. Withdrawals happen through disrespect, broken promises and overreaction. Every relationship carries a balance, whether you track it or not. And with the people closest to you, the account needs constant deposits, because expectations are highest there.",
+      "visual": {
+        "title": "Deposits and withdrawals",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "omar",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "the amount of trust"
+            },
+            "pose": "standing"
+          },
+          {
+            "kind": "coins",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "Deposits are made"
+            }
+          },
+          {
+            "kind": "wall",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "every word is misread"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr7-2",
+      "type": "list_card",
+      "narration": "Covey names the major deposits. Understand the individual, because what matters to them must matter to you. Attend to the little things, since small kindnesses are big. Keep your commitments, and clarify expectations up front. Show personal integrity, especially loyalty to those who are not present. And apologize sincerely when you make a withdrawal. None of these are grand gestures. They are small, steady deposits that add up over years.",
+      "visual": {
+        "title": "Make deposits",
+        "items": [
+          {
+            "label": "Understand the person",
+            "sync": {
+              "phrase": "Understand the individual"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Attend to little things",
+            "sync": {
+              "phrase": "the little things"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Keep and clarify commitments",
+            "sync": {
+              "phrase": "Keep your commitments"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Show integrity",
+            "sync": {
+              "phrase": "personal integrity"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Apologize sincerely",
+            "sync": {
+              "phrase": "apologize sincerely"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr7-3",
+      "type": "character_scene",
+      "narration": "One deposit deserves a closer look. Be loyal to those who are not present. When you defend someone behind their back, everyone in the room learns something about you. If you gossip about others, they quietly assume you will gossip about them too. Integrity in the small, unseen moments is what builds trust in the big ones. Covey says the way you treat the one reveals how you will treat the many.",
+      "visual": {
+        "title": "Loyal when they're absent",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "nadia",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "defend someone"
+            },
+            "pose": "presenting",
+            "facing": "right"
+          },
+          {
+            "kind": "figure",
+            "cast": "deshawn",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "everyone in the room"
+            },
+            "pose": "standing",
+            "facing": "left",
+            "effects": [
+              {
+                "kind": "idea_flash",
+                "sync": {
+                  "phrase": "gossip about them too"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr8-title",
+      "type": "section_title",
+      "narration": "Habit four. Think win win.",
+      "visual": {
+        "title": "Habit 4: Think Win-Win",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Think win win"
+        },
+        "role": "principle",
+        "number": 8,
+        "part": 3,
+        "memory": "scale"
+      }
+    },
+    {
+      "id": "pr8-1",
+      "type": "table",
+      "narration": "Habit four starts with how you see every deal. Covey describes six paradigms of human interaction. Win lose, where I win and you lose. Lose win, where I give in to keep the peace. Lose lose, where both sides end up worse. Win, where I only care about my result. And win win, where both sides feel good about the outcome. The sixth is win win or no deal. Covey argues that in most relationships, anything less than win win eventually becomes lose lose.",
+      "visual": {
+        "title": "Six ways to deal",
+        "columns": [
+          "Paradigm",
+          "Mindset"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Win-lose",
+              "I beat you"
+            ],
+            "sync": {
+              "phrase": "Win lose, where"
+            }
+          },
+          {
+            "cells": [
+              "Lose-win",
+              "I give in"
+            ],
+            "sync": {
+              "phrase": "Lose win, where"
+            }
+          },
+          {
+            "cells": [
+              "Lose-lose",
+              "We both suffer"
+            ],
+            "sync": {
+              "phrase": "Lose lose, where"
+            }
+          },
+          {
+            "cells": [
+              "Win",
+              "Only my result"
+            ],
+            "sync": {
+              "phrase": "Win, where I only"
+            }
+          },
+          {
+            "cells": [
+              "Win-win",
+              "We both gain"
+            ],
+            "sync": {
+              "phrase": "win win, where both"
+            },
+            "highlight": true
+          },
+          {
+            "cells": [
+              "Win-win or no deal",
+              "Walk away kindly"
+            ],
+            "sync": {
+              "phrase": "win win or no deal"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr8-2",
+      "type": "character_scene",
+      "narration": "Win win depends on what Covey calls the abundance mentality. Most people are scripted with a scarcity mentality. They see life as a pie with only so much to go around, so if you get a bigger slice, they get less. People with abundance believe there is plenty out there for everybody. They share credit, celebrate others' success and look for solutions that grow the pie. Scarcity turns colleagues into rivals. Abundance turns them into allies.",
+      "visual": {
+        "title": "Abundance, not scarcity",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "kwame",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "abundance mentality"
+            },
+            "pose": "celebrating",
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "share credit"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "piechart",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "a pie with only"
+            }
+          },
+          {
+            "kind": "gift",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "plenty out there"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr8-3",
+      "type": "character_scene",
+      "narration": "The most freeing option is win win or no deal. If you cannot find a solution that works for both sides, you agree, respectfully, not to make a deal at all. That sounds like a loss, but it removes the pressure to manipulate or give in. Covey says it takes courage balanced with consideration. Stand up for yourself, and care about the other person too.",
+      "visual": {
+        "title": "Win-win or no deal",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "theo",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "not to make a deal"
+            },
+            "pose": "handshake",
+            "facing": "right"
+          },
+          {
+            "kind": "figure",
+            "cast": "rosa",
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "not to make a deal"
+            },
+            "pose": "handshake",
+            "facing": "left"
+          },
+          {
+            "kind": "scale",
+            "at": {
+              "col": 9,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "courage balanced with consideration"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr8-4",
+      "type": "list_card",
+      "narration": "Covey turns win win into practical agreements. Spell out the desired results, the guidelines, the resources available, the accountability, and the consequences. When all five are clear up front, people can manage themselves, and you stop hovering. It is the same structure as stewardship delegation, and it works at home as well as at work.",
+      "visual": {
+        "title": "Win-win agreements",
+        "items": [
+          {
+            "label": "Desired results",
+            "sync": {
+              "phrase": "desired results"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Guidelines",
+            "sync": {
+              "phrase": "the guidelines"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Resources",
+            "sync": {
+              "phrase": "the resources available"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Accountability",
+            "sync": {
+              "phrase": "the accountability"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Consequences",
+            "sync": {
+              "phrase": "the consequences"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p3-recap",
+      "type": "recap_card",
+      "narration": "That is the foundation of the public victory. Build trust through the emotional bank account. Make deposits, especially the small ones. Think win win, with an abundance mentality, and be willing to walk away. We are about halfway through. If you are still here, you are exactly who this channel is for. Subscribe, and tell me in the comments which book I should break down next. I read every single one.",
+      "visual": {
+        "title": "Public victory recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Build trust deposits",
+            "sync": {
+              "phrase": "emotional bank account"
+            }
+          },
+          {
+            "label": "Small things matter",
+            "sync": {
+              "phrase": "especially the small ones"
+            }
+          },
+          {
+            "label": "Think win win",
+            "sync": {
+              "phrase": "Think win win"
+            }
+          },
+          {
+            "label": "Walk away if needed",
+            "sync": {
+              "phrase": "willing to walk away"
+            }
+          }
+        ]
+      },
+      "subscribe": {
+        "phrase": "Subscribe, and tell me",
+        "line": "Comment: which book next?"
+      }
+    },
+    {
+      "id": "p4-title",
+      "type": "section_title",
+      "narration": "Part four. Communicate and create.",
+      "visual": {
+        "title": "Communicate And Create",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "Communicate and create"
+        },
+        "role": "part",
+        "number": 4
+      }
+    },
+    {
+      "id": "p4-rehook",
+      "type": "character_scene",
+      "narration": "Here is a question that stings. When someone is talking to you, are you listening, or are you just waiting for your turn to speak. Covey says most people listen with the intent to reply, not to understand. And that one habit quietly damages more relationships than almost anything else. Most of us were taught to read, write and speak. Almost nobody was ever trained to listen.",
+      "visual": {
+        "title": "Listening to reply",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "maya",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "someone is talking"
+            },
+            "pose": "presenting",
+            "facing": "right"
+          },
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "waiting for your turn"
+            },
+            "pose": "standing",
+            "facing": "left",
+            "effects": [
+              {
+                "kind": "thought_bubble",
+                "sync": {
+                  "phrase": "intent to reply"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr9-title",
+      "type": "section_title",
+      "narration": "Habit five. Seek first to understand.",
+      "visual": {
+        "title": "Habit 5: Seek To Understand",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Seek first to understand"
+        },
+        "role": "principle",
+        "number": 9,
+        "part": 4,
+        "memory": "speech"
+      }
+    },
+    {
+      "id": "pr9-1",
+      "type": "list_card",
+      "narration": "Covey describes five levels of listening. Ignoring, where you do not really listen at all. Pretending, with uh huh and right. Selective listening, hearing only parts. Attentive listening, focused on the words. And the highest, empathic listening, where you listen to understand the other person's feelings and point of view, from inside their frame of reference. Most of us live in the middle, hearing the words while quietly planning our reply.",
+      "visual": {
+        "title": "Levels of listening",
+        "items": [
+          {
+            "label": "Ignoring",
+            "sync": {
+              "phrase": "Ignoring, where"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Pretending",
+            "sync": {
+              "phrase": "Pretending, with"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Selective",
+            "sync": {
+              "phrase": "Selective listening"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Attentive",
+            "sync": {
+              "phrase": "Attentive listening"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Empathic",
+            "sync": {
+              "phrase": "empathic listening"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr9-2",
+      "type": "table",
+      "narration": "Instead, we usually respond from our own life story. Covey calls these autobiographical responses. We evaluate, agreeing or disagreeing. We probe, asking questions from our own frame of reference. We advise, giving counsel from our own experience. Or we interpret, explaining people's motives based on our own behavior. Each one makes the conversation about us.",
+      "visual": {
+        "title": "Autobiographical responses",
+        "columns": [
+          "Response",
+          "What we do"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Evaluate",
+              "Agree or disagree"
+            ],
+            "sync": {
+              "phrase": "We evaluate"
+            }
+          },
+          {
+            "cells": [
+              "Probe",
+              "Ask our questions"
+            ],
+            "sync": {
+              "phrase": "We probe"
+            }
+          },
+          {
+            "cells": [
+              "Advise",
+              "Give our counsel"
+            ],
+            "sync": {
+              "phrase": "We advise"
+            }
+          },
+          {
+            "cells": [
+              "Interpret",
+              "Explain their motives"
+            ],
+            "sync": {
+              "phrase": "we interpret"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr9-6",
+      "type": "character_scene",
+      "narration": "Covey tells a story about an eye doctor. You complain that your vision is blurry, and the doctor takes off his own glasses, hands them to you and says, wear these, they work great for me. Of course they make things worse. That is exactly what we do when we advise before we understand. Diagnose before you prescribe. A good doctor asks questions before writing a prescription, and a good friend, parent or manager should too.",
+      "visual": {
+        "title": "Diagnose before you prescribe",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "theo",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "an eye doctor"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "target",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "Diagnose before you prescribe"
+            }
+          },
+          {
+            "kind": "checkmark",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "asks questions"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr9-3",
+      "type": "character_scene",
+      "narration": "Picture a teenage son who says, school is stupid. His father jumps straight in. You just need to try harder. That is advice before understanding, and the conversation is over. An empathic listener would reflect the feeling instead. You're really frustrated with school. Suddenly the son keeps talking, and the real problem comes out. He is struggling to read and feels embarrassed. You cannot solve a problem you never hear. One reflective sentence opened a door that advice had slammed shut.",
+      "visual": {
+        "title": "Reflect the feeling",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "neutral",
+            "enter": "draw",
+            "sync": {
+              "phrase": "His father jumps"
+            },
+            "pose": "pointing",
+            "facing": "right",
+            "expressions": [
+              {
+                "value": "neutral"
+              },
+              {
+                "value": "curious",
+                "sync": {
+                  "phrase": "reflect the feeling"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "figure",
+            "cast": "pip",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "expression": "angry",
+            "enter": "draw",
+            "sync": {
+              "phrase": "school is stupid"
+            },
+            "pose": "standing",
+            "facing": "left",
+            "expressions": [
+              {
+                "value": "angry"
+              },
+              {
+                "value": "worried",
+                "sync": {
+                  "phrase": "struggling to read"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr9-4",
+      "type": "list_card",
+      "narration": "Then comes the second half. Seek to be understood. Covey borrows from the ancient Greeks. Ethos is your credibility, the trust people have in you. Pathos is the feeling, your understanding of their emotions. Logos is the logic of your argument. Most people jump straight to logic. Effective people present their ideas in that order, character first, then empathy, then reason.",
+      "visual": {
+        "title": "Then be understood",
+        "items": [
+          {
+            "label": "Ethos: credibility",
+            "sync": {
+              "phrase": "Ethos is your credibility"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Pathos: their feelings",
+            "sync": {
+              "phrase": "Pathos is the feeling"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Logos: your logic",
+            "sync": {
+              "phrase": "Logos is the logic"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr9-5",
+      "type": "character_scene",
+      "narration": "Empathic listening does not mean you agree. It means you understand, deeply, emotionally and intellectually, before you respond. Covey compares it to giving someone psychological air. When people feel understood, the pressure drops, and they can finally hear you. Until then, your best advice bounces off. It is also the fastest way to make a deposit in the emotional bank account.",
+      "visual": {
+        "title": "Psychological air",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "rosa",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "does not mean you agree"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "speech",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "psychological air"
+            }
+          },
+          {
+            "kind": "heart",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "feel understood"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr10-title",
+      "type": "section_title",
+      "narration": "Habit six. Synergize.",
+      "visual": {
+        "title": "Habit 6: Synergize",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Synergize"
+        },
+        "role": "principle",
+        "number": 10,
+        "part": 4,
+        "memory": "gears"
+      }
+    },
+    {
+      "id": "pr10-1",
+      "type": "character_scene",
+      "narration": "Synergy means the whole is greater than the sum of its parts. Covey notes that if you plant two plants close together, their roots mingle and improve the soil, so both grow better than they would apart. People work the same way. When you combine different strengths with real trust and open communication, you create solutions neither person would have found alone. Synergy is the highest activity in all of life, Covey says, the true test and payoff of every habit before it.",
+      "visual": {
+        "title": "Greater than the sum",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "lena",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "the whole is greater"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "seedling",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "plant two plants"
+            }
+          },
+          {
+            "kind": "sapling",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "both grow better"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr10-5",
+      "type": "character_scene",
+      "narration": "The key to synergy is valuing differences. Covey describes a class that is shown one drawing. Half the room sees a young woman, the other half sees an old woman, and both are right. If two people can see the same thing differently and both be right, then difference is not a threat. It is a resource.",
+      "visual": {
+        "title": "Value the difference",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "nadia",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "valuing differences"
+            },
+            "pose": "pointing"
+          },
+          {
+            "kind": "easel",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "one drawing"
+            }
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "It is a resource"
+            },
+            "state": "on"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr10-2",
+      "type": "table",
+      "narration": "Covey maps communication against trust and cooperation. Low trust creates defensive communication, protecting yourself with legal language and escape clauses. Middle trust creates respectful communication, polite, but compromise at best. High trust creates synergistic communication, where one plus one equals three, or even ten. Most organizations live in the respectful middle. Synergy only appears when trust climbs high enough to risk real openness.",
+      "visual": {
+        "title": "Trust shapes the talk",
+        "columns": [
+          "Trust",
+          "Communication",
+          "Result"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Low",
+              "Defensive",
+              "Win-lose"
+            ],
+            "sync": {
+              "phrase": "Low trust"
+            }
+          },
+          {
+            "cells": [
+              "Middle",
+              "Respectful",
+              "Compromise"
+            ],
+            "sync": {
+              "phrase": "Middle trust"
+            }
+          },
+          {
+            "cells": [
+              "High",
+              "Synergistic",
+              "Something better"
+            ],
+            "sync": {
+              "phrase": "High trust"
+            },
+            "highlight": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr10-3",
+      "type": "character_scene",
+      "narration": "Covey describes a classic clash. A husband has planned a family vacation at a lake, with fishing he has looked forward to for months. Then his wife learns her mother is seriously ill, hundreds of miles away. Compromise would leave both unhappy. Instead, they keep listening until a third alternative appears. They find a place near her mother with good fishing nearby, and the whole family enjoys it. Not my way, not your way, a better way. Synergy is not compromise. Compromise means one plus one equals one and a half.",
+      "visual": {
+        "title": "The third alternative",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "omar",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "classic clash"
+            },
+            "pose": "standing",
+            "facing": "right",
+            "expressions": [
+              {
+                "value": "worried"
+              },
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "third alternative"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "figure",
+            "cast": "maya",
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "her mother is seriously ill"
+            },
+            "pose": "standing",
+            "facing": "left",
+            "expressions": [
+              {
+                "value": "worried"
+              },
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "third alternative"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "house",
+            "at": {
+              "col": 9,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "a place near her mother"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr10-4",
+      "type": "list_card",
+      "narration": "When you hit a conflict, try Covey's simple process. First, ask, would you be willing to look for a solution better than either of us has in mind. Then state the problem from the other person's side, until they feel understood. Next, share your own concerns. Finally, brainstorm freely before judging any idea.",
+      "visual": {
+        "title": "Find a third alternative",
+        "items": [
+          {
+            "label": "Agree to seek better",
+            "sync": {
+              "phrase": "would you be willing"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "State their side first",
+            "sync": {
+              "phrase": "from the other person's side"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Share your concerns",
+            "sync": {
+              "phrase": "share your own concerns"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Brainstorm, then judge",
+            "sync": {
+              "phrase": "brainstorm freely"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p4-recap",
+      "type": "recap_card",
+      "narration": "Part four in short. Seek first to understand, with empathic listening. Drop the autobiographical responses. Then be understood, character, then empathy, then logic. And synergize, finding the third alternative that beats any compromise.",
+      "visual": {
+        "title": "Part four recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Listen empathically",
+            "sync": {
+              "phrase": "with empathic listening"
+            }
+          },
+          {
+            "label": "Skip your autobiography",
+            "sync": {
+              "phrase": "autobiographical responses"
+            }
+          },
+          {
+            "label": "Ethos, pathos, logos",
+            "sync": {
+              "phrase": "character, then empathy"
+            }
+          },
+          {
+            "label": "Find a third alternative",
+            "sync": {
+              "phrase": "third alternative"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "p5-title",
+      "type": "section_title",
+      "narration": "Part five. Renewal.",
+      "visual": {
+        "title": "Renewal",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "Renewal"
+        },
+        "role": "part",
+        "number": 5
+      }
+    },
+    {
+      "id": "p5-rehook",
+      "type": "character_scene",
+      "narration": "Imagine you come across someone in the woods, sawing down a tree. They have been at it for five hours and they are exhausted. You suggest they take a few minutes to sharpen the saw. They snap back, I don't have time to sharpen the saw, I'm too busy sawing. That is most of us, every single day. We are so busy producing that we forget to maintain the one tool doing all the work. You.",
+      "visual": {
+        "title": "Too busy sawing",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "tired",
+            "enter": "draw",
+            "sync": {
+              "phrase": "sawing down a tree"
+            },
+            "pose": "standing",
+            "effects": [
+              {
+                "kind": "sweat_drop"
+              }
+            ]
+          },
+          {
+            "kind": "tree",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "in the woods"
+            }
+          },
+          {
+            "kind": "hourglass",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "five hours"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr11-title",
+      "type": "section_title",
+      "narration": "Habit seven. Sharpen the saw.",
+      "visual": {
+        "title": "Habit 7: Sharpen The Saw",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Sharpen the saw"
+        },
+        "role": "principle",
+        "number": 11,
+        "part": 5,
+        "memory": "dumbbell"
+      }
+    },
+    {
+      "id": "pr11-1",
+      "type": "table",
+      "narration": "Habit seven is about renewing yourself in four dimensions. Physical, through exercise, nutrition and rest. Spiritual, through your values, whether that is meditation, prayer, nature or great literature. Mental, through reading, writing and learning. And social and emotional, through service, empathy and the relationships you build. Neglect any one, and the others start to suffer. Covey calls this the single most powerful investment you can ever make, an investment in yourself.",
+      "visual": {
+        "title": "Four ways to renew",
+        "columns": [
+          "Dimension",
+          "How to renew"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Physical",
+              "Exercise, nutrition, rest"
+            ],
+            "sync": {
+              "phrase": "Physical, through"
+            }
+          },
+          {
+            "cells": [
+              "Spiritual",
+              "Values, nature, reflection"
+            ],
+            "sync": {
+              "phrase": "Spiritual, through"
+            }
+          },
+          {
+            "cells": [
+              "Mental",
+              "Read, write, learn"
+            ],
+            "sync": {
+              "phrase": "Mental, through"
+            }
+          },
+          {
+            "cells": [
+              "Social, emotional",
+              "Service and empathy"
+            ],
+            "sync": {
+              "phrase": "social and emotional, through"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr11-4",
+      "type": "character_scene",
+      "narration": "The physical dimension is the easiest to neglect. Covey recommends a few hours of exercise each week, building endurance, flexibility and strength. It is classic quadrant two. Nobody demands it, and the cost of skipping it shows up slowly, years later, as a crisis. A few hours a week returns far more energy than it takes.",
+      "visual": {
+        "title": "Renew your body",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "kwame",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "physical dimension"
+            },
+            "pose": "celebrating"
+          },
+          {
+            "kind": "dumbbell",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "endurance, flexibility and strength"
+            }
+          },
+          {
+            "kind": "heart",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "more energy"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr11-2",
+      "type": "list_card",
+      "narration": "Covey's practical advice is a daily private victory. Spend about an hour every day renewing yourself, ideally first thing in the morning. Exercise for your body. Read or reflect for your mind and spirit. Review your mission and plan your day. It is pure quadrant two. Nobody will ever force you to do it, which is exactly why it makes such a difference. Covey believed this single daily hour was the key to developing all of the habits.",
+      "visual": {
+        "title": "Your daily hour",
+        "items": [
+          {
+            "label": "Exercise your body",
+            "sync": {
+              "phrase": "Exercise for your body"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Read or reflect",
+            "sync": {
+              "phrase": "Read or reflect"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Review your mission",
+            "sync": {
+              "phrase": "Review your mission"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr11-5",
+      "type": "character_scene",
+      "narration": "The social and emotional dimension is renewed through people. Every time you practice empathic listening, look for a win win, or create a third alternative, you are sharpening this part of the saw. You do not need extra time for it. You renew it in the ordinary conversations of your day, by bringing the habits into them.",
+      "visual": {
+        "title": "Renew through people",
+        "stage": "street",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "omar",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "renewed through people"
+            },
+            "pose": "handshake",
+            "facing": "right"
+          },
+          {
+            "kind": "figure",
+            "cast": "lena",
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "renewed through people"
+            },
+            "pose": "handshake",
+            "facing": "left"
+          },
+          {
+            "kind": "heart",
+            "at": {
+              "col": 9,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "sharpening this part"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr11-3",
+      "type": "character_scene",
+      "narration": "Covey also points out that many adults stop reading seriously after school, and stop growing with it. There are few better ways to inform and expand your mind than reading good books regularly. Even thirty minutes a day puts you in the company of the greatest minds who ever lived. Which is, of course, exactly why this channel exists. Pair reading with writing, through a journal or notes, and the ideas sink in far deeper.",
+      "visual": {
+        "title": "Keep your mind sharp",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "stop reading"
+            },
+            "pose": "sitting",
+            "seat": "chair",
+            "holding": {
+              "prop": "book",
+              "hand": "right"
+            }
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "expand your mind"
+            },
+            "state": "on"
+          },
+          {
+            "kind": "staircase",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "greatest minds"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr12-title",
+      "type": "section_title",
+      "narration": "Principle twelve. The upward spiral.",
+      "visual": {
+        "title": "The Upward Spiral",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "upward spiral"
+        },
+        "role": "principle",
+        "number": 12,
+        "part": 5,
+        "memory": "staircase"
+      }
+    },
+    {
+      "id": "pr12-1",
+      "type": "character_scene",
+      "narration": "Covey ends with the idea of an upward spiral. Learn, commit, do. Then learn, commit and do again, each time at a higher level. Your conscience gets educated, your habits get stronger, and your effectiveness grows. The habits are not a checklist you finish. They are a cycle you keep climbing for the rest of your life. Every time you go around the spiral, the habits become less of an effort and more of who you are.",
+      "visual": {
+        "title": "Learn, commit, do",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "upward spiral"
+            },
+            "pose": "celebrating"
+          },
+          {
+            "kind": "staircase",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "a higher level"
+            }
+          },
+          {
+            "kind": "trophy",
+            "at": {
+              "col": 11,
+              "row": 4,
+              "w": 1,
+              "h": 2
+            },
+            "reveal": "pop",
+            "color": "accent",
+            "sync": {
+              "phrase": "effectiveness grows"
+            },
+            "tier": "ambient"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr12-2",
+      "type": "character_scene",
+      "narration": "Covey adds a personal challenge. Become a transition person. Many of us inherited unhelpful patterns, anger, criticism, scarcity, from the families and cultures we grew up in. A transition person absorbs those patterns and refuses to pass them on. The proactive choice you make today can change the story for the generations that follow you.",
+      "visual": {
+        "title": "Be a transition person",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "deshawn",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "transition person"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "bridge",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "refuses to pass them on"
+            }
+          },
+          {
+            "kind": "tree",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "the generations"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr12-3",
+      "type": "list_card",
+      "narration": "The cycle is simple enough to start tonight. Learn one idea from a habit. Commit to it in writing, in your mission or your weekly plan. Then do it, even imperfectly. Next week, learn again, a little deeper. That loop, repeated, is what turns information into character.",
+      "visual": {
+        "title": "Start the spiral",
+        "items": [
+          {
+            "label": "Learn one idea",
+            "sync": {
+              "phrase": "Learn one idea"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Commit in writing",
+            "sync": {
+              "phrase": "Commit to it in writing"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Do it, imperfectly",
+            "sync": {
+              "phrase": "do it, even imperfectly"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p5-recap",
+      "type": "recap_card",
+      "narration": "Part five, quickly. Sharpen the saw in every dimension, physical, spiritual, mental and social. Protect a daily hour of renewal. And keep climbing the upward spiral, learn, commit, do.",
+      "visual": {
+        "title": "Part five recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Sharpen the saw",
+            "sync": {
+              "phrase": "Sharpen the saw"
+            }
+          },
+          {
+            "label": "Daily hour of renewal",
+            "sync": {
+              "phrase": "daily hour of renewal"
+            }
+          },
+          {
+            "label": "Learn, commit, do",
+            "sync": {
+              "phrase": "learn, commit, do"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "apply-1",
+      "type": "list_card",
+      "narration": "So where do you start this week. Pick one area of your circle of influence and keep one small promise to yourself every day. Write a rough draft of your mission statement. On Sunday, plan your week by roles, scheduling quadrant two first. Make one deposit in an important relationship. And block an hour each morning to sharpen the saw. Small, consistent steps beat a dramatic overhaul every single time.",
+      "visual": {
+        "title": "Your first week",
+        "items": [
+          {
+            "label": "Keep one daily promise",
+            "sync": {
+              "phrase": "keep one small promise"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Draft your mission",
+            "sync": {
+              "phrase": "rough draft"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Plan weekly by roles",
+            "sync": {
+              "phrase": "plan your week by roles"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "One relationship deposit",
+            "sync": {
+              "phrase": "Make one deposit"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "An hour of renewal",
+            "sync": {
+              "phrase": "block an hour"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "apply-2",
+      "type": "character_scene",
+      "narration": "Imagine Priya, a nurse who feels like life just happens to her. She starts small, catching herself saying I have to and replacing it with I choose to. On Sundays she plans her week by roles. Within a couple of months, she is running again, calling her sister every week and leading a project at work. Nothing outside her changed first. She did. The habits worked because she started inside her own circle, with tiny promises she actually kept.",
+      "visual": {
+        "title": "Priya's turnaround",
+        "stage": "street",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "lena",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Imagine Priya"
+            },
+            "poses": [
+              "standing",
+              "celebrating"
+            ]
+          },
+          {
+            "kind": "calendar",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "On Sundays"
+            }
+          },
+          {
+            "kind": "shoe",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "running again"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "final-recap",
+      "type": "recap_card",
+      "narration": "Let us tie the whole book together. Change starts on the inside, with how you see. Habit one, be proactive. Habit two, begin with the end in mind. Habit three, put first things first. Habit four, think win win. Habit five, seek first to understand, then to be understood. Habit six, synergize. And habit seven, sharpen the saw, so the whole cycle keeps climbing.",
+      "visual": {
+        "title": "The whole book",
+        "scope": "final",
+        "items": [
+          {
+            "label": "Inside out first",
+            "sync": {
+              "phrase": "Change starts on the inside"
+            }
+          },
+          {
+            "label": "Private victory: 1–3",
+            "sync": {
+              "phrase": "Habit one, be proactive"
+            }
+          },
+          {
+            "label": "Public victory: 4–6",
+            "sync": {
+              "phrase": "Habit four, think win win"
+            }
+          },
+          {
+            "label": "Renew: sharpen the saw",
+            "sync": {
+              "phrase": "habit seven, sharpen the saw"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "close",
+      "type": "character_scene",
+      "narration": "Here is the one line to carry out of this book. You are not a product of your circumstances. You are a product of your decisions. Choose your response, choose your center, and keep sharpening the saw. Effectiveness is not a talent you are born with. It is a set of habits you build, one week at a time. Start this Sunday with one plan, one deposit and one promise kept.",
+      "visual": {
+        "title": "A product of decisions",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "jade",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "product of your decisions"
+            },
+            "pose": "celebrating",
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "keep sharpening the saw"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "mountain",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 5,
+              "h": 5
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "one week at a time"
+            }
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 5.5,
+              "row": 0.5,
+              "w": 1.5,
+              "h": 1.5
+            },
+            "reveal": "pop",
+            "color": "accent",
+            "sync": {
+              "phrase": "Choose your response"
+            },
+            "tier": "ambient",
+            "state": "on"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta-subscribe",
+      "type": "cta",
+      "narration": "That's The Seven Habits in thirty minutes. Tomorrow, it's How to Win Friends and Influence People by Dale Carnegie. Subscribe and turn on the bell, so you don't miss it.",
+      "visual": {
+        "text": "Tomorrow: How to Win Friends",
+        "style": "subscribe"
+      }
+    },
+    {
+      "id": "cta-endscreen",
+      "type": "cta",
+      "narration": "And if this one clicked for you, Deep Work is the perfect follow up, because putting first things first starts with focus. It's right here on screen. Watch it next, and I'll see you there.",
+      "visual": {
+        "text": "Watch next: Deep Work",
+        "style": "corner"
+      }
+    }
+  ]
+}

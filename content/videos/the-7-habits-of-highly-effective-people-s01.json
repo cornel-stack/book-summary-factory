@@ -1,0 +1,214 @@
+{
+  "id": "the-7-habits-of-highly-effective-people-s01",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Stop Saying \"I Have To\" 🛑 #7habits",
+  "short_hook": "Stop saying I have to",
+  "book": {
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Stephen R. Covey",
+    "year": 1989
+  },
+  "description": "Reactive vs proactive language, and the circle of influence that grows when you use it. From The 7 Habits of Highly Effective People by Stephen R. Covey. Follow ReadLark for one book a day.",
+  "tags": [
+    "7 habits",
+    "stephen covey",
+    "self improvement",
+    "book summary",
+    "shorts",
+    "be proactive",
+    "mindset"
+  ],
+  "pinned_comment": "What's one thing you'll switch from 'I have to' to 'I choose to'? 👇",
+  "thumbnail": {
+    "headline": "Stop saying I have to"
+  },
+  "voice": "en-US-AndrewNeural",
+  "rate": "-5%",
+  "loop": true,
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "kinetic",
+      "narration": "Stop saying I have to. Those three words are quietly making you powerless.",
+      "visual": {
+        "layout": "hook",
+        "text": "Stop saying “I have to”",
+        "accent": [
+          "have",
+          "to"
+        ],
+        "icon": "wall"
+      }
+    },
+    {
+      "id": "reactive",
+      "type": "kinetic",
+      "narration": "Stephen Covey noticed that reactive people talk in a very specific way.",
+      "visual": {
+        "layout": "statement",
+        "text": "Reactive people sound like this",
+        "accent": [
+          "Reactive"
+        ],
+        "icon": "speech",
+        "sync": {
+          "phrase": "reactive people"
+        }
+      }
+    },
+    {
+      "id": "versus",
+      "type": "kinetic",
+      "narration": "They say, I have to, I can't, he makes me so mad. Proactive people say, I choose to, I prefer, I control my own feelings.",
+      "visual": {
+        "layout": "versus",
+        "left": {
+          "label": "I have to",
+          "icon": "wall",
+          "sync": {
+            "phrase": "They say, I have to"
+          }
+        },
+        "right": {
+          "label": "I choose to",
+          "icon": "lightbulb",
+          "sync": {
+            "phrase": "I choose to"
+          }
+        },
+        "winner": "right"
+      }
+    },
+    {
+      "id": "words",
+      "type": "kinetic",
+      "narration": "The difference sounds tiny. It isn't. Your words become the way you see yourself.",
+      "visual": {
+        "layout": "statement",
+        "text": "Your words shape you",
+        "accent": [
+          "shape"
+        ],
+        "icon": "brain",
+        "sync": {
+          "phrase": "Your words become"
+        }
+      }
+    },
+    {
+      "id": "rehook",
+      "type": "kinetic",
+      "narration": "But here's the part that actually changes your life.",
+      "visual": {
+        "layout": "statement",
+        "text": "Here's the real secret",
+        "accent": [
+          "secret"
+        ]
+      }
+    },
+    {
+      "id": "circles",
+      "type": "kinetic",
+      "narration": "Draw two circles. The big one is your circle of concern, everything you worry about. Inside it is your circle of influence, what you can actually change.",
+      "visual": {
+        "layout": "icons",
+        "title": "Two circles",
+        "items": [
+          {
+            "icon": "hourglass",
+            "label": "Concern",
+            "sync": {
+              "phrase": "circle of concern"
+            }
+          },
+          {
+            "icon": "target",
+            "label": "Influence",
+            "sync": {
+              "phrase": "circle of influence"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "curve",
+      "type": "kinetic",
+      "narration": "Focus on concern, and your influence shrinks. Focus on influence, and it grows, every single month.",
+      "visual": {
+        "layout": "curve",
+        "label": "Your circle of influence",
+        "to": "Grows",
+        "contrast": "Shrinks",
+        "sync": {
+          "phrase": "Focus on influence"
+        }
+      }
+    },
+    {
+      "id": "test",
+      "type": "kinetic",
+      "narration": "So try Covey's thirty day test. Keep every small promise. Be part of the solution. Work only on what you can change.",
+      "visual": {
+        "layout": "steps",
+        "title": "The 30 day test",
+        "items": [
+          {
+            "label": "Keep small promises",
+            "sync": {
+              "phrase": "Keep every small promise"
+            }
+          },
+          {
+            "label": "Be the solution",
+            "sync": {
+              "phrase": "part of the solution"
+            }
+          },
+          {
+            "label": "Change what you can",
+            "sync": {
+              "phrase": "what you can change"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "decisions",
+      "type": "kinetic",
+      "narration": "You are not a product of your circumstances. You're a product of your decisions.",
+      "visual": {
+        "layout": "statement",
+        "text": "A product of your decisions",
+        "accent": [
+          "decisions"
+        ],
+        "icon": "checkmark",
+        "sync": {
+          "phrase": "product of your decisions"
+        }
+      }
+    },
+    {
+      "id": "loop",
+      "type": "kinetic",
+      "narration": "That's The Seven Habits by Stephen Covey. So,",
+      "visual": {
+        "layout": "statement",
+        "text": "The 7 Habits · Stephen Covey",
+        "accent": [
+          "7",
+          "Habits"
+        ],
+        "icon": "book"
+      }
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "id": "the-7-habits-of-highly-effective-people-s03",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Every Relationship Has a Bank Balance 💰 #7habits",
+  "short_hook": "Your relationships have a balance",
+  "book": {
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Stephen R. Covey",
+    "year": 1989
+  },
+  "description": "Covey's emotional bank account: the deposits that build trust and the withdrawals that drain it. From The 7 Habits of Highly Effective People by Stephen R. Covey. Follow ReadLark for one book a day.",
+  "tags": [
+    "7 habits",
+    "stephen covey",
+    "self improvement",
+    "book summary",
+    "shorts",
+    "relationships",
+    "trust"
+  ],
+  "pinned_comment": "Who's one person you'll make a deposit with today? 👇",
+  "thumbnail": {
+    "headline": "Your relationships have a balance"
+  },
+  "voice": "en-US-AndrewNeural",
+  "rate": "-5%",
+  "loop": true,
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "kinetic",
+      "narration": "Every relationship you have has a bank balance, and yours might be overdrawn.",
+      "visual": {
+        "layout": "hook",
+        "text": "Your relationships have a balance",
+        "accent": [
+          "balance"
+        ],
+        "icon": "moneybag"
+      }
+    },
+    {
+      "id": "eba",
+      "type": "kinetic",
+      "narration": "Stephen Covey called it the emotional bank account. It's how much trust is stored between two people.",
+      "visual": {
+        "layout": "statement",
+        "text": "The emotional bank account",
+        "accent": [
+          "bank",
+          "account"
+        ],
+        "icon": "heart",
+        "sync": {
+          "phrase": "emotional bank account"
+        }
+      }
+    },
+    {
+      "id": "versus",
+      "type": "kinetic",
+      "narration": "When the balance is high, even your mistakes get forgiven. When it's overdrawn, every word gets misread.",
+      "visual": {
+        "layout": "versus",
+        "left": {
+          "label": "Overdrawn",
+          "icon": "wall",
+          "sync": {
+            "phrase": "When it's overdrawn"
+          }
+        },
+        "right": {
+          "label": "High balance",
+          "icon": "coins",
+          "sync": {
+            "phrase": "When the balance is high"
+          }
+        },
+        "winner": "right"
+      }
+    },
+    {
+      "id": "rehook",
+      "type": "kinetic",
+      "narration": "So how do you make deposits? Covey's list is surprisingly simple.",
+      "visual": {
+        "layout": "statement",
+        "text": "How to make deposits",
+        "accent": [
+          "deposits"
+        ],
+        "icon": "coins"
+      }
+    },
+    {
+      "id": "deposits",
+      "type": "kinetic",
+      "narration": "Understand what matters to them. Do the little things. Keep every promise. Be loyal to people who aren't in the room. And apologize sincerely.",
+      "visual": {
+        "layout": "steps",
+        "title": "Make deposits",
+        "items": [
+          {
+            "label": "Understand what matters",
+            "sync": {
+              "phrase": "Understand what matters"
+            }
+          },
+          {
+            "label": "Do the little things",
+            "sync": {
+              "phrase": "Do the little things"
+            }
+          },
+          {
+            "label": "Keep every promise",
+            "sync": {
+              "phrase": "Keep every promise"
+            }
+          },
+          {
+            "label": "Be loyal when absent",
+            "sync": {
+              "phrase": "Be loyal"
+            }
+          },
+          {
+            "label": "Apologize sincerely",
+            "sync": {
+              "phrase": "apologize sincerely"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gossip",
+      "type": "kinetic",
+      "narration": "That one about loyalty is huge. When you gossip about someone, everyone listening assumes you'd gossip about them too.",
+      "visual": {
+        "layout": "statement",
+        "text": "Gossip costs you everyone",
+        "accent": [
+          "everyone"
+        ],
+        "icon": "speech",
+        "sync": {
+          "phrase": "When you gossip"
+        }
+      }
+    },
+    {
+      "id": "small",
+      "type": "kinetic",
+      "narration": "Covey also said small things are big things. A two minute kindness can matter more than a grand gesture.",
+      "visual": {
+        "layout": "number",
+        "value": 2,
+        "suffix": " min",
+        "label": "of kindness beats grand gestures",
+        "sync": {
+          "phrase": "two minute kindness"
+        }
+      }
+    },
+    {
+      "id": "withdrawals",
+      "type": "kinetic",
+      "narration": "Withdrawals are just as simple, and they cost far more. Broken promises. Disrespect. Overreacting.",
+      "visual": {
+        "layout": "icons",
+        "title": "Withdrawals",
+        "items": [
+          {
+            "icon": "wall",
+            "label": "Broken promises",
+            "sync": {
+              "phrase": "Broken promises"
+            }
+          },
+          {
+            "icon": "speech",
+            "label": "Disrespect",
+            "sync": {
+              "phrase": "Disrespect"
+            }
+          },
+          {
+            "icon": "hourglass",
+            "label": "Overreacting",
+            "sync": {
+              "phrase": "Overreacting"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "today",
+      "type": "kinetic",
+      "narration": "Start today. Make one real deposit with the person who matters most.",
+      "visual": {
+        "layout": "statement",
+        "text": "Make one deposit today",
+        "accent": [
+          "today"
+        ],
+        "icon": "gift",
+        "sync": {
+          "phrase": "Make one real deposit"
+        }
+      }
+    },
+    {
+      "id": "loop",
+      "type": "kinetic",
+      "narration": "That's The Seven Habits by Stephen Covey. Because",
+      "visual": {
+        "layout": "statement",
+        "text": "The 7 Habits · Stephen Covey",
+        "accent": [
+          "7",
+          "Habits"
+        ],
+        "icon": "book"
+      }
+    }
+  ]
+}

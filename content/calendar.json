@@ -72,6 +72,14 @@
     "category": "Habits & Productivity"
   },
   {
+    "video_id": "the-7-habits-of-highly-effective-people",
+    "brand": "readlark",
+    "format": "longform",
+    "publish_date": "2026-10-19",
+    "status": "scheduled",
+    "category": "Habits & Productivity"
+  },
+  {
     "video_id": "deep-work-s01",
     "brand": "readlark",
     "format": "short",
@@ -89,6 +97,30 @@
   },
   {
     "video_id": "deep-work-s03",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-19",
+    "status": "scheduled",
+    "category": "Habits & Productivity"
+  },
+  {
+    "video_id": "the-7-habits-of-highly-effective-people-s01",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-19",
+    "status": "scheduled",
+    "category": "Habits & Productivity"
+  },
+  {
+    "video_id": "the-7-habits-of-highly-effective-people-s02",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-19",
+    "status": "scheduled",
+    "category": "Habits & Productivity"
+  },
+  {
+    "video_id": "the-7-habits-of-highly-effective-people-s03",
     "brand": "readlark",
     "format": "short",
     "publish_date": "2026-10-19",
