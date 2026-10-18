@@ -9,6 +9,18 @@ fail fast with a readable error before any audio or rendering happens.
 > **label**, never a sentence. The narration carries the words; the canvas
 > carries the drawing. Word limits are enforced by the schema (see below).
 
+## What changed in v2.2 (Oct 2026 — subscriber growth + kinetic shorts)
+
+- **`subscribe: { phrase, line? }` on any scene** → the animated subscribe button
+  (pop → cursor click → "Subscribed ✓" → bell, 5 s) starts on `phrase`.
+- **`cta.style: "subscribe"`** — full card + the same button. ≤3 cta scenes.
+- **Longform needs ≥3 subscribe prompts** (start / mid / end) — enforced by
+  `validate_script.ts` (word position) and `lint_script.ts` (real seconds).
+  Rules + copy: `template.md` §7. Pre-pass videos are grandfathered.
+- **`type: "kinetic"`** — shorts-only, character-free motion graphics. `visual.layout`
+  is one of `hook | statement | number | versus | steps | icons | curve | quote`.
+  Full field list + writing rules: `content/shorts-template.md`.
+
 ## What changed in v2.0 (vs v1.x) — **breaking**
 
 - **The Cast is the one character system.** Every `kind: "figure"` is a cast

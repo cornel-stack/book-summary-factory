@@ -116,10 +116,11 @@ export const SectionTitleVisual = z.object({
   memory: z.enum(PROP_KINDS).optional(),
 });
 
-/** A brief, non-salesy prompt (subscribe / description link). Max 2 per video. */
+/** A brief, value-led prompt. "subscribe" = full card with the animated
+ *  subscribe button (counts as a subscribe prompt). Max 3 per video. */
 export const CtaVisual = z.object({
   text: z.string().min(1),
-  style: z.enum(["card", "corner"]).default("card"),
+  style: z.enum(["card", "corner", "subscribe"]).default("card"),
 });
 
 /** A single drawable element in a character scene (figure or prop). */
@@ -274,11 +275,69 @@ export const TableVisual = z.object({
   rows: z.array(TableRow).min(2).max(6),
 });
 
+/**
+ * Shorts-native kinetic motion graphics (no characters). One scene = one beat;
+ * the vertical renderer (short/KineticScene.tsx) owns all geometry. Every item
+ * `sync` is a VERBATIM phrase of the scene narration (same rule as longform).
+ */
+const KineticIcon = PropKind;
+const KineticSide = z.object({
+  label: wordLimit(3),
+  icon: KineticIcon.optional(),
+  sync: Sync.optional(),
+});
+export const KineticVisual = z.discriminatedUnion("layout", [
+  // Frame-0 hook slam: the claim is fully on screen at frame 0 (it doubles as the feed thumbnail).
+  z.object({ layout: z.literal("hook"), text: wordLimit(10), accent: z.array(z.string()).default([]), icon: KineticIcon.optional() }),
+  // A punchline / reframe in huge type, accent words in amber.
+  z.object({ layout: z.literal("statement"), text: wordLimit(12), accent: z.array(z.string()).default([]), icon: KineticIcon.optional(), sync: Sync.optional() }),
+  // One giant count-up stat.
+  z.object({
+    layout: z.literal("number"),
+    value: z.number(),
+    prefix: z.string().optional(),
+    suffix: z.string().optional(),
+    decimals: z.number().int().min(0).max(2).optional(),
+    label: wordLimit(6),
+    sync: Sync.optional(),
+  }),
+  // Split comparison (X vs Y); `winner` gets the green tick, the other a red cross.
+  z.object({ layout: z.literal("versus"), left: KineticSide, right: KineticSide, winner: z.enum(["left", "right"]).optional() }),
+  // Numbered steps / countdown list, each flies in on its phrase.
+  z.object({
+    layout: z.literal("steps"),
+    title: wordLimit(6).optional(),
+    countdown: z.boolean().optional(),
+    items: z.array(z.object({ label: wordLimit(5), sync: Sync.optional() })).min(1).max(5),
+  }),
+  // Icon chain / loop diagram (e.g. cue → craving → response → reward).
+  z.object({
+    layout: z.literal("icons"),
+    title: wordLimit(6).optional(),
+    items: z.array(z.object({ icon: KineticIcon, label: wordLimit(3), sync: Sync.optional() })).min(1).max(4),
+  }),
+  // Compounding curve drawn left→right; optional decaying contrast line.
+  z.object({
+    layout: z.literal("curve"),
+    label: wordLimit(6),
+    to: wordLimit(3),
+    contrast: wordLimit(3).optional(),
+    sync: Sync.optional(),
+  }),
+  // A book quote, karaoke-highlighted as it is read.
+  z.object({ layout: z.literal("quote"), quote: z.string().min(1), attribution: z.string().min(1) }),
+]);
+export type KineticVisual = z.infer<typeof KineticVisual>;
+
 // ---------- Discriminated union of scenes ----------
 
 const SceneBase = {
   id: z.string().min(1),
   narration: z.string().min(1),
+  // Subscriber-growth pass: pop the animated subscribe button when this phrase
+  // (a verbatim narration substring — normally containing "subscribe") is spoken.
+  // `line` is the value text above the button (default "1 book · every day").
+  subscribe: z.object({ phrase: z.string().min(1), line: z.string().optional() }).optional(),
 };
 
 export const Scene = z.discriminatedUnion("type", [
@@ -291,6 +350,7 @@ export const Scene = z.discriminatedUnion("type", [
   z.object({ ...SceneBase, type: z.literal("compare"), visual: CompareVisual }),
   z.object({ ...SceneBase, type: z.literal("table"), visual: TableVisual }),
   z.object({ ...SceneBase, type: z.literal("cta"), visual: CtaVisual }),
+  z.object({ ...SceneBase, type: z.literal("kinetic"), visual: KineticVisual }),
 ]);
 
 // ---------- Top-level script ----------
@@ -417,10 +477,14 @@ export const Script = z.object({
       }
     });
   }
-  // At most 2 CTA scenes per video.
+  // At most 3 CTA scenes per video (subscribe prompts are mostly inline overlays).
   const ctaCount = s.scenes.filter((sc) => sc.type === "cta").length;
-  if (ctaCount > 2) {
-    ctx.addIssue({ code: z.ZodIssueCode.custom, message: `at most 2 cta scenes per video (found ${ctaCount})`, path: ["scenes"] });
+  if (ctaCount > 3) {
+    ctx.addIssue({ code: z.ZodIssueCode.custom, message: `at most 3 cta scenes per video (found ${ctaCount})`, path: ["scenes"] });
+  }
+  // Kinetic scenes are vertical-only.
+  if (s.format === "longform" && s.scenes.some((sc) => sc.type === "kinetic")) {
+    ctx.addIssue({ code: z.ZodIssueCode.custom, message: "kinetic scenes are shorts-only (format:\"short\")", path: ["scenes"] });
   }
 });
 
@@ -466,11 +530,30 @@ export function collectScenePhrases(scene: Scene): string[] {
     case "table":
       scene.visual.rows.forEach((r) => push(r.sync));
       break;
+    case "kinetic": {
+      const v = scene.visual;
+      if (v.layout === "statement" || v.layout === "number" || v.layout === "curve") push(v.sync);
+      else if (v.layout === "versus") { push(v.left.sync); push(v.right.sync); }
+      else if (v.layout === "steps" || v.layout === "icons") v.items.forEach((i) => push(i.sync));
+      break;
+    }
     case "quote_card":
     case "cta":
       break;
   }
+  if (scene.subscribe) out.push(scene.subscribe.phrase);
   return out;
+}
+
+/**
+ * Indices of the scenes that carry a subscribe prompt: an inline `subscribe`
+ * overlay, or a cta scene with style "subscribe". Longform needs ≥3 (start /
+ * mid / end) — enforced by validate_script (word position) + lint (timing).
+ */
+export function subscribePromptIndices(script: { scenes: Scene[] }): number[] {
+  return script.scenes
+    .map((sc, i) => ((sc.subscribe || (sc.type === "cta" && sc.visual.style === "subscribe")) ? i : -1))
+    .filter((i) => i >= 0);
 }
 
 // ---------- Timing manifest (produced by build_manifest.ts) ----------

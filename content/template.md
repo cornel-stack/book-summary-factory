@@ -16,17 +16,19 @@ constant — see §8.
 ## 1. The video skeleton (long-form)
 
 ```
-HOOK            1 scene    ~15–25 s   name the book; promise the one idea
-  → CTA (card)  1 scene    ~5–8 s     "subscribe / full notes below" (after the hook)
+HOOK            1 scene    ~15–25 s   name the book; promise the one idea; open a loop
 BOOK INTRO      2 scenes   ~35–50 s   who wrote it, why it matters, the surrogate (Alex) picks it up
 PART 1          title + 2–3 PRINCIPLE sections
+  ★ SUBSCRIBE #1 (START)  inline, ~1:30–4:00 — right after the FIRST principle pays off
   MID-RECAP     1 scene    ~15–20 s   recap_card scope:"mid"
 PART 2          RE-HOOK + title + 2–3 PRINCIPLE sections
   MID-RECAP     1 scene    ~15–20 s
   (PARTS 3–5 …  same shape: RE-HOOK, title, principles, mid-recap)
+  ★ SUBSCRIBE #2 (MID)    inline, 35–65% of runtime — on a mid-recap + "comment which book next"
 FINAL RECAP     1 scene    ~25–35 s   recap_card scope:"final" (one line per part)
 CLOSE           1 scene    ~15–20 s   the one-line takeaway
-  → CTA (corner)1 scene    ~5–8 s     "which habit will you start? — comment" (at the close)
+  ★ SUBSCRIBE #3 (END)    cta style:"subscribe", last ~60 s — name TOMORROW's book
+END SCREEN      1 scene    ~15–20 s   cta style:"corner": keep talking, point at the next video
 ```
 
 - **4–6 PARTS, 9–14 PRINCIPLE sections total** (long-form). A short book still
@@ -42,7 +44,9 @@ CLOSE           1 scene    ~15–20 s   the one-line takeaway
 - **~60–90 scenes per video.** The pipeline handles it (edge-tts runs a
   concurrency pool; chunked CI render fans out automatically). If a script has
   fewer than ~55 scenes at 30 min, principles are being told too thinly.
-- At most **2 CTAs** per video: one after the hook, one at the close. Never salesy.
+- **Exactly 3+ SUBSCRIBE prompts** (start / mid / end) — see §7. Validation
+  (`validate_script.ts`) and lint (`lint_script.ts`) HARD-FAIL without them.
+  Never in the hook: asking before delivering value is the #1 mistake.
 
 ---
 
@@ -51,7 +55,11 @@ CLOSE           1 scene    ~15–20 s   the one-line takeaway
 - `section_title.role` = `"part" | "principle"` + `number` (+ `part` for a
   principle) → renders a "PART 1" / "PRINCIPLE 2" kicker.
 - `recap_card.scope` = `"mid" | "final"`.
-- `cta` scene = `{ text, style:"card"|"corner" }`.
+- `cta` scene = `{ text, style:"card"|"corner"|"subscribe" }` (≤3 per video).
+- Scene-level `subscribe: { phrase, line? }` on ANY scene → the animated
+  subscribe button (pop → cursor click → "Subscribed ✓" → bell) starts when
+  `phrase` is spoken. `phrase` must be verbatim narration and should contain
+  "subscribe". Put it early enough that ≥5 s of the scene remains.
 - Script-level `template` = `{ framing:"book-structure"|"listicle",
   hook:"direct"|"cold-open" }`. **book-structure requires the book title or
   author in scene 1's narration** (enforced by the schema).
@@ -363,14 +371,40 @@ Suggested is the long-term one. Pack for it:
 
 ---
 
-## 7. CTA copy (non-salesy)
+## 7. Subscribe prompts (subscriber-growth pass, Oct 2026)
 
-- After the hook (`style:"card"`): "Full notes in the description — subscribe
-  if you want the next one." (~5 s)
-- At the close (`style:"corner"`): "Which habit will you start today? Tell me
-  below." (~5 s)
+**Why:** ~280 views → 1 subscriber. Viewers subscribe when you (a) have already
+delivered value and (b) give a concrete reason (*one book, every day*). Sources:
+the MrBeast production guide, vidIQ/TubeBuddy guidance, a vendor A/B test (an end
+ask ≈1.6× subs/view vs no ask). YouTube also highlights its own Subscribe button
+when "subscribe" is spoken, so always say the word clearly.
 
-Never interrupt a principle with a CTA. Never more than one sentence.
+| # | Where | How | Length |
+|---|-------|-----|--------|
+| 1 START | right after principle 1's payoff (~1:30–4:00) | `subscribe` overlay on that principle's last scene | 1 sentence, ~6 s |
+| 2 MID | 35–65% of runtime, on a mid-recap | `subscribe` overlay + comment prompt | ~10 s |
+| 3 END | after the final recap + close (last 60 s) | `cta style:"subscribe"` naming tomorrow's book | ~8 s |
+| END SCREEN | last 15–20 s | `cta style:"corner"`, keep talking, point to one next video | ~15 s |
+
+**Rules**
+- Tie every ask to a benefit; **never** "smash that like button" / "like and subscribe".
+- One ask per slot, never mid-principle, never in the first minute.
+- Pair the MID ask with an engagement prompt ("tell me which book I should do next").
+- END: recap first, then ask, then the next-video tease. Silent end screens underperform.
+- The overlay's `line` (default "1 book · every day") can carry a series hook
+  ("Money books · 1 a day").
+
+**Copy bank** (adapt; keep the word "subscribe")
+1. START: "If that one idea was worth it, ReadLark does this every day: one book, its best ideas, no fluff. Subscribe so tomorrow's book lands in your feed."
+2. START: "Quick one: I break down a new book every single day. If you'd rather get the ideas of hundreds of books without reading them all, subscribe."
+3. MID: "We're halfway. If you're still here, you're exactly who this channel is for. Subscribe, and tell me in the comments which book I should do next."
+4. MID: "Before the next part: most people who watch this never subscribe, and they miss tomorrow's book. Don't be most people."
+5. END: "That's <Book> in thirty minutes. Tomorrow it's <Next Book>. Subscribe and turn on the bell so you don't miss it."
+6. END SCREEN: "If <Book> clicked for you, <Related Book> is the perfect follow-up. It's right here. Watch it next."
+
+**Retention support for the asks:** open a loop in the hook ("the idea that
+changed everything for me comes last"), re-hook at every part boundary, and
+tease the next book ~60–90 s before the end so the end-screen click is expected.
 
 ---
 
@@ -439,7 +473,8 @@ changes.
 - [ ] 4–6 parts, 9–14 principles, ~60–90 scenes.
 - [ ] Every part followed by a mid-recap; a final recap before the close.
 - [ ] A RE-HOOK beat at every part boundary after Part 1 (§3b).
-- [ ] ≤ 2 CTAs (one post-hook, one at close).
+- [ ] ≥3 subscribe prompts: START (1–5 min, after principle 1), MID (35–65%),
+      END (final 2 min, `cta style:"subscribe"`), each value-led + says "subscribe".
 - [ ] No 3 consecutive same-type scenes.
 - [ ] Every principle 220–360 words; no single scene over ~65 words.
 - [ ] Every key visual has a `sync` phrase; the phrase is in that scene's narration.

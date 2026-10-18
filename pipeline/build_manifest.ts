@@ -23,7 +23,7 @@ import {
   type ManifestScene,
   type WordTiming,
 } from "../remotion/src/schema.js";
-import { VIDEO, VIDEO_VERTICAL, SCENE_PADDING_FRAMES, SHORTS_ENDCARD_SECONDS } from "../remotion/src/theme.js";
+import { VIDEO, VIDEO_VERTICAL, SCENE_PADDING_FRAMES, SHORT_SCENE_PADDING_FRAMES, SHORTS_ENDCARD_SECONDS } from "../remotion/src/theme.js";
 import { resolvePhraseTime } from "../remotion/src/drawing/sync.js";
 import { getBrand } from "../config/brands.js";
 
@@ -110,7 +110,7 @@ function main() {
     const durationInFrames =
       script.format === "short" && scene.type === "cta"
         ? Math.max(1, Math.round(SHORTS_ENDCARD_SECONDS * VIDEO.fps))
-        : audioFrames + SCENE_PADDING_FRAMES;
+        : audioFrames + (script.format === "short" ? SHORT_SCENE_PADDING_FRAMES : SCENE_PADDING_FRAMES);
 
     const startFrame = cursor;
     cursor += durationInFrames;
@@ -178,6 +178,10 @@ function main() {
         if (actualMin < lo || actualMin > hi) {
           problems.push(`outside ±15% of target ${target} min (${(lo * 60).toFixed(0)}–${(hi * 60).toFixed(0)}s)`);
         }
+      } else if (script.scenes.every((s) => s.type === "kinetic")) {
+        // Kinetic shorts target ~1 minute (Oct 2026 direction).
+        if (actualSec < 50 || actualSec > 66)
+          problems.push(`kinetic short is ${actualSec.toFixed(1)}s — outside the 50–66s window (aim ~60s ≈ 150–165 words)`);
       } else if (actualSec < 20 || actualSec > 70) {
         problems.push(`short is ${actualSec.toFixed(1)}s — outside the 20–70s window (aim 30–60s)`);
       }

@@ -34,5 +34,8 @@ export const SceneRenderer: React.FC<{ scene: Scene; words: WordTiming[] }> = ({
       return <TableCard visual={scene.visual} words={words} />;
     case "cta":
       return <CtaCard visual={scene.visual} />;
+    case "kinetic":
+      // Shorts-only (schema rejects kinetic in longform); rendered by ShortVideo.
+      return null;
   }
 };

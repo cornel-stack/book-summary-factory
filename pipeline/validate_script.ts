@@ -10,10 +10,13 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { Script, collectScenePhrases } from "../remotion/src/schema.js";
+import { Script, collectScenePhrases, subscribePromptIndices } from "../remotion/src/schema.js";
 
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DIR = join(REPO, "content", "videos");
+// Published before the subscriber-growth pass (Oct 2026) — exempt from the
+// 3-prompt rule so CI lint keeps passing on the back catalogue.
+const LEGACY_NO_SUBSCRIBE = new Set(["atomic-habits", "the-psychology-of-money", "sample-video"]);
 const norm = (x: string) => x.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter(Boolean).join(" ");
 
 function validate(id: string): number {
@@ -36,9 +39,36 @@ function validate(id: string): number {
       }
     }
   }
+  bad += checkSubscribePrompts(id, parsed.data);
   if (bad) return 1;
   console.log(`✓ ${id}: ${parsed.data.scenes.length} scenes, ${words} words, all sync phrases present`);
   return 0;
+}
+
+/**
+ * Longform subscriber-growth rule: ≥3 subscribe prompts — START (after the
+ * first value lands, ~2–15% in), MID (30–70%), END (final ~15%). Position is
+ * by narration words (audio-free); lint_script re-checks it in real seconds.
+ */
+function checkSubscribePrompts(id: string, script: Script): number {
+  if (script.format !== "longform" || LEGACY_NO_SUBSCRIBE.has(id)) return 0;
+  const idx = subscribePromptIndices(script);
+  const wc = script.scenes.map((sc) => sc.narration.trim().split(/\s+/).length);
+  const total = wc.reduce((a, b) => a + b, 0);
+  const posOf = (i: number) => wc.slice(0, i).reduce((a, b) => a + b, 0) / total;
+  const pos = idx.map(posOf);
+  const problems: string[] = [];
+  if (idx.length < 3) problems.push(`only ${idx.length} subscribe prompt(s) — need ≥3 (start, mid, end)`);
+  if (!pos.some((p) => p >= 0.02 && p <= 0.15)) problems.push("no START prompt between 2% and 15% of the narration (after the first idea pays off)");
+  if (!pos.some((p) => p >= 0.3 && p <= 0.7)) problems.push("no MID prompt between 30% and 70%");
+  if (!pos.some((p) => p >= 0.85)) problems.push("no END prompt in the final 15%");
+  if (pos.some((p) => p < 0.02)) problems.push("a subscribe prompt sits in the hook — never ask before delivering value");
+  for (const i of idx) {
+    const sc = script.scenes[i]!;
+    if (!/subscrib/i.test(sc.narration)) problems.push(`[${sc.id}] subscribe prompt narration never says "subscribe"`);
+  }
+  for (const p of problems) console.error(`✖ ${id}: ${p}`);
+  return problems.length;
 }
 
 const arg = process.argv[2];

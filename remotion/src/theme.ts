@@ -36,13 +36,19 @@ export const SHORT_SAFE = {
  */
 export const SHORTS_ENDCARD_SECONDS = 1.0;
 /** Target length band for shorts (seconds). Lint warns beyond `warn`. */
-export const SHORTS_DURATION = { min: 35, max: 50, warn: 55 } as const;
+// Oct 2026: kinetic shorts target ~1 minute (user direction). Hard window 50–66s in build_manifest.
+export const SHORTS_DURATION = { min: 50, max: 62, warn: 64 } as const;
 
 /**
  * Silent padding (in frames) appended after each scene's narration so that
  * one scene's audio doesn't bump straight into the next.
  */
 export const SCENE_PADDING_FRAMES = 12; // 0.4s at 30fps
+/** Shorts: near-zero dead air between beats (pace > polish; gaps >2.5s dip retention). */
+export const SHORT_SCENE_PADDING_FRAMES = 3;
+
+/** Animated subscribe overlay length (frames): pop → cursor click → bell → exit. */
+export const SUBSCRIBE_OVERLAY_FRAMES = 150; // 5s
 
 /**
  * MEASURED channel pacing constant (Phase 11). Words of narration per minute of

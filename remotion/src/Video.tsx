@@ -6,6 +6,8 @@ import { propShape, type PropKind } from "./drawing/props";
 import { fillColor } from "./components/CastFigure";
 import { BrandProvider } from "./brand";
 import { getBrand } from "../../config/brands";
+import { SubscribeOverlay } from "./components/SubscribeOverlay";
+import { syncStartFrame } from "./drawing/layout";
 
 /** Board memory: small takeaway icons from the current part's principles,
  *  accumulated along the bottom edge (faded, never hand-drawn). */
@@ -81,6 +83,12 @@ export const Video: React.FC<RenderProps> = ({ script, manifest }) => {
               <Audio src={staticFile(m.audioFile)} />
               <SceneRenderer scene={scene} words={m.words} />
               <BoardMemory icons={memByScene.get(m.id) ?? []} />
+              {scene.subscribe && (
+                <SubscribeOverlay
+                  startFrame={syncStartFrame(m.words, scene.subscribe, manifest.fps)}
+                  line={scene.subscribe.line}
+                />
+              )}
             </Sequence>
           );
         })}

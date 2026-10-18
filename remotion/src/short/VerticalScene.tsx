@@ -660,5 +660,8 @@ export const VerticalScene: React.FC<{ scene: Scene; words: WordTiming[]; isHook
     case "cta":
       // The end card renders full-frame brand chrome upstream (ShortEndCard).
       return null;
+    case "kinetic":
+      // Rendered by short/KineticScene (ShortVideo routes kinetic scenes there).
+      return null;
   }
 };

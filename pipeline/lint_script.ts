@@ -11,8 +11,8 @@
 import { readFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { Script, type Manifest } from "../remotion/src/schema.js";
-import { VIDEO, SHORTS_DURATION } from "../remotion/src/theme.js";
+import { Script, subscribePromptIndices, type Manifest } from "../remotion/src/schema.js";
+import { VIDEO, SHORTS_DURATION, SUBSCRIBE_OVERLAY_FRAMES } from "../remotion/src/theme.js";
 import { gridBox } from "../remotion/src/drawing/layout.js";
 import { resolvePhraseTime } from "../remotion/src/drawing/sync.js";
 
@@ -29,6 +29,8 @@ const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DENSITY_WINDOW = 8; // seconds — progressive-pacing dwell cap (Phase 10)
 const SWING = (40 + 18) / 30; // pose hold+transition ≈ one "new thing" cadence
 const fps = VIDEO.fps;
+// Published before the subscriber-growth pass — exempt from the 3-prompt rule.
+const LEGACY_NO_SUBSCRIBE = new Set(["atomic-habits", "the-psychology-of-money", "sample-video"]);
 
 function main() {
   const id = process.argv[2];
@@ -124,13 +126,33 @@ function main() {
     } else {
       warns.push("no `promise` tagged — cannot verify the 15s core-promise hook (tag the promise sentence)");
     }
+
+    // (G) subscriber growth: the subscribe prompts land at START (1–5 min, after
+    // the first idea pays off), MID (35–65% of runtime) and END (final 2 min).
+    const total = manifest.totalDurationInFrames / fps;
+    const asks: number[] = [];
+    for (const i of subscribePromptIndices(script)) {
+      const scene = script.scenes[i]!;
+      const m = mById.get(scene.id);
+      if (!m) continue;
+      const t0 = m.startFrame / fps;
+      const rel = scene.subscribe ? resolvePhraseTime(m.words, scene.subscribe.phrase) ?? 0 : 0;
+      asks.push(t0 + rel);
+      if (scene.subscribe && m.durationInFrames / fps - rel < SUBSCRIBE_OVERLAY_FRAMES / fps - 1)
+        warns.push(`[${scene.id}] subscribe overlay starts ${rel.toFixed(1)}s in but the scene ends ${(m.durationInFrames / fps - rel).toFixed(1)}s later — move the phrase earlier so the click + bell play out`);
+    }
+    if (!LEGACY_NO_SUBSCRIBE.has(id)) {
+      if (!asks.some((t) => t >= 60 && t <= 300)) errors.push(`no START subscribe prompt between 1:00 and 5:00 (asks at ${asks.map((t) => t.toFixed(0) + "s").join(", ") || "none"})`);
+      if (!asks.some((t) => t >= total * 0.35 && t <= total * 0.65)) errors.push("no MID subscribe prompt between 35% and 65% of the runtime");
+      if (!asks.some((t) => t >= total - 120)) errors.push("no END subscribe prompt in the final 2 minutes");
+    }
   }
   if (script.format === "short") {
     // (D) duration band + 2s on-screen hook claim.
     const shortTotal = manifest.totalDurationInFrames / fps;
     const cap = script.max_seconds ?? SHORTS_DURATION.warn;
     if (shortTotal > cap)
-      warns.push(`short is ${shortTotal.toFixed(1)}s (> ${cap}s${script.max_seconds ? " override" : " — target 35–50s; set max_seconds for a deliberate long short"})`);
+      warns.push(`short is ${shortTotal.toFixed(1)}s (> ${cap}s${script.max_seconds ? " override" : " — target ~60s; set max_seconds for a deliberate long short"})`);
     if (!script.short_hook) warns.push("no short_hook — the 2s hook needs an on-screen claim in the first ~60 frames");
   }
 

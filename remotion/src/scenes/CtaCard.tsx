@@ -7,13 +7,15 @@ import { DrawingBoard } from "../components/DrawingBoard";
 import { underline } from "../drawing/icons";
 import { propShape } from "../drawing/props";
 import type { BoardElement } from "../drawing/types";
+import { SubscribeOverlay } from "../components/SubscribeOverlay";
 
 /**
  * A brief, non-salesy call-to-action. "card" = centered prompt with a drawn
  * arrow + flame underline (used after the hook / at the close). "corner" = a
- * small lower-left prompt that doesn't take the whole frame.
+ * small lower-left prompt that doesn't take the whole frame. "subscribe" = the
+ * card plus the animated subscribe button (cursor click + bell).
  */
-export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner" } }> = ({ visual }) => {
+export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner" | "subscribe" } }> = ({ visual }) => {
   const frame = useCurrentFrame();
   const brand = useBrand();
   const corner = visual.style === "corner";
@@ -88,6 +90,7 @@ export const CtaCard: React.FC<{ visual: { text: string; style: "card" | "corner
       >
         {visual.text}
       </div>
+      {visual.style === "subscribe" && <SubscribeOverlay startFrame={12} />}
     </AbsoluteFill>
   );
 };

@@ -3,7 +3,7 @@
  * exists at content/videos/<slug>.json (written by Claude Code via /make-today),
  * it does everything else hands-off:
  *
- *   derive 3 shorts → validate → schedule calendar → commit + push →
+ *   collect the 3 hand-written kinetic shorts → validate → schedule calendar → commit + push →
  *   trigger CI (render.yml + render-shorts.yml into one content-<date> bundle) →
  *   wait for both runs → download the finished videos into output/<date>/ →
  *   mark the book done in the xlsx + launch-plan.json.
@@ -19,8 +19,11 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const VENV_PY = join(REPO, ".venv", "bin", "python");
-const PY = existsSync(VENV_PY) ? VENV_PY : "python3";
+const isWin = process.platform === "win32";
+const VENV_PY = isWin
+  ? join(REPO, ".venv", "Scripts", "python.exe")
+  : join(REPO, ".venv", "bin", "python");
+const PY = existsSync(VENV_PY) ? VENV_PY : isWin ? "python" : "python3";
 
 const argv = process.argv.slice(2);
 const dry = argv.includes("--dry");
@@ -32,9 +35,10 @@ if (!slug) {
 
 const sleep = (ms: number) => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 const run = (cmd: string, args: string[], env?: NodeJS.ProcessEnv) =>
-  execFileSync(cmd, args, { cwd: REPO, stdio: "inherit", env: env ?? process.env });
+  // Windows: npx is a .cmd shim, which execFile can only launch through a shell.
+  execFileSync(cmd, args, { cwd: REPO, stdio: "inherit", env: env ?? process.env, shell: isWin && cmd === "npx" });
 const cap = (cmd: string, args: string[]) =>
-  execFileSync(cmd, args, { cwd: REPO, encoding: "utf8" }).trim();
+  execFileSync(cmd, args, { cwd: REPO, encoding: "utf8", shell: isWin && cmd === "npx" }).trim();
 const step = (n: string) => console.log(`\n▶ ${n}`);
 
 function main() {
@@ -48,16 +52,25 @@ function main() {
   const branch = cap("git", ["rev-parse", "--abbrev-ref", "HEAD"]);
   console.log(`Day run: ${slug}  →  bundle ${tag}  (branch ${branch})`);
 
-  // 1. derive 3 shorts
-  step("1/8 derive 3 shorts");
-  run("npx", ["tsx", "pipeline/derive_shorts.ts", slug, "--max", "3"]);
+  // 1. the 3 shorts — hand-written kinetic scripts (content/shorts-template.md),
+  // written alongside the longform by /make-today. The old mechanical derivation
+  // (derive_shorts.ts → static character shorts) is retired from the daily run.
+  step("1/8 collect 3 kinetic shorts");
   const shortIds = readdirSync(join(REPO, "content", "videos"))
     .filter((f) => new RegExp(`^${slug}-s\\d+\\.json$`).test(f))
     .map((f) => f.replace(/\.json$/, ""))
     .sort()
     .slice(0, 3);
-  if (shortIds.length === 0) {
-    console.error("✖ derive_shorts produced no shorts (does the longform have principle sections?)");
+  const notKinetic = shortIds.filter((id) => {
+    const sc = JSON.parse(readFileSync(join(REPO, "content", "videos", `${id}.json`), "utf8")).scenes as { type: string }[];
+    return !sc.every((x) => x.type === "kinetic");
+  });
+  if (shortIds.length < 3 || notKinetic.length) {
+    console.error(
+      `✖ need 3 hand-written kinetic shorts content/videos/${slug}-s01..s03.json (found ${shortIds.length}` +
+        (notKinetic.length ? `; not kinetic: ${notKinetic.join(", ")}` : "") +
+        ") — write them per content/shorts-template.md",
+    );
     process.exit(1);
   }
   console.log(`  shorts: ${shortIds.join(", ")}`);

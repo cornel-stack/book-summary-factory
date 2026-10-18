@@ -35,8 +35,11 @@ if (!existsSync(scriptJson)) {
 const isShort = (JSON.parse(readFileSync(scriptJson, "utf8")).format ?? "longform") === "short";
 
 // Prefer the project virtualenv's Python if present (edge-tts lives there).
-const venvPython = join(REPO, ".venv", "bin", "python");
-const python = existsSync(venvPython) ? venvPython : "python3";
+const isWin = process.platform === "win32";
+const venvPython = isWin
+  ? join(REPO, ".venv", "Scripts", "python.exe")
+  : join(REPO, ".venv", "bin", "python");
+const python = existsSync(venvPython) ? venvPython : isWin ? "python" : "python3";
 
 const buildDir = join(REPO, ".build", videoId);
 const propsPath = join(buildDir, "props.json");
@@ -50,7 +53,9 @@ function run(label: string, cmd: string, args: string[]) {
   const started = Date.now();
   console.log(`\n▶ ${label}`);
   console.log(`  $ ${cmd} ${args.join(" ")}`);
-  execFileSync(cmd, args, { stdio: "inherit", cwd: REPO });
+  // Windows: npx is a .cmd shim, which execFile can only launch through a shell.
+  // PYTHONUTF8: the Windows console codepage (cp1252) can't print the pipeline's "→" logs.
+  execFileSync(cmd, args, { stdio: "inherit", cwd: REPO, shell: isWin && cmd === "npx", env: { ...process.env, PYTHONUTF8: "1" } });
   console.log(`  ✓ ${label} (${((Date.now() - started) / 1000).toFixed(1)}s)`);
 }
 

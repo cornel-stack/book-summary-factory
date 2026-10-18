@@ -1,0 +1,67 @@
+{
+  "id": "atomic-habits-k01",
+  "brand": "readlark",
+  "format": "short",
+  "title": "1% Better Every Day = 37× Better 📈 #atomichabits",
+  "short_hook": "1% better every day",
+  "book": { "title": "Atomic Habits", "author": "James Clear", "year": 2018 },
+  "description": "Get 1% better every day and you end up 37 times better in a year. The math behind Atomic Habits by James Clear. Follow ReadLark for one book a day.",
+  "tags": ["atomic habits", "james clear", "habits", "self improvement", "book summary", "shorts"],
+  "pinned_comment": "What's the ONE tiny habit you're starting today?",
+  "thumbnail": { "headline": "1% Better Every Day" },
+  "voice": "en-US-AndrewNeural",
+  "rate": "-5%",
+  "loop": true,
+  "template": { "framing": "book-structure", "hook": "direct" },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "kinetic",
+      "narration": "Get one percent better every day, and watch what happens in a year.",
+      "visual": { "layout": "hook", "text": "1% better every day", "accent": ["1%"], "icon": "staircase" }
+    },
+    {
+      "id": "math",
+      "type": "kinetic",
+      "narration": "Do the math. One point zero one, to the power of three sixty five, is thirty seven.",
+      "visual": { "layout": "number", "value": 37, "suffix": "×", "label": "better in one year", "sync": { "phrase": "is thirty seven" } }
+    },
+    {
+      "id": "curve",
+      "type": "kinetic",
+      "narration": "Tiny gains feel like nothing at first. Then they compound, and the curve goes vertical.",
+      "visual": { "layout": "curve", "label": "How habits compound", "to": "37×", "contrast": "1% worse", "sync": { "phrase": "they compound" } }
+    },
+    {
+      "id": "versus",
+      "type": "kinetic",
+      "narration": "Get one percent worse each day instead, and you end up near zero. Same effort. Opposite direction.",
+      "visual": {
+        "layout": "versus",
+        "left": { "label": "1% worse", "icon": "hourglass", "sync": { "phrase": "one percent worse" } },
+        "right": { "label": "1% better", "icon": "trendup", "sync": { "phrase": "Same effort" } },
+        "winner": "right"
+      }
+    },
+    {
+      "id": "steps",
+      "type": "kinetic",
+      "narration": "So pick one habit. Make it tiny. Repeat it daily.",
+      "visual": {
+        "layout": "steps",
+        "title": "Start today",
+        "items": [
+          { "label": "Pick one habit", "sync": { "phrase": "pick one habit" } },
+          { "label": "Make it tiny", "sync": { "phrase": "make it tiny" } },
+          { "label": "Repeat it daily", "sync": { "phrase": "repeat it daily" } }
+        ]
+      }
+    },
+    {
+      "id": "loop",
+      "type": "kinetic",
+      "narration": "That's Atomic Habits by James Clear. So remember,",
+      "visual": { "layout": "statement", "text": "Small habits. Big results.", "accent": ["Big"], "icon": "book" }
+    }
+  ]
+}
