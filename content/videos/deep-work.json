@@ -1,0 +1,3517 @@
+{
+  "id": "deep-work",
+  "title": "Deep Work Summary: Focus Is the New Superpower",
+  "brand": "readlark",
+  "format": "longform",
+  "book": {
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "year": 2016
+  },
+  "description": "Deep Work by Cal Newport explains why the ability to focus without distraction is becoming one of the most valuable skills in the modern economy, and how to build it. This summary covers why deep work is valuable, rare and meaningful, then walks through the four rules: work deeply, embrace boredom, quit social media, and drain the shallows. You will learn the four depth philosophies, how to ritualize focus, Roosevelt dashes, the thirty day social media test, time blocking, and the shutdown ritual that ends every workday.",
+  "tags": [
+    "deep work",
+    "cal newport",
+    "deep work summary",
+    "focus",
+    "productivity",
+    "how to focus",
+    "time blocking",
+    "digital minimalism",
+    "shutdown ritual",
+    "attention residue",
+    "self improvement",
+    "book summary"
+  ],
+  "thumbnail": {
+    "headline": "Focus Is A Superpower",
+    "punch_words": [
+      "DEEP",
+      "FOCUS",
+      "WINS"
+    ],
+    "cast": "kwame",
+    "pose": "pointing",
+    "expression": "shocked",
+    "props": [
+      "brain",
+      "phone"
+    ],
+    "pointer": "spotlight"
+  },
+  "voice": "en-US-AndrewNeural",
+  "target_minutes": 32,
+  "pinned_comment": "How many hours of truly deep work did you do yesterday? Be honest. And which book should I break down next?",
+  "promise": "the superpower of the twenty first century",
+  "title_variants": [
+    "Deep Work Summary: Focus Is the New Superpower",
+    "Why You Can't Focus Anymore (And How to Get It Back)",
+    "Do More in 4 Focused Hours Than Most People Do All Day"
+  ],
+  "category": "Habits & Productivity",
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "character_scene",
+      "narration": "In Deep Work, Cal Newport makes a bold claim. The ability to focus without distraction on hard things is becoming the superpower of the twenty first century. It is getting rarer every year, exactly as it becomes more valuable. And by the end of this video, you will have a complete system to build it, including the one habit that changed how I end every single day.",
+      "visual": {
+        "title": "Focus is the superpower",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "jade",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Cal Newport"
+            },
+            "pose": "pointing"
+          },
+          {
+            "kind": "brain",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "the superpower"
+            }
+          },
+          {
+            "kind": "trendup",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "more valuable"
+            },
+            "tier": "ambient"
+          }
+        ]
+      }
+    },
+    {
+      "id": "intro-1",
+      "type": "character_scene",
+      "narration": "In nineteen twenty two, the psychiatrist Carl Jung did something strange. He left his busy practice in Zurich and built a simple stone tower in the woods near the village of Bollingen. No electricity, no visitors without permission. Every morning he locked himself in a small room and wrote, without interruption. Jung was not running from work. He was protecting the one kind of work that would make his ideas outlive him. Newport calls that kind of effort deep work.",
+      "visual": {
+        "title": "Jung's tower",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "locked himself"
+            },
+            "pose": "sitting",
+            "seat": "desk",
+            "holding": {
+              "prop": "book",
+              "hand": "right"
+            }
+          },
+          {
+            "kind": "house",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 4,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "stone tower"
+            }
+          },
+          {
+            "kind": "tree",
+            "at": {
+              "col": 10.5,
+              "row": 3,
+              "w": 1.5,
+              "h": 2
+            },
+            "reveal": "pop",
+            "color": "ink",
+            "sync": {
+              "phrase": "in the woods"
+            },
+            "tier": "ambient"
+          }
+        ]
+      }
+    },
+    {
+      "id": "intro-2",
+      "type": "compare",
+      "narration": "Here is the difference that runs through the whole book. Deep work is professional activity done in distraction free concentration that pushes your mind to its limit. It creates new value and it is hard to copy. Shallow work is the opposite. Logistical tasks like email, meetings and quick replies, usually done while distracted. It feels busy, but anyone could do it, and it rarely moves anything forward.",
+      "visual": {
+        "title": "Two kinds of work",
+        "left": {
+          "heading": "Deep work",
+          "items": [
+            {
+              "label": "Distraction free focus",
+              "sync": {
+                "phrase": "distraction free concentration"
+              }
+            },
+            {
+              "label": "Creates new value",
+              "sync": {
+                "phrase": "creates new value"
+              }
+            },
+            {
+              "label": "Hard to copy",
+              "sync": {
+                "phrase": "hard to copy"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Shallow work",
+          "items": [
+            {
+              "label": "Email and meetings",
+              "sync": {
+                "phrase": "email, meetings"
+              }
+            },
+            {
+              "label": "Done while distracted",
+              "sync": {
+                "phrase": "done while distracted"
+              }
+            },
+            {
+              "label": "Anyone could do it",
+              "sync": {
+                "phrase": "anyone could do it"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "intro-3",
+      "type": "stat_chart",
+      "narration": "How much of your week is shallow. A study by the McKinsey Global Institute found that the average knowledge worker spends more than sixty percent of the workweek on electronic communication and internet searching, with nearly thirty percent of the week spent reading and answering email alone. That leaves a thin slice of time for the work that actually matters.",
+      "visual": {
+        "label": "Share of the workweek",
+        "mode": "bars",
+        "datapoints": [
+          {
+            "label": "Communication",
+            "value": 60,
+            "sync": {
+              "phrase": "sixty percent"
+            }
+          },
+          {
+            "label": "Email alone",
+            "value": 30,
+            "sync": {
+              "phrase": "nearly thirty percent"
+            }
+          }
+        ],
+        "suffix": "%"
+      }
+    },
+    {
+      "id": "intro-4",
+      "type": "character_scene",
+      "narration": "That leads to Newport's central idea, the deep work hypothesis. The ability to perform deep work is becoming increasingly rare at exactly the same time it is becoming increasingly valuable. So the few who cultivate this skill, and make it the core of their working life, will thrive. This video follows the book in two halves. First, why deep work matters. Then, the rules to make it a daily habit.",
+      "visual": {
+        "title": "The deep work hypothesis",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "omar",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "deep work hypothesis"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "scale",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "increasingly rare"
+            }
+          },
+          {
+            "kind": "trophy",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "pop",
+            "color": "accent",
+            "sync": {
+              "phrase": "will thrive"
+            },
+            "tier": "ambient"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p1-title",
+      "type": "section_title",
+      "narration": "Part one. Why deep work matters.",
+      "visual": {
+        "title": "Why Deep Work Matters",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "Why deep work matters"
+        },
+        "role": "part",
+        "number": 1
+      }
+    },
+    {
+      "id": "pr1-title",
+      "type": "section_title",
+      "narration": "Principle one. Deep work is valuable.",
+      "visual": {
+        "title": "Deep Work Is Valuable",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Deep work is valuable"
+        },
+        "role": "principle",
+        "number": 1,
+        "part": 1,
+        "memory": "trophy"
+      }
+    },
+    {
+      "id": "pr1-1",
+      "type": "character_scene",
+      "narration": "Intelligent machines are changing the economy, and Newport argues that the winners share a pair of core abilities. First, the ability to quickly master hard things, because the tools keep changing and you must keep up. Second, the ability to produce at an elite level, in both quality and speed. Both depend on one skill. You cannot learn something hard, or produce something great, while you check your phone every few minutes.",
+      "visual": {
+        "title": "Master hard things fast",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "kwame",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Intelligent machines"
+            },
+            "pose": "thinking",
+            "effects": [
+              {
+                "kind": "thought_bubble",
+                "sync": {
+                  "phrase": "one skill"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "staircase",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "master hard things"
+            }
+          },
+          {
+            "kind": "target",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "elite level"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr1-quote",
+      "type": "quote_card",
+      "narration": "Newport sums it up in a simple formula. High quality work produced equals time spent, times intensity of focus. Push your intensity to the maximum and you get more done in less time. Spread your attention thin and even long hours produce little.",
+      "visual": {
+        "quote": "High quality work produced equals time spent times intensity of focus.",
+        "attribution": "Cal Newport, Deep Work",
+        "cast": "sage"
+      }
+    },
+    {
+      "id": "pr1-2",
+      "type": "character_scene",
+      "narration": "Why does switching hurt so much. The business professor Sophie Leroy discovered something she called attention residue. When you move from task A to task B, part of your attention stays stuck on task A. So that quick glance at your inbox in the middle of a report leaves a residue that drags your thinking down for a while after you return. Do that every ten minutes and you never work at full power.",
+      "visual": {
+        "title": "Attention residue",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "lena",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "attention residue"
+            },
+            "pose": "standing",
+            "effects": [
+              {
+                "kind": "question_marks",
+                "sync": {
+                  "phrase": "stays stuck"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "phone",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 2,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "quick glance at your inbox"
+            }
+          },
+          {
+            "kind": "brain",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "drags your thinking down"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr1-3",
+      "type": "character_scene",
+      "narration": "Now flip it around. Work in a single long block, with no switching, and the residue disappears. The psychologist Adam Grant did this, batching his hardest work into days when he closed his door completely, and he became one of the youngest full professors at Wharton. Focus is not a nice extra. It is the multiplier on everything you do. And if that idea was worth it, ReadLark does this every day, one book and its best ideas. Subscribe so tomorrow's book lands in your feed. Now, why is something this valuable so rare.",
+      "visual": {
+        "title": "Close the door",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "theo",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "single long block"
+            },
+            "pose": "sitting",
+            "seat": "desk"
+          },
+          {
+            "kind": "door",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "closed his door"
+            }
+          },
+          {
+            "kind": "ladder",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "youngest full professors"
+            }
+          }
+        ]
+      },
+      "subscribe": {
+        "phrase": "Subscribe so tomorrow's book",
+        "line": "1 book · every day"
+      }
+    },
+    {
+      "id": "pr2-title",
+      "type": "section_title",
+      "narration": "Principle two. Deep work is rare.",
+      "visual": {
+        "title": "Deep Work Is Rare",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Deep work is rare"
+        },
+        "role": "principle",
+        "number": 2,
+        "part": 1,
+        "memory": "phone"
+      }
+    },
+    {
+      "id": "pr2-1",
+      "type": "character_scene",
+      "narration": "If deep work is so valuable, why do so few organizations make room for it. Newport points to the metric black hole. It is very hard to measure what distraction costs, so nobody does. Without a clear measure, people fall back on the principle of least resistance. They do whatever is easiest in the moment, like answering every message instantly, because it feels responsive and productive. So the inbox gets cleared, the chat stays green, and the hard project waits for a quiet day that never comes.",
+      "visual": {
+        "title": "The metric black hole",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "metric black hole"
+            },
+            "poses": [
+              "standing",
+              "shrugging"
+            ]
+          },
+          {
+            "kind": "bargraph",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "hard to measure"
+            }
+          },
+          {
+            "kind": "path",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "least resistance"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr2-2",
+      "type": "compare",
+      "narration": "The result is a strange habit Newport calls busyness as a proxy for productivity. When it is hard to show what you have achieved, you show how busy you are instead. Fast replies, packed calendars and constant meetings look like work. But looking busy and creating value are not the same thing at all.",
+      "visual": {
+        "title": "Looking busy vs real work",
+        "left": {
+          "heading": "Looks productive",
+          "items": [
+            {
+              "label": "Fast replies",
+              "sync": {
+                "phrase": "Fast replies"
+              }
+            },
+            {
+              "label": "Packed calendars",
+              "sync": {
+                "phrase": "packed calendars"
+              }
+            },
+            {
+              "label": "Constant meetings",
+              "sync": {
+                "phrase": "constant meetings"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Is productive",
+          "items": [
+            {
+              "label": "Hard problems solved"
+            },
+            {
+              "label": "New value created",
+              "sync": {
+                "phrase": "creating value"
+              }
+            },
+            {
+              "label": "Skills that compound"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr2-3",
+      "type": "character_scene",
+      "narration": "Modern workplaces make it worse. Open offices, instant messaging and the expectation that you will reply within minutes all chop the day into fragments. Newport is not saying these tools are evil. He is saying they have a cost nobody counts. And here is the opportunity. Because most people have drifted into constant distraction, anyone who can still concentrate deeply now stands out. Scarcity is what makes a skill valuable, and focus has never been scarcer.",
+      "visual": {
+        "title": "Your day in fragments",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "nadia",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "chop the day into fragments"
+            },
+            "pose": "panicking",
+            "effects": [
+              {
+                "kind": "sweat_drop"
+              }
+            ]
+          },
+          {
+            "kind": "speech",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "instant messaging"
+            }
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "here is the opportunity"
+            },
+            "state": "on"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr2-4",
+      "type": "character_scene",
+      "narration": "Newport also blames what he calls the cult of the internet. Any new network tool is treated as automatically good, and questioning it makes you look old fashioned. So companies adopt every chat app and every new platform without asking what it does to concentration. Meanwhile, the people doing the most valuable work, writers, scientists and top programmers, quietly guard their focus and get ahead. They are not anti technology. They simply refuse to let a tool decide how they spend their attention.",
+      "visual": {
+        "title": "The cult of the internet",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "rosa",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "cult of the internet"
+            },
+            "pose": "standing"
+          },
+          {
+            "kind": "gears",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "every chat app"
+            }
+          },
+          {
+            "kind": "trophy",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "pop",
+            "color": "accent",
+            "sync": {
+              "phrase": "get ahead"
+            },
+            "tier": "ambient"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr3-title",
+      "type": "section_title",
+      "narration": "Principle three. Deep work is meaningful.",
+      "visual": {
+        "title": "Deep Work Is Meaningful",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Deep work is meaningful"
+        },
+        "role": "principle",
+        "number": 3,
+        "part": 1,
+        "memory": "heart"
+      }
+    },
+    {
+      "id": "pr3-quote",
+      "type": "quote_card",
+      "narration": "The science writer Winifred Gallagher put it this way. Who you are, what you think, feel, and do, what you love, is the sum of what you focus on. Fill your days with noise, and your life starts to feel like noise.",
+      "visual": {
+        "quote": "Who you are, what you think, feel, and do, what you love, is the sum of what you focus on.",
+        "attribution": "Winifred Gallagher, Rapt",
+        "cast": "rosa"
+      }
+    },
+    {
+      "id": "pr3-2",
+      "type": "character_scene",
+      "narration": "Psychology backs her up. Mihaly Csikszentmihalyi studied what makes people happiest, and found that the best moments usually come when the body or mind is stretched to its limits, trying to do something difficult and worthwhile. He called it flow. Surprisingly, people reported more flow at work than in their free time. Deep work is basically a flow generator. Shallow work almost never is. The hours you spend absorbed in a hard problem are, quite literally, some of the happiest hours you will have.",
+      "visual": {
+        "title": "The science of flow",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "maya",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "best moments"
+            },
+            "pose": "celebrating",
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "He called it flow"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "mountain",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "stretched to its limits"
+            }
+          },
+          {
+            "kind": "heart",
+            "at": {
+              "col": 11,
+              "row": 1,
+              "w": 1,
+              "h": 2
+            },
+            "reveal": "pop",
+            "color": "accent",
+            "sync": {
+              "phrase": "flow generator"
+            },
+            "tier": "ambient"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr3-3",
+      "type": "character_scene",
+      "narration": "There is also a deeper reason. Newport tells the story of Ric Furrer, a blacksmith who forges swords by hand, slowly turning raw metal into something beautiful through hours of total focus. You do not need a forge to feel that. A programmer, a writer or a teacher can approach their work as a craft. Do it with full attention, and even ordinary work starts to feel meaningful. Newport's point is that meaning is not found in the job title. It comes from how deeply you engage with the work in front of you.",
+      "visual": {
+        "title": "Work as a craft",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "deshawn",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "a blacksmith"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "gears",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "raw metal"
+            }
+          },
+          {
+            "kind": "checkmark",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "feel meaningful"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr3-4",
+      "type": "list_card",
+      "narration": "So how do you bring that craftsman feeling into an ordinary job. Pick one task each day and do it with full attention, start to finish. Raise your standard, so the work is something you are proud to sign. And notice the small improvements in your skill over time. Meaning grows out of mastery, one focused hour at a time.",
+      "visual": {
+        "title": "Bring craft to your job",
+        "items": [
+          {
+            "label": "One task, full attention",
+            "sync": {
+              "phrase": "full attention, start to finish"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Raise your standard",
+            "sync": {
+              "phrase": "Raise your standard"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Notice skill growing",
+            "sync": {
+              "phrase": "small improvements"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p1-recap",
+      "type": "recap_card",
+      "narration": "Before the rules, lock in part one. Deep work is valuable, because focus multiplies everything. It is rare, because busyness hides its cost. And it is meaningful, because a focused life is a good life. Now let us build it.",
+      "visual": {
+        "title": "Part one recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Valuable: focus multiplies",
+            "sync": {
+              "phrase": "Deep work is valuable"
+            }
+          },
+          {
+            "label": "Rare: busyness hides it",
+            "sync": {
+              "phrase": "It is rare"
+            }
+          },
+          {
+            "label": "Meaningful: a focused life",
+            "sync": {
+              "phrase": "a focused life"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-title",
+      "type": "section_title",
+      "narration": "Part two. Rule one, work deeply.",
+      "visual": {
+        "title": "Rule One: Work Deeply",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "work deeply"
+        },
+        "role": "part",
+        "number": 2
+      }
+    },
+    {
+      "id": "p2-rehook",
+      "type": "character_scene",
+      "narration": "You now know why focus matters. But here is the trap. Willpower alone will not save you, because you only have a limited amount of it each day, and the world is designed to drain it. The answer is not trying harder. It is building routines and rituals that make deep work automatic, so you spend almost no willpower to get started. Think of the greatest thinkers in history. Almost all of them had strict routines, not superhuman self control.",
+      "visual": {
+        "title": "Willpower runs out",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Willpower alone"
+            },
+            "poses": [
+              "standing",
+              "thinking"
+            ]
+          },
+          {
+            "kind": "hourglass",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "limited amount"
+            }
+          },
+          {
+            "kind": "gears",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "routines and rituals"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr4-title",
+      "type": "section_title",
+      "narration": "Principle four. Choose your depth philosophy.",
+      "visual": {
+        "title": "Choose Your Depth Philosophy",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Choose your depth philosophy"
+        },
+        "role": "principle",
+        "number": 4,
+        "part": 2,
+        "memory": "calendar"
+      }
+    },
+    {
+      "id": "pr4-1",
+      "type": "table",
+      "narration": "Newport describes four ways to fit deep work into a life. The monastic approach removes nearly all shallow work, like the computer scientist Donald Knuth, who simply does not use email. The bimodal approach splits time into long deep stretches and open stretches, like Jung with his tower. The rhythmic approach makes deep work a daily habit at a fixed time. And the journalistic approach fits deep work in wherever a gap appears, like the writer Walter Isaacson.",
+      "visual": {
+        "title": "Four depth philosophies",
+        "columns": [
+          "Style",
+          "How it works",
+          "Example"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Monastic",
+              "Cut most shallow work",
+              "Donald Knuth"
+            ],
+            "sync": {
+              "phrase": "monastic approach"
+            }
+          },
+          {
+            "cells": [
+              "Bimodal",
+              "Long deep stretches",
+              "Carl Jung"
+            ],
+            "sync": {
+              "phrase": "bimodal approach"
+            }
+          },
+          {
+            "cells": [
+              "Rhythmic",
+              "Same time daily",
+              "Most people"
+            ],
+            "sync": {
+              "phrase": "rhythmic approach"
+            },
+            "highlight": true
+          },
+          {
+            "cells": [
+              "Journalistic",
+              "Any free gap",
+              "Walter Isaacson"
+            ],
+            "sync": {
+              "phrase": "journalistic approach"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr4-2",
+      "type": "character_scene",
+      "narration": "For most of us, the rhythmic approach works best. Pick a time, say the first ninety minutes of every morning, and protect it like a meeting with your boss. One trick is the chain method. Mark a big X on a calendar for every day you complete your deep block, and soon the growing chain becomes its own motivation. You will not want to break it. Journalistic depth sounds tempting, but it takes years of practice to switch in instantly.",
+      "visual": {
+        "title": "Don't break the chain",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "pip",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "first ninety minutes"
+            },
+            "pose": "pointing"
+          },
+          {
+            "kind": "calendar",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "big X on a calendar"
+            }
+          },
+          {
+            "kind": "checkmark",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "growing chain"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr4-3",
+      "type": "character_scene",
+      "narration": "Bimodal can work inside a normal job too. Adam Grant stacked all his teaching into one semester, leaving the other free for research. And within research weeks, he would go fully offline for two to four days at a time, with an out of office reply. Even one deep day a week, protected without exception, can change what you produce in a year. Pick the version your job can actually tolerate, then defend it.",
+      "visual": {
+        "title": "Deep days, open days",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "deshawn",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "fully offline"
+            },
+            "pose": "sitting",
+            "seat": "desk"
+          },
+          {
+            "kind": "calendar",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "one semester"
+            }
+          },
+          {
+            "kind": "wall",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "without exception"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr5-title",
+      "type": "section_title",
+      "narration": "Principle five. Ritualize.",
+      "visual": {
+        "title": "Ritualize Your Deep Work",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Ritualize"
+        },
+        "role": "principle",
+        "number": 5,
+        "part": 2,
+        "memory": "coffee"
+      }
+    },
+    {
+      "id": "pr5-1",
+      "type": "list_card",
+      "narration": "Great minds rarely wait for inspiration. They use rituals. Newport says a good ritual answers a few simple questions. Where will you work, and for how long. How will you work, for example, no internet at all. And how will you support your work, with coffee, a walk first or the right food. Decide these in advance, and your brain learns that this place and this routine mean focus.",
+      "visual": {
+        "title": "Your deep work ritual",
+        "items": [
+          {
+            "label": "Where and how long",
+            "sync": {
+              "phrase": "Where will you work"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Rules: no internet",
+            "sync": {
+              "phrase": "no internet at all"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Support: coffee, a walk",
+            "sync": {
+              "phrase": "coffee, a walk"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Same routine every time",
+            "sync": {
+              "phrase": "this place and this routine"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr5-2",
+      "type": "character_scene",
+      "narration": "Sometimes you need a grand gesture. When J K Rowling was struggling to finish the final Harry Potter book, she checked into a suite at the Balmoral Hotel in Edinburgh, and wrote there until it was done. Bill Gates famously takes think weeks, retreating to a cabin with a stack of papers. Spending real money or effort on a change of scene tells your brain that this work matters. You do not need a hotel. A different cafe, a library, or a closed meeting room can send the same signal.",
+      "visual": {
+        "title": "The grand gesture",
+        "stage": "street",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "rosa",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "walk",
+            "sync": {
+              "phrase": "checked into a suite"
+            },
+            "poses": [
+              "walking",
+              "standing"
+            ],
+            "facing": "right"
+          },
+          {
+            "kind": "house",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "Balmoral Hotel"
+            }
+          },
+          {
+            "kind": "book",
+            "at": {
+              "col": 10.5,
+              "row": 3,
+              "w": 1.5,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "stack of papers"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr5-3",
+      "type": "character_scene",
+      "narration": "Deep work does not always mean working alone. Newport points to Bell Labs, where brilliant people mixed in shared hallways and then returned to private offices to think. He calls it the hub and spoke model. Collide with others to spark ideas, then retreat to go deep. Collaboration should feed concentration, not replace it. So meet, argue and brainstorm together, but do the actual thinking alone, with the door closed.",
+      "visual": {
+        "title": "Hub and spoke",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "kwame",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "shared hallways"
+            },
+            "pose": "handshake",
+            "facing": "right"
+          },
+          {
+            "kind": "figure",
+            "cast": "lena",
+            "at": {
+              "col": 4,
+              "row": 1,
+              "w": 3,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "shared hallways"
+            },
+            "pose": "handshake",
+            "facing": "left"
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 8,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "spark ideas"
+            },
+            "state": "on"
+          },
+          {
+            "kind": "door",
+            "at": {
+              "col": 10.5,
+              "row": 2,
+              "w": 1.5,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "retreat to go deep"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr6-title",
+      "type": "section_title",
+      "narration": "Principle six. Execute like a business.",
+      "visual": {
+        "title": "Execute Like A Business",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Execute like a business"
+        },
+        "role": "principle",
+        "number": 6,
+        "part": 2,
+        "memory": "target"
+      }
+    },
+    {
+      "id": "pr6-1",
+      "type": "list_card",
+      "narration": "Knowing what to do is easy. Doing it is hard. So Newport borrows a framework from business called the four disciplines of execution. One, focus on the wildly important, a small number of ambitious goals. Two, act on lead measures, like hours of deep work, instead of lag measures like results. Three, keep a compelling scoreboard you can see. Four, create a cadence of accountability, a weekly review of how you did.",
+      "visual": {
+        "title": "Four disciplines",
+        "items": [
+          {
+            "label": "Wildly important goals",
+            "sync": {
+              "phrase": "wildly important"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Track lead measures",
+            "sync": {
+              "phrase": "act on lead measures"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Keep a scoreboard",
+            "sync": {
+              "phrase": "compelling scoreboard"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Weekly accountability review",
+            "sync": {
+              "phrase": "cadence of accountability"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr6-2",
+      "type": "stat_chart",
+      "narration": "The lead measure that matters most is simple. Hours spent in deep work. Newport kept a tally on a card by his desk, marking every deep hour. Picture a week that starts with just two hours on Monday and climbs, as the scoreboard pulls you forward, to four hours on Friday. When the hours go up, the results follow.",
+      "visual": {
+        "label": "Deep hours per day (example week)",
+        "mode": "bars",
+        "datapoints": [
+          {
+            "label": "Mon",
+            "value": 2,
+            "sync": {
+              "phrase": "two hours on Monday"
+            }
+          },
+          {
+            "label": "Tue",
+            "value": 2.5
+          },
+          {
+            "label": "Wed",
+            "value": 3
+          },
+          {
+            "label": "Thu",
+            "value": 3.5
+          },
+          {
+            "label": "Fri",
+            "value": 4,
+            "sync": {
+              "phrase": "four hours on Friday"
+            }
+          }
+        ],
+        "decimals": 1
+      }
+    },
+    {
+      "id": "pr6-3",
+      "type": "character_scene",
+      "narration": "Here is why the scoreboard works. When your deep hours are visible, a lazy afternoon is not invisible anymore. You see the empty tally, and you want to fill it. And once a week, look back at your scoreboard, celebrate good weeks, and ask what got in the way of the bad ones. That simple review keeps the whole system honest. Newport reviews his tally every Friday and plans the next week around what he learns.",
+      "visual": {
+        "title": "Make deep hours visible",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "jade",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "deep hours are visible"
+            },
+            "pose": "sitting",
+            "seat": "desk"
+          },
+          {
+            "kind": "easel",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "look back at your scoreboard"
+            }
+          },
+          {
+            "kind": "trophy",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "celebrate good weeks"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr7-title",
+      "type": "section_title",
+      "narration": "Principle seven. Be lazy.",
+      "visual": {
+        "title": "Be Lazy: The Shutdown",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Be lazy"
+        },
+        "role": "principle",
+        "number": 7,
+        "part": 2,
+        "memory": "bed"
+      }
+    },
+    {
+      "id": "pr7-1",
+      "type": "character_scene",
+      "narration": "This one surprises people. Newport says you should be lazy, deliberately. At the end of the workday, stop thinking about work completely. Research backs this. Downtime lets your unconscious mind work on hard problems, and time in nature restores your ability to direct attention. And Anders Ericsson found that even elite experts manage only about four hours of intense focus a day. Evening work rarely matters as much as it feels. Pushing on late at night usually produces shallow work that steals from tomorrow's focus.",
+      "visual": {
+        "title": "Rest is part of the work",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "theo",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "be lazy, deliberately"
+            },
+            "pose": "sitting",
+            "seat": "chair",
+            "effects": [
+              {
+                "kind": "zzz",
+                "sync": {
+                  "phrase": "Downtime"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "bed",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "stop thinking about work"
+            }
+          },
+          {
+            "kind": "tree",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "time in nature"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr7-stat",
+      "type": "stat_chart",
+      "narration": "Think about that number. The world's best performers, violinists, chess players and writers, usually top out at around four hours of deep practice a day. Beyond that, quality drops. So protect those hours, and rest the remainder of the time.",
+      "visual": {
+        "label": "Daily limit of deep practice (hours)",
+        "mode": "number",
+        "datapoints": [
+          {
+            "label": "deep hours",
+            "value": 4,
+            "sync": {
+              "phrase": "four hours"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr7-2",
+      "type": "character_scene",
+      "narration": "And here is the habit I promised at the start. Newport ends every workday with a shutdown ritual. He checks his email one last time, makes sure every open task is captured on a list, reviews tomorrow's plan, and then says out loud, shutdown complete. It sounds silly. But it tells your brain that nothing is forgotten, so it can finally let go of work. When a work thought pops up later, you simply remind yourself that you already shut down.",
+      "visual": {
+        "title": "Shutdown complete",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "shutdown ritual"
+            },
+            "poses": [
+              "standing",
+              "celebrating"
+            ]
+          },
+          {
+            "kind": "clock",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "ends every workday"
+            }
+          },
+          {
+            "kind": "checkmark",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "shutdown complete"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr7-3",
+      "type": "list_card",
+      "narration": "Here is a simple shutdown checklist you can copy. Check your inbox one last time for anything urgent. Capture every open loop on a single list. Look at tomorrow's calendar and sketch a plan. Then say shutdown complete, close the laptop and walk away. It takes about ten minutes, and it buys you a whole evening of real rest.",
+      "visual": {
+        "title": "Your shutdown checklist",
+        "items": [
+          {
+            "label": "Final inbox check",
+            "sync": {
+              "phrase": "Check your inbox"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Capture open loops",
+            "sync": {
+              "phrase": "Capture every open loop"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Plan tomorrow",
+            "sync": {
+              "phrase": "tomorrow's calendar"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Say shutdown complete",
+            "sync": {
+              "phrase": "say shutdown complete"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-recap",
+      "type": "recap_card",
+      "narration": "That was rule one, and it is the heart of the book. Choose a depth philosophy that fits your life. Ritualize it, so starting takes no willpower. Execute like a business with a scoreboard. And shut down completely every evening. We are halfway. If you are still here, you are exactly who this channel is for. Subscribe, and tell me in the comments which book I should break down next. I read every single one.",
+      "visual": {
+        "title": "Rule one recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Pick a philosophy",
+            "sync": {
+              "phrase": "depth philosophy"
+            }
+          },
+          {
+            "label": "Ritualize it",
+            "sync": {
+              "phrase": "Ritualize it"
+            }
+          },
+          {
+            "label": "Scoreboard your hours",
+            "sync": {
+              "phrase": "with a scoreboard"
+            }
+          },
+          {
+            "label": "Shut down nightly",
+            "sync": {
+              "phrase": "shut down completely"
+            }
+          }
+        ]
+      },
+      "subscribe": {
+        "phrase": "Subscribe, and tell me",
+        "line": "Comment: which book next?"
+      }
+    },
+    {
+      "id": "p3-title",
+      "type": "section_title",
+      "narration": "Part three. Rule two, embrace boredom.",
+      "visual": {
+        "title": "Rule Two: Embrace Boredom",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "embrace boredom"
+        },
+        "role": "part",
+        "number": 3
+      }
+    },
+    {
+      "id": "p3-rehook",
+      "type": "character_scene",
+      "narration": "Here is an uncomfortable test. The last time you stood in a line for two minutes, did you reach for your phone. Most of us do, every time. Newport argues that this tiny reflex is quietly destroying your ability to concentrate. Your brain gets trained to expect novelty every few seconds, and then deep work feels unbearable. Concentration is not a habit you switch on. It is a skill you train, and right now, most of us are training the opposite.",
+      "visual": {
+        "title": "The phone reflex",
+        "stage": "street",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "omar",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "reach for your phone"
+            },
+            "pose": "standing",
+            "holding": {
+              "prop": "phone",
+              "hand": "right"
+            }
+          },
+          {
+            "kind": "brain",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "ability to concentrate"
+            }
+          },
+          {
+            "kind": "hourglass",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "every few seconds"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr8-title",
+      "type": "section_title",
+      "narration": "Principle eight. Take breaks from focus.",
+      "visual": {
+        "title": "Take Breaks From Focus",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Take breaks from focus"
+        },
+        "role": "principle",
+        "number": 8,
+        "part": 3,
+        "memory": "phone"
+      }
+    },
+    {
+      "id": "pr8-1",
+      "type": "compare",
+      "narration": "The fix sounds backwards. Do not take breaks from distraction. Take breaks from focus. Most people work in a distracted state and occasionally try to concentrate. Newport flips it. Schedule specific blocks when you are allowed to use the internet, and outside those blocks, stay completely offline. Even if your job requires lots of browsing, the structure still trains your brain to resist the itch.",
+      "visual": {
+        "title": "Flip your breaks",
+        "left": {
+          "heading": "Breaks from distraction",
+          "items": [
+            {
+              "label": "Distracted by default",
+              "sync": {
+                "phrase": "distracted state"
+              }
+            },
+            {
+              "label": "Focus occasionally",
+              "sync": {
+                "phrase": "occasionally try to concentrate"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Breaks from focus",
+          "items": [
+            {
+              "label": "Internet in set blocks",
+              "sync": {
+                "phrase": "allowed to use the internet"
+              }
+            },
+            {
+              "label": "Offline by default",
+              "sync": {
+                "phrase": "stay completely offline"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr8-2",
+      "type": "character_scene",
+      "narration": "Try it tomorrow. Write down the next time you are allowed online, maybe ten thirty. Until then, no browsing, no messages, no quick checks, even if you are bored. Especially if you are bored. When the urge hits, notice it, and let it pass. At first it feels like withdrawal. After a few weeks, your mind stops screaming for stimulation. The goal is not to suffer. It is to teach your brain that boredom is safe.",
+      "visual": {
+        "title": "Wait for your block",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "nadia",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Write down"
+            },
+            "pose": "sitting",
+            "seat": "desk"
+          },
+          {
+            "kind": "clock",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "ten thirty"
+            }
+          },
+          {
+            "kind": "wall",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "no quick checks"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr8-3",
+      "type": "character_scene",
+      "narration": "What if your job demands that you answer quickly. Newport's answer is to make the blocks shorter, not to abandon them. Check messages every thirty minutes instead of every thirty seconds. The point is that you decide when you switch to the internet, so your brain learns to wait. Over time, that waiting becomes the very muscle that lets you hold a hard problem for an hour.",
+      "visual": {
+        "title": "Shorter blocks still work",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "omar",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "answer quickly"
+            },
+            "pose": "thinking"
+          },
+          {
+            "kind": "clock",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "every thirty minutes"
+            }
+          },
+          {
+            "kind": "brain",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "the very muscle"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr9-title",
+      "type": "section_title",
+      "narration": "Principle nine. Train your focus.",
+      "visual": {
+        "title": "Train Your Focus Muscle",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Train your focus"
+        },
+        "role": "principle",
+        "number": 9,
+        "part": 3,
+        "memory": "dumbbell"
+      }
+    },
+    {
+      "id": "pr9-1",
+      "type": "character_scene",
+      "narration": "Newport's favorite training drill comes from Theodore Roosevelt. At Harvard, Roosevelt had a packed social life, yet he got top grades by studying in short, ferocious bursts. You can copy this. Pick a task, estimate how long it would normally take, then set a hard deadline well under that. Work with total intensity to beat the clock. Newport calls these Roosevelt dashes. Start with one dash a week, then make them more frequent and the deadlines tighter as your focus grows.",
+      "visual": {
+        "title": "Roosevelt dashes",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "max",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "ferocious bursts"
+            },
+            "poses": [
+              "standing",
+              "pointing"
+            ],
+            "effects": [
+              {
+                "kind": "motion_lines",
+                "sync": {
+                  "phrase": "beat the clock"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "hourglass",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "hard deadline"
+            }
+          },
+          {
+            "kind": "dumbbell",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "Roosevelt dashes"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr9-2",
+      "type": "character_scene",
+      "narration": "Another drill is productive meditation. Take a walk, a run or a commute where your body is busy but your mind is free, and focus on a single hard problem. When your mind wanders, gently bring it back. Review the key variables, then push toward the next step. It is hard at first, like any exercise. But it builds the exact muscle deep work needs. Newport uses his daily walks to solve proofs in his head, turning dead time into some of his best thinking.",
+      "visual": {
+        "title": "Productive meditation",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "maya",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "walk",
+            "sync": {
+              "phrase": "Take a walk"
+            },
+            "poses": [
+              "walking",
+              "thinking"
+            ],
+            "facing": "right"
+          },
+          {
+            "kind": "path",
+            "at": {
+              "col": 7,
+              "row": 3,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "a single hard problem"
+            }
+          },
+          {
+            "kind": "brain",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "bring it back"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr9-3",
+      "type": "list_card",
+      "narration": "There is even a party trick version. Memory champions like Ron White train their attention by memorizing an entire shuffled deck of cards. It is not about cards. It is about holding something complex in your mind without drifting away. Any hard mental exercise you do with full focus strengthens the same ability you need at your desk. Strength in one area transfers to the other.",
+      "visual": {
+        "title": "Focus drills",
+        "items": [
+          {
+            "label": "Memorize a card deck",
+            "sync": {
+              "phrase": "shuffled deck of cards"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Hold complex ideas",
+            "sync": {
+              "phrase": "holding something complex"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Train for your desk",
+            "sync": {
+              "phrase": "need at your desk"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p3-recap",
+      "type": "recap_card",
+      "narration": "Rule two in one breath. Take breaks from focus, not from distraction. Schedule your internet time. Train with Roosevelt dashes and productive meditation. Boredom is not your enemy. It is your training ground.",
+      "visual": {
+        "title": "Rule two recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Breaks from focus",
+            "sync": {
+              "phrase": "breaks from focus"
+            }
+          },
+          {
+            "label": "Schedule internet time",
+            "sync": {
+              "phrase": "Schedule your internet time"
+            }
+          },
+          {
+            "label": "Roosevelt dashes",
+            "sync": {
+              "phrase": "Roosevelt dashes"
+            }
+          },
+          {
+            "label": "Boredom trains you",
+            "sync": {
+              "phrase": "Boredom is not your enemy"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "p4-title",
+      "type": "section_title",
+      "narration": "Part four. Rule three, quit social media.",
+      "visual": {
+        "title": "Rule Three: Quit Social Media",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "quit social media"
+        },
+        "role": "part",
+        "number": 4
+      }
+    },
+    {
+      "id": "p4-rehook",
+      "type": "character_scene",
+      "narration": "This is the rule that makes people angry. Newport does not say social media is useless. He says the way we choose our tools is broken. We sign up for anything that offers even a tiny benefit, and never count what it costs us in time and attention. There is a better way to decide, and it comes from craftsmen. Their question is never, does this have any benefit. It is, is this the best use of my limited attention.",
+      "visual": {
+        "title": "How we pick tools",
+        "stage": "plain",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "kwame",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "angry",
+            "enter": "draw",
+            "sync": {
+              "phrase": "makes people angry"
+            },
+            "pose": "facepalm",
+            "effects": [
+              {
+                "kind": "anger_marks"
+              }
+            ]
+          },
+          {
+            "kind": "phone",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "social media is useless"
+            }
+          },
+          {
+            "kind": "scale",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "count what it costs"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr10-title",
+      "type": "section_title",
+      "narration": "Principle ten. The craftsman approach.",
+      "visual": {
+        "title": "The Craftsman Approach",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "craftsman approach"
+        },
+        "role": "principle",
+        "number": 10,
+        "part": 4,
+        "memory": "scale"
+      }
+    },
+    {
+      "id": "pr10-1",
+      "type": "compare",
+      "narration": "Newport contrasts two ways of choosing tools. The any benefit approach says, if a tool offers any possible benefit, use it. That is how we end up with a dozen apps. The craftsman approach says, first identify the core factors that matter most in your work and life, then adopt a tool only if its positive impacts substantially outweigh its negative ones. A carpenter does not buy every hammer at the store. Every tool you adopt takes something from you, so it has to give back far more.",
+      "visual": {
+        "title": "Choosing your tools",
+        "left": {
+          "heading": "Any benefit",
+          "items": [
+            {
+              "label": "Any upside? Use it",
+              "sync": {
+                "phrase": "any possible benefit"
+              }
+            },
+            {
+              "label": "A dozen apps",
+              "sync": {
+                "phrase": "a dozen apps"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Craftsman",
+          "items": [
+            {
+              "label": "Start from core goals",
+              "sync": {
+                "phrase": "core factors"
+              }
+            },
+            {
+              "label": "Benefits must clearly win",
+              "sync": {
+                "phrase": "substantially outweigh"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr10-2",
+      "type": "stat_chart",
+      "narration": "There is also the law of the vital few, better known as the eighty twenty rule. In most areas, around twenty percent of activities produce eighty percent of the results. So judge a tool against your most important activities, not your trivial ones. If social media only helps the bottom of your list, it is stealing time from the top.",
+      "visual": {
+        "label": "Share of results",
+        "mode": "pie",
+        "datapoints": [
+          {
+            "label": "Vital few",
+            "value": 80,
+            "sync": {
+              "phrase": "eighty percent"
+            }
+          },
+          {
+            "label": "Trivial many",
+            "value": 20
+          }
+        ],
+        "suffix": "%"
+      }
+    },
+    {
+      "id": "pr10-3",
+      "type": "character_scene",
+      "narration": "Newport points out that many best selling writers, like Malcolm Gladwell and Michael Lewis, have famously stayed off Twitter. They built huge audiences by doing work so good that people sought it out. The lesson is not that social media is evil. It is that your attention is the most valuable thing you own, and most apps are designed to buy it cheap.",
+      "visual": {
+        "title": "Great work finds its audience",
+        "stage": "stage-spotlight",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "pip",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "best selling writers"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "book",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "built huge audiences"
+            }
+          },
+          {
+            "kind": "phone",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "buy it cheap"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr11-title",
+      "type": "section_title",
+      "narration": "Principle eleven. The thirty day test.",
+      "visual": {
+        "title": "The Thirty Day Test",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "thirty day test"
+        },
+        "role": "principle",
+        "number": 11,
+        "part": 4,
+        "memory": "calendar"
+      }
+    },
+    {
+      "id": "pr11-1",
+      "type": "character_scene",
+      "narration": "Ready for an experiment. Quit every social media service for thirty days. Do not announce it, do not deactivate anything, just stop using them. After the month, ask yourself a pair of honest questions. Would the last thirty days have been notably better if I had used this service. And did people care that I was gone. If the answer to both is no, quit for good. Most people discover nobody noticed. And if some service genuinely passes the test, keep it, with a clear reason why.",
+      "visual": {
+        "title": "Thirty days offline",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "lena",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Quit every social media"
+            },
+            "poses": [
+              "standing",
+              "shrugging"
+            ],
+            "effects": [
+              {
+                "kind": "question_marks",
+                "sync": {
+                  "phrase": "did people care"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "calendar",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "for thirty days"
+            }
+          },
+          {
+            "kind": "checkmark",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "quit for good"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr11-2",
+      "type": "character_scene",
+      "narration": "There is a catch. If you quit without a plan, the empty evenings pull you straight back. So Newport says, put real thought into your leisure time. Arnold Bennett, writing over a century ago, argued that your evenings are a second life. Read serious books, learn an instrument, build something, take long walks. When your free time is rich, the feed loses its grip. Newport even suggests scheduling your evenings and weekends, so quality leisure does not lose to the easiest scroll.",
+      "visual": {
+        "title": "Plan your leisure",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "put real thought"
+            },
+            "pose": "sitting",
+            "seat": "chair",
+            "holding": {
+              "prop": "coffee",
+              "hand": "right"
+            }
+          },
+          {
+            "kind": "tree",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "take long walks"
+            }
+          },
+          {
+            "kind": "book",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "Read serious books"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr11-3",
+      "type": "compare",
+      "narration": "Compare a pair of evenings. In the first, you drop onto the couch and scroll until midnight, and wake up tired and scattered. In the second, you planned a walk, a chapter of a good book and an early night. Same hours, completely different tomorrow. Your leisure is either training your attention or draining it.",
+      "visual": {
+        "title": "Your evenings",
+        "left": {
+          "heading": "Default evening",
+          "items": [
+            {
+              "label": "Scroll until midnight",
+              "sync": {
+                "phrase": "scroll until midnight"
+              }
+            },
+            {
+              "label": "Wake up scattered",
+              "sync": {
+                "phrase": "tired and scattered"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Planned evening",
+          "items": [
+            {
+              "label": "A walk and a book",
+              "sync": {
+                "phrase": "planned a walk"
+              }
+            },
+            {
+              "label": "An early night",
+              "sync": {
+                "phrase": "an early night"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "p4-recap",
+      "type": "recap_card",
+      "narration": "Rule three, in short. Choose tools like a craftsman, not a collector. Apply the eighty twenty rule to your attention. Test any service with a thirty day break. And fill your evenings with something better than the feed.",
+      "visual": {
+        "title": "Rule three recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Craftsman tool choice",
+            "sync": {
+              "phrase": "like a craftsman"
+            }
+          },
+          {
+            "label": "Eighty twenty rule",
+            "sync": {
+              "phrase": "eighty twenty rule"
+            }
+          },
+          {
+            "label": "Thirty day break",
+            "sync": {
+              "phrase": "thirty day break"
+            }
+          },
+          {
+            "label": "Rich leisure time",
+            "sync": {
+              "phrase": "fill your evenings"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "p5-title",
+      "type": "section_title",
+      "narration": "Part five. Rule four, drain the shallows.",
+      "visual": {
+        "title": "Rule Four: Drain The Shallows",
+        "emphasis": "underline",
+        "sync": {
+          "phrase": "drain the shallows"
+        },
+        "role": "part",
+        "number": 5
+      }
+    },
+    {
+      "id": "p5-rehook",
+      "type": "character_scene",
+      "narration": "Even with perfect focus, your inbox and calendar will try to swallow your day. Shallow work never disappears on its own. It expands to fill whatever time you give it. The final rule is about fighting back, treating every shallow task with suspicion and shrinking it, so your deep hours survive contact with real life. The trick is not to eliminate shallow work, which is impossible, but to keep it on a short leash.",
+      "visual": {
+        "title": "Shallow work expands",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "deshawn",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "swallow your day"
+            },
+            "pose": "panicking",
+            "effects": [
+              {
+                "kind": "sweat_drop"
+              }
+            ]
+          },
+          {
+            "kind": "wall",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "fighting back"
+            }
+          },
+          {
+            "kind": "target",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "deep hours survive"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr12-title",
+      "type": "section_title",
+      "narration": "Principle twelve. Schedule every minute.",
+      "visual": {
+        "title": "Schedule Every Minute",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Schedule every minute"
+        },
+        "role": "principle",
+        "number": 12,
+        "part": 5,
+        "memory": "clock"
+      }
+    },
+    {
+      "id": "pr12-1",
+      "type": "character_scene",
+      "narration": "Newport plans every minute of his workday. Before the day begins, he takes a sheet of paper and divides the hours into blocks, assigning a task to each one. Email gets a block. Deep work gets a block. Even breaks get blocks. When something unexpected happens, and it will, he simply takes a moment to redo the schedule for the rest of the day. The goal is not rigid control. It is deciding in advance where your time goes. Without a plan, your day gets decided by whoever emails you first.",
+      "visual": {
+        "title": "Time blocking",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "alex",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "sheet of paper"
+            },
+            "pose": "sitting",
+            "seat": "desk"
+          },
+          {
+            "kind": "calendar",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "divides the hours into blocks"
+            }
+          },
+          {
+            "kind": "arrow",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "redo the schedule"
+            },
+            "variant": "curved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr12-2",
+      "type": "table",
+      "narration": "Here is what a time blocked morning might look like. Deep work from eight to ten. Email and messages from ten to ten thirty. Meetings until noon. Then lunch, and a short walk. Every block has a job, so nothing quietly eats the most valuable hours.",
+      "visual": {
+        "title": "A time blocked morning",
+        "columns": [
+          "Time",
+          "Block"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Eight to ten",
+              "Deep work"
+            ],
+            "sync": {
+              "phrase": "Deep work from eight"
+            },
+            "highlight": true
+          },
+          {
+            "cells": [
+              "Ten to ten thirty",
+              "Email and messages"
+            ],
+            "sync": {
+              "phrase": "Email and messages"
+            }
+          },
+          {
+            "cells": [
+              "Until noon",
+              "Meetings"
+            ],
+            "sync": {
+              "phrase": "Meetings until noon"
+            }
+          },
+          {
+            "cells": [
+              "Noon",
+              "Lunch and walk"
+            ],
+            "sync": {
+              "phrase": "a short walk"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr12-3",
+      "type": "character_scene",
+      "narration": "A couple of tips make time blocking work. First, you will underestimate how long things take, so add overflow blocks for tasks that run long. Second, be flexible. If a brilliant idea arrives during a shallow block, follow it and redo the plan. The schedule is a tool for thinking about your time, not a cage. After a few weeks, your estimates get sharper, and you start to see exactly where your days used to leak.",
+      "visual": {
+        "title": "Plan, then adapt",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "sage",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "underestimate"
+            },
+            "pose": "presenting"
+          },
+          {
+            "kind": "hourglass",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "overflow blocks"
+            }
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "brilliant idea"
+            },
+            "state": "on"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr13-title",
+      "type": "section_title",
+      "narration": "Principle thirteen. Measure the depth.",
+      "visual": {
+        "title": "Measure Every Task's Depth",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Measure the depth"
+        },
+        "role": "principle",
+        "number": 13,
+        "part": 5,
+        "memory": "scale"
+      }
+    },
+    {
+      "id": "pr13-1",
+      "type": "character_scene",
+      "narration": "How do you know if a task is shallow. Newport offers a brilliant question. How many months would it take to train a smart recent college graduate, with no special training in my field, to complete this task. If the answer is a few weeks, the task is shallow. If it would take years of skill, it is deep, and it deserves your best hours. Most people are shocked by how much of their week fails this test.",
+      "visual": {
+        "title": "How deep is this task?",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "maya",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "curious",
+            "enter": "draw",
+            "sync": {
+              "phrase": "brilliant question"
+            },
+            "pose": "thinking",
+            "effects": [
+              {
+                "kind": "thought_bubble",
+                "sync": {
+                  "phrase": "How many months"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "ladder",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 4
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "years of skill"
+            }
+          },
+          {
+            "kind": "target",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "your best hours"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr13-2",
+      "type": "stat_chart",
+      "narration": "Then ask your boss a question most people never ask. What percentage of my time should be spent on shallow work. For many knowledge workers, the honest answer lands somewhere between thirty and fifty percent. Once you agree on a number, you have permission to say no to the rest, and a clear reason to protect your deep blocks.",
+      "visual": {
+        "label": "Shallow work budget (upper end)",
+        "mode": "number",
+        "datapoints": [
+          {
+            "label": "max shallow",
+            "value": 50,
+            "sync": {
+              "phrase": "fifty percent"
+            }
+          }
+        ],
+        "suffix": "%"
+      }
+    },
+    {
+      "id": "pr13-3",
+      "type": "compare",
+      "narration": "Run some real tasks through that test. Writing a strategy report, learning a new programming language or designing a lesson plan takes months of training, so they are deep. Scheduling meetings, formatting slides and clearing your inbox could be taught in a week, so they are shallow. Shallow tasks are not useless, but they should never get your freshest hours.",
+      "visual": {
+        "title": "Deep or shallow?",
+        "left": {
+          "heading": "Deep tasks",
+          "items": [
+            {
+              "label": "Strategy report",
+              "sync": {
+                "phrase": "strategy report"
+              }
+            },
+            {
+              "label": "Learn a language",
+              "sync": {
+                "phrase": "new programming language"
+              }
+            },
+            {
+              "label": "Design a lesson",
+              "sync": {
+                "phrase": "lesson plan"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "Shallow tasks",
+          "items": [
+            {
+              "label": "Schedule meetings",
+              "sync": {
+                "phrase": "Scheduling meetings"
+              }
+            },
+            {
+              "label": "Format slides",
+              "sync": {
+                "phrase": "formatting slides"
+              }
+            },
+            {
+              "label": "Clear the inbox",
+              "sync": {
+                "phrase": "clearing your inbox"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pr14-title",
+      "type": "section_title",
+      "narration": "Principle fourteen. Become hard to reach.",
+      "visual": {
+        "title": "Become Hard To Reach",
+        "emphasis": "circle",
+        "sync": {
+          "phrase": "Become hard to reach"
+        },
+        "role": "principle",
+        "number": 14,
+        "part": 5,
+        "memory": "wall"
+      }
+    },
+    {
+      "id": "pr14-1",
+      "type": "character_scene",
+      "narration": "Start by finishing your work by five thirty. Newport calls this fixed schedule productivity. He sets a firm end to his workday, then works backward to decide what fits. That hard limit forces ruthless choices. You drop the low value meetings, say no more often, and squeeze the shallow tasks. Strangely, the constraint makes him more productive, not less. Because the time is limited, every hour has to earn its place.",
+      "visual": {
+        "title": "Finish by five thirty",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "nadia",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "five thirty"
+            },
+            "pose": "pointing"
+          },
+          {
+            "kind": "clock",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "firm end"
+            }
+          },
+          {
+            "kind": "door",
+            "at": {
+              "col": 10,
+              "row": 3,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "ruthless choices"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr14-2",
+      "type": "list_card",
+      "narration": "Then make yourself harder to reach by email. First, make people who email you do more work, for example by listing what kinds of messages you will reply to. Second, when you write an email, do more work up front, proposing a full plan so the thread ends in one reply instead of five. Third, do not respond to everything. If a message is vague or not worth it, let it go. Nothing bad usually happens. Most messages solve themselves.",
+      "visual": {
+        "title": "Tame your inbox",
+        "items": [
+          {
+            "label": "Make senders do work",
+            "sync": {
+              "phrase": "make people who email you"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Write process emails",
+            "sync": {
+              "phrase": "proposing a full plan"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Don't reply to everything",
+            "sync": {
+              "phrase": "do not respond to everything"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pr14-3",
+      "type": "character_scene",
+      "narration": "This feels uncomfortable at first, because we are trained to believe every message deserves an answer. But Newport found that when he stopped replying to vague requests, almost nobody complained. People adapt quickly. They start sending clearer messages, or they solve the problem themselves. Your silence, used wisely, protects the hours that create real value. And the hours you win back go straight into deep work.",
+      "visual": {
+        "title": "Silence is allowed",
+        "stage": "room",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "rosa",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "worried",
+            "enter": "draw",
+            "sync": {
+              "phrase": "uncomfortable at first"
+            },
+            "pose": "sitting",
+            "seat": "desk",
+            "expressions": [
+              {
+                "value": "worried"
+              },
+              {
+                "value": "happy",
+                "sync": {
+                  "phrase": "People adapt quickly"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "speech",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "vague requests"
+            }
+          },
+          {
+            "kind": "checkmark",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "real value"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "p5-recap",
+      "type": "recap_card",
+      "narration": "Rule four in a nutshell. Schedule every minute. Measure the depth of every task. Agree on a shallow work budget. Finish by five thirty. And become hard to reach. Shrink the shallows, and the deep work finally has room to breathe.",
+      "visual": {
+        "title": "Rule four recap",
+        "scope": "mid",
+        "items": [
+          {
+            "label": "Schedule every minute",
+            "sync": {
+              "phrase": "Schedule every minute"
+            }
+          },
+          {
+            "label": "Measure task depth",
+            "sync": {
+              "phrase": "Measure the depth"
+            }
+          },
+          {
+            "label": "Finish by five thirty",
+            "sync": {
+              "phrase": "Finish by five thirty"
+            }
+          },
+          {
+            "label": "Be hard to reach",
+            "sync": {
+              "phrase": "become hard to reach"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "apply-1",
+      "type": "list_card",
+      "narration": "So where do you start. Here is a simple first week. Pick your depth philosophy and block ninety minutes every morning. Build a ritual around that block. Keep a tally of your deep hours. Schedule your internet time. And end each day with a shutdown ritual. Do just that for seven days, and you will feel the difference.",
+      "visual": {
+        "title": "Your first deep week",
+        "items": [
+          {
+            "label": "Block ninety minutes daily",
+            "sync": {
+              "phrase": "block ninety minutes"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Build a ritual",
+            "sync": {
+              "phrase": "Build a ritual"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Tally deep hours",
+            "sync": {
+              "phrase": "Keep a tally"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Schedule internet time",
+            "sync": {
+              "phrase": "Schedule your internet time"
+            },
+            "icon": "tick"
+          },
+          {
+            "label": "Shutdown every evening",
+            "sync": {
+              "phrase": "end each day"
+            },
+            "icon": "tick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "apply-2",
+      "type": "character_scene",
+      "narration": "Imagine Sam, a designer who spends every morning in email and every afternoon in meetings. Sam tries the rhythmic approach, blocking eight to nine thirty for real design work, phone in a drawer. In week one, Sam manages three deep blocks. By week four, it is every day, and Sam's best work of the year comes out of those quiet mornings. Nothing about Sam's job changed. Only the defaults did.",
+      "visual": {
+        "title": "Sam's first month",
+        "stage": "desk-office",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "theo",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "Imagine Sam"
+            },
+            "pose": "sitting",
+            "seat": "desk"
+          },
+          {
+            "kind": "calendar",
+            "at": {
+              "col": 7,
+              "row": 2,
+              "w": 3,
+              "h": 3
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "eight to nine thirty"
+            }
+          },
+          {
+            "kind": "trophy",
+            "at": {
+              "col": 10,
+              "row": 1,
+              "w": 2,
+              "h": 2
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "best work of the year"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "final-recap",
+      "type": "recap_card",
+      "narration": "Let us tie the whole book together. Deep work is rare and valuable, and it makes life meaningful. Rule one, work deeply, with rituals, a scoreboard and a shutdown. Rule two, embrace boredom, so your brain can focus on demand. Rule three, quit social media, unless a tool truly earns its place. Rule four, drain the shallows, so the deep work has room.",
+      "visual": {
+        "title": "The whole book",
+        "scope": "final",
+        "items": [
+          {
+            "label": "Rare, valuable, meaningful",
+            "sync": {
+              "phrase": "rare and valuable"
+            }
+          },
+          {
+            "label": "Work deeply",
+            "sync": {
+              "phrase": "Rule one, work deeply"
+            }
+          },
+          {
+            "label": "Embrace boredom",
+            "sync": {
+              "phrase": "embrace boredom"
+            }
+          },
+          {
+            "label": "Quit social media",
+            "sync": {
+              "phrase": "quit social media"
+            }
+          },
+          {
+            "label": "Drain the shallows",
+            "sync": {
+              "phrase": "drain the shallows"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "close",
+      "type": "character_scene",
+      "narration": "Here is the one line to carry out of Deep Work. A deep life is a good life. In a world that rewards constant reaction, the person who can sit with one hard problem for hours has a quiet superpower. Guard your attention, because what you focus on becomes who you are. Start tomorrow morning with one protected block, and see what you are capable of.",
+      "visual": {
+        "title": "A deep life is good",
+        "stage": "outdoor",
+        "elements": [
+          {
+            "kind": "figure",
+            "cast": "jade",
+            "at": {
+              "col": 1,
+              "row": 1,
+              "w": 4,
+              "h": 5
+            },
+            "expression": "happy",
+            "enter": "draw",
+            "sync": {
+              "phrase": "deep life is a good life"
+            },
+            "pose": "celebrating",
+            "effects": [
+              {
+                "kind": "sparkles",
+                "sync": {
+                  "phrase": "quiet superpower"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "mountain",
+            "at": {
+              "col": 7,
+              "row": 1,
+              "w": 5,
+              "h": 5
+            },
+            "reveal": "draw",
+            "color": "accent",
+            "sync": {
+              "phrase": "one hard problem"
+            }
+          },
+          {
+            "kind": "lightbulb",
+            "at": {
+              "col": 5.5,
+              "row": 0.5,
+              "w": 1.5,
+              "h": 1.5
+            },
+            "reveal": "pop",
+            "color": "accent",
+            "sync": {
+              "phrase": "Guard your attention"
+            },
+            "tier": "ambient",
+            "state": "on"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta-subscribe",
+      "type": "cta",
+      "narration": "That's Deep Work in thirty minutes. Tomorrow, it's The Seven Habits of Highly Effective People by Stephen Covey. Subscribe and turn on the bell, so you don't miss it.",
+      "visual": {
+        "text": "Tomorrow: The 7 Habits",
+        "style": "subscribe"
+      }
+    },
+    {
+      "id": "cta-endscreen",
+      "type": "cta",
+      "narration": "And if Deep Work clicked for you, Atomic Habits is the perfect follow up, because focus is a habit too. It's right here on screen. Watch it next, and I'll see you there.",
+      "visual": {
+        "text": "Watch next: Atomic Habits",
+        "style": "corner"
+      }
+    }
+  ]
+}

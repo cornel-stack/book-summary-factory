@@ -134,5 +134,37 @@
     "publish_date": "2026-10-15",
     "status": "scheduled",
     "category": "Habits & Productivity"
+  },
+  {
+    "video_id": "deep-work",
+    "brand": "readlark",
+    "format": "longform",
+    "publish_date": "2026-10-19",
+    "status": "scheduled",
+    "category": "Habits & Productivity"
+  },
+  {
+    "video_id": "deep-work-s01",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-19",
+    "status": "scheduled",
+    "category": "Habits & Productivity"
+  },
+  {
+    "video_id": "deep-work-s02",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-19",
+    "status": "scheduled",
+    "category": "Habits & Productivity"
+  },
+  {
+    "video_id": "deep-work-s03",
+    "brand": "readlark",
+    "format": "short",
+    "publish_date": "2026-10-19",
+    "status": "scheduled",
+    "category": "Habits & Productivity"
   }
 ]

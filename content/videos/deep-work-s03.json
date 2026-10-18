@@ -1,0 +1,225 @@
+{
+  "id": "deep-work-s03",
+  "brand": "readlark",
+  "format": "short",
+  "title": "Quit Social Media for 30 Days. Nobody Notices. 📵 #deepwork",
+  "short_hook": "Quit social media for 30 days",
+  "book": {
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "year": 2016
+  },
+  "description": "Cal Newport's thirty day social media test, and the two questions that decide what stays. From Deep Work by Cal Newport. Follow ReadLark for one book a day.",
+  "tags": [
+    "deep work",
+    "cal newport",
+    "focus",
+    "productivity",
+    "book summary",
+    "shorts",
+    "quit social media",
+    "digital minimalism"
+  ],
+  "pinned_comment": "Which app would you quit first for 30 days? 👇",
+  "thumbnail": {
+    "headline": "Quit social media for 30"
+  },
+  "voice": "en-US-AndrewNeural",
+  "rate": "-5%",
+  "loop": true,
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "kinetic",
+      "narration": "Quit social media for thirty days, and here is the weird thing that happens.",
+      "visual": {
+        "layout": "hook",
+        "text": "Quit social media for 30 days",
+        "accent": [
+          "30",
+          "days"
+        ],
+        "icon": "phone"
+      }
+    },
+    {
+      "id": "nobody",
+      "type": "kinetic",
+      "narration": "Nobody notices. That's the result Cal Newport keeps seeing when people try his test from Deep Work.",
+      "visual": {
+        "layout": "statement",
+        "text": "Nobody notices",
+        "accent": [
+          "Nobody"
+        ],
+        "icon": "wall"
+      }
+    },
+    {
+      "id": "tools",
+      "type": "kinetic",
+      "narration": "Most of us pick tools with the any benefit approach. If an app has any possible upside, we keep it. Newport says think like a craftsman instead.",
+      "visual": {
+        "layout": "versus",
+        "left": {
+          "label": "Any benefit",
+          "icon": "phone",
+          "sync": {
+            "phrase": "any benefit approach"
+          }
+        },
+        "right": {
+          "label": "Craftsman",
+          "icon": "gears",
+          "sync": {
+            "phrase": "think like a craftsman"
+          }
+        },
+        "winner": "right"
+      }
+    },
+    {
+      "id": "test",
+      "type": "kinetic",
+      "narration": "Here's the test. Stop using every social app for thirty days. Don't announce it. Don't deactivate anything. Just stop.",
+      "visual": {
+        "layout": "steps",
+        "title": "The 30 day test",
+        "items": [
+          {
+            "label": "Stop every social app",
+            "sync": {
+              "phrase": "Stop using every social app"
+            }
+          },
+          {
+            "label": "Don't announce it",
+            "sync": {
+              "phrase": "Don't announce it"
+            }
+          },
+          {
+            "label": "Just stop",
+            "sync": {
+              "phrase": "Just stop"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "rehook",
+      "type": "kinetic",
+      "narration": "Then, after a month, ask yourself two brutal questions.",
+      "visual": {
+        "layout": "statement",
+        "text": "Two brutal questions",
+        "accent": [
+          "brutal"
+        ],
+        "icon": "brain"
+      }
+    },
+    {
+      "id": "questions",
+      "type": "kinetic",
+      "narration": "One. Would the last thirty days have been notably better with it? Two. Did anyone actually care that I was gone?",
+      "visual": {
+        "layout": "steps",
+        "items": [
+          {
+            "label": "Was life notably better?",
+            "sync": {
+              "phrase": "notably better"
+            }
+          },
+          {
+            "label": "Did anyone care?",
+            "sync": {
+              "phrase": "actually care"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "answer",
+      "type": "kinetic",
+      "narration": "For most people, both answers are no, and they win back hours every single week.",
+      "visual": {
+        "layout": "statement",
+        "text": "Both answers: no",
+        "accent": [
+          "no"
+        ],
+        "icon": "checkmark",
+        "sync": {
+          "phrase": "both answers are no"
+        }
+      }
+    },
+    {
+      "id": "fill",
+      "type": "kinetic",
+      "narration": "Then fill that time with something real. Read serious books. Learn a skill. Take long walks.",
+      "visual": {
+        "layout": "icons",
+        "title": "Fill the time",
+        "items": [
+          {
+            "icon": "book",
+            "label": "Real books",
+            "sync": {
+              "phrase": "Read serious books"
+            }
+          },
+          {
+            "icon": "dumbbell",
+            "label": "New skills",
+            "sync": {
+              "phrase": "Learn a skill"
+            }
+          },
+          {
+            "icon": "tree",
+            "label": "Long walks",
+            "sync": {
+              "phrase": "Take long walks"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "grip",
+      "type": "kinetic",
+      "narration": "When your free time is rich, the feed loses its grip on you.",
+      "visual": {
+        "layout": "statement",
+        "text": "Rich time beats the feed",
+        "accent": [
+          "Rich"
+        ],
+        "icon": "heart"
+      }
+    },
+    {
+      "id": "loop",
+      "type": "kinetic",
+      "narration": "So try it. Seriously.",
+      "visual": {
+        "layout": "statement",
+        "text": "Deep Work · Cal Newport",
+        "accent": [
+          "Deep",
+          "Work"
+        ],
+        "icon": "book"
+      }
+    }
+  ]
+}

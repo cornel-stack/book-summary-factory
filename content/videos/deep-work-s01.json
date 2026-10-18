@@ -1,0 +1,225 @@
+{
+  "id": "deep-work-s01",
+  "brand": "readlark",
+  "format": "short",
+  "title": "One Quick Phone Check Wrecks Your Focus 📱 #deepwork",
+  "short_hook": "One quick check wrecks your focus",
+  "book": {
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "year": 2016
+  },
+  "description": "Why checking your phone for just a second costs you way more than a second: attention residue. From Deep Work by Cal Newport. Follow ReadLark for one book a day.",
+  "tags": [
+    "deep work",
+    "cal newport",
+    "focus",
+    "productivity",
+    "book summary",
+    "shorts",
+    "attention residue",
+    "phone addiction"
+  ],
+  "pinned_comment": "How many times did you check your phone today? Guess a number 👇",
+  "thumbnail": {
+    "headline": "One quick check wrecks your"
+  },
+  "voice": "en-US-AndrewNeural",
+  "rate": "-5%",
+  "loop": true,
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "kinetic",
+      "narration": "Checking your phone for just a second is wrecking your focus, and here is the proof.",
+      "visual": {
+        "layout": "hook",
+        "text": "One quick check wrecks your focus",
+        "accent": [
+          "wrecks"
+        ],
+        "icon": "phone"
+      }
+    },
+    {
+      "id": "residue",
+      "type": "kinetic",
+      "narration": "A business professor named Sophie Leroy discovered something she called attention residue.",
+      "visual": {
+        "layout": "statement",
+        "text": "Attention residue",
+        "accent": [
+          "residue"
+        ],
+        "icon": "brain",
+        "sync": {
+          "phrase": "attention residue"
+        }
+      }
+    },
+    {
+      "id": "switch",
+      "type": "kinetic",
+      "narration": "When you switch from task A to task B, part of your mind stays stuck on task A.",
+      "visual": {
+        "layout": "icons",
+        "title": "What switching does",
+        "items": [
+          {
+            "icon": "book",
+            "label": "Task A",
+            "sync": {
+              "phrase": "from task A"
+            }
+          },
+          {
+            "icon": "phone",
+            "label": "Task B",
+            "sync": {
+              "phrase": "to task B"
+            }
+          },
+          {
+            "icon": "brain",
+            "label": "Still stuck",
+            "sync": {
+              "phrase": "stays stuck"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drag",
+      "type": "kinetic",
+      "narration": "So that quick glance at your inbox leaves a residue that drags your thinking down for several minutes after you return.",
+      "visual": {
+        "layout": "statement",
+        "text": "Your brain stays half there",
+        "accent": [
+          "half"
+        ],
+        "sync": {
+          "phrase": "drags your thinking down"
+        }
+      }
+    },
+    {
+      "id": "stat",
+      "type": "kinetic",
+      "narration": "But here is the scary part. Knowledge workers spend over sixty percent of the week on messages and searching.",
+      "visual": {
+        "layout": "number",
+        "value": 60,
+        "suffix": "%",
+        "label": "of the week on messages",
+        "sync": {
+          "phrase": "sixty percent"
+        }
+      }
+    },
+    {
+      "id": "never",
+      "type": "kinetic",
+      "narration": "Which means most people never work at full power. Not once, all day long, and they don't even notice.",
+      "visual": {
+        "layout": "statement",
+        "text": "Never at full power",
+        "accent": [
+          "full",
+          "power"
+        ],
+        "icon": "gears",
+        "sync": {
+          "phrase": "never work at full power"
+        }
+      }
+    },
+    {
+      "id": "versus",
+      "type": "kinetic",
+      "narration": "Compare two workers. One switches constantly. The other works in one long block, with zero switching.",
+      "visual": {
+        "layout": "versus",
+        "left": {
+          "label": "Switching",
+          "icon": "phone",
+          "sync": {
+            "phrase": "switches constantly"
+          }
+        },
+        "right": {
+          "label": "One long block",
+          "icon": "target",
+          "sync": {
+            "phrase": "one long block"
+          }
+        },
+        "winner": "right"
+      }
+    },
+    {
+      "id": "fix",
+      "type": "kinetic",
+      "narration": "The fix is simple. Put your phone in another room. Close every tab you don't need. Work for ninety minutes straight.",
+      "visual": {
+        "layout": "steps",
+        "title": "The fix",
+        "items": [
+          {
+            "label": "Phone in another room",
+            "sync": {
+              "phrase": "phone in another room"
+            }
+          },
+          {
+            "label": "Close extra tabs",
+            "sync": {
+              "phrase": "Close every tab"
+            }
+          },
+          {
+            "label": "Ninety minutes straight",
+            "sync": {
+              "phrase": "ninety minutes straight"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "payoff",
+      "type": "kinetic",
+      "narration": "Do that once a day, and you will get more done before lunch than most people do all day.",
+      "visual": {
+        "layout": "statement",
+        "text": "More done before lunch",
+        "accent": [
+          "lunch"
+        ],
+        "icon": "trophy",
+        "sync": {
+          "phrase": "more done before lunch"
+        }
+      }
+    },
+    {
+      "id": "loop",
+      "type": "kinetic",
+      "narration": "That's from Deep Work by Cal Newport. And remember,",
+      "visual": {
+        "layout": "statement",
+        "text": "Deep Work · Cal Newport",
+        "accent": [
+          "Deep",
+          "Work"
+        ],
+        "icon": "book"
+      }
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "deep-work-s02",
+  "brand": "readlark",
+  "format": "short",
+  "title": "The Best in the World Only Work 4 Hours a Day ⏳ #deepwork",
+  "short_hook": "The best work just 4 hours a day",
+  "book": {
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "year": 2016
+  },
+  "description": "Elite performers top out at about four hours of deep focus a day. Here is how to use yours. From Deep Work by Cal Newport. Follow ReadLark for one book a day.",
+  "tags": [
+    "deep work",
+    "cal newport",
+    "focus",
+    "productivity",
+    "book summary",
+    "shorts",
+    "deliberate practice",
+    "work smarter"
+  ],
+  "pinned_comment": "How many hours of real focus did you get today? Be honest 👇",
+  "thumbnail": {
+    "headline": "The best work just 4"
+  },
+  "voice": "en-US-AndrewNeural",
+  "rate": "-5%",
+  "loop": true,
+  "template": {
+    "framing": "book-structure",
+    "hook": "direct"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "kinetic",
+      "narration": "The best performers in the world only do four hours of real work a day.",
+      "visual": {
+        "layout": "hook",
+        "text": "The best work just 4 hours a day",
+        "accent": [
+          "4",
+          "hours"
+        ],
+        "icon": "clock"
+      }
+    },
+    {
+      "id": "experts",
+      "type": "kinetic",
+      "narration": "Psychologist Anders Ericsson spent his career studying the very best, elite violinists, chess players and writers.",
+      "visual": {
+        "layout": "icons",
+        "title": "Elite experts",
+        "items": [
+          {
+            "icon": "trophy",
+            "label": "Violinists",
+            "sync": {
+              "phrase": "elite violinists"
+            }
+          },
+          {
+            "icon": "brain",
+            "label": "Chess players",
+            "sync": {
+              "phrase": "chess players"
+            }
+          },
+          {
+            "icon": "book",
+            "label": "Writers",
+            "sync": {
+              "phrase": "and writers"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "limit",
+      "type": "kinetic",
+      "narration": "Again and again, their limit for intense, deliberate practice was about four hours a day. Not eight. Not ten.",
+      "visual": {
+        "layout": "number",
+        "value": 4,
+        "suffix": " hrs",
+        "label": "of deep focus a day",
+        "sync": {
+          "phrase": "about four hours"
+        }
+      }
+    },
+    {
+      "id": "cliff",
+      "type": "kinetic",
+      "narration": "Push beyond that, and quality drops off a cliff. More hours just meant worse work, and more mistakes.",
+      "visual": {
+        "layout": "statement",
+        "text": "More hours, worse work",
+        "accent": [
+          "worse"
+        ],
+        "icon": "hourglass",
+        "sync": {
+          "phrase": "drops off a cliff"
+        }
+      }
+    },
+    {
+      "id": "rehook",
+      "type": "kinetic",
+      "narration": "But here's what most people miss. Those four hours only count if they're totally undistracted.",
+      "visual": {
+        "layout": "statement",
+        "text": "Only if undistracted",
+        "accent": [
+          "undistracted"
+        ],
+        "icon": "phone",
+        "sync": {
+          "phrase": "totally undistracted"
+        }
+      }
+    },
+    {
+      "id": "formula",
+      "type": "kinetic",
+      "narration": "Newport puts it as a simple formula. Time spent, times intensity of focus, equals what you actually produce.",
+      "visual": {
+        "layout": "curve",
+        "label": "Time × focus",
+        "to": "Real output",
+        "contrast": "Distracted",
+        "sync": {
+          "phrase": "intensity of focus"
+        }
+      }
+    },
+    {
+      "id": "copy",
+      "type": "kinetic",
+      "narration": "So copy the experts. Do your hardest work first, before anything else. Set a deadline that feels too short. Then stop completely and rest.",
+      "visual": {
+        "layout": "steps",
+        "title": "Work like an expert",
+        "items": [
+          {
+            "label": "Hardest work first",
+            "sync": {
+              "phrase": "hardest work first"
+            }
+          },
+          {
+            "label": "Set a short deadline",
+            "sync": {
+              "phrase": "Set a deadline"
+            }
+          },
+          {
+            "label": "Stop and rest",
+            "sync": {
+              "phrase": "stop completely"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "shutdown",
+      "type": "kinetic",
+      "narration": "That's why Cal Newport ends every workday by saying two words out loud. Shutdown complete.",
+      "visual": {
+        "layout": "statement",
+        "text": "Shutdown complete",
+        "accent": [
+          "complete"
+        ],
+        "icon": "checkmark",
+        "sync": {
+          "phrase": "Shutdown complete"
+        }
+      }
+    },
+    {
+      "id": "loop",
+      "type": "kinetic",
+      "narration": "It tells your brain the work is done, because",
+      "visual": {
+        "layout": "statement",
+        "text": "Deep Work · Cal Newport",
+        "accent": [
+          "Deep",
+          "Work"
+        ],
+        "icon": "book"
+      }
+    }
+  ]
+}
