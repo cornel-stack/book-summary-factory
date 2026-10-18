@@ -167,7 +167,7 @@ function main() {
       if (heroes.length <= 1) warns.push(`lone graphic in "${scene.id}" — add a metaphor/data prop or a 2nd figure (never a lone figure)`);
     }
     const em = scene.narration.match(ENUM);
-    if (em && !SHOWN.has(scene.type)) warns.push(`"${scene.id}" narrates a list ("${em[0].slice(0, 32)}…") but doesn't show it — use list_card / compare / stat_chart`);
+    if (em && !SHOWN.has(scene.type) && scene.type !== "kinetic") warns.push(`"${scene.id}" narrates a list ("${em[0].slice(0, 32)}…") but doesn't show it — use list_card / compare / stat_chart`);
   }
 
   events.sort((a, b) => a - b);
