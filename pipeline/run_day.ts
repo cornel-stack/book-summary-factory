@@ -48,7 +48,9 @@ function main() {
     process.exit(1);
   }
   const date = new Date().toLocaleDateString("en-CA", { timeZone: "Africa/Nairobi" });
-  const tag = `content-${date}`;
+  // One bundle per BOOK (not per date): two books on one day must not share a
+  // Release, or the second clobbers the first's description/thumbnail/notes.
+  const tag = `content-${date}-${slug}`;
   const branch = cap("git", ["rev-parse", "--abbrev-ref", "HEAD"]);
   console.log(`Day run: ${slug}  →  bundle ${tag}  (branch ${branch})`);
 
@@ -113,13 +115,20 @@ function main() {
 
   // 7. download the finished bundle into output/<date>/
   step("7/8 download → output/" + date);
-  run("npx", ["tsx", "pipeline/fetch_release.ts", "--today"], { ...process.env, FETCH_DIR: join(REPO, "output", date) });
+  const fetchEnv = { ...process.env, FETCH_DIR: join(REPO, "output", date) };
+  try {
+    run("npx", ["tsx", "pipeline/fetch_release.ts", tag], fetchEnv);
+  } catch {
+    console.warn("  ⚠ download failed — retrying once in 20s (the Release can lag the run by a few seconds)");
+    sleep(20000);
+    run("npx", ["tsx", "pipeline/fetch_release.ts", tag], fetchEnv);
+  }
 
   // 8. mark the book produced (xlsx + launch-plan)
   step("8/8 mark done");
   run(PY, ["pipeline/mark_book_done.py", slug, date]);
 
-  console.log(`\n✅ ${slug}: longform + ${shortIds.length} shorts rendered → output/${date}/  (marked done)`);
+  console.log(`\n✅ ${slug}: longform + ${shortIds.length} shorts rendered → output/${date}/${tag}/  (marked done)`);
 }
 
 /** Latest run id for a workflow on a branch (after we just triggered it). */

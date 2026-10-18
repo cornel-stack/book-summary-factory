@@ -87,9 +87,9 @@ CI and HARD-FAILS on missing title_variants/promise/book-title — so get those 
 npm run day -- <slug>
 ```
 This picks up the 3 hand-written shorts, validates, schedules the calendar, commits + pushes,
-triggers CI (render.yml + render-shorts.yml into one `content-<date>` bundle),
+triggers CI (render.yml + render-shorts.yml into one `content-<date>-<slug>` bundle — one per book, so two books a day never collide),
 waits ~20–30 min for both runs, downloads the finished videos into
-`output/<date>/`, and marks the book done (xlsx "Video" column + launch-plan).
+`output/<date>/content-<date>-<slug>/`, and marks the book done (xlsx "Video" column + launch-plan).
 TTS in CI auto-falls back edge → Azure → Kokoro, so narration never fails.
 
 > For a quick local check without touching CI, run `npm run day -- <slug> --dry`.
